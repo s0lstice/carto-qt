@@ -1,23 +1,30 @@
 #include "heure.h"
+#include <QDebug>
 
 heure::heure(){}
 void heure::setJour(int jour){
     this->jour = jour;
 }
 
-void heure::setDebut(QString debut){
-    this->debut = QTime::fromString(debut, "hh:mm:ss");
+int heure::getJour(){
+    return jour;
 }
 
-void heure::setDebut(QTime debut){
+void heure::setDebut(QString debut){
     this->debut = debut;
 }
 
-void heure::setFin(QString fin){
-    this->fin = QTime::fromString(fin, "hh:mm:ss");
+QString heure::getDebut(){
+    return debut;
 }
 
-void heure::setFin(QTime fin){
+void heure::setFin(QString fin){
     this->fin = fin;
 }
+
+
+QString heure::getFin(){
+    return fin;
+}
+
 

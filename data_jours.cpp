@@ -1,8 +1,6 @@
 #include "data_jours.h"
 #include "database.h"
 
-
-
 bool initJoursTable(){
     QSqlQuery query(database::dataCreate()->dataConnect());
 
@@ -25,6 +23,16 @@ bool initJoursTable(){
         query.exec("insert into jours(jour) values('" + jour + "')");
 
     }
-    qDebug("ok");
     return true;
+}
+
+QString jourById(int jour_id){
+    QSqlQuery query(database::dataCreate()->dataConnect());
+
+    if( query.exec("SELECT jour FROM jours WHERE jour_id = " + QString::number(jour_id)) == false){
+        qDebug()<< "jourById" << query.lastError().text();
+        exit(1);
+    }
+    query.next();
+    return query.value(0).toString();
 }

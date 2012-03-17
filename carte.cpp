@@ -14,6 +14,7 @@
 #include <QString>
 //#include "Exception"
 #include "edit_point_gui.h"
+#include "data_csv.h"
 
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
@@ -39,6 +40,7 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionChoix_BDD,SIGNAL(triggered()),this,SLOT(choixBDD()));
     connect(ui->actionGestion_BDD,SIGNAL(triggered()),this,SLOT(gestionBDD()));
+    connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
     connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
 
@@ -54,6 +56,9 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     DownloadTimer->start();
 }
 
+void Carte::exportCSV(){
+    export_csv();
+}
 
 void Carte::choixBDD()
 {

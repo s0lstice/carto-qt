@@ -57,7 +57,8 @@ private slots:
     void ParserA(QNetworkReply *reponse);
     void ReponseQListClick(QListWidgetItem* Item);
     void ReponseGeometryClick(Geometry*,QPoint);
-    };
+    void exportCSV();
+};
 
 
 #endif // CARTE_H

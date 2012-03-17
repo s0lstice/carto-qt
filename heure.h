@@ -7,8 +7,8 @@
 class heure{
 private :
     int jour;
-    QTime debut;
-    QTime fin;
+    QString debut;
+    QString fin;
 
 
 public:
@@ -16,9 +16,11 @@ public:
 
     void setJour(int jour);
     void setDebut(QString debut);
-    void setDebut(QTime debut);
     void setFin(QString fin);
-    void setFin(QTime fin);
+
+    int getJour();
+    QString getDebut();
+    QString getFin();
 
 };
 

@@ -85,15 +85,16 @@ QVector<POI> getPointByCategorie(QString categorie){
     POI tmpPOI;
     QVector<POI> tabPOI;
 
-    if(query.exec("SELECT latitude, longitude, name, categorie_id FROM points WHERE categorie_id = '"+ QString::number(getCategorieIdByName(categorie)) +"'") == false)
+    if(query.exec("SELECT latitude, longitude, name, categorie_id, point_id FROM points WHERE categorie_id = "+ QString::number(getCategorieIdByName(categorie))) == false)
     {
         qDebug()<< "getPointByCategorie" << query.lastError().text();
         exit(1);
     }
 
     while(query.next()){
-        tmpPOI.SetCat(query.value(3).toString());
-        tmpPOI.SetName(getCategorieById(query.value(2).toInt()));
+        tmpPOI.SetId(query.value(4).toInt());
+        tmpPOI.SetCat(getCategorieById(query.value(3).toInt()));
+        tmpPOI.SetName(query.value(2).toString());
         tmpPOI.Setlat(query.value(0).toFloat());
         tmpPOI.Setlong(query.value(1).toFloat());
         tabPOI.append(tmpPOI);
@@ -113,14 +114,9 @@ QVector<POI> getPointByName(QString name){
 
    while(query.next()){
        tmpPOI.SetCat(getCategorieById(query.value(3).toInt()));
-       qDebug() << tmpPOI.GetCat();
        tmpPOI.SetName(query.value(2).toString());
-       qDebug() << tmpPOI.GetName();
        tmpPOI.Setlat(query.value(0).toFloat());
-       qDebug() << tmpPOI.Getlat();
        tmpPOI.Setlong(query.value(1).toFloat());
-       qDebug() << tmpPOI.Getlon();
-
        tabPOI.append(tmpPOI);
    }
 
@@ -147,7 +143,6 @@ QVector<POI> getPoint(float latitude, float longitude, QString name){
        tmpPOI.SetName(query.value(2).toString());
        tmpPOI.Setlat(query.value(0).toFloat());
        tmpPOI.Setlong(query.value(1).toFloat());
-
        tabPOI.append(tmpPOI);
    }
 

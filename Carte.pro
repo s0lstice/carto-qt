@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     database.cpp \
     montrerpoint.cpp \
     edit_point_gui.cpp \
-    edite_categories.cpp
+    edite_categories.cpp \
+    data_csv.cpp
 
 HEADERS  += carte.h \
     POI.h \
@@ -39,7 +40,8 @@ HEADERS  += carte.h \
     data_categories.h \
     montrerpoint.h \
     edit_point_gui.h \
-    edite_categories.h
+    edite_categories.h \
+    data_csv.h
 
 
 

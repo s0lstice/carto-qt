@@ -7,6 +7,7 @@
 class POI {
 
  private :
+    int id;
     QString name;
     QString description;
     QString categorie;
@@ -16,13 +17,18 @@ class POI {
     float distance;
    public :
 
+    void SetId(int id){
+        this->id = id;
+    }
+
+    int GetId(){
+        return id;
+    }
 
     float GetDist()
     {
         return distance;
-
     }
-
 
     void SetDist(float dist)
     {

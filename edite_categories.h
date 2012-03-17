@@ -14,6 +14,7 @@ QT_END_NAMESPACE
 class edite_categories: public QDialog
 {
     Q_OBJECT
+
 public:
     edite_categories(QWidget *parent = 0);
 

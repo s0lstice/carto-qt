@@ -9,11 +9,11 @@
 #include "database.h"
 #include "data_points.h"
 #include <QtXml>
-#include <iostream>
+//#include <iostream>
 #include <QFile>
 #include <QString>
-#include "Exception"
-
+//#include "Exception"
+#include "edit_point_gui.h"
 
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
@@ -38,8 +38,10 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(mc,SIGNAL(viewChanged(QPointF,int)),this,SLOT(ZoomInv(QPointF,int)));
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionChoix_BDD,SIGNAL(triggered()),this,SLOT(choixBDD()));
+    connect(ui->actionGestion_BDD,SIGNAL(triggered()),this,SLOT(gestionBDD()));
     connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
+
     ProtectBDD = new QMutex();
     ProtectDraw = new QMutex();
     LectureBaseDDTimer = new QTimer();
@@ -50,8 +52,6 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(DownloadTimer,SIGNAL(timeout()),this,SLOT(DownloadAndParsage()));
     LectureBaseDDTimer->start();
     DownloadTimer->start();
-
-
 }
 
 
@@ -63,6 +63,11 @@ void Carte::choixBDD()
     ProtectBDD->unlock();
     choixFenetre->show();
     this->close();
+}
+
+void Carte::gestionBDD(){
+    edit_point_gui window(1);
+    window.exec();
 }
 
 void Carte::DownloadAndParsage()
@@ -171,9 +176,6 @@ ProtectBDD->unlock();
        return;
    }
 
-
-
-
 }
 
 void Carte::ParserA(QNetworkReply* reponse)
@@ -248,8 +250,6 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
         }
     }
     ProtectDraw->unlock();
-
-
 
 }
 void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)

@@ -23,7 +23,9 @@ SOURCES += main.cpp\
     data_heures.cpp \
     data_categories.cpp \
     database.cpp \
-    montrerpoint.cpp
+    montrerpoint.cpp \
+    edit_point_gui.cpp \
+    edite_categories.cpp
 
 HEADERS  += carte.h \
     POI.h \
@@ -35,12 +37,15 @@ HEADERS  += carte.h \
     data_jours.h \
     data_heures.h \
     data_categories.h \
-    montrerpoint.h
+    montrerpoint.h \
+    edit_point_gui.h \
+    edite_categories.h
 
 
 
 FORMS    += carte.ui \
     askdatabase.ui \
-    montrerpoint.ui
+    montrerpoint.ui \
+    edition_point.ui
 
 QT += xml

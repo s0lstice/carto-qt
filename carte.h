@@ -45,11 +45,13 @@ private:
     QVector<POI> VPOI;
     void Parser(QNetworkReply *reponse);
     void addPointThread(QString categorie, QString name, float latitude, float longitude);
+
 private slots:
     void AjouterPoints();
     void ZoomInv(QPointF,int);
     void PosLabel(int);
     void choixBDD();
+    void gestionBDD();
     void DownloadAndParsage();
     void LoadingDBBData();
     void ParserA(QNetworkReply *reponse);

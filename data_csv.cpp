@@ -22,7 +22,7 @@ void export_csv(){
 
     categories = getCategories();
     foreach(QString categorie, categories){
-        points = getPointByCategorie(categorie);
+        points = getPointByCategorie(categorie,99999);
 
         foreach(POI point, points){
             heures = getHeureByPoint(point.GetId());

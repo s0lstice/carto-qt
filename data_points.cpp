@@ -80,12 +80,12 @@ bool addPoint(QString categorie, QString name, float latitude, float longitude){
     return true;
 }
 
-QVector<POI> getPointByCategorie(QString categorie){
+QVector<POI> getPointByCategorie(QString categorie,int nbpts){
     QSqlQuery query(database::dataCreate()->dataConnect());
     POI tmpPOI;
     QVector<POI> tabPOI;
 
-    if(query.exec("SELECT latitude, longitude, name, categorie_id, point_id FROM points WHERE categorie_id = "+ QString::number(getCategorieIdByName(categorie))) == false)
+    if(query.exec("SELECT latitude, longitude, name, categorie_id, point_id FROM points WHERE categorie_id = "+ QString::number(getCategorieIdByName(categorie)) + "  LIMIT " + QString::number(nbpts) + " ;") == false)
     {
         qDebug()<< "getPointByCategorie" << query.lastError().text();
         exit(1);

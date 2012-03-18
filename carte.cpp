@@ -13,12 +13,13 @@
 #include "edit_point_gui.h"
 #include "data_csv.h"
 #include <QSettings>
+#include "data_categories.h"
 
 
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
     y=0;
-    cmpt=1;
+    cmpt=9;
     GestionnaireDeRequete = new QNetworkAccessManager();
 
     ui->setupUi(this);
@@ -39,6 +40,7 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionChoix_BDD,SIGNAL(triggered()),this,SLOT(choixBDD()));
     connect(ui->actionGestion_BDD,SIGNAL(triggered()),this,SLOT(gestionBDD()));
+    connect(ui->comboBox,SIGNAL(currentIndexChanged(int)),this,SLOT(ByCat(int)));
     connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
     connect(ui->lineEdit,SIGNAL(textChanged(QString)),this,SLOT(Chercher(QString)));
@@ -46,6 +48,7 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
 
+    ui->comboBox->addItem("");
 
     ProtectBDD = new QMutex();
     ProtectDraw = new QMutex();
@@ -101,6 +104,7 @@ void Carte::Centrer()
 void Carte::gestionBDD(){
     edit_point_gui window(1);
     window.exec();
+    cmpt=9;
 }
 
 void Carte::DownloadAndParsage()
@@ -171,7 +175,7 @@ void Carte::LoadingDBBData()
     int i;
     ui->progressBar->setValue(y);
 
-    if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt==10))
+        if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt==10)||(cmpt==9))
     {
 
         if(cmpt==10)
@@ -187,6 +191,19 @@ void Carte::LoadingDBBData()
             AjouterPoints();
             return;
         }
+        if(cmpt==9)
+        {
+            QVector<QString> Categories = getCategories();
+
+            for(i=0;i<Categories.count();i++)
+            {
+                if(ui->comboBox->findText(Categories.value(i))==-1)
+                {
+                    ui->comboBox->addItem(Categories.value(i));
+                }
+            }
+            cmpt =1;
+        }
         PosxBak = Posx;
         PosyBak = Posy;
 
@@ -200,7 +217,7 @@ void Carte::LoadingDBBDataA()
 
    ProtectDraw->lock();
 
-   if(ui->lineEdit->text()=="")
+   if((ui->lineEdit->text()=="")&&(ui->comboBox->currentText()==""))
    {
    ProtectBDD->lock();
    VPOI.clear();
@@ -334,6 +351,14 @@ void Carte::Chercher(QString Chaine)
 {
     VPOI.clear();
     VPOI=getPointByName(Chaine.replace(QString("'"),QString(" ")),nbpstoshow);
+    cmpt=10;
+
+}
+
+void Carte::ByCat(int i)
+{
+    VPOI.clear();
+    VPOI=getPointByCategorie(ui->comboBox->currentText().replace(QString("'"),QString(" ")),nbpstoshow);
     cmpt=10;
 
 }

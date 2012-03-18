@@ -62,6 +62,7 @@ private slots:
     void ReponseGeometryClick(Geometry*,QPoint);
     void ModifNbPoint(int nbpoints);
     void Centrer();
+    void ByCat(int i );
 
 
     void exportCSV();

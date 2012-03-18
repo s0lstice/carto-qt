@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'montrerpoint.ui'
 **
-** Created: Fri 16. Mar 23:28:10 2012
+** Created: Sun 18. Mar 12:05:14 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

@@ -39,9 +39,9 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionChoix_BDD,SIGNAL(triggered()),this,SLOT(choixBDD()));
     connect(ui->actionGestion_BDD,SIGNAL(triggered()),this,SLOT(gestionBDD()));
-    connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
+    connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
-
+    connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
     ProtectBDD = new QMutex();
     ProtectDraw = new QMutex();
     LectureBaseDDTimer = new QTimer();
@@ -63,6 +63,25 @@ void Carte::choixBDD()
     ProtectBDD->unlock();
     choixFenetre->show();
     this->close();
+}
+void Carte::Centrer()
+{
+    ProtectDraw->lock();
+    int i = 0 ;
+    if(ui->listWidget->selectedItems().count()==1)
+    {
+        if(VPOI.count()>0)
+        {
+            for(i=0;i<VPOI.count();i++)
+            {
+                 if(VPOI.value(i).GetName()==ui->listWidget->selectedItems().value(0)->text())
+                 {
+                      mc->setView(QPointF(VPOI.value(i).Getlat(),VPOI.value(i).Getlon()));
+                 }
+            }
+        }
+    }
+    ProtectDraw->unlock();
 }
 
 void Carte::gestionBDD(){
@@ -103,6 +122,7 @@ void Carte::AjouterPoints()
     mainlayer->setVisible(true);
     free(pointpen);
 
+
 }
 
 void Carte::ZoomInv(QPointF Point,int Entier)
@@ -134,16 +154,24 @@ void Carte::LoadingDBBData()
 {
     int i;
     ui->progressBar->setValue(y);
-    ui->listWidget->clear();
-    for(i=0;i<VPOI.count();i++)
-    {
-        ui->listWidget->addItem(VPOI.value(i).GetName());
-    }
-    if((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))
+
+    if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt==10))
     {
 
+        if(cmpt==10)
+        {
+            cmpt=1;
+            AjouterPoints();
+            ui->listWidget->clear();
+            for(i=0;i<VPOI.count();i++)
+            {
+                ui->listWidget->addItem(VPOI.value(i).GetName());
+            }
+            return;
+        }
         PosxBak = Posx;
         PosyBak = Posy;
+
         QtConcurrent::run(this,&Carte::LoadingDBBDataA);
     }
 }
@@ -165,7 +193,7 @@ ProtectBDD->unlock();
            cmpt = 5;
            return;
        }
-        AjouterPoints();
+        cmpt = 10;
         ProtectDraw->unlock();
    }
    else
@@ -223,7 +251,7 @@ void Carte::ParserA(QNetworkReply* reponse)
   }
     doc.clear();
     reponse->close();
-    cmpt=1;
+    cmpt=10;
     qDebug("yeah Fin");
 }
 

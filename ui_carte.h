@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'carte.ui'
 **
-** Created: Fri 16. Mar 23:28:10 2012
+** Created: Sat 17. Mar 18:47:43 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,6 +34,7 @@ class Ui_Carte
 public:
     QAction *actionQuitter;
     QAction *actionChoix_BDD;
+    QAction *actionGestion_BDD;
     QWidget *centralWidget;
     QWidget *MapWidget;
     QSlider *verticalSlider;
@@ -41,7 +42,6 @@ public:
     QProgressBar *progressBar;
     QPushButton *BouttonModifier;
     QPushButton *BouttonAccesBDD;
-    QPushButton *BouttonAjouter;
     QListWidget *listWidget;
     QPushButton *BouttonCentrer;
     QMenuBar *menuBar;
@@ -63,6 +63,8 @@ public:
         actionQuitter->setObjectName(QString::fromUtf8("actionQuitter"));
         actionChoix_BDD = new QAction(Carte);
         actionChoix_BDD->setObjectName(QString::fromUtf8("actionChoix_BDD"));
+        actionGestion_BDD = new QAction(Carte);
+        actionGestion_BDD->setObjectName(QString::fromUtf8("actionGestion_BDD"));
         centralWidget = new QWidget(Carte);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         MapWidget = new QWidget(centralWidget);
@@ -85,19 +87,16 @@ public:
         progressBar->setTextDirection(QProgressBar::TopToBottom);
         BouttonModifier = new QPushButton(centralWidget);
         BouttonModifier->setObjectName(QString::fromUtf8("BouttonModifier"));
-        BouttonModifier->setGeometry(QRect(570, 520, 81, 23));
+        BouttonModifier->setGeometry(QRect(570, 340, 81, 23));
         BouttonAccesBDD = new QPushButton(centralWidget);
         BouttonAccesBDD->setObjectName(QString::fromUtf8("BouttonAccesBDD"));
-        BouttonAccesBDD->setGeometry(QRect(660, 520, 71, 23));
-        BouttonAjouter = new QPushButton(centralWidget);
-        BouttonAjouter->setObjectName(QString::fromUtf8("BouttonAjouter"));
-        BouttonAjouter->setGeometry(QRect(740, 520, 91, 23));
+        BouttonAccesBDD->setGeometry(QRect(740, 340, 91, 23));
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(570, 10, 261, 471));
+        listWidget->setGeometry(QRect(570, 10, 261, 321));
         BouttonCentrer = new QPushButton(centralWidget);
         BouttonCentrer->setObjectName(QString::fromUtf8("BouttonCentrer"));
-        BouttonCentrer->setGeometry(QRect(660, 490, 71, 23));
+        BouttonCentrer->setGeometry(QRect(660, 340, 71, 23));
         Carte->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Carte);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -114,6 +113,7 @@ public:
 
         menuBar->addAction(menuMenu->menuAction());
         menuMenu->addAction(actionChoix_BDD);
+        menuMenu->addAction(actionGestion_BDD);
         menuMenu->addAction(actionQuitter);
 
         retranslateUi(Carte);
@@ -126,10 +126,10 @@ public:
         Carte->setWindowTitle(QApplication::translate("Carte", "Carte", 0, QApplication::UnicodeUTF8));
         actionQuitter->setText(QApplication::translate("Carte", "Quitter", 0, QApplication::UnicodeUTF8));
         actionChoix_BDD->setText(QApplication::translate("Carte", "Choix BDD", 0, QApplication::UnicodeUTF8));
+        actionGestion_BDD->setText(QApplication::translate("Carte", "Gestion BDD", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("Carte", "0", 0, QApplication::UnicodeUTF8));
         BouttonModifier->setText(QApplication::translate("Carte", "Modifier", 0, QApplication::UnicodeUTF8));
         BouttonAccesBDD->setText(QApplication::translate("Carte", "Acces BDD", 0, QApplication::UnicodeUTF8));
-        BouttonAjouter->setText(QApplication::translate("Carte", "Ajouter", 0, QApplication::UnicodeUTF8));
         BouttonCentrer->setText(QApplication::translate("Carte", "Centrer", 0, QApplication::UnicodeUTF8));
         menuMenu->setTitle(QApplication::translate("Carte", "Menu", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

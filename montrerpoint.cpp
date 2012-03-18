@@ -6,8 +6,8 @@ MontrerPoint::MontrerPoint(POI PointDInteret,QWidget *parent) :
     ui(new Ui::MontrerPoint)
 {
     ui->setupUi(this);
-    ui->lineEdit->setText(PointDInteret.GetName());
-    ui->lineEdit_2->setText(PointDInteret.GetCat());
+    ui->lineEdit->setText(PointDInteret.GetCat());
+    ui->lineEdit_2->setText(PointDInteret.GetName());
     ui->lineEdit_3->setText(QString::number(PointDInteret.Getlat()));
     ui->lineEdit_4->setText(QString::number(PointDInteret.Getlon()));
     ui->plainTextEdit->appendPlainText(PointDInteret.GetDesc());
@@ -17,7 +17,6 @@ MontrerPoint::MontrerPoint(POI PointDInteret,QWidget *parent) :
    mapadapter = new OSMMapAdapter();
    mainlayer = new MapLayer("OpenStreetMap-Layer", mapadapter);
    mc->addLayer(mainlayer);
-
    mc->setView(QPointF(PointDInteret.Getlat(),PointDInteret.Getlon()));
    mc->setZoom(13);
    Temp.addWidget(mc);

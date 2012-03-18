@@ -36,6 +36,7 @@ private:
     float Posy;
     float PosxBak;
     float PosyBak;
+    CirclePoint* PointA;
     QTimer * LectureBaseDDTimer;
     QTimer * DownloadTimer;
     int cmpt;
@@ -57,6 +58,7 @@ private slots:
     void ParserA(QNetworkReply *reponse);
     void ReponseQListClick(QListWidgetItem* Item);
     void ReponseGeometryClick(Geometry*,QPoint);
+    void Centrer();
     };
 
 

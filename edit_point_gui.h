@@ -38,10 +38,6 @@ private slots:
     void on_fin_heur_editingFinished();
     void on_debut_heur_editingFinished();
 
-    void on_debut_heur_selectionChanged();
-
-    void on_fin_heur_selectionChanged();
-
     void on_categorie_point_but_clicked();
 
 private:

@@ -2,19 +2,18 @@
 #include "ui_carte.h"
 #include <QtGui>
 #include <QFormLayout>
-#include <QDebug>
 #include <QNetworkRequest>
 #include "askdatabase.h"
 #include "QtConcurrentRun"
 #include "database.h"
 #include "data_points.h"
 #include <QtXml>
-//#include <iostream>
 #include <QFile>
 #include <QString>
-//#include "Exception"
 #include "edit_point_gui.h"
 #include "data_csv.h"
+#include <QSettings>
+
 
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
@@ -33,31 +32,36 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     mc->setZoom(13);
     Temp.addWidget(mc);
     ui->MapWidget->setLayout(&Temp);
-
+    connect(ui->spinBox,SIGNAL(valueChanged(int)),this,SLOT(ModifNbPoint(int)));
     connect(ui->verticalSlider,SIGNAL(valueChanged(int)),this,SLOT(PosLabel(int)));
     connect(ui->verticalSlider,SIGNAL(valueChanged(int)),mc,SLOT(setZoom(int)));
     connect(mc,SIGNAL(viewChanged(QPointF,int)),this,SLOT(ZoomInv(QPointF,int)));
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionChoix_BDD,SIGNAL(triggered()),this,SLOT(choixBDD()));
     connect(ui->actionGestion_BDD,SIGNAL(triggered()),this,SLOT(gestionBDD()));
-<<<<<<< HEAD
     connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
-=======
     connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
-    connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
->>>>>>> 5a308a2996cbd4f18a8ac61f50227d480de9aab3
+    connect(ui->lineEdit,SIGNAL(textChanged(QString)),this,SLOT(Chercher(QString)));
+    connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
+
+
     ProtectBDD = new QMutex();
     ProtectDraw = new QMutex();
     LectureBaseDDTimer = new QTimer();
     DownloadTimer = new QTimer();
-    LectureBaseDDTimer->setInterval(250);
+    LectureBaseDDTimer->setInterval(50);
     DownloadTimer->setInterval(250);
     connect(LectureBaseDDTimer,SIGNAL(timeout()),this,SLOT(LoadingDBBData()));
     connect(DownloadTimer,SIGNAL(timeout()),this,SLOT(DownloadAndParsage()));
     LectureBaseDDTimer->start();
     DownloadTimer->start();
+    ui->spinBox->setValue(10);
+    nbpstoshow = 10 ;
+
+
+
 }
 
 void Carte::exportCSV(){
@@ -73,6 +77,7 @@ void Carte::choixBDD()
     choixFenetre->show();
     this->close();
 }
+
 void Carte::Centrer()
 {
     ProtectDraw->lock();
@@ -120,14 +125,16 @@ void Carte::AjouterPoints()
     int i;
     QPen* pointpen = new QPen(QColor(0,255,0));
     pointpen->setWidth(3);
+    mainlayer->setVisible(false);
     mainlayer->clearGeometries();
 
     for(i=0;i<VPOI.count();i++)
     {
         CirclePoint* PointA = new   CirclePoint(VPOI.value(i).Getlat(),VPOI.value(i).Getlon(),VPOI.value(i).GetName(),Point::Middle,pointpen);
         mainlayer->addGeometry(PointA);
+
     }
-    mainlayer->setVisible(false);
+
     mainlayer->setVisible(true);
     free(pointpen);
 
@@ -170,39 +177,47 @@ void Carte::LoadingDBBData()
         if(cmpt==10)
         {
             cmpt=1;
-            AjouterPoints();
             ui->listWidget->clear();
+            ui->listWidget->setUpdatesEnabled(false);
             for(i=0;i<VPOI.count();i++)
             {
                 ui->listWidget->addItem(VPOI.value(i).GetName());
             }
+            ui->listWidget->setUpdatesEnabled(true);
+            AjouterPoints();
             return;
         }
         PosxBak = Posx;
         PosyBak = Posy;
 
         QtConcurrent::run(this,&Carte::LoadingDBBDataA);
+
     }
 }
 
 void Carte::LoadingDBBDataA()
 {
 
-
    ProtectDraw->lock();
- ProtectBDD->lock();
-   VPOI = getPointImp(Posx,Posy);
-ProtectBDD->unlock();
+
+   if(ui->lineEdit->text()=="")
+   {
+   ProtectBDD->lock();
+   VPOI.clear();
+   VPOI = getPointImp(Posx,Posy,nbpstoshow);
+   ProtectBDD->unlock();
+   }
+
    if(VPOI.count()!=0)
    {
-       if(VPOI.value(1).GetDist()>0.01)
+       if(VPOI.value(1).GetDist()>0.00005)
        {
            ProtectDraw->unlock();
            qDebug() << "download";
            cmpt = 5;
            return;
        }
-        cmpt = 10;
+        cmpt=10;
         ProtectDraw->unlock();
    }
    else
@@ -289,6 +304,14 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
     ProtectDraw->unlock();
 
 }
+
+   void Carte::ModifNbPoint(int nbpoints)
+   {
+        nbpstoshow = nbpoints;
+        cmpt=10;
+
+   }
+
 void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
 {
     int iterateur=0;
@@ -305,4 +328,12 @@ void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
         }
     }
     ProtectDraw->unlock();
+}
+
+void Carte::Chercher(QString Chaine)
+{
+    VPOI.clear();
+    VPOI=getPointByName(Chaine.replace(QString("'"),QString(" ")),nbpstoshow);
+    cmpt=10;
+
 }

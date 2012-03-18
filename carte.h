@@ -40,6 +40,7 @@ private:
     QTimer * LectureBaseDDTimer;
     QTimer * DownloadTimer;
     int cmpt;
+    int nbpstoshow;
     void LoadingDBBDataA();
     QMutex * ProtectBDD;
     QMutex * ProtectDraw;
@@ -48,6 +49,7 @@ private:
     void addPointThread(QString categorie, QString name, float latitude, float longitude);
 
 private slots:
+    void Chercher(QString Chaine);
     void AjouterPoints();
     void ZoomInv(QPointF,int);
     void PosLabel(int);
@@ -58,13 +60,13 @@ private slots:
     void ParserA(QNetworkReply *reponse);
     void ReponseQListClick(QListWidgetItem* Item);
     void ReponseGeometryClick(Geometry*,QPoint);
-<<<<<<< HEAD
+    void ModifNbPoint(int nbpoints);
     void Centrer();
-    };
-=======
+
+
     void exportCSV();
 };
->>>>>>> 5a308a2996cbd4f18a8ac61f50227d480de9aab3
+
 
 
 #endif // CARTE_H

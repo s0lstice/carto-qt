@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'carte.ui'
 **
-** Created: Sat 17. Mar 18:47:43 2012
+** Created: Sun 18. Mar 18:15:17 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,8 +14,10 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
 #include <QtGui/QListWidget>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
@@ -23,8 +25,10 @@
 #include <QtGui/QProgressBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QSlider>
+#include <QtGui/QSpinBox>
 #include <QtGui/QStatusBar>
 #include <QtGui/QToolBar>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,17 +39,27 @@ public:
     QAction *actionQuitter;
     QAction *actionChoix_BDD;
     QAction *actionGestion_BDD;
+    QAction *actionExport_BDD;
     QWidget *centralWidget;
     QWidget *MapWidget;
     QSlider *verticalSlider;
     QLabel *label;
     QProgressBar *progressBar;
-    QPushButton *BouttonModifier;
-    QPushButton *BouttonAccesBDD;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_2;
+    QSpinBox *spinBox;
+    QWidget *widget1;
+    QVBoxLayout *verticalLayout;
     QListWidget *listWidget;
     QPushButton *BouttonCentrer;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_3;
+    QLineEdit *lineEdit;
     QMenuBar *menuBar;
     QMenu *menuMenu;
+    QMenu *menuBDD;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -65,6 +79,8 @@ public:
         actionChoix_BDD->setObjectName(QString::fromUtf8("actionChoix_BDD"));
         actionGestion_BDD = new QAction(Carte);
         actionGestion_BDD->setObjectName(QString::fromUtf8("actionGestion_BDD"));
+        actionExport_BDD = new QAction(Carte);
+        actionExport_BDD->setObjectName(QString::fromUtf8("actionExport_BDD"));
         centralWidget = new QWidget(Carte);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         MapWidget = new QWidget(centralWidget);
@@ -85,24 +101,70 @@ public:
         progressBar->setAlignment(Qt::AlignCenter);
         progressBar->setInvertedAppearance(false);
         progressBar->setTextDirection(QProgressBar::TopToBottom);
-        BouttonModifier = new QPushButton(centralWidget);
-        BouttonModifier->setObjectName(QString::fromUtf8("BouttonModifier"));
-        BouttonModifier->setGeometry(QRect(570, 340, 81, 23));
-        BouttonAccesBDD = new QPushButton(centralWidget);
-        BouttonAccesBDD->setObjectName(QString::fromUtf8("BouttonAccesBDD"));
-        BouttonAccesBDD->setGeometry(QRect(740, 340, 91, 23));
-        listWidget = new QListWidget(centralWidget);
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(570, 370, 251, 22));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout->addWidget(label_2);
+
+        spinBox = new QSpinBox(widget);
+        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        spinBox->setMaximum(99999);
+        spinBox->setValue(10);
+
+        horizontalLayout->addWidget(spinBox);
+
+        widget1 = new QWidget(centralWidget);
+        widget1->setObjectName(QString::fromUtf8("widget1"));
+        widget1->setGeometry(QRect(570, 10, 258, 351));
+        verticalLayout = new QVBoxLayout(widget1);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        listWidget = new QListWidget(widget1);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(570, 10, 261, 321));
-        BouttonCentrer = new QPushButton(centralWidget);
+
+        verticalLayout->addWidget(listWidget);
+
+        BouttonCentrer = new QPushButton(widget1);
         BouttonCentrer->setObjectName(QString::fromUtf8("BouttonCentrer"));
-        BouttonCentrer->setGeometry(QRect(660, 340, 71, 23));
+
+        verticalLayout->addWidget(BouttonCentrer);
+
+        widget2 = new QWidget(centralWidget);
+        widget2->setObjectName(QString::fromUtf8("widget2"));
+        widget2->setGeometry(QRect(570, 400, 251, 25));
+        horizontalLayout_2 = new QHBoxLayout(widget2);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_3 = new QLabel(widget2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_2->addWidget(label_3);
+
+        lineEdit = new QLineEdit(widget2);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        horizontalLayout_2->addWidget(lineEdit);
+
         Carte->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Carte);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 849, 21));
         menuMenu = new QMenu(menuBar);
         menuMenu->setObjectName(QString::fromUtf8("menuMenu"));
+        menuBDD = new QMenu(menuBar);
+        menuBDD->setObjectName(QString::fromUtf8("menuBDD"));
         Carte->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Carte);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -112,9 +174,11 @@ public:
         Carte->setStatusBar(statusBar);
 
         menuBar->addAction(menuMenu->menuAction());
-        menuMenu->addAction(actionChoix_BDD);
-        menuMenu->addAction(actionGestion_BDD);
+        menuBar->addAction(menuBDD->menuAction());
         menuMenu->addAction(actionQuitter);
+        menuBDD->addAction(actionChoix_BDD);
+        menuBDD->addAction(actionGestion_BDD);
+        menuBDD->addAction(actionExport_BDD);
 
         retranslateUi(Carte);
 
@@ -127,11 +191,13 @@ public:
         actionQuitter->setText(QApplication::translate("Carte", "Quitter", 0, QApplication::UnicodeUTF8));
         actionChoix_BDD->setText(QApplication::translate("Carte", "Choix BDD", 0, QApplication::UnicodeUTF8));
         actionGestion_BDD->setText(QApplication::translate("Carte", "Gestion BDD", 0, QApplication::UnicodeUTF8));
+        actionExport_BDD->setText(QApplication::translate("Carte", "Export BDD", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("Carte", "0", 0, QApplication::UnicodeUTF8));
-        BouttonModifier->setText(QApplication::translate("Carte", "Modifier", 0, QApplication::UnicodeUTF8));
-        BouttonAccesBDD->setText(QApplication::translate("Carte", "Acces BDD", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("Carte", "Nombre de points \303\240 afficher :", 0, QApplication::UnicodeUTF8));
         BouttonCentrer->setText(QApplication::translate("Carte", "Centrer", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("Carte", "Chaine De Recherche :", 0, QApplication::UnicodeUTF8));
         menuMenu->setTitle(QApplication::translate("Carte", "Menu", 0, QApplication::UnicodeUTF8));
+        menuBDD->setTitle(QApplication::translate("Carte", "BDD", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

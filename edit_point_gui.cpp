@@ -401,10 +401,11 @@ void edit_point_gui::insert_point(){
 */
 void edit_point_gui::on_debut_heur_editingFinished()
 {
-    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]:[0-9][0-9]$");
+    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]$");
     if(exp.exactMatch(debut_heur->text()) == false){
         QMessageBox::warning(this, tr("Erreur"),
-                             tr("l'heur doit etre sous la forme suivante HH:mm"));
+                             tr("l'heure doit etre sous la forme suivante HH:mm"));
+        debut_heur->setText("00:00");
     }
 }
 
@@ -414,38 +415,43 @@ void edit_point_gui::on_debut_heur_editingFinished()
 */
 void edit_point_gui::on_fin_heur_editingFinished()
 {
-    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]:[0-9][0-9]$");
+    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]$");
     if(exp.exactMatch(fin_heur->text()) == false){
         QMessageBox::warning(this, tr("Erreur"),
                              tr("l'heur doit etre sous la forme suivante HH:mm"));
+        fin_heur->setText("00:00");
     }
 }
-
+/*
 /*! action lors de la modification d'une heure
     @param debut_heur : QLineEdit : élément de edittion_point.ui.
     @note : role : verifier que le format ecrit soit le bon.
-*/
+*\/
 void edit_point_gui::on_debut_heur_selectionChanged()
 {
-    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]:[0-9][0-9]$");
+    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]$");
     if(exp.exactMatch(debut_heur->text()) == false){
         QMessageBox::warning(this, tr("Erreur"),
                              tr("l'heur doit etre sous la forme suivante HH:mm"));
+        debut_heur->setText("00:00");
     }
 }
-
+*/
+/*
 /*! action lors de la modification d'une heure
     @param fin_heur : QLineEdit : élément de edittion_point.ui.
     @note : role : verifier que le format ecrit soit le bon.
-*/
+*\/
 void edit_point_gui::on_fin_heur_selectionChanged()
 {
-    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]:[0-9][0-9]$");
+    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]$");
     if(exp.exactMatch(fin_heur->text()) == false){
         QMessageBox::warning(this, tr("Erreur"),
                              tr("l'heur doit etre sous la forme suivante HH:mm"));
+        debut_heur->setText("00:00");
     }
 }
+*/
 
 /*! ajout/modification de categorie(s)
     @note role :-fait appelle a la classe edite_categories pour afficher la fenetre d'edition\n

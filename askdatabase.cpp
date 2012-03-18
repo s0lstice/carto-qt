@@ -3,6 +3,9 @@
 #include "carte.h"
 #include "QDebug"
 #include "database.h"
+#include "data_categories.h"
+#include <QSettings>
+#include <string>
 
 AskDataBase::AskDataBase(QWidget *parent) :
     QMainWindow(parent),
@@ -64,6 +67,15 @@ void AskDataBase::CreationCarte(){
     Carte * WCarte = new Carte();
     filename= ui->comboBox->currentText().remove(".db");
     database::dataCreate(filename);
+    int i = 0 ;
+    QStringList Categories;
+    QSettings settings("CartoTeam", "Cartographe");
+    Categories.append(settings.value("Categories").toStringList());
+    for(i=0;i<Categories.count();i++)
+    {
+        addCategorie(Categories.value(i));
+    }
+
     WCarte->show();
 }
 

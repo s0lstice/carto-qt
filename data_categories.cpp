@@ -9,6 +9,7 @@ bool initCategoriesTable(){
                   "categorie VARCHAR(64),"
                   "unique (categorie))");
 
+
     return true;
 }
 

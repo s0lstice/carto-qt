@@ -19,15 +19,15 @@ bool initPointsTable(){
 
     return true;
 }
-QVector<POI> getPointImp(float latitude, float longitude)
+QVector<POI> getPointImp(float latitude, float longitude,int nbpts)
 {
    QSqlQuery query(database::dataCreate()->dataConnect());
    POI tmpPOI;
    QVector<POI> tabPOI;
-
-   if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points ORDER BY distance LIMIT 10;") == false)
+   qDebug() << nbpts;
+   if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
    {
-      return tabPOI;
+       return tabPOI;
    }
 
    while(query.next()){
@@ -102,11 +102,12 @@ QVector<POI> getPointByCategorie(QString categorie){
     return tabPOI;
 }
 
-QVector<POI> getPointByName(QString name){
+QVector<POI> getPointByName(QString name,int nbpts){
    QSqlQuery query(database::dataCreate()->dataConnect());
    POI tmpPOI;
    QVector<POI> tabPOI;
-   if(query.exec("SELECT latitude, longitude, name, categorie_id FROM points WHERE name = '"+ name +"'") == false)
+
+   if(query.exec("SELECT latitude, longitude, name, categorie_id FROM points WHERE name like '"+ name +"%' OR description like '" + name +"%' LIMIT " + QString::number(nbpts)) == false)
    {
        qDebug()<< "getPointByName" << query.lastError().text();
        exit(1);

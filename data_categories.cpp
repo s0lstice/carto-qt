@@ -50,3 +50,21 @@ int getCategorieIdByName(QString name){
      query.next();
      return query.value(0).toInt();
 }
+
+QVector<QString> getCategories()
+{
+   QSqlQuery query(database::dataCreate()->dataConnect());
+   QVector<QString> categories;
+
+   if(query.exec("SELECT categorie FROM categories ORDER BY categorie ASC;") == false)
+   {
+       qDebug()<< "getCategories" << query.lastError().text();
+       exit(1);
+   }
+
+   while(query.next()){
+       categories.append(query.value(0).toString());
+   }
+
+   return categories;
+}

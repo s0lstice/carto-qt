@@ -144,18 +144,25 @@
     <property name="title">
      <string>Menu</string>
     </property>
-    <addaction name="actionChoix_BDD"/>
-    <addaction name="actionGestion_BDD"/>
     <addaction name="actionQuitter"/>
    </widget>
+   <widget class="QMenu" name="menuBDD">
+    <property name="title">
+     <string>BDD</string>
+    </property>
+    <addaction name="actionChoix_BDD"/>
+    <addaction name="actionGestion_BDD"/>
+    <addaction name="actionExport_BDD"/>
+   </widget>
    <addaction name="menuMenu"/>
+   <addaction name="menuBDD"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>false</bool>
+    <bool>true</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -172,6 +179,11 @@
   <action name="actionGestion_BDD">
    <property name="text">
     <string>Gestion BDD</string>
+   </property>
+  </action>
+  <action name="actionExport_BDD">
+   <property name="text">
+    <string>Export BDD</string>
    </property>
   </action>
  </widget>

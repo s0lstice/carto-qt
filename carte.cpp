@@ -14,6 +14,7 @@
 #include <QString>
 //#include "Exception"
 #include "edit_point_gui.h"
+#include "data_csv.h"
 
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
@@ -39,7 +40,12 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionChoix_BDD,SIGNAL(triggered()),this,SLOT(choixBDD()));
     connect(ui->actionGestion_BDD,SIGNAL(triggered()),this,SLOT(gestionBDD()));
+<<<<<<< HEAD
     connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
+=======
+    connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
+    connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
+>>>>>>> 5a308a2996cbd4f18a8ac61f50227d480de9aab3
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
     ProtectBDD = new QMutex();
@@ -54,6 +60,9 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     DownloadTimer->start();
 }
 
+void Carte::exportCSV(){
+    export_csv();
+}
 
 void Carte::choixBDD()
 {

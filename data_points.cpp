@@ -15,21 +15,29 @@ bool initPointsTable(){
                   "longitude FLOAT, "
                   "description VARCHAR(1024), "
                   "FOREIGN KEY(categorie_id) REFERENCES categories(point_id), "
-                  "unique ( latitude, longitude))");
+                  "unique ( name,latitude, longitude,categorie_id))");
 
     return true;
 }
-QVector<POI> getPointImp(float latitude, float longitude,int nbpts)
+QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,QString Cat)
 {
    QSqlQuery query(database::dataCreate()->dataConnect());
    POI tmpPOI;
    QVector<POI> tabPOI;
-   qDebug() << nbpts;
-   if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
+   if(Cat!="")
    {
-       return tabPOI;
+       if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE categorie_id = "+ QString::number(getCategorieIdByName(Cat)) + " AND name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
+       {
+           return tabPOI;
+       }
+    }
+   else
+   {
+       if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
+       {
+           return tabPOI;
+       }
    }
-
    while(query.next()){
        tmpPOI.SetCat(getCategorieById(query.value(3).toInt()));
        tmpPOI.SetName(query.value(2).toString());
@@ -42,7 +50,7 @@ QVector<POI> getPointImp(float latitude, float longitude,int nbpts)
    return tabPOI;
 }
 bool addPoint(QString categorie, QString name, float latitude, float longitude, QString description){
-    qDebug("Ajout");
+
     QSqlQuery query(database::dataCreate()->dataConnect());
 
     addCategorie(categorie);

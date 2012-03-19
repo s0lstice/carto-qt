@@ -63,7 +63,8 @@ private slots:
     void ModifNbPoint(int nbpoints);
     void Centrer();
     void ByCat(int i );
-
+    void langue_englais();
+    void langue_francais();
 
     void exportCSV();
 };

@@ -14,7 +14,7 @@ QString database::dataName = "";
 database::database(QString name)
 {
     db = QSqlDatabase :: addDatabase("QSQLITE");
-
+    qDebug()<<"Le nom est " << name;
     db.setDatabaseName(name + ".db");
     if(db.open() == false){
         throw(db.lastError());

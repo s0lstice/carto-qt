@@ -3,7 +3,6 @@
 #include <QtGui>
 #include "data_categories.h"
 #include "edite_categories.h"
-
 #include "data_gui.h"
 
 /*! met en place le model de point
@@ -27,19 +26,19 @@ void edit_point_gui::init_table_point(){
 
 }
 
-/*! desalocation du moel de point
-    @param modelpoints : QSqlRelationalTableModel [attirbut privé] contien le model de point
+/*! desalocation du model de point
+    @param modelpoints : QSqlRelationalTableModel [attirbut priv�e] contient le model de point
 */
 void edit_point_gui::delete_table_point(){
     delete modelpoints;
 }
 
 /*! met en place l'affichage des points sous forme de table
-    @param table_point : QTableView : élément de edittion_point.ui.
-    @param submit_point : QPushButton : élément de edittion_point.ui.
-    @param jout_point : QPushButton : élément de edittion_point.ui.
-    @param supr_point : QPushButton : élément de edittion_point.ui.
-    @param modelpoints : QSqlRelationalTableModel [attirbut privé] : contien le model de point
+    @param table_point : QTableView : élément de edition_point.ui.
+    @param submit_point : QPushButton : élément de edition_point.ui.
+    @param jout_point : QPushButton : élément de edition_point.ui.
+    @param supr_point : QPushButton : élément de edition_point.ui.
+    @param modelpoints : QSqlRelationalTableModel [attribut privé] : contient le model de point
     @note role : \n -charge le modelpoint dans une table_point, \n
         -Masque la colonnes des identifiants, \n
         -redimentionne la colonne description en fonction de la place restante dans la vue, \n

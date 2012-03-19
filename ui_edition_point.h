@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'edition_point.ui'
 **
-** Created: Sun 18. Mar 12:05:14 2012
+** Created: Mon 19. Mar 09:41:59 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -87,12 +87,18 @@ public:
         lat_point = new QDoubleSpinBox(Point);
         lat_point->setObjectName(QString::fromUtf8("lat_point"));
         lat_point->setGeometry(QRect(92, 91, 141, 27));
+        lat_point->setDecimals(5);
+        lat_point->setMinimum(-100);
+        lat_point->setMaximum(100);
         Lon_point_lab = new QLabel(Point);
         Lon_point_lab->setObjectName(QString::fromUtf8("Lon_point_lab"));
         Lon_point_lab->setGeometry(QRect(10, 127, 91, 17));
         lon_point = new QDoubleSpinBox(Point);
         lon_point->setObjectName(QString::fromUtf8("lon_point"));
         lon_point->setGeometry(QRect(92, 122, 141, 27));
+        lon_point->setDecimals(5);
+        lon_point->setMinimum(-100);
+        lon_point->setMaximum(100);
         decription_point_lab = new QLabel(Point);
         decription_point_lab->setObjectName(QString::fromUtf8("decription_point_lab"));
         decription_point_lab->setGeometry(QRect(10, 160, 81, 17));

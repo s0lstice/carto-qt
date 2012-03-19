@@ -15,9 +15,11 @@ public:
 
     static database *dataCreate(QString name)
     {
+
         if (NULL == _singleton)
         {
             dataName = name;
+
             _singleton = new database(dataName);
         }
         return _singleton;
@@ -25,6 +27,8 @@ public:
 
     static database *dataCreate()
     {
+
+
         if (NULL == _singleton)
         {
             _singleton = new database(dataName);

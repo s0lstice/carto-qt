@@ -17,8 +17,7 @@ AskDataBase::AskDataBase(QWidget *parent) :
     connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(ValidateFile()));
     connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(CreateFile()));
     connect(ui->pushButton_4,SIGNAL(clicked()),this,SLOT(SelectFile()));
-    // On remplit une QStringList avec chacun des filtres désirés
-    // On sélectionne le répertoire à partir duquel on va rechercher les fichiers .db
+
     QString MyAppDirPath =  QCoreApplication::applicationDirPath();
     QStringList listFilter;
     listFilter << "*.db";
@@ -27,7 +26,6 @@ AskDataBase::AskDataBase(QWidget *parent) :
     int i = 0;
     for(i=0;i<FIL.count();i++)
     {
-        qDebug("File found");
         ui->comboBox->addItem(FIL[i]);
     }
     free(DirA);
@@ -52,21 +50,11 @@ void AskDataBase::SelectFile(void)
 
 void AskDataBase::CreateFile(void)
 {
-
-    CreationCarte();
-    this->close();
-}
-
-void AskDataBase::ValidateFile(void)
-{
-    CreationCarte();
-    this->close();
-}
-
-void AskDataBase::CreationCarte(){
     Carte * WCarte = new Carte();
+    qDebug("ici");
     filename= ui->comboBox->currentText().remove(".db");
     database::dataCreate(filename);
+
     int i = 0 ;
     QStringList Categories;
     QSettings settings("CartoTeam", "Cartographe");
@@ -77,5 +65,29 @@ void AskDataBase::CreationCarte(){
     }
 
     WCarte->show();
+
+    this->close();
+}
+
+void AskDataBase::ValidateFile(void)
+{
+
+    Carte * WCarte = new Carte();
+
+        filename= ui->comboBox->currentText().remove(".db");
+        database::dataCreate(filename);
+
+        int i = 0 ;
+        QStringList Categories;
+        QSettings settings("CartoTeam", "Cartographe");
+        Categories.append(settings.value("Categories").toStringList());
+        for(i=0;i<Categories.count();i++)
+        {
+            addCategorie(Categories.value(i));
+        }
+
+
+        WCarte->show();
+        this->close();
 }
 

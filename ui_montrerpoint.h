@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'montrerpoint.ui'
 **
-** Created: Mon 19. Mar 22:13:33 2012
+** Created: Tue 20. Mar 11:22:24 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -31,7 +31,6 @@ class Ui_MontrerPoint
 {
 public:
     QWidget *widget;
-    QPushButton *BouttonFermer;
     QWidget *widget1;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
@@ -50,6 +49,10 @@ public:
     QLabel *label_5;
     QPlainTextEdit *plainTextEdit;
     QTableWidget *tableWidget;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *BouttonModification;
+    QPushButton *BouttonFermer;
 
     void setupUi(QDialog *MontrerPoint)
     {
@@ -59,9 +62,6 @@ public:
         widget = new QWidget(MontrerPoint);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(9, 9, 231, 351));
-        BouttonFermer = new QPushButton(MontrerPoint);
-        BouttonFermer->setObjectName(QString::fromUtf8("BouttonFermer"));
-        BouttonFermer->setGeometry(QRect(580, 370, 75, 23));
         widget1 = new QWidget(MontrerPoint);
         widget1->setObjectName(QString::fromUtf8("widget1"));
         widget1->setGeometry(QRect(250, 10, 411, 351));
@@ -79,6 +79,7 @@ public:
 
         lineEdit_2 = new QLineEdit(widget1);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setReadOnly(true);
 
         horizontalLayout->addWidget(lineEdit_2);
 
@@ -94,6 +95,7 @@ public:
 
         lineEdit = new QLineEdit(widget1);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setReadOnly(true);
 
         horizontalLayout_2->addWidget(lineEdit);
 
@@ -109,6 +111,7 @@ public:
 
         lineEdit_3 = new QLineEdit(widget1);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setReadOnly(true);
 
         horizontalLayout_3->addWidget(lineEdit_3);
 
@@ -119,6 +122,7 @@ public:
 
         lineEdit_4 = new QLineEdit(widget1);
         lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setReadOnly(true);
 
         horizontalLayout_3->addWidget(lineEdit_4);
 
@@ -134,6 +138,7 @@ public:
 
         plainTextEdit = new QPlainTextEdit(widget1);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+        plainTextEdit->setReadOnly(true);
 
         horizontalLayout_4->addWidget(plainTextEdit);
 
@@ -144,16 +149,34 @@ public:
         if (tableWidget->columnCount() < 3)
             tableWidget->setColumnCount(3);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        tableWidget->setSortingEnabled(true);
         tableWidget->setRowCount(0);
         tableWidget->setColumnCount(3);
         tableWidget->horizontalHeader()->setVisible(true);
         tableWidget->horizontalHeader()->setCascadingSectionResizes(true);
-        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
 
         verticalLayout->addWidget(tableWidget);
 
 
         verticalLayout_2->addLayout(verticalLayout);
+
+        widget2 = new QWidget(MontrerPoint);
+        widget2->setObjectName(QString::fromUtf8("widget2"));
+        widget2->setGeometry(QRect(490, 370, 158, 25));
+        horizontalLayout_5 = new QHBoxLayout(widget2);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        BouttonModification = new QPushButton(widget2);
+        BouttonModification->setObjectName(QString::fromUtf8("BouttonModification"));
+
+        horizontalLayout_5->addWidget(BouttonModification);
+
+        BouttonFermer = new QPushButton(widget2);
+        BouttonFermer->setObjectName(QString::fromUtf8("BouttonFermer"));
+
+        horizontalLayout_5->addWidget(BouttonFermer);
 
 
         retranslateUi(MontrerPoint);
@@ -164,12 +187,13 @@ public:
     void retranslateUi(QDialog *MontrerPoint)
     {
         MontrerPoint->setWindowTitle(QApplication::translate("MontrerPoint", "Dialog", 0, QApplication::UnicodeUTF8));
-        BouttonFermer->setText(QApplication::translate("MontrerPoint", "Fermer", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MontrerPoint", "Nom :", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MontrerPoint", "Categorie :", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MontrerPoint", "Latitude :", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("MontrerPoint", "Longitude :", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("MontrerPoint", "Description :", 0, QApplication::UnicodeUTF8));
+        BouttonModification->setText(QApplication::translate("MontrerPoint", "Modification", 0, QApplication::UnicodeUTF8));
+        BouttonFermer->setText(QApplication::translate("MontrerPoint", "Fermer", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -22,7 +22,6 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 
     cmpt=1;
     GestionnaireDeRequete = new QNetworkAccessManager();
-
     ui->setupUi(this);
     QVBoxLayout Temp;
     mc = new MapControl(QSize(480, 480));
@@ -46,24 +45,18 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->actionAnglais,SIGNAL(triggered()),this,SLOT(langue_englais()));
     connect(ui->actionFrancais,SIGNAL(triggered()),this,SLOT(langue_francais()));
     connect(ui->comboBox,SIGNAL(currentIndexChanged(int)),this,SLOT(ByCat(int)));
-
     connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
     connect(ui->lineEdit,SIGNAL(textChanged(QString)),this,SLOT(Chercher(QString)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
-
     ui->comboBox->addItem("");
-
     ProtectBDD = new QMutex();
     ProtectDraw = new QMutex();
     LectureBaseDDTimer = new QTimer();
     DownloadTimer = new QTimer();
     LectureBaseDDTimer->setInterval(50);
-    DownloadTimer->setInterval(250);
     connect(LectureBaseDDTimer,SIGNAL(timeout()),this,SLOT(LoadingDBBData()));
-    connect(DownloadTimer,SIGNAL(timeout()),this,SLOT(DownloadAndParsage()));
     LectureBaseDDTimer->start();
-    DownloadTimer->start();
     ui->spinBox->setValue(10);
     nbpstoshow = 10 ;
     int i ;
@@ -91,9 +84,6 @@ void Carte::langue_englais(){
 
 void Carte::langue_francais(){
     Carte * WCarte = new Carte();
-
-
-
     QTranslator translator;
     translator.load("langue_fr");
     application *app = application::appInit();
@@ -144,38 +134,32 @@ void Carte::gestionBDD(){
     cmpt=9;
 }
 
-void Carte::DownloadAndParsage()
-{
 
-    if(cmpt==5)
-    {
-    cmpt=10;
-
-    QString Urlp = QString("http://www.geovelo.fr/api_test.php?lon=" + QString::number(Posx) + "&lat=" + QString::number(Posy));
-    QUrl url = QUrl(Urlp);
-    QNetworkRequest requete(url);
-    GestionnaireDeRequete->get(requete);
-    connect( GestionnaireDeRequete, SIGNAL(finished(QNetworkReply*)), this, SLOT(ParserA(QNetworkReply*)));
-    }
-
-}
 
 
 void Carte::AjouterPoints()
 {
-    int i;
-    QPen* pointpen = new QPen(QColor(0,255,0));
-    pointpen->setWidth(3);
-    mainlayer->setVisible(false);
-    mainlayer->clearGeometries();
 
+
+    int i;
+
+    QPen* pointpen = new QPen(QColor(0,0,0));
+    QVector<QString>A=getCategories();
+    mainlayer->clearGeometries();
+    pointpen->setWidth(3);
+    pointpen->setColor(QColor(0,127,255));
     for(i=0;i<VPOI.count();i++)
     {
+
+
         CirclePoint* PointA = new   CirclePoint(VPOI.value(i).Getlat(),VPOI.value(i).Getlon(),VPOI.value(i).GetName(),Point::Middle,pointpen);
         mainlayer->addGeometry(PointA);
+
     }
-    mainlayer->setVisible(true);
     free(pointpen);
+    mainlayer->setVisible(false);
+    mainlayer->setVisible(true);
+
 }
 
 void Carte::ZoomInv(QPointF Point,int Entier)
@@ -217,7 +201,7 @@ void Carte::LoadingDBBData()
     }
 
 
-    if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt==10)||(cmpt==9))
+    if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt>=5))
     {
 
         if(cmpt==10)
@@ -226,24 +210,17 @@ void Carte::LoadingDBBData()
                 ui->listWidget->clear();
                 ui->listWidget->setUpdatesEnabled(false);
                 for(i=0;i<VPOI.count();i++)
-
                 {
                     ui->listWidget->addItem(VPOI.value(i).GetName());
                 }
                 ui->listWidget->setUpdatesEnabled(true);
+                qDebug("omega");
                 AjouterPoints();
                 return;
-            }
+        }
 
-
-
-
-            if(cmpt==9)
-
-
-
-
-            {
+        if(cmpt==9)
+        {
 
                 QVector<QString> Categories = getCategories();
 
@@ -255,12 +232,21 @@ void Carte::LoadingDBBData()
                     }
                 }
                 cmpt =1;
-            }
-
+        }
+        if(cmpt==5)
+        {
+                ProtectDraw->unlock();
+                cmpt=10;
+                QString Urlp = QString("http://www.geovelo.fr/api_test.php?lon=" + QString::number(Posx) + "&lat=" + QString::number(Posy));
+                QUrl url = QUrl(Urlp);
+                QNetworkRequest requete(url);
+                GestionnaireDeRequete->get(requete);
+                connect( GestionnaireDeRequete, SIGNAL(finished(QNetworkReply*)), this, SLOT(ParserA(QNetworkReply*)));
+         }
 
             PosxBak = Posx;
             PosyBak = Posy;
-
+            qDebug()<<"E";
             QtConcurrent::run(this,&Carte::LoadingDBBDataA);
 
     }
@@ -270,10 +256,6 @@ void Carte::LoadingDBBDataA()
 {
 
    ProtectDraw->lock();
-
- //  if((ui->lineEdit->text()=="")&&(ui->comboBox->currentText()==""))
-
-   //{
    ProtectBDD->lock();
    VPOI.clear();
 
@@ -283,25 +265,23 @@ void Carte::LoadingDBBDataA()
 
    ProtectBDD->unlock();
 
-  // }
-
    if(VPOI.count()!=0)
    {
        if(VPOI.value(1).GetDist()>0.00005)
        {
-           ProtectDraw->unlock();
-
-           cmpt = 5;
+            cmpt = 5 ;
            return;
+
        }
-        cmpt=10;
-        ProtectDraw->unlock();
+       AjouterPoints();
+       cmpt=10;
+       ProtectDraw->unlock();
    }
    else
    {
          ProtectDraw->unlock();
 
-       cmpt = 5;
+       cmpt=5;
        return;
    }
 

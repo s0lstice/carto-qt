@@ -55,7 +55,6 @@ private slots:
     void PosLabel(int);
     void choixBDD();
     void gestionBDD();
-    void DownloadAndParsage();
     void LoadingDBBData();
     void ParserA(QNetworkReply *reponse);
     void ReponseQListClick(QListWidgetItem* Item);

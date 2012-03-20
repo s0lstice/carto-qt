@@ -215,12 +215,14 @@ edit_point_gui::edit_point_gui(float PosxA  ,float PosyA ,int point_id , QWidget
 {
     setupUi(this);
     database::dataCreate();
-Posx = PosxA;
-Posy = PosyA;
+    Posx = PosxA;
+    Posy = PosyA;
     /*** initialisation ***/
-    courantpoint = point_id;
+    courantpoint = 1;
     if(point_id != 0)
         courantpoint = point_id;
+
+
 
     init_table_point();
     init_view_point();
@@ -228,8 +230,8 @@ Posy = PosyA;
     init_table_heure();
     init_view_heure();
     init_mapper_heure();
-
     setWindowTitle(tr("Edition des points"));
+
 }
 
 /*! destucteur de la classe edit_point_gui

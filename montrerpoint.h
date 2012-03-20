@@ -11,6 +11,10 @@
 #include <QPointF>
 #include <QSqlRelationalTableModel>
 #include <QSqlRelationalDelegate>
+#include "POI.h"
+#include "edit_point_gui.h"
+
+
 
 using namespace qmapcontrol;
 namespace Ui {
@@ -31,6 +35,9 @@ private:
     MapAdapter* mapadapter;
     Layer* mainlayer;
     QSqlRelationalTableModel *modelheures;
+    POI PointDInteretA;
+private slots:
+    void modification();
 };
 
 #endif // MONTRERPOINT_H

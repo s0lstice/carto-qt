@@ -7,6 +7,19 @@
 #include <QSettings>
 #include <string>
 
+
+/*! Construit la fenêtre et initialise les données importantes
+
+    \note Cette fenêtre que nous allons créer est faite pour permettre à l'utilisateur de choisir une base de donnée.
+    Il y a 4 bouttons :
+    -pushbutton_3 permet de quitter
+    -pushbutton_2 permet de creer ou selectionner une BDD
+    -pushbutton permet de creer ou selectionner une BDD
+    -pushbutton_4 permet d'ouvrir un explorateur pour choisir un fichier
+
+    Deplus la fenêtre liste tout les fichiers en .db dans son repertoire.
+*/
+
 AskDataBase::AskDataBase(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AskDataBase)
@@ -37,6 +50,11 @@ AskDataBase::~AskDataBase()
     delete ui;
 }
 
+
+/*! Creer une fenêtre qui permet la selection d'un fichier .
+
+    \note Une fois la selection faite on met automatiquement dans la combobox le fichier qui vient d'être selectionné.
+*/
 void AskDataBase::SelectFile(void)
 {
      qDebug()<<"CartoTag4";
@@ -51,39 +69,35 @@ void AskDataBase::SelectFile(void)
      qDebug()<<"CartoTag5";
 }
 
+/*! Cree ou recupere une BDD puis lance la feetre principale.
+    \note Dans les faits la recuperation ou la creation de la base de donnée se fait à l'appel de datacreate on récupére aussi les catagories qui ont été sauvergardé dans les QSettings.
+
+*/
 void AskDataBase::CreateFile(void)
 {
-
-
-    qDebug()<<"CartoTag6";
     filename= ui->comboBox->currentText().remove(".db");
-    qDebug()<<"CartoTag7";
     database::dataCreate(filename);
-    qDebug()<<"CartoTag8";
-    database::dataCreate()->dataCreate();
-    qDebug()<<"CartoTag9";
     int i = 0 ;
-    qDebug()<<"CartoTag10";
     QStringList Categories;
-    qDebug()<<"CartoTag11";
     QSettings settings("CartoTeam", "Cartographe");
-    qDebug()<<"CartoTag12";
     Categories.append(settings.value("Categories").toStringList());
-    qDebug()<<"CartoTag13";
     for(i=0;i<Categories.count();i++)
     {
         addCategorie(Categories.value(i));
     }
     Carte * WCarte = new Carte();
     WCarte->show();
-
     this->close();
 }
 
+/*! Cree ou recupere une BDD puis lance la feetre principale.
+    \note Dans les faits la recuperation ou la creation de la base de donnée se fait à l'appel de datacreate on récupére aussi les catagories qui ont été sauvergardé dans les QSettings.
+
+*/
 void AskDataBase::ValidateFile(void)
 {
 
-    Carte * WCarte = new Carte();
+
 
         filename= ui->comboBox->currentText().remove(".db");
         database::dataCreate(filename);
@@ -97,7 +111,7 @@ void AskDataBase::ValidateFile(void)
             addCategorie(Categories.value(i));
         }
 
-
+        Carte * WCarte = new Carte();
         WCarte->show();
         this->close();
 }

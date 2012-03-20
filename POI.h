@@ -13,7 +13,7 @@ class POI {
     QString categorie;
     float lon;
     float lat;
-    float distance;
+    float distance; // Sert pour trier les points par distance par rapport au centre de vue;
    public :
 
     void SetId(int id){

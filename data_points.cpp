@@ -19,6 +19,8 @@ bool initPointsTable(){
 
     return true;
 }
+
+
 QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,QString Cat)
 {
    QSqlQuery query(database::dataCreate()->dataConnect());
@@ -26,14 +28,14 @@ QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,
    QVector<POI> tabPOI;
    if(Cat!="")
    {
-       if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE categorie_id = "+ QString::number(getCategorieIdByName(Cat)) + " AND name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
+       if(query.exec("SELECT latitude, longitude, name, categorie_id ,descriptio,point_id,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE categorie_id = "+ QString::number(getCategorieIdByName(Cat)) + " AND name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
        {
            return tabPOI;
        }
     }
    else
    {
-       if(query.exec("SELECT latitude, longitude, name, categorie_id ,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
+       if(query.exec("SELECT latitude, longitude, name, categorie_id ,description,point_id,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
        {
            return tabPOI;
        }
@@ -43,7 +45,9 @@ QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,
        tmpPOI.SetName(query.value(2).toString());
        tmpPOI.Setlat(query.value(0).toFloat());
        tmpPOI.Setlong(query.value(1).toFloat());
-       tmpPOI.SetDist(query.value(4).toFloat());
+       tmpPOI.SetDesc(query.value(4).toString());
+       tmpPOI.SetDist(query.value(6).toFloat());
+       tmpPOI.SetId(query.value(5).toInt());
        tabPOI.append(tmpPOI);
    }
 

@@ -52,3 +52,17 @@ QVector<heure> getHeureByPoint(int point_id){
 
      return tabHeure;
 }
+
+QSqlRecord getHeureByPointRecord(int point_id){
+    QSqlQuery query(database::dataCreate()->dataConnect());
+
+
+     if(query.exec("SELECT jour, debut, fin FROM heures WHERE point_id = '"+
+                   QString::number(point_id) +"'") == false)
+     {
+         qDebug()<< "getHeureByPoint" << query.lastError().text();
+         exit(1);
+     }
+
+ return query.record();
+}

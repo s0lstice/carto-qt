@@ -12,12 +12,12 @@ AskDataBase::AskDataBase(QWidget *parent) :
     ui(new Ui::AskDataBase)
 {
     ui->setupUi(this);
-
+    qDebug()<<"CartoTag";
     connect(ui->pushButton_3,SIGNAL(clicked()),this,SLOT(close()));
     connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(ValidateFile()));
     connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(CreateFile()));
     connect(ui->pushButton_4,SIGNAL(clicked()),this,SLOT(SelectFile()));
-
+ qDebug()<<"CartoTag2";
     QString MyAppDirPath =  QCoreApplication::applicationDirPath();
     QStringList listFilter;
     listFilter << "*.db";
@@ -29,6 +29,7 @@ AskDataBase::AskDataBase(QWidget *parent) :
         ui->comboBox->addItem(FIL[i]);
     }
     free(DirA);
+ qDebug()<<"CartoTag3";
 }
 
 AskDataBase::~AskDataBase()
@@ -38,6 +39,7 @@ AskDataBase::~AskDataBase()
 
 void AskDataBase::SelectFile(void)
 {
+     qDebug()<<"CartoTag4";
     QString File = QFileDialog::getOpenFileName(this,tr("Choisir base de donnée"), QDir::currentPath(), tr("Database files (*.db)"));
 
     if (!File.isEmpty())
@@ -46,24 +48,33 @@ void AskDataBase::SelectFile(void)
                  ui->comboBox->addItem(File);
                  ui->comboBox->setCurrentIndex(ui->comboBox->findText(File));
          }
+     qDebug()<<"CartoTag5";
 }
 
 void AskDataBase::CreateFile(void)
 {
-    Carte * WCarte = new Carte();
-    qDebug("ici");
-    filename= ui->comboBox->currentText().remove(".db");
-    database::dataCreate(filename);
 
+
+    qDebug()<<"CartoTag6";
+    filename= ui->comboBox->currentText().remove(".db");
+    qDebug()<<"CartoTag7";
+    database::dataCreate(filename);
+    qDebug()<<"CartoTag8";
+    database::dataCreate()->dataCreate();
+    qDebug()<<"CartoTag9";
     int i = 0 ;
+    qDebug()<<"CartoTag10";
     QStringList Categories;
+    qDebug()<<"CartoTag11";
     QSettings settings("CartoTeam", "Cartographe");
+    qDebug()<<"CartoTag12";
     Categories.append(settings.value("Categories").toStringList());
+    qDebug()<<"CartoTag13";
     for(i=0;i<Categories.count();i++)
     {
         addCategorie(Categories.value(i));
     }
-
+    Carte * WCarte = new Carte();
     WCarte->show();
 
     this->close();

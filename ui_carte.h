@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'carte.ui'
 **
-** Created: Mon 19. Mar 15:53:39 2012
+** Created: Mon 19. Mar 19:20:15 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

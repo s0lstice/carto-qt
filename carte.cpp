@@ -45,12 +45,10 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
     connect(ui->actionAnglais,SIGNAL(triggered()),this,SLOT(langue_englais()));
     connect(ui->actionFrancais,SIGNAL(triggered()),this,SLOT(langue_francais()));
-    connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(ui->comboBox,SIGNAL(currentIndexChanged(int)),this,SLOT(ByCat(int)));
-    connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
+
     connect(ui->actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));
     connect(ui->lineEdit,SIGNAL(textChanged(QString)),this,SLOT(Chercher(QString)));
-    connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(ReponseQListClick(QListWidgetItem*)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
 
@@ -82,14 +80,12 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 
 void Carte::langue_englais(){
     Carte * WCarte = new Carte();
-
-    this->close();
     QTranslator translator;
     translator.load("langue_en");
     application *app = application::appInit();
     app->installTranslator(&translator);
-
     WCarte->show();
+    this->close();
 }
 
 
@@ -102,10 +98,10 @@ void Carte::langue_francais(){
     translator.load("langue_fr");
     application *app = application::appInit();
     app->installTranslator(&translator);
-
+     WCarte->show();
     this->close();
 
-    WCarte->show();
+
 }
 
 void Carte::exportCSV(){
@@ -143,11 +139,9 @@ void Carte::Centrer()
 }
 
 void Carte::gestionBDD(){
-
-    edit_point_gui window(1);
-    window.exec();
+    edit_point_gui art(0,Posx,Posy,0);
+    art.exec();
     cmpt=9;
-
 }
 
 void Carte::DownloadAndParsage()
@@ -179,13 +173,9 @@ void Carte::AjouterPoints()
     {
         CirclePoint* PointA = new   CirclePoint(VPOI.value(i).Getlat(),VPOI.value(i).Getlon(),VPOI.value(i).GetName(),Point::Middle,pointpen);
         mainlayer->addGeometry(PointA);
-
     }
-
     mainlayer->setVisible(true);
     free(pointpen);
-
-
 }
 
 void Carte::ZoomInv(QPointF Point,int Entier)
@@ -379,16 +369,19 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
     int iterateur=0;
     MontrerPoint *MontrePointWindow;
     ProtectDraw->lock();
+    qDebug()<<"1";
     for(iterateur=0;iterateur<VPOI.count();iterateur++)
     {
         if(VPOI.value(iterateur).GetName()==Item->text())
         {
+          qDebug()<<"2";
           MontrePointWindow = new MontrerPoint(VPOI.value(iterateur));
-           MontrePointWindow->show();
-            break;
+          MontrePointWindow->exec();
+          ProtectDraw->unlock();
+          return;
         }
     }
-    ProtectDraw->unlock();
+
 
 }
 

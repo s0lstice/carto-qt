@@ -6,6 +6,7 @@
 
 bool addHeur(int point_id, int joure, QString debut, QString fin );
 QVector<heure> getHeureByPoint(int point_id);
+QSqlRecord getHeureByPointRecord(int point_id);
 bool initHeuresTable();
 
 

@@ -23,10 +23,11 @@ class edit_point_gui: public QDialog, public Ui::edit_point
 
 public:
     //edit_point_gui(QWidget *parent = 0);
-    edit_point_gui(int point_id = 0, QWidget *parent = 0);
+    edit_point_gui(float Posx  ,float Posy ,int point_id = 0, QWidget *parent = 0);
     ~edit_point_gui();
 
 private slots:
+
     void select_point(const QModelIndex &index);
     void select_heure(const QModelIndex &index);
     void drup_point();
@@ -37,7 +38,7 @@ private slots:
     void submitPoints();
     void on_fin_heur_editingFinished();
     void on_debut_heur_editingFinished();
-
+    void position();
     void on_categorie_point_but_clicked();
 
 private:
@@ -52,7 +53,8 @@ private:
     void delete_mapper_point();
     void delete_table_heure();
     void delete_mapper_heure();
-
+    float Posx;
+    float Posy;
     QSqlRelationalTableModel *modelpoints;
     QItemSelectionModel *selectionModel;
     QDataWidgetMapper *mapperpoints;

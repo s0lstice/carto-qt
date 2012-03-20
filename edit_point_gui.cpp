@@ -63,6 +63,7 @@ void edit_point_gui::init_view_point(){
     table_point->setColumnWidth(5, table_point->columnWidth(5) + width -2);
 
     connect(submit_point,  SIGNAL(clicked()), this, SLOT(submitPoints()));
+    connect(BouttonPosition,SIGNAL(clicked()),this,SLOT(position()));
     connect(jout_point,  SIGNAL(clicked()), this, SLOT(insert_point()));
     connect(supr_point,  SIGNAL(clicked()), this, SLOT(drup_point()));
     connect(table_point->selectionModel(),SIGNAL(
@@ -128,7 +129,7 @@ void edit_point_gui::init_table_heure(){
 
 }
 
-/*! desalocation du moel heure
+/*! desalocation du model heure
     @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
 */
 void edit_point_gui::delete_table_heure(){
@@ -210,11 +211,12 @@ void edit_point_gui::delete_mapper_heure(){
   @param point_id : int parametre optionnel, designe le point courant dès l'affichage de la fenetre.
   @param courantpoint : int [attirbut privé] : point selectionné
 */
-edit_point_gui::edit_point_gui(int point_id, QWidget *parent) : QDialog(parent)
+edit_point_gui::edit_point_gui(float PosxA  ,float PosyA ,int point_id , QWidget *parent ) : QDialog(parent)
 {
     setupUi(this);
     database::dataCreate();
-
+Posx = PosxA;
+Posy = PosyA;
     /*** initialisation ***/
     courantpoint = point_id;
     if(point_id != 0)
@@ -421,36 +423,7 @@ void edit_point_gui::on_fin_heur_editingFinished()
         fin_heur->setText("00:00");
     }
 }
-/*
-/*! action lors de la modification d'une heure
-    @param debut_heur : QLineEdit : élément de edittion_point.ui.
-    @note : role : verifier que le format ecrit soit le bon.
-*\/
-void edit_point_gui::on_debut_heur_selectionChanged()
-{
-    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]$");
-    if(exp.exactMatch(debut_heur->text()) == false){
-        QMessageBox::warning(this, tr("Erreur"),
-                             tr("l'heur doit etre sous la forme suivante HH:mm"));
-        debut_heur->setText("00:00");
-    }
-}
-*/
-/*
-/*! action lors de la modification d'une heure
-    @param fin_heur : QLineEdit : élément de edittion_point.ui.
-    @note : role : verifier que le format ecrit soit le bon.
-*\/
-void edit_point_gui::on_fin_heur_selectionChanged()
-{
-    QRegExp exp ("^[0-9][0-9]:[0-9][0-9]$");
-    if(exp.exactMatch(fin_heur->text()) == false){
-        QMessageBox::warning(this, tr("Erreur"),
-                             tr("l'heur doit etre sous la forme suivante HH:mm"));
-        debut_heur->setText("00:00");
-    }
-}
-*/
+
 
 /*! ajout/modification de categorie(s)
     @note role :-fait appelle a la classe edite_categories pour afficher la fenetre d'edition\n
@@ -469,4 +442,13 @@ void edit_point_gui::on_categorie_point_but_clicked()
     init_view_point();
     init_mapper_point();
     init_view_heure();
+}
+
+
+void edit_point_gui::position()
+{
+
+    lon_point->setValue(Posx);
+    lat_point->setValue(Posy);
+
 }

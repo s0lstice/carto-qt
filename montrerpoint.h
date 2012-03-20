@@ -9,6 +9,8 @@
 #include <QSlider>
 #include <QNetworkReply>
 #include <QPointF>
+#include <QSqlRelationalTableModel>
+#include <QSqlRelationalDelegate>
 
 using namespace qmapcontrol;
 namespace Ui {
@@ -28,6 +30,7 @@ private:
     MapControl* mc;
     MapAdapter* mapadapter;
     Layer* mainlayer;
+    QSqlRelationalTableModel *modelheures;
 };
 
 #endif // MONTRERPOINT_H

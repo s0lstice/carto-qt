@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'montrerpoint.ui'
 **
-** Created: Sun 18. Mar 12:05:14 2012
+** Created: Mon 19. Mar 22:13:33 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,6 +21,7 @@
 #include <QtGui/QLineEdit>
 #include <QtGui/QPlainTextEdit>
 #include <QtGui/QPushButton>
+#include <QtGui/QTableWidget>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -32,6 +33,7 @@ public:
     QWidget *widget;
     QPushButton *BouttonFermer;
     QWidget *widget1;
+    QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -47,24 +49,27 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_5;
     QPlainTextEdit *plainTextEdit;
+    QTableWidget *tableWidget;
 
     void setupUi(QDialog *MontrerPoint)
     {
         if (MontrerPoint->objectName().isEmpty())
             MontrerPoint->setObjectName(QString::fromUtf8("MontrerPoint"));
-        MontrerPoint->resize(636, 330);
+        MontrerPoint->resize(670, 404);
         widget = new QWidget(MontrerPoint);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(9, 9, 211, 281));
+        widget->setGeometry(QRect(9, 9, 231, 351));
         BouttonFermer = new QPushButton(MontrerPoint);
         BouttonFermer->setObjectName(QString::fromUtf8("BouttonFermer"));
-        BouttonFermer->setGeometry(QRect(550, 300, 75, 23));
+        BouttonFermer->setGeometry(QRect(580, 370, 75, 23));
         widget1 = new QWidget(MontrerPoint);
         widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(240, 10, 388, 280));
-        verticalLayout = new QVBoxLayout(widget1);
+        widget1->setGeometry(QRect(250, 10, 411, 351));
+        verticalLayout_2 = new QVBoxLayout(widget1);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(widget1);
@@ -134,6 +139,21 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_4);
+
+        tableWidget = new QTableWidget(widget1);
+        if (tableWidget->columnCount() < 3)
+            tableWidget->setColumnCount(3);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setRowCount(0);
+        tableWidget->setColumnCount(3);
+        tableWidget->horizontalHeader()->setVisible(true);
+        tableWidget->horizontalHeader()->setCascadingSectionResizes(true);
+        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+
+        verticalLayout->addWidget(tableWidget);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
 
 
         retranslateUi(MontrerPoint);

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'edition_point.ui'
 **
-** Created: Mon 19. Mar 09:41:59 2012
+** Created: Tue 20. Mar 10:15:25 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,7 +42,7 @@ public:
     QLabel *decription_point_lab;
     QPlainTextEdit *description_point;
     QPushButton *categorie_point_but;
-    QPushButton *pushButton;
+    QPushButton *BouttonPosition;
     QGroupBox *heures_point_box;
     QTableView *viewheures;
     QLabel *jour_heur_lab;
@@ -108,9 +108,9 @@ public:
         categorie_point_but = new QPushButton(Point);
         categorie_point_but->setObjectName(QString::fromUtf8("categorie_point_but"));
         categorie_point_but->setGeometry(QRect(240, 60, 161, 30));
-        pushButton = new QPushButton(Point);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(240, 106, 161, 30));
+        BouttonPosition = new QPushButton(Point);
+        BouttonPosition->setObjectName(QString::fromUtf8("BouttonPosition"));
+        BouttonPosition->setGeometry(QRect(240, 106, 161, 30));
         heures_point_box = new QGroupBox(edit_point);
         heures_point_box->setObjectName(QString::fromUtf8("heures_point_box"));
         heures_point_box->setGeometry(QRect(420, 190, 401, 331));
@@ -177,7 +177,7 @@ public:
         Lon_point_lab->setText(QApplication::translate("edit_point", "Longitude : ", 0, QApplication::UnicodeUTF8));
         decription_point_lab->setText(QApplication::translate("edit_point", "desciption :", 0, QApplication::UnicodeUTF8));
         categorie_point_but->setText(QApplication::translate("edit_point", "Ajouter une categorie", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("edit_point", "Position actuel", 0, QApplication::UnicodeUTF8));
+        BouttonPosition->setText(QApplication::translate("edit_point", "Position actuel", 0, QApplication::UnicodeUTF8));
         heures_point_box->setTitle(QApplication::translate("edit_point", "Horaires du point :", 0, QApplication::UnicodeUTF8));
         jour_heur_lab->setText(QApplication::translate("edit_point", "Jour :", 0, QApplication::UnicodeUTF8));
         plage_heur->setText(QApplication::translate("edit_point", "Plage horaire  :", 0, QApplication::UnicodeUTF8));

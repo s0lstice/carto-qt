@@ -13,7 +13,6 @@ class POI {
     QString categorie;
     float lon;
     float lat;
-    QDate horaires;
     float distance;
    public :
 
@@ -69,14 +68,6 @@ class POI {
     void Setlat(float f)
     {
         lat = f;
-    }
-    QDate GetHoraires()
-    {
-        return horaires;
-    }
-    void SetHoraires(QDate H)
-    {
-        horaires=H;
     }
 };
 

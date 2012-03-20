@@ -177,7 +177,7 @@
      <string>Ajouter une categorie</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="BouttonPosition">
     <property name="geometry">
      <rect>
       <x>240</x>

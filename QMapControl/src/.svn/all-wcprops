@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src
+END
+imagepoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/imagepoint.h
+END
+emptymapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/emptymapadapter.h
+END
+fixedimageoverlay.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/qmapcontrol/!svn/ver/28/QMapControl/src/fixedimageoverlay.cpp
+END
+wmsmapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/wmsmapadapter.cpp
+END
+circlepoint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/circlepoint.cpp
+END
+googlemapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/googlemapadapter.cpp
+END
+layermanager.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/29/QMapControl/src/layermanager.h
+END
+layer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/layer.cpp
+END
+imagemanager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/imagemanager.cpp
+END
+gps_position.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/gps_position.cpp
+END
+mapcontrol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/mapcontrol.cpp
+END
+mapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/mapadapter.cpp
+END
+linestring.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/linestring.cpp
+END
+maplayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/maplayer.h
+END
+openaerialmapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/qmapcontrol/!svn/ver/25/QMapControl/src/openaerialmapadapter.h
+END
+yahoomapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/yahoomapadapter.h
+END
+googlesatmapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/googlesatmapadapter.cpp
+END
+mapnetwork.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/mapnetwork.cpp
+END
+geometrylayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/geometrylayer.cpp
+END
+curve.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/curve.h
+END
+imagepoint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/imagepoint.cpp
+END
+emptymapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/emptymapadapter.cpp
+END
+point.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/qmapcontrol/!svn/ver/27/QMapControl/src/point.h
+END
+geometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/geometry.h
+END
+tilemapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/tilemapadapter.h
+END
+osmmapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/osmmapadapter.h
+END
+layermanager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/qmapcontrol/!svn/ver/29/QMapControl/src/layermanager.cpp
+END
+fixedimageoverlay.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/qmapcontrol/!svn/ver/27/QMapControl/src/fixedimageoverlay.h
+END
+maplayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/maplayer.cpp
+END
+wmsmapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/wmsmapadapter.h
+END
+yahoomapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/yahoomapadapter.cpp
+END
+openaerialmapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/qmapcontrol/!svn/ver/25/QMapControl/src/openaerialmapadapter.cpp
+END
+circlepoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/circlepoint.h
+END
+googlemapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/googlemapadapter.h
+END
+layer.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/layer.h
+END
+imagemanager.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/imagemanager.h
+END
+gps_position.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/gps_position.h
+END
+mapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/mapadapter.h
+END
+linestring.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/linestring.h
+END
+mapcontrol.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/mapcontrol.h
+END
+curve.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/curve.cpp
+END
+googlesatmapadapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/googlesatmapadapter.h
+END
+point.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/point.cpp
+END
+geometry.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/geometry.cpp
+END
+mapnetwork.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/mapnetwork.h
+END
+tilemapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/tilemapadapter.cpp
+END
+geometrylayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/qmapcontrol/!svn/ver/23/QMapControl/src/geometrylayer.h
+END
+osmmapadapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/qmapcontrol/!svn/ver/30/QMapControl/src/osmmapadapter.cpp
+END

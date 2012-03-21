@@ -1,0 +1,83 @@
+10
+
+dir
+30
+https://qmapcontrol.svn.sourceforge.net/svnroot/qmapcontrol/QMapControl/Samples
+https://qmapcontrol.svn.sourceforge.net/svnroot/qmapcontrol
+
+
+
+2009-07-29T11:25:05.972361Z
+30
+kaiwinter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7a14e55a-7340-0410-9c5e-d514c3f7b88f
+
+Mapviewer
+dir
+
+Multidemo
+dir
+
+Mapview_FixedOverlayOnEmptyMap
+dir
+
+Samples.pro
+file
+
+
+
+
+2009-07-29T11:25:32.000000Z
+edcfce9c4a07151441bf3a4f43f8d8c9
+2008-02-03T19:44:13.104327Z
+1
+kaiwinter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+90
+
+Phonebook
+dir
+
+Citymap
+dir
+
+GPS
+dir
+
+LinesAndPoints
+dir
+

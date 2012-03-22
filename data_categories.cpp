@@ -1,6 +1,12 @@
 #include "data_categories.h"
 
-
+/*! fonction : creant la table categories dans la base de donnée
+ @return vrai|fau : bool : indique la reussite ou l'echque de l'initialisation
+ @note les champs de la table points sont :\n
+    -categorie_id : INTEGER PRIMARY KEY AUTOINCREMENT : clef primaire de latable\n
+    -categorie : VARCHAR(64) : nom de la categorie\n
+    @note categorie est unique
+*/
 bool initCategoriesTable(){
     QSqlQuery query(database::dataCreate()->dataConnect());
 
@@ -13,18 +19,26 @@ bool initCategoriesTable(){
     return true;
 }
 
+/*! fonction : ajoute la categorie passe en parametre
+ @param categorie : QString : nom de la categorie a ajouter
+ @return vrai|fau : bool : indique la reussite ou l'echque de l'instertion
+*/
 bool addCategorie(QString categorie){
     QSqlQuery query(database::dataCreate()->dataConnect());
     if( query.exec("insert into categories(categorie) values('"
                    + categorie
                    + "')") == false)
     {
-       // qDebug()<< "addCategorie" << query.lastError().text();
+        qDebug()<< "addCategorie" << query.lastError().text();
         return false;
     }
     return true;
 }
 
+/*! fonction : retourne le nom de la categorie en fonction de l'identifiant
+ @param id : int : identifiant cherche
+ @return QString : nom de la categorie
+*/
 QString getCategorieById(int id){
     QSqlQuery query(database::dataCreate()->dataConnect());
 
@@ -39,6 +53,10 @@ QString getCategorieById(int id){
      return query.value(0).toString();
 }
 
+/*! fonction : retourne l'identifiant de la categorie en fonction de son nom
+ @return id : int : identifiant cherche
+ @param QString : nom de la categorie
+*/
 int getCategorieIdByName(QString name){
     QSqlQuery query(database::dataCreate()->dataConnect());
 
@@ -52,6 +70,10 @@ int getCategorieIdByName(QString name){
      return query.value(0).toInt();
 }
 
+/*! fonction : retourne un vecteur avec toutes les categories de la base de donnee
+ @return id : int : identifiant cherche
+ @return QVector<QString>  : vecteur de categories
+*/
 QVector<QString> getCategories()
 {
    QSqlQuery query(database::dataCreate()->dataConnect());

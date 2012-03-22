@@ -13,8 +13,9 @@ void export_csv(QString filecsv){
     QVector<QString> categories;
     QVector<POI> points;
     QVector<heure> heures;
-    qDebug() << filecsv + ".csv";
+
     QFile file(filecsv + ".csv");
+
     if(!file.open(QIODevice::WriteOnly)){
         qWarning() << "[erreur] impossible d'ouvrir le ficher en ecriture seul"
                   << qPrintable(file.errorString());

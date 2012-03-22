@@ -212,7 +212,6 @@ void Carte::LoadingDBBData()
         {
                 cmpt=1;
                 AjouterPoints();
-     qDebug("10");
                 return;
 
         }
@@ -229,9 +228,9 @@ void Carte::LoadingDBBData()
                 }
                 cmpt =1;
         }
-        if(cmpt==5)
+        if((cmpt==5)&&(downloading==false))
         {
-
+                downloading = true;
                 QString Urlp = QString("http://www.geovelo.fr/api_test.php?lon=" + QString::number(Posx) + "&lat=" + QString::number(Posy));
                 QUrl url = QUrl(Urlp);
                 QNetworkRequest requete(url);
@@ -239,10 +238,10 @@ void Carte::LoadingDBBData()
                 connect( GestionnaireDeRequete, SIGNAL(finished(QNetworkReply*)), this, SLOT(ParserA(QNetworkReply*)));
          }
 
-            PosxBak = Posx;
-            PosyBak = Posy;
-            AjouterPoints();
-            QtConcurrent::run(this,&Carte::LoadingDBBDataA);
+         PosxBak = Posx;
+         PosyBak = Posy;
+         AjouterPoints();
+         QtConcurrent::run(this,&Carte::LoadingDBBDataA);
 
     }
 }
@@ -276,6 +275,7 @@ void Carte::LoadingDBBDataA()
    }
 
 }
+
 
 void Carte::ParserA(QNetworkReply* reponse)
 {
@@ -323,6 +323,7 @@ void Carte::ParserA(QNetworkReply* reponse)
     doc.clear();
     reponse->close();
     cmpt=10;
+    downloading=false;
 
 }
 
@@ -330,8 +331,8 @@ void Carte::addPointThread(QString categorie, QString name, float latitude, floa
 {
 
        addPoint(categorie, name,latitude,longitude);
-
-      y++;
+       cmpt = 10;
+       y++;
 }
 
 void Carte::ReponseQListClick(QListWidgetItem* Item)
@@ -354,7 +355,7 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
    void Carte::ModifNbPoint(int nbpoints)
    {
         nbpstoshow = nbpoints;
-        cmpt=10;
+        AjouterPoints();
 
    }
 
@@ -381,7 +382,7 @@ void Carte::Chercher(QString Chaine)
     VPOI.clear();
 
     VPOI=getPointImp(Posx,Posy,nbpstoshow,Chaine,ui->comboBox->currentText());
-   cmpt=10;
+    cmpt=10;
 
 }
 
@@ -390,6 +391,6 @@ void Carte::ByCat(int i)
     VPOI.clear();
 
     VPOI=getPointImp(Posx,Posy,nbpstoshow,ui->lineEdit->text(),ui->comboBox->currentText());
-   cmpt=10;
+    cmpt=10;
 
 }

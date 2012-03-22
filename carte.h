@@ -45,6 +45,7 @@ private:
     QVector<POI> VPOI;
     void Parser(QNetworkReply *reponse);
     void addPointThread(QString categorie, QString name, float latitude, float longitude);
+    bool downloading;
 
 private slots:
     void Chercher(QString Chaine);

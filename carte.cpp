@@ -94,8 +94,6 @@ void Carte::langue_francais(){
     app->installTranslator(&translator);
      WCarte->show();
     this->close();
-
-
 }
 
 void Carte::exportCSV(){

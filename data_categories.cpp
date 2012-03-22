@@ -1,6 +1,9 @@
 #include "data_categories.h"
 
-/*! fonction : creant la table categories dans la base de donnée
+/*!
+  @fn bool initCategoriesTable(){
+
+  @brief fonction : creant la table categories dans la base de donnée
  @return vrai|fau : bool : indique la reussite ou l'echque de l'initialisation
  @note les champs de la table points sont :\n
     -categorie_id : INTEGER PRIMARY KEY AUTOINCREMENT : clef primaire de latable\n
@@ -19,7 +22,9 @@ bool initCategoriesTable(){
     return true;
 }
 
-/*! fonction : ajoute la categorie passe en parametre
+/*!
+  @fn bool addCategorie(QString categorie){
+  @brief fonction : ajoute la categorie passe en parametre
  @param categorie : QString : nom de la categorie a ajouter
  @return vrai|fau : bool : indique la reussite ou l'echque de l'instertion
 */
@@ -35,7 +40,9 @@ bool addCategorie(QString categorie){
     return true;
 }
 
-/*! fonction : retourne le nom de la categorie en fonction de l'identifiant
+/*!
+  @fn QString getCategorieById(int id){
+  @brief fonction : retourne le nom de la categorie en fonction de l'identifiant
  @param id : int : identifiant cherche
  @return QString : nom de la categorie
 */
@@ -53,7 +60,9 @@ QString getCategorieById(int id){
      return query.value(0).toString();
 }
 
-/*! fonction : retourne l'identifiant de la categorie en fonction de son nom
+/*!
+  @fn int getCategorieIdByName(QString name){
+  @brief fonction : retourne l'identifiant de la categorie en fonction de son nom
  @return id : int : identifiant cherche
  @param QString : nom de la categorie
 */
@@ -70,7 +79,9 @@ int getCategorieIdByName(QString name){
      return query.value(0).toInt();
 }
 
-/*! fonction : retourne un vecteur avec toutes les categories de la base de donnee
+/*!
+  @fn QVector<QString> getCategories()
+  @brief fonction : retourne un vecteur avec toutes les categories de la base de donnee
  @return id : int : identifiant cherche
  @return QVector<QString>  : vecteur de categories
 */

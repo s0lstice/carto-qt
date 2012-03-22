@@ -1,3 +1,12 @@
+/**
+ * \file edit_point_gui.cpp
+ * \brief Fenetre gerant l'edition de la base de donnee.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #include "edit_point_gui.h"
 #include "database.h"
 #include <QtGui>
@@ -5,8 +14,10 @@
 #include "edite_categories.h"
 #include "data_gui.h"
 
-/*! met en place le model de point
-    @param modelpoints : QSqlRelationalTableModel [attirbut privé] contien le model de point
+/*!
+  @fn void edit_point_gui::init_table_point()
+  @brief met en place le model de point
+    @param modelpoints : QSqlRelationalTableModel [attirbut prive] contien le model de point
     @note charge la table points dans un QSqlRelationalTableModel,
         fait la relation entre la colonne points.categorie_id et categories.categorie en fonction de categories.categorie_id.
         nome les colonnes 1 :2 3 4 de la table pour l'affichage
@@ -26,19 +37,23 @@ void edit_point_gui::init_table_point(){
 
 }
 
-/*! desalocation du model de point
+/*!
+  @fn void edit_point_gui::delete_table_point()
+  @brief desalocation du model de point
     @param modelpoints : QSqlRelationalTableModel [attirbut priv�e] contient le model de point
 */
 void edit_point_gui::delete_table_point(){
     delete modelpoints;
 }
 
-/*! met en place l'affichage des points sous forme de table
-    @param table_point : QTableView : élément de edition_point.ui.
-    @param submit_point : QPushButton : élément de edition_point.ui.
-    @param jout_point : QPushButton : élément de edition_point.ui.
-    @param supr_point : QPushButton : élément de edition_point.ui.
-    @param modelpoints : QSqlRelationalTableModel [attribut privé] : contient le model de point
+/*!
+  @fn void edit_point_gui::init_view_point()
+  @brief met en place l'affichage des points sous forme de table
+    @param table_point : QTableView : element de edition_point.ui.
+    @param submit_point : QPushButton : element de edition_point.ui.
+    @param jout_point : QPushButton : element de edition_point.ui.
+    @param supr_point : QPushButton : element de edition_point.ui.
+    @param modelpoints : QSqlRelationalTableModel [attribut prive] : contient le model de point
     @note role : \n -charge le modelpoint dans une table_point, \n
         -Masque la colonnes des identifiants, \n
         -redimentionne la colonne description en fonction de la place restante dans la vue, \n
@@ -71,16 +86,18 @@ void edit_point_gui::init_view_point(){
                 const QModelIndex &)),this,SLOT(select_point(const QModelIndex &)));
 }
 
-/*! met en place le mapper de point
-    @param modelpoints : QSqlRelationalTableModel [attirbut privé] : contien le model de point
-    @param mapperpoints : QDataWidgetMapper [attirbut privé]
-    @param nom_point : QLineEdit : élément de edittion_point.ui.
-    @param categorie_point : QDialogButtonBox : élément de edittion_point.ui.
-    @param lat_point : QLineEdit : élément de edittion_point.ui.
-    @param lon_point : QLineEdit : élément de edittion_point.ui.
-    @param description_point : QPlainTextedit : élément de edittion_point.ui.
-    @note roel : \n met en place la jointure entre points.categorie_id et categories.categorie ; le resultt est affiché dans la liste deroulante categorie_point,\n
-        fait la relation entre les éléments de la table points et nom_point, categorie_point, lat_point, lon_point, description_point.
+/*!
+  @fn void edit_point_gui::init_mapper_point()
+  @brief met en place le mapper de point
+    @param modelpoints : QSqlRelationalTableModel [attirbut prive] : contien le model de point
+    @param mapperpoints : QDataWidgetMapper [attirbut prive]
+    @param nom_point : QLineEdit : element de edittion_point.ui.
+    @param categorie_point : QDialogButtonBox : element de edittion_point.ui.
+    @param lat_point : QLineEdit : element de edittion_point.ui.
+    @param lon_point : QLineEdit : element de edittion_point.ui.
+    @param description_point : QPlainTextedit : element de edittion_point.ui.
+    @note roel : \n met en place la jointure entre points.categorie_id et categories.categorie ; le resultt est affiche dans la liste deroulante categorie_point,\n
+        fait la relation entre les elements de la table points et nom_point, categorie_point, lat_point, lon_point, description_point.
 */
 void edit_point_gui::init_mapper_point(){
     /*** affichage de la partie point ***/
@@ -100,15 +117,19 @@ void edit_point_gui::init_mapper_point(){
     mapperpoints->toFirst();
 }
 
-/*! desalocation du mapper de point
-    @param mapperpoints : QDataWidgetMapper [attirbut privé]
+/*!
+  @fn void edit_point_gui::delete_mapper_point()
+  @brief  desalocation du mapper de point
+    @param mapperpoints : QDataWidgetMapper [attirbut prive]
 */
 void edit_point_gui::delete_mapper_point(){
     delete mapperpoints;
 }
 
-/*! met en place le model heure
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] contien le model d'heure
+/*!
+    @brief met en place le model heure
+    @void edit_point_gui::init_table_heure()
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] contien le model d'heure
     @note role : \n -charge la table heures dans un QSqlRelationalTableModel,\n
         -fait la relation entre la colonne heures.jour_id et jours.jour en fonction de jours.jour_id.\n
         -nome les colonnes 2 3 4 de la table pour l'affichage \n
@@ -129,19 +150,23 @@ void edit_point_gui::init_table_heure(){
 
 }
 
-/*! desalocation du model heure
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
+/*!
+  @fn void edit_point_gui::delete_table_heure()
+  @brief desalocation du model heure
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
 */
 void edit_point_gui::delete_table_heure(){
     delete modelheures;
 }
 
-/*! met en place l'affichage des heures sous forme de table
-    @param jout_heur : QDialogButtonBox : élément de edittion_point.ui.
-    @param submit_heure : QPushButton : élément de edittion_point.ui.
-    @param supr_heur : QPushButton : élément de edittion_point.ui.
-    @param viewheures : QTableView : élément de edittion_point.ui.
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
+/*!
+  @fn void edit_point_gui::init_view_heure()
+  @brief  met en place l'affichage des heures sous forme de table
+    @param jout_heur : QDialogButtonBox : element de edittion_point.ui.
+    @param submit_heure : QPushButton : element de edittion_point.ui.
+    @param supr_heur : QPushButton : element de edittion_point.ui.
+    @param viewheures : QTableView : element de edittion_point.ui.
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
     @note role : \n -charge le modelheures dans une QTableView,\n
         -masque les colonnes des identifiants,\n
         -redimentionne toutes les colonnes de nmaniere homogene en fonction de la place disponible,\n
@@ -175,13 +200,15 @@ void edit_point_gui::init_view_heure(){
                 const QModelIndex &)),this,SLOT(select_heure(const QModelIndex &)));
 }
 
-/*! met en place le mapper d'heures
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
-    @param mapperheures : QDataWidgetMapper [attirbut privé]
-    @param jour_heur : QDialogButtonBox : élément de edittion_point.ui.
-    @param debut_heur : QLineEdit : élément de edittion_point.ui.
-    @param fin_heur : QLineEdit : élément de edittion_point.ui.
-    @note role : \n -met en place la jointure entre heures.jour_id et jours.jour d'on le resultt est affiché dans la liste deroulante jour_heur,\n
+/*!
+  @fn void edit_point_gui::init_mapper_heure()
+  @brief met en place le mapper d'heures
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
+    @param mapperheures : QDataWidgetMapper [attirbut prive]
+    @param jour_heur : QDialogButtonBox : element de edittion_point.ui.
+    @param debut_heur : QLineEdit : element de edittion_point.ui.
+    @param fin_heur : QLineEdit : element de edittion_point.ui.
+    @note role : \n -met en place la jointure entre heures.jour_id et jours.jour d'on le resultt est affiche dans la liste deroulante jour_heur,\n
         -fait la relation entre les element de la table points et jour_heur, debut_heur, fin_heur.
 */
 void edit_point_gui::init_mapper_heure(){
@@ -200,16 +227,20 @@ void edit_point_gui::init_mapper_heure(){
     mapperheures->toFirst();
 }
 
-/*! desalocation du mapper d'heure
-    @param mapperheures : QDataWidgetMapper [attirbut privé]
+/*!
+  @fn void edit_point_gui::delete_mapper_heure()
+  @brief desalocation du mapper d'heure
+    @param mapperheures : QDataWidgetMapper [attirbut prive]
 */
 void edit_point_gui::delete_mapper_heure(){
     delete mapperheures;
 }
 
-/*! contructeur de la classe edit_point_gui
+/*!
+  @fn edit_point_gui::edit_point_gui(float PosxA  ,float PosyA ,int point_id , QWidget *parent ) : QDialog(parent)
+  @brief contructeur de la classe edit_point_gui
   @param point_id : int parametre optionnel, designe le point courant dès l'affichage de la fenetre.
-  @param courantpoint : int [attirbut privé] : point selectionné
+  @param courantpoint : int [attirbut prive] : point selectionne
 */
 edit_point_gui::edit_point_gui(float PosxA  ,float PosyA ,int point_id , QWidget *parent ) : QDialog(parent)
 {
@@ -234,7 +265,9 @@ edit_point_gui::edit_point_gui(float PosxA  ,float PosyA ,int point_id , QWidget
 
 }
 
-/*! destucteur de la classe edit_point_gui
+/*!
+  @fn edit_point_gui::~edit_point_gui()
+  @brief destucteur de la classe edit_point_gui
 */
 edit_point_gui::~edit_point_gui(){
     delete_table_point();
@@ -243,8 +276,10 @@ edit_point_gui::~edit_point_gui(){
     delete_mapper_heure();
 }
 
-/*! met a jour la table points en fonction des champs modifiés
-    @param modelpoints : QSqlRelationalTableModel [attirbut privé] : contien le model de point
+/*!
+  @fn void edit_point_gui::submitPoints()
+  @brief met a jour la table points en fonction des champs modifies
+    @param modelpoints : QSqlRelationalTableModel [attirbut prive] : contien le model de point
 */
 void edit_point_gui::submitPoints()
 {
@@ -259,9 +294,11 @@ void edit_point_gui::submitPoints()
     }
 }
 
-/*! met a jour la table heures en fonction des champs modifiés
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
-    @note evenement lié a submit_heure
+/*!
+  @fn void edit_point_gui::submitHeure()
+  @brief met a jour la table heures en fonction des champs modifies
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
+    @note evenement lie a submit_heure
 */
 void edit_point_gui::submitHeure(){
 
@@ -276,13 +313,15 @@ void edit_point_gui::submitHeure(){
     }
 }
 
-/*! action lors de la selection d'une heure
-    @param courantheur : int [attirbut privé] : identifiant de l'heure selectionné
-    @param mapperheures : QDataWidgetMapper [attirbut privé]
-    @param viewheures : QTableView : élément de edittion_point.ui.
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
-    @note evenement  : lié a la selection d'une ligne dans la vue heure\n
-        role : -met a jour les champs heure de la fenetre \n -stock l'identifiant de l'heure selectionné dans courantheur
+/*!
+  @fn void edit_point_gui::select_heure(const QModelIndex &index)
+  @brief action lors de la selection d'une heure
+    @param courantheur : int [attirbut prive] : identifiant de l'heure selectionne
+    @param mapperheures : QDataWidgetMapper [attirbut prive]
+    @param viewheures : QTableView : element de edittion_point.ui.
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
+    @note evenement  : lie a la selection d'une ligne dans la vue heure\n
+        role : -met a jour les champs heure de la fenetre \n -stock l'identifiant de l'heure selectionne dans courantheur
 */
 void edit_point_gui::select_heure(const QModelIndex &index){
     QModelIndex indexp = viewheures->currentIndex();
@@ -293,14 +332,16 @@ void edit_point_gui::select_heure(const QModelIndex &index){
     courantheur = record.value("heure_id").toInt();
 }
 
-/*! action lors de la selection d'un point
-    @param courantpoint : int [attirbut privé] : identifiant du point selectionné
-    @param table_point : QTableView : élément de edittion_point.ui.
-    @param mapperpoints : QDataWidgetMapper [attirbut privé]
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
-    @note evenement  : lié a la selection d'une ligne dans la vue heure\n
+/*!
+  @fn void edit_point_gui::select_point(const QModelIndex &index)
+  @brief action lors de la selection d'un point
+    @param courantpoint : int [attirbut prive] : identifiant du point selectionne
+    @param table_point : QTableView : element de edittion_point.ui.
+    @param mapperpoints : QDataWidgetMapper [attirbut prive]
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
+    @note evenement  : lie a la selection d'une ligne dans la vue heure\n
         role : -met a jour les champs point de la fenetre \n
-        -stock l'identifiant du point selectionné dans courantpoint\n
+        -stock l'identifiant du point selectionne dans courantpoint\n
         -affiche les heures corespondant a ce point.
 */
 void edit_point_gui::select_point(const QModelIndex &index){
@@ -313,15 +354,17 @@ void edit_point_gui::select_point(const QModelIndex &index){
 
 }
 
-/*! action lors de la suppression d'un point
-    @param courantpoint : int [attirbut privé] : identifiant du point selectionné
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
-    @param modelpoints : QSqlRelationalTableModel [attirbut privé] : contien le model de point
+/*!
+  @fn void edit_point_gui::drup_point()
+  @brief action lors de la suppression d'un point
+    @param courantpoint : int [attirbut prive] : identifiant du point selectionne
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
+    @param modelpoints : QSqlRelationalTableModel [attirbut prive] : contien le model de point
     @note : evenement : lie a la suppression d'un point (supr_point)\n
         role : -supprime toutes les heures qui ont point_id comme clef etrangeres\n
-        -supprime le point selectionné\n
-        -réactualise le model de points\n
-        -réactualise le model d'heures.
+        -supprime le point selectionne\n
+        -reactualise le model de points\n
+        -reactualise le model d'heures.
 */
 void edit_point_gui::drup_point(){
     QSqlQuery query(database::dataCreate()->dataConnect());
@@ -339,12 +382,14 @@ void edit_point_gui::drup_point(){
     modelheures->select();
 }
 
-/*! action lors de la suppression d'une heure
-    @param courantpoint : int [attirbut privé] : identifiant du point selectionné
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
+/*!
+  @fn void edit_point_gui::drup_heur()
+  @brief action lors de la suppression d'une heure
+    @param courantpoint : int [attirbut prive] : identifiant du point selectionne
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
     @note : evenement : lie a la suppression d'une heure (supr_heure)\n
-        role : -supprime l'heure selectionné\n
-        -réactualise le model d'heures.
+        role : -supprime l'heure selectionne\n
+        -reactualise le model d'heures.
 */
 void edit_point_gui::drup_heur(){
     QSqlQuery query(database::dataCreate()->dataConnect());
@@ -356,14 +401,16 @@ void edit_point_gui::drup_heur(){
     modelheures->select();
 }
 
-/*! action lors de l'ajout d'une heure
-    @param courantpoint : int [attirbut privé] : identifiant du point selectionné
-    @param modelheures : QSqlRelationalTableModel [attirbut privé] : contien le model d'heure
-    @param modelpoint : QSqlRelationalTableModel [attirbut privé] : contien le model point
+/*!
+  @fn void edit_point_gui::insert_heur()
+  @brief action lors de l'ajout d'une heure
+    @param courantpoint : int [attirbut prive] : identifiant du point selectionne
+    @param modelheures : QSqlRelationalTableModel [attirbut prive] : contien le model d'heure
+    @param modelpoint : QSqlRelationalTableModel [attirbut prive] : contien le model point
     @note : evenement : lie a l'ajout d'une heure (jout_heure)\n
         role : -ajout un champ vide a la table heures qui a pour clef etrangere l'identifiant du point courant\n
         -met a jour l'affichage des heures.
-        -selectionne l'heure créé.
+        -selectionne l'heure cree.
 */
 void edit_point_gui::insert_heur(){
     QSqlQuery query(database::dataCreate()->dataConnect());
@@ -378,13 +425,15 @@ void edit_point_gui::insert_heur(){
 
 }
 
-/*! action lors de l'ajout d'un point
-    @param courantpoint : int [attirbut privé] : identifiant du point selectionné
-    @param modelpoint : QSqlRelationalTableModel [attirbut privé] : contien le model point
+/*!
+  @fn void edit_point_gui::insert_point()
+  @brief action lors de l'ajout d'un point
+    @param courantpoint : int [attirbut prive] : identifiant du point selectionne
+    @param modelpoint : QSqlRelationalTableModel [attirbut prive] : contien le model point
     @note : evenement : lie a l'ajout d'une heure (jout_point)\n
         role : -ajout un champ vide a la table points\n
         -met a jour l'affichage des points.
-        -selectionne le points créé.
+        -selectionne le points cree.
 */
 void edit_point_gui::insert_point(){
     QSqlQuery query(database::dataCreate()->dataConnect());
@@ -398,8 +447,10 @@ void edit_point_gui::insert_point(){
     modelpoints->select();
 }
 
-/*! action lors de la modification d'une heure
-    @param debut_heur : QLineEdit : élément de edittion_point.ui.
+/*!
+  @fn void edit_point_gui::on_debut_heur_editingFinished()
+  @brief action lors de la modification d'une heure
+    @param debut_heur : QLineEdit : element de edittion_point.ui.
     @note : role : verifier que le format ecrit soit le bon.
 */
 void edit_point_gui::on_debut_heur_editingFinished()
@@ -412,8 +463,10 @@ void edit_point_gui::on_debut_heur_editingFinished()
     }
 }
 
-/*! action lors de la modification d'une heure
-    @param fin_heur : QLineEdit : élément de edittion_point.ui.
+/*!
+  @fn void edit_point_gui::on_fin_heur_editingFinished()
+  @brief action lors de la modification d'une heure
+    @param fin_heur : QLineEdit : element de edittion_point.ui.
     @note : role : verifier que le format ecrit soit le bon.
 */
 void edit_point_gui::on_fin_heur_editingFinished()
@@ -427,7 +480,9 @@ void edit_point_gui::on_fin_heur_editingFinished()
 }
 
 
-/*! ajout/modification de categorie(s)
+/*!
+    @fn void edit_point_gui::on_categorie_point_but_clicked()
+  @brief ajout/modification de categorie(s)
     @note role :-fait appelle a la classe edite_categories pour afficher la fenetre d'edition\n
         -regenre la table, le mapper et la vue des points pour prendre en compte les modifications.
 */
@@ -436,7 +491,7 @@ void edit_point_gui::on_categorie_point_but_clicked()
     edite_categories window;
     window.exec();
 
-    //reactualisation de la base de donné
+    //reactualisation de la base de donne
     delete_table_point();
     delete_mapper_point();
 

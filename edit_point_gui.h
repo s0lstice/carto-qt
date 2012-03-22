@@ -1,3 +1,12 @@
+/**
+ * \file edit_point_gui.h
+ * \brief Fenetre gerant l'edition de la base de donnee.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #ifndef EDITION_POINT_GUI_H
 #define EDITION_POINT_GUI_H
 

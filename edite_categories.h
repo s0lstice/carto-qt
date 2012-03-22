@@ -1,3 +1,12 @@
+/**
+ * \file edite_categories.h
+ * \brief Fenetre gerant l'edition des categories.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #ifndef EDITE_CATEGORIES_H
 #define EDITE_CATEGORIES_H
 

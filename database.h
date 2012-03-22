@@ -1,3 +1,12 @@
+/**
+ * \file database.h
+ * \brief Classe singleton, gere l'ouverture et la fermeture de la base de donne, paussaide egalement les methode pour y acceder.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #ifndef DATABASE_H
 #define DATABASE_H
 

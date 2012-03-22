@@ -1,9 +1,20 @@
+/**
+ * \file edite_categories.cpp
+ * \brief Fenetre gerant l'edition des categories.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #include "edite_categories.h"
 #include "database.h"
 
 #include <QtGui>
 
-/*! contructeur de la classe edit_point_gui
+/*!
+  @fn edite_categories::edite_categories(QWidget *parent) : QDialog(parent)
+  @brief contructeur de la classe edit_point_gui
   @param parent : QWidget : voir les parametre de QDialog
   @note info : la fenetre nutilise pas de .ui, l'interface est codé.\n
   role : crée une fenetre en lien avec la table categories pour permetre son edition.
@@ -63,7 +74,9 @@ edite_categories::edite_categories(QWidget *parent) : QDialog(parent)
     setLayout(mainLayout);
 }
 
-/*! slot gerant la categorie selectionné
+/*!
+  @fn void edite_categories::select_categorie(const QModelIndex &index)
+  @brief slot gerant la categorie selectionné
   @param &index : const QModelIndex : voir QModelIndex
   @note role : reactualise courantCategorie en fonction de la ligne selectionné
 */
@@ -72,7 +85,9 @@ void edite_categories::select_categorie(const QModelIndex &index){
     courantCategorie = record.value("categorie_id").toInt();
 }
 
-/*! slot supprimant une categorie selectionné
+/*!
+  @fn void edite_categories::drup_categorie()
+  @brief slot supprimant une categorie selectionné
   @note role : supprime la categorie selectionné lors de l'appuis sur le bouton
 */
 void edite_categories::drup_categorie(){
@@ -86,7 +101,9 @@ void edite_categories::drup_categorie(){
     edite_categorie->select();
 }
 
-/*! slot ajoute une categorie
+/*!
+  @fn void edite_categories::insert_categorie()
+  @brief slot ajoute une categorie
   @note role : ajoute une actegorie initialisé avec un nom vide et la selectionne. Cette fonction est appelé a partir de l'appuis sur le bouton ajouter.
 */
 void edite_categories::insert_categorie(){
@@ -103,7 +120,9 @@ void edite_categories::insert_categorie(){
     viewCategories->selectRow(courantCategorie);
 }
 
-/*! slot met a jour les champ de la table categories qui ont étés modifiés
+/*!
+  @fn void edite_categories::submitCategorie()
+  @brief slot met a jour les champ de la table categories qui ont étés modifiés
   @note utilise les propriétés des QSQLTableModel.
 */
 void edite_categories::submitCategorie(){

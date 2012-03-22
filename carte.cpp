@@ -1,3 +1,13 @@
+/**
+ * \file carte.cpp
+ * \brief Fenetre principale de l'application
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ * permet la visualisation de la carte, la selection et le filtrage de points. Son menu permet le parametrage de la base de donnee et le changement de langue
+ *
+ */
+
 #include "carte.h"
 #include "ui_carte.h"
 #include <QtGui>
@@ -20,7 +30,9 @@
 
 
 
-/*! Createur de la fentre Carte
+/*!
+    @fn Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
+    @brief Createur de la fentre Carte
     \note Dans les faits la recuperation ou la creation de la base de donne se fait  l'appel de datacreate on rcupre aussi les catagories qui ont t sauvergard dans les QSettings.
 */
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)

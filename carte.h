@@ -1,3 +1,13 @@
+/**
+ * \file carte.h
+ * \brief Fenetre principale de l'application
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ * permet la visualisation de la carte, la selection et le filtrage de points. Son menu permet le parametrage de la base de donnee et le changement de langue
+ *
+ */
+
 #ifndef CARTE_H
 #define CARTE_H
 

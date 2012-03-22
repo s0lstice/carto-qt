@@ -1,7 +1,9 @@
 #include "data_heures.h"
 #include "data_jours.h"
 
-/*! fonction : creant la table heures dans la base de donnée
+/*!
+  @fn bool initHeuresTable(){
+  @brief fonction : creant la table heures dans la base de donnée
  @return vrai|fau : bool : indique la reussite ou l'echque de l'initialisation
  @note les champs de la table points sont :\n
     -heure_id : INTEGER PRIMARY KEY AUTOINCREMENT : clef primaire de latable\n
@@ -22,7 +24,9 @@ bool initHeuresTable(){
     return true;
 }
 
-/*! fonction : permet d'ajouter une plage horaire
+/*!
+  @fn bool addHeur(int point_id,int jour_id, QString debut, QString fin ){
+  @brief fonction : permet d'ajouter une plage horaire
   @param point_id : int : identifiant du point associe
   @param jour_id : int : identifiant du jour
   @param debut : QString : heur d'ouverture sous la forme HH:mm
@@ -44,7 +48,9 @@ bool addHeur(int point_id,int jour_id, QString debut, QString fin ){
     return true;
 }
 
-/*! fonction : permet d'obtenir les plages horaire d'un point
+/*!
+  @fn QVector<heure> getHeureByPoint(int point_id){
+  @brief fonction : permet d'obtenir les plages horaire d'un point
   @param point_id : int : identifiant du point associe
   @return QVector<heure> : un vecteur d'heurs de la classe heure
 */
@@ -71,7 +77,9 @@ QVector<heure> getHeureByPoint(int point_id){
      return tabHeure;
 }
 
-/*! fonction : permet d'obtenir les plages horaire d'un point
+/*!
+  @fn QSqlRecord getHeureByPointRecord(int point_id){
+  @brief fonction : permet d'obtenir les plages horaire d'un point
   @param point_id : int : identifiant du point associe
   @return QSqlRecord : le resultat de la requet sqlite
 */

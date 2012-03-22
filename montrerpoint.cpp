@@ -1,3 +1,13 @@
+/**
+ * \file montrerpoint.cpp
+ * \brief Fenetre permetant la visualisation complette d'un point, position sur catre, donnees dans la base.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
+
 #include "montrerpoint.h"
 #include "ui_montrerpoint.h"
 #include "heure.h"
@@ -6,7 +16,9 @@
 #include <QVector>
 #include "edit_point_gui.h"
 
-/*! Construit la fenêtre et initialise les données importantes
+/*!
+  @fn MontrerPoint::MontrerPoint(POI PointDInteret,QWidget *parent) : QDialog(parent), ui(new Ui::MontrerPoint)
+  @brief Construit la fenêtre et initialise les données importantes
     \param POI PointDInteret. La fenêtre va se construire en utilisant ses attributs
     \note Nous creeons un fenetre qui va afficher les attributs du point et sa position geographique, pour se faire on initialise les champs de la fenêtre avec chaque attributs
     Pour l'affichage de l'heure nous créeons une table et nous récuperons les heures du points à l'aide d'une requete sur la base de donnée.

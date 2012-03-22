@@ -1,7 +1,9 @@
 #include "data_jours.h"
 #include "database.h"
 
-/*! fonction : creant la table heures dans la base de donnée
+/*!
+  @fn bool initJoursTable(){
+  @brief fonction : creant la table heures dans la base de donnée
  @return vrai|fau : bool : indique la reussite ou l'echque de l'initialisation
  @note les champs de la table points sont :\n
     -jour_id : INTEGER PRIMARY KEY AUTOINCREMENT : clef primaire de latable\n
@@ -34,7 +36,9 @@ bool initJoursTable(){
     return true;
 }
 
-/*! fonction : permet de connaitre le jour en fonction de l'identifiant
+/*!
+  @fn QString jourById(int jour_id){
+  @brief fonction : permet de connaitre le jour en fonction de l'identifiant
   @param jour_id : int : identifiant du jour
   @return QString : nom du jour.
 */

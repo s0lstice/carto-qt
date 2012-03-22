@@ -1,3 +1,12 @@
+/**
+ * \file montrerpoint.h
+ * \brief Fenetre permetant la visualisation complette d'un point, position sur catre, donnees dans la base.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #ifndef MONTRERPOINT_H
 #define MONTRERPOINT_H
 

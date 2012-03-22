@@ -1,7 +1,9 @@
 #include "data_points.h"
 #include "data_categories.h"
 
-/*! fonction creant la table points dans la base de donnée
+/*!
+  @fn bool initPointsTable()
+  @brief fonction creant la table points dans la base de donnée
  @return vrai|fau : bool : indique la reussite ou l'echque de l'initialisation
  @note les champs de la table points sont :\n
     -point_id : INTEGER PRIMARY KEY AUTOINCREMENT : clef primaire de latable\n
@@ -29,7 +31,9 @@ bool initPointsTable(){
     return true;
 }
 
-/*! fonction : obtenir les points de la base de donnée
+/*!
+  @fn QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,QString Cat)
+  @brief fonction : obtenir les points de la base de donnée
   @param latitude : float
   @param longitude : flaot
   @param nbpts : int : nombre maximum de points renvoyés
@@ -71,7 +75,9 @@ QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,
 
    return tabPOI;
 }
-/*! fonction : ajoute un point dans la base de donnée
+/*!
+  @fn bool addPoint(QString categorie, QString name, float latitude, float longitude, QString description)
+  @brief fonction : ajoute un point dans la base de donnée
   @param latitude : float
   @param longitude : flaot
   @param name : QString
@@ -99,7 +105,9 @@ bool addPoint(QString categorie, QString name, float latitude, float longitude, 
     return true;
 }
 
-/*! fonction : ajoute un point dans la base de donnée
+/*!
+  @fn bool addPoint(QString categorie, QString name, float latitude, float longitude)
+  @brief fonction : ajoute un point dans la base de donnée
   @param latitude : float
   @param longitude : flaot
   @param name : QString
@@ -125,7 +133,9 @@ bool addPoint(QString categorie, QString name, float latitude, float longitude){
     return true;
 }
 
-/*! fonction : permet d'obtenir les points en fonction de la categorie
+/*!
+  ]fn QVector<POI> getPointByCategorie(QString categorie)
+  @brief fonction : permet d'obtenir les points en fonction de la categorie
   @param categorie : QString : categorie recherché
   @return QVector<POI>  : un vecteur de points
 */
@@ -150,7 +160,9 @@ QVector<POI> getPointByCategorie(QString categorie){
     }
     return tabPOI;
 }
-/*! fonction : permet d'obtenir les points en fonction de leurs nom
+/*!
+  @fn QVector<POI> getPointByName(QString name,int nbpts)
+  @brief fonction : permet d'obtenir les points en fonction de leurs nom
   @param name : QString : nom recherché
   @param nbpts : int : nombre de points maximum renvoyé
   @return QVector<POI>  : un vecteur de points
@@ -177,7 +189,9 @@ QVector<POI> getPointByName(QString name,int nbpts){
    return tabPOI;
 }
 
-/*! fonction : permet d'obtenir les points en fonction de leurs nom et de leurs positions
+/*!
+  @fn QVector<POI> getPoint(float latitude, float longitude, QString name)
+  @brief fonction : permet d'obtenir les points en fonction de leurs nom et de leurs positions
   @param name : QString : nom recherché
   @param latitude : float
   @param longitide : float

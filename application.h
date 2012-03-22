@@ -1,3 +1,13 @@
+/**
+ * \file application.h
+ * \brief classe Application. Initialise l'application
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ * Initialisation et destruction du programme, gere les parametres de l'application.
+ *
+ */
+
 #ifndef APPLICATION_H
 #define APPLICATION_H
 

@@ -1,3 +1,12 @@
+/**
+ * \file heure.h
+ * \brief Classe permetant de contenir toutes les informations d'une plage horaire.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #include "heure.h"
 #include <QDebug>
 

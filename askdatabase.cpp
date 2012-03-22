@@ -1,3 +1,13 @@
+/**
+ * \file askdatabase.cpp
+ * \brief Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ * La creation ou la selection d'une base de donné necessite la selection de son emplacement. La creation necessite de creer toutes les table de la base.
+ *
+ */
+
 #include "askdatabase.h"
 #include "ui_askdatabase.h"
 #include "carte.h"
@@ -8,16 +18,17 @@
 #include <string>
 
 
-/*! Construit la fenêtre et initialise les données importantes
+/*!
+  @brief Construit la fenêtre et initialise les données importantes
+    @fn AskDataBase::AskDataBase(QWidget *parent) : QMainWindow(parent), ui(new Ui::AskDataBase)
+    \note Cette fenêtre que nous allons créer est faite pour permettre à l'utilisateur de choisir une base de donnée.\n
+    Il y a 4 bouttons :\n
+    -pushbutton_3 permet de quitter\n
+    -pushbutton_2 permet de creer ou selectionner une BDD\n
+    -pushbutton permet de creer ou selectionner une BDD\n
+    -pushbutton_4 permet d'ouvrir un explorateur pour choisir un fichier\n
 
-    \note Cette fenêtre que nous allons créer est faite pour permettre à l'utilisateur de choisir une base de donnée.
-    Il y a 4 bouttons :
-    -pushbutton_3 permet de quitter
-    -pushbutton_2 permet de creer ou selectionner une BDD
-    -pushbutton permet de creer ou selectionner une BDD
-    -pushbutton_4 permet d'ouvrir un explorateur pour choisir un fichier
-
-    Deplus la fenêtre liste tout les fichiers en .db dans son repertoire.
+    Deplus la fenêtre liste tout les fichiers en .db dans son repertoire.\n
 */
 
 AskDataBase::AskDataBase(QWidget *parent) :
@@ -48,7 +59,10 @@ AskDataBase::~AskDataBase()
 }
 
 
-/*! Creer une fenêtre qui permet la selection d'un fichier .
+/*!
+  @fn void AskDataBase::SelectFile(void)
+
+  @brief Creer une fenêtre qui permet la selection d'un fichier .
 
     \note Une fois la selection faite on met automatiquement dans la combobox le fichier qui vient d'être selectionné.
 */
@@ -66,7 +80,10 @@ void AskDataBase::SelectFile(void)
 
 }
 
-/*! Cree ou recupere une BDD puis lance la feetre principale.
+/*!
+    @fn void AskDataBase::CreateFile(void)
+
+    @brief Cree ou recupere une BDD puis lance la feetre principale.
     \note Dans les faits la recuperation ou la creation de la base de donnée se fait à l'appel de datacreate on récupére aussi les catagories qui ont été sauvergardé dans les QSettings.
 
 */
@@ -87,7 +104,10 @@ void AskDataBase::CreateFile(void)
     this->close();
 }
 
-/*! Cree ou recupere une BDD puis lance la feetre principale.
+/*!
+  @fn void AskDataBase::ValidateFile(void)
+
+  @brief Cree ou recupere une BDD puis lance la feetre principale.
     \note Dans les faits la recuperation ou la creation de la base de donnée se fait à l'appel de datacreate on récupére aussi les catagories qui ont été sauvergardé dans les QSettings.
 */
 void AskDataBase::ValidateFile(void)

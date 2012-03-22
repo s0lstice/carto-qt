@@ -36,6 +36,7 @@ bool initPointsTable(){
   @param name : QString
   @param Cat : QString : categorie des points recherché
   @return QVector<POI> : un vecteur de POI
+  @note la liste renvoie contien les points les plus proche des coordonnes fournies
 */
 
 QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,QString Cat)

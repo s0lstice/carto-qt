@@ -6,12 +6,15 @@
 #include "data_heures.h"
 #include "data_jours.h"
 
-void export_csv(){
+/*! fonction : export la base de donnee dans un fichier au format csv
+  @param filecsv : QString : adresse et nom du fichier de sauvgarde
+*/
+void export_csv(QString filecsv){
     QVector<QString> categories;
     QVector<POI> points;
     QVector<heure> heures;
-
-    QFile file("export.csv");
+    qDebug() << filecsv + ".csv";
+    QFile file(filecsv + ".csv");
     if(!file.open(QIODevice::WriteOnly)){
         qWarning() << "[erreur] impossible d'ouvrir le ficher en ecriture seul"
                   << qPrintable(file.errorString());

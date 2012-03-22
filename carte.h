@@ -37,6 +37,7 @@ private:
     float PosyBak;
     CirclePoint* PointA;
     QTimer * LectureBaseDDTimer;
+    bool DLenable;
     int cmpt;
     int nbpstoshow;
     void LoadingDBBDataA();
@@ -63,7 +64,8 @@ private slots:
     void ByCat(int i );
     void langue_englais();
     void langue_francais();
-
+    void Telecharger();
+    void AutoTelcharger(int LvL);
     void exportCSV();
 };
 

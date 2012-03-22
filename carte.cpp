@@ -19,6 +19,10 @@
 #include "data_heures.h"
 
 
+
+/*! Createur de la fenêtre Carte
+    \note Dans les faits la recuperation ou la creation de la base de donnée se fait à l'appel de datacreate on récupére aussi les catagories qui ont été sauvergardé dans les QSettings.
+*/
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
 
@@ -51,11 +55,13 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(ui->lineEdit,SIGNAL(textChanged(QString)),this,SLOT(Chercher(QString)));
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
+    connect(ui->AutoDownLoad,SIGNAL(stateChanged(int)),this,SLOT(AutoTelcharger(int)));
+    connect(ui->BouttonTelecharger,SIGNAL(clicked()),this,SLOT(Telecharger()));
     ui->comboBox->addItem("");
     LectureBaseDDTimer = new QTimer();
     LectureBaseDDTimer->setInterval(50);
-    connect(LectureBaseDDTimer,SIGNAL(timeout()),this,SLOT(LoadingDBBData()));
     LectureBaseDDTimer->start();
+    connect(LectureBaseDDTimer,SIGNAL(timeout()),this,SLOT(LoadingDBBData()));
     ui->spinBox->setValue(10);
     nbpstoshow = 10 ;
     int i ;
@@ -63,6 +69,7 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     initCategoriesTable();
     initJoursTable();
     initHeuresTable();
+    DLenable=false;
 
     QVector<QString> Categories = getCategories();
 
@@ -72,6 +79,29 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
         {
             ui->comboBox->addItem(Categories.value(i));
         }
+    }
+}
+
+void Carte::Telecharger()
+{
+    downloading = true;
+    QString Urlp = QString("http://www.geovelo.fr/api_test.php?lon=" + QString::number(Posx) + "&lat=" + QString::number(Posy));
+    QUrl url = QUrl(Urlp);
+    QNetworkRequest requete(url);
+    GestionnaireDeRequete->get(requete);
+    connect( GestionnaireDeRequete, SIGNAL(finished(QNetworkReply*)), this, SLOT(ParserA(QNetworkReply*)));
+
+}
+
+void Carte::AutoTelcharger(int LvL)
+{
+    if(LvL!=2)
+    {
+        DLenable=false;
+    }
+    else
+    {
+        DLenable=true;
     }
 }
 
@@ -130,6 +160,7 @@ void Carte::Centrer()
 
 }
 
+
 void Carte::gestionBDD(){
     edit_point_gui art(0,Posx,Posy,0);
     art.exec();
@@ -137,12 +168,8 @@ void Carte::gestionBDD(){
 }
 
 
-
-
 void Carte::AjouterPoints()
 {
-
-
     int i;
     ui->listWidget->clear();
     ui->listWidget->setUpdatesEnabled(false);
@@ -205,13 +232,11 @@ void Carte::LoadingDBBData()
     }
     if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt>=5))
     {
-
         if(cmpt==10)
         {
                 cmpt=1;
                 AjouterPoints();
                 return;
-
         }
         if(cmpt==9)
         {
@@ -226,58 +251,41 @@ void Carte::LoadingDBBData()
                 }
                 cmpt =1;
         }
-        if((cmpt==5)&&(downloading==false))
+        if((cmpt==5)&&(downloading==false)&&(DLenable==true))
         {
-                downloading = true;
-                QString Urlp = QString("http://www.geovelo.fr/api_test.php?lon=" + QString::number(Posx) + "&lat=" + QString::number(Posy));
-                QUrl url = QUrl(Urlp);
-                QNetworkRequest requete(url);
-                GestionnaireDeRequete->get(requete);
-                connect( GestionnaireDeRequete, SIGNAL(finished(QNetworkReply*)), this, SLOT(ParserA(QNetworkReply*)));
-         }
-
+            Telecharger();
+        }
          PosxBak = Posx;
          PosyBak = Posy;
          AjouterPoints();
          QtConcurrent::run(this,&Carte::LoadingDBBDataA);
-
     }
 }
 
 void Carte::LoadingDBBDataA()
 {
-
-
    VPOI.clear();
    VPOI = getPointImp(Posx,Posy,nbpstoshow,ui->lineEdit->text(),ui->comboBox->currentText());
-
    if(VPOI.count()!=0)
    {
        if(VPOI.value(1).GetDist()>0.00005)
        {
             cmpt = 5 ;
            return;
-
        }
-
        cmpt=10;
       return;
-
    }
    else
    {
-
-
        cmpt=5;
        return;
    }
-
 }
 
 
 void Carte::ParserA(QNetworkReply* reponse)
 {
-
     y=0;
     QDomDocument doc;
   //********************************
@@ -322,12 +330,10 @@ void Carte::ParserA(QNetworkReply* reponse)
     reponse->close();
     cmpt=10;
     downloading=false;
-
 }
 
 void Carte::addPointThread(QString categorie, QString name, float latitude, float longitude)
 {
-
        addPoint(categorie, name,latitude,longitude);
        cmpt = 10;
        y++;
@@ -337,31 +343,27 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
 {
     int iterateur=0;
     MontrerPoint *MontrePointWindow;
-
     for(iterateur=0;iterateur<VPOI.count();iterateur++)
     {
         if(VPOI.value(iterateur).GetName()==Item->text())
         {
           MontrePointWindow = new MontrerPoint(VPOI.value(iterateur));
           MontrePointWindow->exec();
-
           return;
         }
     }
 }
 
-   void Carte::ModifNbPoint(int nbpoints)
-   {
-        nbpstoshow = nbpoints;
-        AjouterPoints();
-
-   }
+void Carte::ModifNbPoint(int nbpoints)
+{
+     nbpstoshow = nbpoints;
+     AjouterPoints();
+}
 
 void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
 {
     int iterateur=0;
     MontrerPoint *MontrePointWindow;
-
     for(iterateur=0;iterateur<VPOI.count();iterateur++)
     {
         if(VPOI.value(iterateur).GetName()==geo->name())
@@ -372,23 +374,18 @@ void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
             break;
         }
     }
-
 }
 
 void Carte::Chercher(QString Chaine)
 {
     VPOI.clear();
-
     VPOI=getPointImp(Posx,Posy,nbpstoshow,Chaine,ui->comboBox->currentText());
     cmpt=10;
-
 }
 
 void Carte::ByCat(int i)
 {
     VPOI.clear();
-
     VPOI=getPointImp(Posx,Posy,nbpstoshow,ui->lineEdit->text(),ui->comboBox->currentText());
     cmpt=10;
-
 }

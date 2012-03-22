@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'carte.ui'
 **
-** Created: Mon 19. Mar 19:20:15 2012
+** Created: Thu 22. Mar 10:14:11 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
 #include <QtGui/QComboBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -62,6 +63,10 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_4;
     QComboBox *comboBox;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *BouttonTelecharger;
+    QCheckBox *AutoDownLoad;
     QMenuBar *menuBar;
     QMenu *menuMenu;
     QMenu *menuBDD;
@@ -73,7 +78,7 @@ public:
     {
         if (Carte->objectName().isEmpty())
             Carte->setObjectName(QString::fromUtf8("Carte"));
-        Carte->resize(849, 631);
+        Carte->resize(850, 652);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -106,7 +111,7 @@ public:
         label->setGeometry(QRect(540, 155, 51, 21));
         progressBar = new QProgressBar(centralWidget);
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setGeometry(QRect(10, 550, 831, 20));
+        progressBar->setGeometry(QRect(10, 570, 831, 20));
         progressBar->setValue(100);
         progressBar->setAlignment(Qt::AlignCenter);
         progressBar->setInvertedAppearance(false);
@@ -185,10 +190,28 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_3);
 
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 540, 301, 21));
+        horizontalLayout_4 = new QHBoxLayout(widget);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        BouttonTelecharger = new QPushButton(widget);
+        BouttonTelecharger->setObjectName(QString::fromUtf8("BouttonTelecharger"));
+
+        horizontalLayout_4->addWidget(BouttonTelecharger);
+
+        AutoDownLoad = new QCheckBox(widget);
+        AutoDownLoad->setObjectName(QString::fromUtf8("AutoDownLoad"));
+
+        horizontalLayout_4->addWidget(AutoDownLoad);
+
         Carte->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Carte);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 849, 21));
+        menuBar->setGeometry(QRect(0, 0, 850, 21));
         menuMenu = new QMenu(menuBar);
         menuMenu->setObjectName(QString::fromUtf8("menuMenu"));
         menuBDD = new QMenu(menuBar);
@@ -232,6 +255,8 @@ public:
         label_2->setText(QApplication::translate("Carte", "Nombre de points \303\240 afficher :", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("Carte", "Chaine De Recherche :", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("Carte", "Categories : ", 0, QApplication::UnicodeUTF8));
+        BouttonTelecharger->setText(QApplication::translate("Carte", "Telecharger", 0, QApplication::UnicodeUTF8));
+        AutoDownLoad->setText(QApplication::translate("Carte", "Auto Telechargement", 0, QApplication::UnicodeUTF8));
         menuMenu->setTitle(QApplication::translate("Carte", "Menu", 0, QApplication::UnicodeUTF8));
         menuBDD->setTitle(QApplication::translate("Carte", "BDD", 0, QApplication::UnicodeUTF8));
         menuLangue->setTitle(QApplication::translate("Carte", "Langue", 0, QApplication::UnicodeUTF8));

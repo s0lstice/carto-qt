@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>849</width>
-    <height>631</height>
+    <width>850</width>
+    <height>652</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -63,7 +63,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>550</y>
+      <y>570</y>
       <width>831</width>
       <height>20</height>
      </rect>
@@ -156,13 +156,39 @@
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>301</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="BouttonTelecharger">
+       <property name="text">
+        <string>Telecharger</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="AutoDownLoad">
+       <property name="text">
+        <string>Auto Telechargement</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>849</width>
+     <width>850</width>
      <height>21</height>
     </rect>
    </property>

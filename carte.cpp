@@ -280,8 +280,8 @@ void Carte::LoadingDBBDataA()
 void Carte::ParserA(QNetworkReply* reponse)
 {
 
-    y=0;
-    QDomDocument doc;
+   y = 0;
+   QDomDocument doc;
   //********************************
   // Read the DOM tree form file
   //********************************

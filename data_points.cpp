@@ -45,7 +45,7 @@ QVector<POI> getPointImp(float latitude, float longitude,int nbpts,QString Name,
    QVector<POI> tabPOI;
    if(Cat!="")
    {
-       if(query.exec("SELECT latitude, longitude, name, categorie_id ,descriptio,point_id,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE categorie_id = "+ QString::number(getCategorieIdByName(Cat)) + " AND name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
+       if(query.exec("SELECT latitude, longitude, name, categorie_id ,description,point_id,((latitude - "+ QString::number(latitude)+  ") * (latitude - "+ QString::number(latitude) +  ")) + ((longitude - "+ QString::number(longitude) +  ") * (longitude -" + QString::number(longitude)+  ")) distance FROM points  WHERE categorie_id = "+ QString::number(getCategorieIdByName(Cat)) + " AND name like '%" + Name +"%' ORDER BY distance LIMIT " + QString::number(nbpts) + " ;") == false)
        {
            return tabPOI;
        }

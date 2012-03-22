@@ -8,7 +8,6 @@
 #include "Parseur.h"
 #include "database.h"
 #include <QTimer>
-#include <QMutex>
 #include "montrerpoint.h"
 
 using namespace qmapcontrol;
@@ -38,7 +37,6 @@ private:
     float PosyBak;
     CirclePoint* PointA;
     QTimer * LectureBaseDDTimer;
-    QTimer * DownloadTimer;
     int cmpt;
     int nbpstoshow;
     void LoadingDBBDataA();

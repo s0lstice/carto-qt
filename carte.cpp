@@ -15,6 +15,8 @@
 #include "application.h"
 #include <QSettings>
 #include "data_categories.h"
+#include "data_jours.h"
+#include "data_heures.h"
 
 
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
@@ -50,16 +52,18 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     connect(mainlayer,SIGNAL(geometryClicked(Geometry*,QPoint)),this,SLOT(ReponseGeometryClick(Geometry*,QPoint)));
     connect(ui->BouttonCentrer,SIGNAL(clicked()),this,SLOT(Centrer()));
     ui->comboBox->addItem("");
-    ProtectBDD = new QMutex();
-    ProtectDraw = new QMutex();
     LectureBaseDDTimer = new QTimer();
-    DownloadTimer = new QTimer();
     LectureBaseDDTimer->setInterval(50);
     connect(LectureBaseDDTimer,SIGNAL(timeout()),this,SLOT(LoadingDBBData()));
     LectureBaseDDTimer->start();
     ui->spinBox->setValue(10);
     nbpstoshow = 10 ;
     int i ;
+    initPointsTable();
+    initCategoriesTable();
+    initJoursTable();
+    initHeuresTable();
+
     QVector<QString> Categories = getCategories();
 
     for(i=0;i<Categories.count();i++)
@@ -101,16 +105,16 @@ void Carte::exportCSV(){
 void Carte::choixBDD()
 {
     AskDataBase *choixFenetre = new AskDataBase();
-    ProtectBDD->lock();
+
     database::dataDisconnect();
-    ProtectBDD->unlock();
+
     choixFenetre->show();
     this->close();
 }
 
 void Carte::Centrer()
 {
-    ProtectDraw->lock();
+
     int i = 0 ;
     if(ui->listWidget->selectedItems().count()==1)
     {
@@ -125,7 +129,7 @@ void Carte::Centrer()
             }
         }
     }
-    ProtectDraw->unlock();
+
 }
 
 void Carte::gestionBDD(){
@@ -142,16 +146,18 @@ void Carte::AjouterPoints()
 
 
     int i;
-
-    QPen* pointpen = new QPen(QColor(0,0,0));
-    QVector<QString>A=getCategories();
-    mainlayer->clearGeometries();
-    pointpen->setWidth(3);
-    pointpen->setColor(QColor(0,127,255));
+    ui->listWidget->clear();
+    ui->listWidget->setUpdatesEnabled(false);
     for(i=0;i<VPOI.count();i++)
     {
-
-
+        ui->listWidget->addItem(VPOI.value(i).GetName());
+    }
+    ui->listWidget->setUpdatesEnabled(true);
+    QPen* pointpen = new QPen(QColor(0,127,255));
+    mainlayer->clearGeometries();
+    pointpen->setWidth(3);
+    for(i=0;i<VPOI.count();i++)
+    {
         CirclePoint* PointA = new   CirclePoint(VPOI.value(i).Getlat(),VPOI.value(i).Getlon(),VPOI.value(i).GetName(),Point::Middle,pointpen);
         mainlayer->addGeometry(PointA);
 
@@ -199,31 +205,21 @@ void Carte::LoadingDBBData()
     {
         y=y-100;
     }
-
-
     if(((cmpt==1)&&(Posx!=PosxBak)&&(Posy!=PosyBak))||(cmpt>=5))
     {
 
         if(cmpt==10)
         {
                 cmpt=1;
-                ui->listWidget->clear();
-                ui->listWidget->setUpdatesEnabled(false);
-                for(i=0;i<VPOI.count();i++)
-                {
-                    ui->listWidget->addItem(VPOI.value(i).GetName());
-                }
-                ui->listWidget->setUpdatesEnabled(true);
-                qDebug("omega");
                 AjouterPoints();
+     qDebug("10");
                 return;
-        }
 
+        }
         if(cmpt==9)
         {
-
-                QVector<QString> Categories = getCategories();
-
+            qDebug("9");
+            QVector<QString> Categories = getCategories();
                 for(i=0;i<Categories.count();i++)
                 {
                     if(ui->comboBox->findText(Categories.value(i))==-1)
@@ -235,8 +231,7 @@ void Carte::LoadingDBBData()
         }
         if(cmpt==5)
         {
-                ProtectDraw->unlock();
-                cmpt=10;
+
                 QString Urlp = QString("http://www.geovelo.fr/api_test.php?lon=" + QString::number(Posx) + "&lat=" + QString::number(Posy));
                 QUrl url = QUrl(Urlp);
                 QNetworkRequest requete(url);
@@ -246,7 +241,7 @@ void Carte::LoadingDBBData()
 
             PosxBak = Posx;
             PosyBak = Posy;
-            qDebug()<<"E";
+            AjouterPoints();
             QtConcurrent::run(this,&Carte::LoadingDBBDataA);
 
     }
@@ -255,15 +250,9 @@ void Carte::LoadingDBBData()
 void Carte::LoadingDBBDataA()
 {
 
-   ProtectDraw->lock();
-   ProtectBDD->lock();
+
    VPOI.clear();
-
    VPOI = getPointImp(Posx,Posy,nbpstoshow,ui->lineEdit->text(),ui->comboBox->currentText());
-
-
-
-   ProtectBDD->unlock();
 
    if(VPOI.count()!=0)
    {
@@ -273,13 +262,14 @@ void Carte::LoadingDBBDataA()
            return;
 
        }
-       AjouterPoints();
+
        cmpt=10;
-       ProtectDraw->unlock();
+      return;
+
    }
    else
    {
-         ProtectDraw->unlock();
+
 
        cmpt=5;
        return;
@@ -338,9 +328,9 @@ void Carte::ParserA(QNetworkReply* reponse)
 
 void Carte::addPointThread(QString categorie, QString name, float latitude, float longitude)
 {
-     ProtectBDD->lock();
+
        addPoint(categorie, name,latitude,longitude);
-      ProtectBDD->unlock();
+
       y++;
 }
 
@@ -348,21 +338,17 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
 {
     int iterateur=0;
     MontrerPoint *MontrePointWindow;
-    ProtectDraw->lock();
-    qDebug()<<"1";
+
     for(iterateur=0;iterateur<VPOI.count();iterateur++)
     {
         if(VPOI.value(iterateur).GetName()==Item->text())
         {
-          qDebug()<<"2";
           MontrePointWindow = new MontrerPoint(VPOI.value(iterateur));
           MontrePointWindow->exec();
-          ProtectDraw->unlock();
+
           return;
         }
     }
-
-
 }
 
    void Carte::ModifNbPoint(int nbpoints)
@@ -376,7 +362,7 @@ void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
 {
     int iterateur=0;
     MontrerPoint *MontrePointWindow;
-    ProtectDraw->lock();
+
     for(iterateur=0;iterateur<VPOI.count();iterateur++)
     {
         if(VPOI.value(iterateur).GetName()==geo->name())
@@ -387,7 +373,7 @@ void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
             break;
         }
     }
-    ProtectDraw->unlock();
+
 }
 
 void Carte::Chercher(QString Chaine)

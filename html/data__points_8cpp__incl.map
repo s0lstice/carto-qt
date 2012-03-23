@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$data__points_8h.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="60,83,159,112"/>
+<area shape="rect" id="node19" href="$data__categories_8h.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="183,83,308,112"/>
+<area shape="rect" id="node7" href="$_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="95,237,151,267"/>
+<area shape="rect" id="node13" href="$database_8h.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="197,160,283,189"/>
+</map>

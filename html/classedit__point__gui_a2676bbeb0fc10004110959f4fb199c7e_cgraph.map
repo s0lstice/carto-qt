@@ -1,0 +1,21 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="744,165,891,194"/>
+<area shape="rect" id="node7" href="$classedit__point__gui.html#a2942df5953fa13d4db13d5079a8f3704" title="met en place le mapper d&#39;heures" alt="" coords="245,58,461,87"/>
+<area shape="rect" id="node9" href="$classedit__point__gui.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point" alt="" coords="248,111,459,141"/>
+<area shape="rect" id="node11" href="$classedit__point__gui.html#a1ddaf28d63a1ff56d6f495a408c19e19" title="met en place le model heure &#160;edit_point_gui::init_table_heure()" alt="" coords="253,165,453,194"/>
+<area shape="rect" id="node13" href="$classedit__point__gui.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point" alt="" coords="255,218,452,247"/>
+<area shape="rect" id="node15" href="$classedit__point__gui.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table" alt="" coords="253,271,453,301"/>
+<area shape="rect" id="node27" href="$classedit__point__gui.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table" alt="" coords="256,405,451,434"/>
+<area shape="rect" id="node41" href="$class_ui__edit__point.html#a48ec337d2706b2922cf8036065770e68" title="Ui_edit_point::setupUi" alt="" coords="279,538,428,567"/>
+<area shape="rect" id="node5" href="$classdatabase.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="939,165,1075,194"/>
+<area shape="rect" id="node17" href="$classedit__point__gui.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure" alt="" coords="520,111,685,141"/>
+<area shape="rect" id="node20" href="$classedit__point__gui.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure" alt="" coords="516,165,689,194"/>
+<area shape="rect" id="node23" href="$classedit__point__gui.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure" alt="" coords="511,218,695,247"/>
+<area shape="rect" id="node25" href="$classedit__point__gui.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies" alt="" coords="511,271,695,301"/>
+<area shape="rect" id="node29" href="$classedit__point__gui.html#a64d46f9525b022fc61466f9a9ebc8e33" title="action lors de la suppression d&#39;un point" alt="" coords="517,325,688,354"/>
+<area shape="rect" id="node32" href="$classedit__point__gui.html#a7ff071eaadca06239c9e7b1fd753b710" title="action lors de l&#39;ajout d&#39;un point" alt="" coords="515,378,691,407"/>
+<area shape="rect" id="node35" href="$classedit__point__gui.html#a47d7e4b965940d01158a8ae9df712ec2" title="edit_point_gui::position" alt="" coords="525,431,680,461"/>
+<area shape="rect" id="node37" href="$classedit__point__gui.html#a9be5a5020e85920440c31ab580fe2ce6" title="action lors de la selection d&#39;un point" alt="" coords="513,485,692,514"/>
+<area shape="rect" id="node39" href="$classedit__point__gui.html#a0d74ca32a3bef4c7694189542e0125d0" title="met a jour la table points en fonction des champs modifies" alt="" coords="509,538,696,567"/>
+<area shape="rect" id="node43" href="$class_ui__edit__point.html#ab3b3a1c61ac1be4e51c6b6e1138d6b47" title="Ui_edit_point::retranslateUi" alt="" coords="513,591,692,621"/>
+</map>

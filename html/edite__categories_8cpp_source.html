@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>cartographie:  Fichier source de edite_categories.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">cartographie</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">edite_categories.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="edite__categories_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="edite__categories_8h.html" title="Fenetre gerant l&#39;edition des categories.">edite_categories.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="database_8h.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho...">database.h</a>&quot;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QtGui&gt;</span>
+<a name="l00014"></a>00014 
+<a name="l00023"></a><a class="code" href="classedite__categories.html#abc5e5d3d4c86f2de06b4a408aff85681">00023</a> <a class="code" href="classedite__categories.html#abc5e5d3d4c86f2de06b4a408aff85681" title="contructeur de la classe edit_point_gui">edite_categories::edite_categories</a>(QWidget *parent) : QDialog(parent)
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025     <a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>();
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027     <a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a> = 1; <span class="comment">// initialise le descripteur de categorie selectionné</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029     <span class="comment">//message de prevantion</span>
+<a name="l00030"></a>00030     QLabel * attention = <span class="keyword">new</span> QLabel;
+<a name="l00031"></a>00031     attention-&gt;setText(tr(<span class="stringliteral">&quot;Attention :\n La suppression d&#39;une categorie en cours d&#39;utilisation\n rendra les donnees inutilisables !&quot;</span>));
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     <span class="comment">//mise en place du model sur latable categories</span>
+<a name="l00034"></a>00034     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a> = <span class="keyword">new</span> QSqlTableModel;
+<a name="l00035"></a>00035     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;setTable(<span class="stringliteral">&quot;categories&quot;</span>);
+<a name="l00036"></a>00036     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;setHeaderData(1, Qt::Horizontal, tr(<span class="stringliteral">&quot;categorie&quot;</span>));
+<a name="l00037"></a>00037     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;select();
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039     <span class="comment">//mise en place du tableau pour l&#39;affichage de la table categories contenue par le model</span>
+<a name="l00040"></a>00040     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a> = <span class="keyword">new</span> QTableView;
+<a name="l00041"></a>00041     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;setModel(<a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>);
+<a name="l00042"></a>00042     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
+<a name="l00043"></a>00043     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;resize(350, 100);
+<a name="l00046"></a>00046     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;setColumnWidth(1, <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;width());
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048     <span class="comment">//initialisation des boutons</span>
+<a name="l00049"></a>00049     <a class="code" href="classedite__categories.html#a0570875ad8f32836717506dd6919f235">editButton</a> = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;&amp;Modifier&quot;</span>));
+<a name="l00050"></a>00050     <a class="code" href="classedite__categories.html#a2f140e171420f87c8f7dd03cb2f5bfe0">addButton</a> = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;&amp;Ajouter&quot;</span>));
+<a name="l00051"></a>00051     <a class="code" href="classedite__categories.html#aa555c7bd16e71d30a585e433f9cf38fb">deletButton</a> = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;&amp;Supprimer&quot;</span>));
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053     <span class="comment">//contenaire pour les boutons</span>
+<a name="l00054"></a>00054     <a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a> = <span class="keyword">new</span> QDialogButtonBox(Qt::Horizontal);
+<a name="l00055"></a>00055     <a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a>-&gt;addButton(<a class="code" href="classedite__categories.html#a0570875ad8f32836717506dd6919f235">editButton</a>, QDialogButtonBox::ActionRole);
+<a name="l00056"></a>00056     <a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a>-&gt;addButton(<a class="code" href="classedite__categories.html#a2f140e171420f87c8f7dd03cb2f5bfe0">addButton</a>, QDialogButtonBox::ActionRole);
+<a name="l00057"></a>00057     <a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a>-&gt;addButton(<a class="code" href="classedite__categories.html#aa555c7bd16e71d30a585e433f9cf38fb">deletButton</a>, QDialogButtonBox::ActionRole);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="comment">//contenaire pour l&#39;ensemble des element de la fenetre</span>
+<a name="l00060"></a>00060     <a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a> = <span class="keyword">new</span> QVBoxLayout;
+<a name="l00061"></a>00061     <a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a>-&gt;addWidget(attention);
+<a name="l00062"></a>00062     <a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a>-&gt;addWidget(<a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>);
+<a name="l00063"></a>00063     <a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a>-&gt;addWidget(<a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a>);
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065     <span class="comment">//mise en place des connections boutons | selection &lt;=&gt; fonctions</span>
+<a name="l00066"></a>00066     connect(<a class="code" href="classedite__categories.html#a0570875ad8f32836717506dd6919f235">editButton</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedite__categories.html#a29e088e169311784a5acf101364ff20f" title="slot met a jour les champ de la table categories qui ont étés modifiés">submitCategorie</a>()));
+<a name="l00067"></a>00067     connect(<a class="code" href="classedite__categories.html#aa555c7bd16e71d30a585e433f9cf38fb">deletButton</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedite__categories.html#a101787e63bf6104ca43e814821bec1ce" title="slot supprimant une categorie selectionné">drup_categorie</a>()));
+<a name="l00068"></a>00068     connect(<a class="code" href="classedite__categories.html#a2f140e171420f87c8f7dd03cb2f5bfe0">addButton</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedite__categories.html#a068ee52d97e92dd1047617aa99431ae6" title="slot ajoute une categorie">insert_categorie</a>()));
+<a name="l00069"></a>00069     connect(<a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;selectionModel(),SIGNAL(
+<a name="l00070"></a>00070                 currentRowChanged(<span class="keyword">const</span> QModelIndex &amp;,
+<a name="l00071"></a>00071                 <span class="keyword">const</span> QModelIndex &amp;)),<span class="keyword">this</span>,SLOT(<a class="code" href="classedite__categories.html#af52c5acacdaa41559ee0066fb3241632" title="slot gerant la categorie selectionné">select_categorie</a>(<span class="keyword">const</span> QModelIndex &amp;)));
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073     <span class="comment">//valide la fenetre pour affichage</span>
+<a name="l00074"></a>00074     setLayout(<a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a>);
+<a name="l00075"></a>00075 }
+<a name="l00076"></a>00076 
+<a name="l00083"></a><a class="code" href="classedite__categories.html#af52c5acacdaa41559ee0066fb3241632">00083</a> <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#af52c5acacdaa41559ee0066fb3241632" title="slot gerant la categorie selectionné">edite_categories::select_categorie</a>(<span class="keyword">const</span> QModelIndex &amp;index){
+<a name="l00084"></a>00084     QSqlRecord record = <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;record(index.row());
+<a name="l00085"></a>00085     <a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a> = record.value(<span class="stringliteral">&quot;categorie_id&quot;</span>).toInt();
+<a name="l00086"></a>00086 }
+<a name="l00087"></a>00087 
+<a name="l00093"></a><a class="code" href="classedite__categories.html#a101787e63bf6104ca43e814821bec1ce">00093</a> <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#a101787e63bf6104ca43e814821bec1ce" title="slot supprimant une categorie selectionné">edite_categories::drup_categorie</a>(){
+<a name="l00094"></a>00094     QSqlQuery query(<a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM categories WHERE categorie_id = &quot;</span> + QString::number(<a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a>)) == <span class="keyword">false</span>)
+<a name="l00097"></a>00097     {
+<a name="l00098"></a>00098         qDebug()&lt;&lt; <span class="stringliteral">&quot;drup_categorie&quot;</span> &lt;&lt; query.lastError().text();
+<a name="l00099"></a>00099     }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;select();
+<a name="l00102"></a>00102 }
+<a name="l00103"></a>00103 
+<a name="l00109"></a><a class="code" href="classedite__categories.html#a068ee52d97e92dd1047617aa99431ae6">00109</a> <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#a068ee52d97e92dd1047617aa99431ae6" title="slot ajoute une categorie">edite_categories::insert_categorie</a>(){
+<a name="l00110"></a>00110     QSqlQuery query(<a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;insert into categories(categorie) values(&#39;&#39;)&quot;</span>) == <span class="keyword">false</span>)
+<a name="l00113"></a>00113     {
+<a name="l00114"></a>00114         qDebug()&lt;&lt; <span class="stringliteral">&quot;insert_categorie&quot;</span> &lt;&lt; query.lastError().text();
+<a name="l00115"></a>00115     }
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;select();
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119     <a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a> = <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;data(<a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;index(<a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;rowCount() -1, 0)).toInt();
+<a name="l00120"></a>00120     <a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>-&gt;selectRow(<a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a>);
+<a name="l00121"></a>00121 }
+<a name="l00122"></a>00122 
+<a name="l00128"></a><a class="code" href="classedite__categories.html#a29e088e169311784a5acf101364ff20f">00128</a> <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#a29e088e169311784a5acf101364ff20f" title="slot met a jour les champ de la table categories qui ont étés modifiés">edite_categories::submitCategorie</a>(){
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130     <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;database().transaction();
+<a name="l00131"></a>00131     <span class="keywordflow">if</span> (<a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;submitAll()) {
+<a name="l00132"></a>00132         <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;database().commit();
+<a name="l00133"></a>00133     } <span class="keywordflow">else</span> {
+<a name="l00134"></a>00134         <a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;database().rollback();
+<a name="l00135"></a>00135         QMessageBox::warning(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Erreur&quot;</span>),
+<a name="l00136"></a>00136                              tr(<span class="stringliteral">&quot;L&#39;opperation de mise a jour de la table de points a rencontre une erreur : %1&quot;</span>)
+<a name="l00137"></a>00137                              .arg(<a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>-&gt;lastError().text()));
+<a name="l00138"></a>00138     }
+<a name="l00139"></a>00139 }
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

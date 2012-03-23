@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$edit__point__gui_8h.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="193,83,305,112"/>
+<area shape="rect" id="node5" href="$montrerpoint_8h.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="83,160,187,189"/>
+<area shape="rect" id="node11" href="$carte_8cpp.html" title="Fenetre principale de l&#39;application." alt="" coords="193,315,268,344"/>
+<area shape="rect" id="node13" href="$montrerpoint_8cpp.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="120,237,237,267"/>
+<area shape="rect" id="node16" href="$edit__point__gui_8cpp.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="312,160,437,189"/>
+<area shape="rect" id="node7" href="$carte_8h.html" title="Fenetre principale de l&#39;application." alt="" coords="35,237,96,267"/>
+<area shape="rect" id="node9" href="$askdatabase_8cpp.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,315,125,344"/>
+</map>

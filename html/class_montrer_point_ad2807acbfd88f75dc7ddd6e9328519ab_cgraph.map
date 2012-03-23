@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_p_o_i.html#a3b511b8714fdadf765e24adf37e51124" title="POI::GetId" alt="" coords="232,5,317,35"/>
+<area shape="rect" id="node5" href="$class_p_o_i.html#aa5b4a4a635f1cf7b096d0610a683cf29" title="POI::Getlat" alt="" coords="231,59,319,88"/>
+<area shape="rect" id="node7" href="$class_p_o_i.html#a991a068f59ee5df1a8695d982f79863f" title="POI::Getlon" alt="" coords="229,112,320,141"/>
+</map>

@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classCarte.html#aaddfb22fcb7baced92648cc0d6a823a0" title="Carte::AjouterPoints" alt="" coords="233,5,372,35"/>
+<area shape="rect" id="node5" href="$data__categories_8cpp.html#aae0ee7b6ed88b7f4a80f4852c51fb729" title="fonction : retourne un vecteur avec toutes les categories de la base de donnee" alt="" coords="808,53,909,83"/>
+<area shape="rect" id="node11" href="$classCarte.html#ab0e71abb5334a5426ca6b7b0eb386372" title="Carte::LoadingDBBDataA" alt="" coords="217,212,388,241"/>
+<area shape="rect" id="node36" href="$classCarte.html#ac25be85b576e7d655754838268055c2e" title="Carte::Telecharger" alt="" coords="237,423,368,452"/>
+<area shape="rect" id="node7" href="$classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="1176,185,1323,215"/>
+<area shape="rect" id="node9" href="$classdatabase.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="1371,185,1507,215"/>
+<area shape="rect" id="node13" href="$data__points_8cpp.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée" alt="" coords="447,315,537,344"/>
+<area shape="rect" id="node16" href="$data__categories_8cpp.html#a4489eb5551004a5fd5ef5920b1c10ce0" title="fonction : retourne le nom de la categorie en fonction de l&#39;identifiant" alt="" coords="797,107,920,136"/>
+<area shape="rect" id="node19" href="$data__categories_8cpp.html#a9bf9ac909e82f3606111afd05c6fd0cb" title="fonction : retourne l&#39;identifiant de la categorie en fonction de son nom" alt="" coords="969,211,1127,240"/>
+<area shape="rect" id="node22" href="$classPOI.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="625,528,719,557"/>
+<area shape="rect" id="node24" href="$classPOI.html#a40b45b8e21bc360ac2ab3a0985a3fe75" title="POI::SetDesc" alt="" coords="620,261,724,291"/>
+<area shape="rect" id="node26" href="$classPOI.html#a99ba0b455ddd3e13a7cff836a4ef73f9" title="POI::SetDist" alt="" coords="624,315,720,344"/>
+<area shape="rect" id="node28" href="$classPOI.html#a082781f842b631163def78870698e0e4" title="POI::SetId" alt="" coords="631,368,713,397"/>
+<area shape="rect" id="node30" href="$classPOI.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="629,581,715,611"/>
+<area shape="rect" id="node32" href="$classPOI.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="624,421,720,451"/>
+<area shape="rect" id="node34" href="$classPOI.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="619,475,725,504"/>
+<area shape="rect" id="node38" href="$classCarte.html#ae53eeee073f163ef27aaddde5e3383f0" title="Carte::ParserA" alt="" coords="437,608,547,637"/>
+<area shape="rect" id="node40" href="$classCarte.html#a1303ca6492f40ce92957f63c3acc5e1c" title="Carte::addPointThread" alt="" coords="596,795,748,824"/>
+<area shape="rect" id="node49" href="$classPOI.html#a21c3cf3a3e3a220a9a926b1b108626fb" title="POI::GetCat" alt="" coords="625,848,719,877"/>
+<area shape="rect" id="node51" href="$classPOI.html#aa5b4a4a635f1cf7b096d0610a683cf29" title="POI::Getlat" alt="" coords="628,635,716,664"/>
+<area shape="rect" id="node53" href="$classPOI.html#a991a068f59ee5df1a8695d982f79863f" title="POI::Getlon" alt="" coords="627,688,717,717"/>
+<area shape="rect" id="node55" href="$classPOI.html#a1c2e342a9f0d189ec2a7f376d3cd6b03" title="POI::GetName" alt="" coords="617,741,727,771"/>
+<area shape="rect" id="node42" href="$data__points_8cpp.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée" alt="" coords="823,289,895,319"/>
+<area shape="rect" id="node44" href="$data__categories_8cpp.html#a5470005e0fdf270b455aec1bce4d7a11" title="fonction : ajoute la categorie passe en parametre" alt="" coords="999,315,1097,344"/>
+</map>

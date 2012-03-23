@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_carte.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="209,59,303,88"/>
+<area shape="rect" id="node11" href="$classdatabase.html#a1605bbf17785278bfe6f99f7cc066b07" title="fonction d&#39;initialisation des table de la base de donnÃ©e (privÃ©)" alt="" coords="191,112,321,141"/>
+<area shape="rect" id="node5" href="$class_carte.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="383,5,529,35"/>
+<area shape="rect" id="node8" href="$class_carte.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="380,59,532,88"/>
+<area shape="rect" id="node13" href="$class_ask_data_base.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale." alt="" coords="371,112,541,141"/>
+<area shape="rect" id="node15" href="$class_ask_data_base.html#a3ed1c48c258ae7c445b8017007a5abc3" title="Construit la fenêtre et initialise les données importantes." alt="" coords="589,112,781,141"/>
+</map>

@@ -1,0 +1,51 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_carte.html#a6dfd8ad4dff7484f5ae5fe782ed982aa" title="Carte::AutoTelcharger" alt="" coords="176,224,325,253"/>
+<area shape="rect" id="node5" href="$class_carte.html#ab681a8ee604483662f63665c3b1e50d5" title="Carte::ByCat" alt="" coords="439,691,537,720"/>
+<area shape="rect" id="node31" href="$class_carte.html#a23f49c62048a8d7b32d91375d128f625" title="Carte::Centrer" alt="" coords="199,1000,303,1029"/>
+<area shape="rect" id="node33" href="$class_carte.html#af4df96a9bef8e73e816ab139b8f65db6" title="Carte::Chercher" alt="" coords="431,744,545,773"/>
+<area shape="rect" id="node36" href="$class_carte.html#afc9f6dae9773fce89d8b4a894d8bcc6c" title="Carte::choixBDD" alt="" coords="189,1053,312,1083"/>
+<area shape="rect" id="node40" href="$class_carte.html#a917a730085cc0ae242a8b5cc6833895c" title="Carte::exportCSV" alt="" coords="425,392,551,421"/>
+<area shape="rect" id="node46" href="$data__categories_8cpp.html#aae0ee7b6ed88b7f4a80f4852c51fb729" title="fonction : retourne un vecteur avec toutes les categories de la base de donnee" alt="" coords="837,5,939,35"/>
+<area shape="rect" id="node66" href="$class_carte.html#a079dbf7d072f670b0a41fd11529fd115" title="Carte::gestionBDD" alt="" coords="184,1107,317,1136"/>
+<area shape="rect" id="node69" href="$data__categories_8cpp.html#ac88bc1f40ebd488cb44ab192b365b6ca" title="fonction : creant la table categories dans la base de donnée" alt="" coords="625,1001,759,1031"/>
+<area shape="rect" id="node72" href="$data__heures_8cpp.html#a4a044f655010bb22e0b584c10b407f18" title="fonction : creant la table heures dans la base de donnée" alt="" coords="636,1119,748,1148"/>
+<area shape="rect" id="node75" href="$data__jours_8cpp.html#a0e22631de0be04e1bd4c212e533e6091" title="fonction : creant la table heures dans la base de donnée" alt="" coords="641,1204,743,1233"/>
+<area shape="rect" id="node78" href="$data__points_8cpp.html#af81c8a88d7865cce9652e08c2c9de6f7" title="fonction creant la table points dans la base de donnée" alt="" coords="639,820,745,849"/>
+<area shape="rect" id="node81" href="$class_carte.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="177,1160,324,1189"/>
+<area shape="rect" id="node86" href="$class_carte.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="175,1213,327,1243"/>
+<area shape="rect" id="node90" href="$class_carte.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="169,584,332,613"/>
+<area shape="rect" id="node98" href="$class_carte.html#ac25be85b576e7d655754838268055c2e" title="Carte::Telecharger" alt="" coords="423,472,553,501"/>
+<area shape="rect" id="node109" href="$class_carte.html#a94df4902e76bdb3576b2e27d5b9b3d57" title="Carte::ModifNbPoint" alt="" coords="180,637,321,667"/>
+<area shape="rect" id="node112" href="$class_carte.html#a1a9520bb412647b8845abe985f51798e" title="Carte::PosLabel" alt="" coords="193,1267,308,1296"/>
+<area shape="rect" id="node114" href="$class_carte.html#abf355f4d7ce3cc7792d778e57f1a2c46" title="Carte::ReponseGeometryClick" alt="" coords="151,1320,351,1349"/>
+<area shape="rect" id="node116" href="$class_carte.html#a4676e76ceba5f4b897f7a7a0cbcc3c19" title="Carte::ReponseQListClick" alt="" coords="164,1373,337,1403"/>
+<area shape="rect" id="node118" href="$class_ui___carte.html#a71c9da78123888b7e43332ea6ff8ef31" title="Ui_Carte::setupUi" alt="" coords="188,1427,313,1456"/>
+<area shape="rect" id="node123" href="$class_carte.html#adc796443eae536cbe05fbb18fbfa54bf" title="Carte::ZoomInv" alt="" coords="195,1480,307,1509"/>
+<area shape="rect" id="node7" href="$data__points_8cpp.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée" alt="" coords="647,744,737,773"/>
+<area shape="rect" id="node9" href="$classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="1016,856,1163,885"/>
+<area shape="rect" id="node11" href="$data__categories_8cpp.html#a4489eb5551004a5fd5ef5920b1c10ce0" title="fonction : retourne le nom de la categorie en fonction de l&#39;identifiant" alt="" coords="827,803,949,832"/>
+<area shape="rect" id="node14" href="$data__categories_8cpp.html#a9bf9ac909e82f3606111afd05c6fd0cb" title="fonction : retourne l&#39;identifiant de la categorie en fonction de son nom" alt="" coords="809,856,967,885"/>
+<area shape="rect" id="node17" href="$class_p_o_i.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="841,539,935,568"/>
+<area shape="rect" id="node19" href="$class_p_o_i.html#a40b45b8e21bc360ac2ab3a0985a3fe75" title="POI::SetDesc" alt="" coords="836,909,940,939"/>
+<area shape="rect" id="node21" href="$class_p_o_i.html#a99ba0b455ddd3e13a7cff836a4ef73f9" title="POI::SetDist" alt="" coords="840,963,936,992"/>
+<area shape="rect" id="node23" href="$class_p_o_i.html#a082781f842b631163def78870698e0e4" title="POI::SetId" alt="" coords="847,1016,929,1045"/>
+<area shape="rect" id="node25" href="$class_p_o_i.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="845,592,931,621"/>
+<area shape="rect" id="node27" href="$class_p_o_i.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="840,645,936,675"/>
+<area shape="rect" id="node29" href="$class_p_o_i.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="835,699,941,728"/>
+<area shape="rect" id="node38" href="$classdatabase.html#a4cc091f2b67ceb0504d87de92e0111bd" title="database::dataDisconnect" alt="" coords="401,1053,575,1083"/>
+<area shape="rect" id="node42" href="$data__csv_8cpp.html#ac273e7f12452330543253a1d3a5727b2" title="export_csv" alt="" coords="649,379,735,408"/>
+<area shape="rect" id="node44" href="$class_p_o_i.html#a21c3cf3a3e3a220a9a926b1b108626fb" title="POI::GetCat" alt="" coords="841,485,935,515"/>
+<area shape="rect" id="node49" href="$classheure.html#aa237a49068c5881c57db606d342378b4" title="heure::getDebut" alt="" coords="831,325,945,355"/>
+<area shape="rect" id="node51" href="$class_p_o_i.html#ad3e54d9834f4700f4540bde6ab306039" title="POI::GetDesc" alt="" coords="836,59,940,88"/>
+<area shape="rect" id="node53" href="$classheure.html#a55859421cc39c7c2519026eda7e2850e" title="heure::getFin" alt="" coords="839,112,937,141"/>
+<area shape="rect" id="node55" href="$data__heures_8cpp.html#a0619f9b984a4c68485b72e664c18952d" title="fonction : permet d&#39;obtenir les plages horaire d&#39;un point" alt="" coords="828,219,948,248"/>
+<area shape="rect" id="node58" href="$class_p_o_i.html#a3b511b8714fdadf765e24adf37e51124" title="POI::GetId" alt="" coords="845,165,931,195"/>
+<area shape="rect" id="node60" href="$classheure.html#a37d672d10538f023b756998218a27341" title="heure::getJour" alt="" coords="836,272,940,301"/>
+<area shape="rect" id="node62" href="$class_p_o_i.html#aa5b4a4a635f1cf7b096d0610a683cf29" title="POI::Getlat" alt="" coords="844,379,932,408"/>
+<area shape="rect" id="node64" href="$class_p_o_i.html#a991a068f59ee5df1a8695d982f79863f" title="POI::Getlon" alt="" coords="843,432,933,461"/>
+<area shape="rect" id="node83" href="$classapplication.html#a9115346cb4be2645bf9682326dba535a" title="application::appInit" alt="" coords="423,1187,553,1216"/>
+<area shape="rect" id="node92" href="$class_carte.html#aaddfb22fcb7baced92648cc0d6a823a0" title="Carte::AjouterPoints" alt="" coords="419,637,557,667"/>
+<area shape="rect" id="node95" href="$class_carte.html#ab0e71abb5334a5426ca6b7b0eb386372" title="Carte::LoadingDBBDataA" alt="" coords="403,584,573,613"/>
+<area shape="rect" id="node100" href="$class_carte.html#ae53eeee073f163ef27aaddde5e3383f0" title="Carte::ParserA" alt="" coords="637,512,747,541"/>
+<area shape="rect" id="node120" href="$class_ui___carte.html#a39630df0f9dd8da7ee242462867afe51" title="Ui_Carte::retranslateUi" alt="" coords="411,1427,565,1456"/>
+</map>

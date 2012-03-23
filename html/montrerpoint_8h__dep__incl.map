@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$carte_8h.html" title="Fenetre principale de l&#39;application." alt="" coords="95,83,156,112"/>
+<area shape="rect" id="node9" href="$montrerpoint_8cpp.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="180,83,297,112"/>
+<area shape="rect" id="node5" href="$askdatabase_8cpp.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,160,125,189"/>
+<area shape="rect" id="node7" href="$carte_8cpp.html" title="Fenetre principale de l&#39;application." alt="" coords="149,160,224,189"/>
+</map>

@@ -1,7 +1,12 @@
+/*! \class data_points data_points.h
+ * \brief Ceci est une bibilotheque fournissant des fonctions en lecture-ecriture sur la table points. (\link data_points.cpp data_points.cpp \endlink)
+*/
+
 #include "data_points.h"
 #include "data_categories.h"
 
 /*!
+  @class data_points
   @fn bool initPointsTable()
   @brief fonction creant la table points dans la base de donnée
  @return vrai|fau : bool : indique la reussite ou l'echque de l'initialisation

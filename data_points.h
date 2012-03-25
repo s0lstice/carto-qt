@@ -4,8 +4,6 @@
  * \author Guillaume Lastecoueres & Mickael Puret
  * \version 0.1
  *
- * Ensemble de fonctions de gestion de la table points
- *
  */
 
 #ifndef DATA_POINTS_H
@@ -15,6 +13,7 @@
 #include "POI.h"
 #include "database.h"
 #include <QMutex>
+
 
 bool addPoint(QString categorie, QString name, float latitude, float longitude);
 bool addPoint(QString categorie, QString name, float latitude, float longitude, QString description);

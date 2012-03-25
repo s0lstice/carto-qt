@@ -1,3 +1,6 @@
+/*! \class data_heures data_heures.h
+ * \brief Ceci est une bibilotheque fournissant des fonctions en lecture-ecriture sur la table heures. (\link data_heures.cpp data_heures.cpp \endlink)
+*/
 #include "data_heures.h"
 #include "data_jours.h"
 

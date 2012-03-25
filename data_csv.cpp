@@ -1,3 +1,7 @@
+/*! \class data_csv data_csv.h
+ * \brief Ce si est une bibilotheque qui s'appuis sur la base de donnee et les methode associe, pour plus d'informations, voir la documentation associe.(\link data_csv.cpp \endlink)
+*/
+
 #include "data_csv.h"
 #include "data_categories.h"
 #include "POI.h"

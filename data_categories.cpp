@@ -1,3 +1,6 @@
+/*! \class data_categories data_categories.h
+ * \brief Ceci est une bibilotheque fournissant des fonctions en lecture-ecriture sur la table categories. (\link data_categories.cpp data_categories.cpp \endlink)
+*/
 #include "data_categories.h"
 
 /*!

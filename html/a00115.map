@@ -1,4 +1,2 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$a00015.html" title="{Ui::edit_point\n||}" alt="" coords="65,643,164,728"/>
-<area shape="rect" id="node4" href="$a00019.html" title="{Ui_edit_point\n|+ BouttonPosition\l+ categorie_point\l+ categorie_point_but\l+ categorie_point_lab\l+ debut_heur\l+ decription_point_lab\l+ description_point\l+ fin_heur\l+ groupBox\l+ heures_point_box\l+ jour_heur\l+ jour_heur_lab\l+ jout_heur\l+ jout_point\l+ label\l+ lat_point\l+ lat_point_lab\l+ lon_point\l+ Lon_point_lab\l+ nom_point\l+ plage_heur\l+ Point\l+ point_name_lab\l+ submit_heure\l+ submit_point\l+ supr_heur\l+ supr_point\l+ table_point\l+ viewheures\l|+ retranslateUi()\l+ setupUi()\l}" alt="" coords="40,6,189,594"/>
 </map>

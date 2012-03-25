@@ -1,0 +1,11 @@
+La base de données est constituée de plusieurs tables permettant d’avoir une structure cohérente est ainsi d’utiliser les modèles proposés par Qt.\n
+Notre application se repose sur quatre tables :
+-          La table points qui contient toutes les informations sur un point
+-          La table categories, qui contient le nom des différentes catégories, elle est en relation avec la table points
+-          La table heures, qui contient les informations heures d’ouverture et de fermeture ainsi que le jour. Cette table est en relation avec la table points.\n
+-          La table jours, contient les jours de la semaine, cette table et en relation avec la table heures.
+Cette structure permet donc de gère un nombre infini de points définis par :
+-          Un nom, une catégorie, une latitude, une longitude, un nombre infini de plages horaires et une description.\n
+Le diagramme suivant montre la structure de la base de données :\n
+
+\image html bdd.jpeg

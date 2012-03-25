@@ -35,6 +35,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
@@ -158,26 +159,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <span class="keywordflow">while</span>(!Placemark.isNull())
   {
-      <a class="code" href="a00013.html">POI</a>* PointOfInterest = <span class="keyword">new</span> <a class="code" href="a00013.html">POI</a>();
+      <a class="code" href="a00015.html">POI</a>* PointOfInterest = <span class="keyword">new</span> <a class="code" href="a00015.html">POI</a>();
       node = Placemark.firstChild().toElement();
       <span class="keywordflow">while</span>(!node.isNull()){
           <span class="keywordflow">if</span>(node.tagName() == <span class="stringliteral">&quot;categorie&quot;</span>){
-            PointOfInterest-&gt;<a class="code" href="a00013_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12">SetCat</a>(node.text());
+            PointOfInterest-&gt;<a class="code" href="a00015_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12">SetCat</a>(node.text());
           }
           <span class="keywordflow">else</span> <span class="keywordflow">if</span>(node.tagName() == <span class="stringliteral">&quot;nom&quot;</span>){
-              PointOfInterest-&gt;<a class="code" href="a00013_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e">SetName</a>(node.text().replace(QString(<span class="stringliteral">&quot;&#39;&quot;</span>),QString(<span class="stringliteral">&quot; &quot;</span>),Qt::CaseSensitive));
+              PointOfInterest-&gt;<a class="code" href="a00015_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e">SetName</a>(node.text().replace(QString(<span class="stringliteral">&quot;&#39;&quot;</span>),QString(<span class="stringliteral">&quot; &quot;</span>),Qt::CaseSensitive));
           }
           <span class="keywordflow">else</span> <span class="keywordflow">if</span>(node.tagName() == <span class="stringliteral">&quot;Point&quot;</span>){
               childnode = node.firstChild().toElement();
               <span class="keywordflow">if</span>(childnode.tagName() == <span class="stringliteral">&quot;coordinates&quot;</span>){
-                  PointOfInterest-&gt;<a class="code" href="a00013_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002">Setlat</a>(QString(childnode.text().split(<span class="stringliteral">&quot;,&quot;</span>)[0]).toFloat());
-                  PointOfInterest-&gt;<a class="code" href="a00013_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246">Setlong</a>(QString(childnode.text().split(<span class="stringliteral">&quot;,&quot;</span>)[1]).toFloat());
+                  PointOfInterest-&gt;<a class="code" href="a00015_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002">Setlat</a>(QString(childnode.text().split(<span class="stringliteral">&quot;,&quot;</span>)[0]).toFloat());
+                  PointOfInterest-&gt;<a class="code" href="a00015_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246">Setlong</a>(QString(childnode.text().split(<span class="stringliteral">&quot;,&quot;</span>)[1]).toFloat());
                   }
           }
           node = node.nextSibling().toElement();
       }
       Placemark = Placemark.nextSibling().toElement();
-      QtConcurrent::run(<span class="keyword">this</span>,&amp;<a class="code" href="a00004_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c">Carte::addPointThread</a>,PointOfInterest-&gt;<a class="code" href="a00013_a21c3cf3a3e3a220a9a926b1b108626fb.html#a21c3cf3a3e3a220a9a926b1b108626fb">GetCat</a>(),PointOfInterest-&gt;<a class="code" href="a00013_a1c2e342a9f0d189ec2a7f376d3cd6b03.html#a1c2e342a9f0d189ec2a7f376d3cd6b03">GetName</a>(),PointOfInterest-&gt;<a class="code" href="a00013_aa5b4a4a635f1cf7b096d0610a683cf29.html#aa5b4a4a635f1cf7b096d0610a683cf29">Getlat</a>(),PointOfInterest-&gt;<a class="code" href="a00013_a991a068f59ee5df1a8695d982f79863f.html#a991a068f59ee5df1a8695d982f79863f">Getlon</a>());
+      QtConcurrent::run(<span class="keyword">this</span>,&amp;<a class="code" href="a00004_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c">Carte::addPointThread</a>,PointOfInterest-&gt;<a class="code" href="a00015_a21c3cf3a3e3a220a9a926b1b108626fb.html#a21c3cf3a3e3a220a9a926b1b108626fb">GetCat</a>(),PointOfInterest-&gt;<a class="code" href="a00015_a1c2e342a9f0d189ec2a7f376d3cd6b03.html#a1c2e342a9f0d189ec2a7f376d3cd6b03">GetName</a>(),PointOfInterest-&gt;<a class="code" href="a00015_aa5b4a4a635f1cf7b096d0610a683cf29.html#aa5b4a4a635f1cf7b096d0610a683cf29">Getlat</a>(),PointOfInterest-&gt;<a class="code" href="a00015_a991a068f59ee5df1a8695d982f79863f.html#a991a068f59ee5df1a8695d982f79863f">Getlon</a>());
         free(PointOfInterest);
   }
     doc.clear();
@@ -196,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00004.html">Carte</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 16:07:40 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 19:41:51 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

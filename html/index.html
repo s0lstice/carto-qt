@@ -80,25 +80,40 @@ Introducation</h2>
 <p>Le but de cette application et la mise en place d'une catre interactive sur la quelle se situent differant lieux, designe par une categorie, un nom, une description et des coordonnees Le langage de programmation et le Cpp Qt, la base de donnee est une SQlite.</p>
 <h2><a class="anchor" id="ch1"></a>
 Utilisation du logiciel</h2>
-<h3><a class="anchor" id=""></a>
-</h3>
-<h3><a class="anchor" id=""></a>
-</h3>
-<h3><a class="anchor" id=""></a>
-</h3>
-<h3><a class="anchor" id=""></a>
-</h3>
-<h3><a class="anchor" id=""></a>
-</h3>
+<h3><a class="anchor" id="sub1"></a>
+Creation et reutilisation de la base de donnee</h3>
+<h3><a class="anchor" id="sub2"></a>
+Navigation et gestion des points</h3>
+<h3><a class="anchor" id="sub3"></a>
+Ajout et edition des points</h3>
+<h3><a class="anchor" id="sub4"></a>
+Charger et exporter de base de donnee</h3>
+<h3><a class="anchor" id="sub5"></a>
+Traduction dinamique de l'application</h3>
 <h2><a class="anchor" id="ch2"></a>
 Structure de la base de donnee</h2>
+<p>La base de données est constituée de plusieurs tables permettant d’avoir une structure cohérente est ainsi d’utiliser les modèles proposés par Qt.<br/>
+ Notre application se repose sur quatre tables :</p>
+<ul>
+<li>La table points qui contient toutes les informations sur un point</li>
+<li>La table categories, qui contient le nom des différentes catégories, elle est en relation avec la table points</li>
+<li>La table heures, qui contient les informations heures d’ouverture et de fermeture ainsi que le jour. Cette table est en relation avec la table points.<br/>
+</li>
+<li>La table jours, contient les jours de la semaine, cette table et en relation avec la table heures. Cette structure permet donc de gère un nombre infini de points définis par :</li>
+<li>Un nom, une catégorie, une latitude, une longitude, un nombre infini de plages horaires et une description.<br/>
+ Le diagramme suivant montre la structure de la base de données :<br/>
+</li>
+</ul>
+<div class="image">
+<img src="bdd.jpeg" alt="bdd.jpeg"/>
+</div>
 <h2><a class="anchor" id="ch3"></a>
 Structure du programme</h2>
 </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Généré le Sun Mar 25 2012 17:32:59 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

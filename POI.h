@@ -1,3 +1,12 @@
+/**
+ * \file POI.h
+ * \brief Classe permetant de contenir toutes les informations d'un point.
+ * \author Guillaume Lastecoueres & Mickael Puret
+ * \version 0.1
+ *
+ *
+ */
+
 #ifndef POI_H
 #define POI_H
 

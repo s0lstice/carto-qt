@@ -115,14 +115,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p>Définition à la ligne <a class="el" href="#L34">34</a> du fichier <a class="el" href="">askdatabase.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">                                        :
-    QMainWindow(parent),
-    <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>(<span class="keyword">new</span> <a class="code" href="a00015.html">Ui::AskDataBase</a>)
+    <a class="code" href="a00017.html">QMainWindow</a>(parent),
+    <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>(<span class="keyword">new</span> <a class="code" href="a00018.html">Ui::AskDataBase</a>)
 {
-    <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00019_a6a0fa94e5d9e02acf1ada45ef77d6110.html#a6a0fa94e5d9e02acf1ada45ef77d6110">setupUi</a>(<span class="keyword">this</span>);
-    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00019_a06e3c5e0cc829d6d7a766f4ea2b8965e.html#a06e3c5e0cc829d6d7a766f4ea2b8965e">pushButton_3</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(close()));
-    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00019_ab65c3a128db8e2c530b11ade6fe374d1.html#ab65c3a128db8e2c530b11ade6fe374d1">pushButton_2</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176" title="Cree ou recupere une BDD puis lance la feetre principale.">ValidateFile</a>()));
-    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00019_ae62d1ddb6fe62b2a9fefdebd0777db1b.html#ae62d1ddb6fe62b2a9fefdebd0777db1b">pushButton</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale.">CreateFile</a>()));
-    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00019_a5e35fc71f60e60c08d90d3664c54a512.html#a5e35fc71f60e60c08d90d3664c54a512">pushButton_4</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a" title="Creer une fen�tre qui permet la selection d&#39;un fichier .">SelectFile</a>()));
+    <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00022_a6a0fa94e5d9e02acf1ada45ef77d6110.html#a6a0fa94e5d9e02acf1ada45ef77d6110">setupUi</a>(<span class="keyword">this</span>);
+    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00022_a06e3c5e0cc829d6d7a766f4ea2b8965e.html#a06e3c5e0cc829d6d7a766f4ea2b8965e">pushButton_3</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(close()));
+    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00022_ab65c3a128db8e2c530b11ade6fe374d1.html#ab65c3a128db8e2c530b11ade6fe374d1">pushButton_2</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176" title="Cree ou recupere une BDD puis lance la feetre principale.">ValidateFile</a>()));
+    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00022_ae62d1ddb6fe62b2a9fefdebd0777db1b.html#ae62d1ddb6fe62b2a9fefdebd0777db1b">pushButton</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale.">CreateFile</a>()));
+    connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00022_a5e35fc71f60e60c08d90d3664c54a512.html#a5e35fc71f60e60c08d90d3664c54a512">pushButton_4</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a" title="Creer une fen�tre qui permet la selection d&#39;un fichier .">SelectFile</a>()));
     QString MyAppDirPath =  QCoreApplication::applicationDirPath();
     QStringList listFilter;
     listFilter &lt;&lt; <span class="stringliteral">&quot;*.db&quot;</span>;
@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <span class="keywordtype">int</span> i = 0;
     <span class="keywordflow">for</span>(i=0;i&lt;FIL.count();i++)
     {
-        <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00019_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;addItem(FIL[i]);
+        <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00022_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;addItem(FIL[i]);
     }
     free(DirA);
 }
@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00002.html">AskDataBase</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:26 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:35 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

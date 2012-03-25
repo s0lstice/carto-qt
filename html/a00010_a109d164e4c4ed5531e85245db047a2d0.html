@@ -145,30 +145,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  -met en place la selection d'une ligne de la vue.<br/>
  </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="#L176">176</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="#L175">175</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">                                    {
     <span class="comment">/*** affichage du tableau ***/</span>
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setModel(<a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(1, <span class="keyword">true</span>);
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setModel(<a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(1, <span class="keyword">true</span>);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     <span class="comment">/*calcule de la largeur de chaque collone plus de la barre d&#39;entete avec + 2 pour les marges*/</span>
     <span class="comment">/*car adjustesize ne marche pas sur les QTableView*/</span>
-    <span class="keywordtype">int</span> width =  <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;width() - (<a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;verticalHeader()-&gt;width() +
-            <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) +
-            <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) +
-            <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4));
+    <span class="keywordtype">int</span> width =  <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;width() - (<a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;verticalHeader()-&gt;width() +
+            <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) +
+            <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) +
+            <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4));
     width/=3; <span class="comment">//&lt;- largeur a rajouter</span>
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(2, <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) + width);
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(3, <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) + width);
-    <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(4, <a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4) + width -1);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(2, <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) + width);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(3, <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) + width);
+    <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(4, <a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4) + width -1);
 
-    connect(<a class="code" href="a00021_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="a00010_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure">insert_heur</a>()));
-    connect(<a class="code" href="a00021_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="a00010_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies">submitHeure</a>()));
-    connect(<a class="code" href="a00021_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="a00010_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure">drup_heur</a>()));
-    connect(<a class="code" href="a00021_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;selectionModel(),SIGNAL(
+    connect(<a class="code" href="a00024_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="a00010_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure">insert_heur</a>()));
+    connect(<a class="code" href="a00024_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="a00010_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies">submitHeure</a>()));
+    connect(<a class="code" href="a00024_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="a00010_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure">drup_heur</a>()));
+    connect(<a class="code" href="a00024_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;selectionModel(),SIGNAL(
                 currentRowChanged(<span class="keyword">const</span> QModelIndex &amp;,
                 <span class="keyword">const</span> QModelIndex &amp;)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00010_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure">select_heure</a>(<span class="keyword">const</span> QModelIndex &amp;)));
 }
@@ -183,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00010.html">edit_point_gui</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:26 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:35 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

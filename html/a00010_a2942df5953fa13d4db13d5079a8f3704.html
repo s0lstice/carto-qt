@@ -141,20 +141,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  -met en place la jointure entre heures.jour_id et jours.jour d'on le resultt est affiche dans la liste deroulante jour_heur,<br/>
  -fait la relation entre les element de la table points et jour_heur, debut_heur, fin_heur. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="#L214">214</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="#L213">213</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">                                      {
     <span class="comment">/*** gestion des heures (ajout : suppression) ***/</span>
 
     QSqlTableModel *relModelJour = <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;relationModel(<a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
-    <a class="code" href="a00021_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModel(relModelJour);
-    <a class="code" href="a00021_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModelColumn(relModelJour-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
+    <a class="code" href="a00024_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModel(relModelJour);
+    <a class="code" href="a00024_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModelColumn(relModelJour-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
 
     <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a> = <span class="keyword">new</span> QDataWidgetMapper(<span class="keyword">this</span>);
     <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setModel(<a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
     <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-    <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="a00021_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>, <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
-    <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="a00021_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>, <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;debut&quot;</span>));
-    <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="a00021_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>, <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;fin&quot;</span>));
+    <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="a00024_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>, <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
+    <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="a00024_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>, <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;debut&quot;</span>));
+    <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="a00024_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>, <a class="code" href="a00010_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;fin&quot;</span>));
     <a class="code" href="a00010_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;toFirst();
 }
 </pre></div>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00010.html">edit_point_gui</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:26 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:35 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

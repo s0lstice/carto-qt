@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="28,83,113,112"/>
-<area shape="rect" id="node7" href="$a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,160,139,189"/>
+<area shape="rect" id="node3" href="$a00028.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,83,125,112"/>
+<area shape="rect" id="node5" href="$a00030.html" title="Fenetre principale de l&#39;application." alt="" coords="149,83,224,112"/>
 </map>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Cartographie de lieux: Référence du fichier data_jours.cpp</title>
+<title>Cartographie de lieux: Référence du fichier data_csv.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -79,34 +79,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div class="summary">
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier data_jours.cpp</div>  </div>
+<div class="title">Référence du fichier data_csv.h</div>  </div>
 </div>
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">data_jours.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">database.h</a>&quot;</code><br/>
+
+<p>Fonction d'exportation de la base de donnee au format csv.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;QString&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de data_jours.cpp:</div>
+Graphe des dépendances par inclusion de data_csv.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00076.png" border="0" usemap="#data__jours_8cpp" alt=""/></div>
-<map name="data__jours_8cpp" id="data__jours_8cpp">
-<area shape="rect" id="node3" href="a00036.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="5,83,99,112"/><area shape="rect" id="node5" href="a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="51,160,136,189"/><area shape="rect" id="node9" href="a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="105,237,161,267"/></map>
+<div class="center"><img src="a00074.png" border="0" usemap="#data__csv_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00075.png" border="0" usemap="#data__csv_8hdep" alt=""/></div>
+<map name="data__csv_8hdep" id="data__csv_8hdep">
+<area shape="rect" id="node3" href="a00030.html" title="Fenetre principale de l&#39;application." alt="" coords="5,83,80,112"/><area shape="rect" id="node5" href="a00034.html" title="data_csv.cpp" alt="" coords="104,83,203,112"/></map>
 </div>
 </div>
 <p><a href="">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035_a0e22631de0be04e1bd4c212e533e6091.html#a0e22631de0be04e1bd4c212e533e6091">initJoursTable</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : creant la table heures dans la base de donnée  <a href="#a0e22631de0be04e1bd4c212e533e6091"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035_a152678b2a8d06834e4b6f7d994814542.html#a152678b2a8d06834e4b6f7d994814542">jourById</a> (int jour_id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : permet de connaitre le jour en fonction de l'identifiant  <a href="#a152678b2a8d06834e4b6f7d994814542"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035_ac273e7f12452330543253a1d3a5727b2.html#ac273e7f12452330543253a1d3a5727b2">export_csv</a> (QString filecsv)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : export la base de donnee dans un fichier au format csv  <a href="#ac273e7f12452330543253a1d3a5727b2"></a><br/></td></tr>
 </table>
-</div>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Fonction d'exportation de la base de donnee au format csv. </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Guillaume Lastecoueres &amp; Mickael Puret </dd></dl>
+<dl class="version"><dt><b>Version:</b></dt><dd>0.1</dd></dl>
+<p>Ensemble de fonctions de gestion de la table categories </p>
+
+<p>Définition dans le fichier <a class="el" href="">data_csv.h</a>.</p>
+</div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00035.html">data_jours.cpp</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="navelem"><a class="el" href="a00035.html">data_csv.h</a>      </li>
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

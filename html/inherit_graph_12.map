@@ -1,3 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$a00014.html" title="POI" alt="" coords="5,5,51,35"/>
+<area shape="rect" id="node1" href="$a00016.html" title="QDialog" alt="" coords="167,59,236,88"/>
+<area shape="rect" id="node3" href="$a00010.html" title="edit_point_gui" alt="" coords="307,5,408,35"/>
+<area shape="rect" id="node5" href="$a00011.html" title="edite_categories" alt="" coords="299,59,416,88"/>
+<area shape="rect" id="node7" href="$a00013.html" title="MontrerPoint" alt="" coords="309,112,405,141"/>
+<area shape="rect" id="node8" href="$a00024.html" title="Ui_edit_point" alt="" coords="5,5,104,35"/>
+<area shape="rect" id="node10" href="$a00020.html" title="Ui::edit_point" alt="" coords="152,5,251,35"/>
 </map>

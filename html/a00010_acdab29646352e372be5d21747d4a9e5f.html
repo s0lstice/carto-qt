@@ -143,22 +143,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  met en place la jointure entre points.categorie_id et categories.categorie ; le resultt est affiche dans la liste deroulante categorie_point,<br/>
  fait la relation entre les elements de la table points et nom_point, categorie_point, lat_point, lon_point, description_point. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="#L102">102</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="#L101">101</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">                                      {
     <span class="comment">/*** affichage de la partie point ***/</span>
 
     QSqlTableModel *relModelCategorie = <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;relationModel(2);
-    <a class="code" href="a00021_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModel(relModelCategorie);
-    <a class="code" href="a00021_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModelColumn(relModelCategorie-&gt;fieldIndex(<span class="stringliteral">&quot;categorie&quot;</span>));
+    <a class="code" href="a00024_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModel(relModelCategorie);
+    <a class="code" href="a00024_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModelColumn(relModelCategorie-&gt;fieldIndex(<span class="stringliteral">&quot;categorie&quot;</span>));
 
     <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a> = <span class="keyword">new</span> QDataWidgetMapper(<span class="keyword">this</span>);
     <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setModel(<a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>);
     <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00021_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;name&quot;</span>));
-    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00021_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>, 2);<span class="comment">//modelpoints-&gt;fieldIndex(&quot;categorie_id&quot;)</span>
-    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00021_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;latitude&quot;</span>));
-    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00021_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;longitude&quot;</span>));
-    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00021_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;description&quot;</span>));
+    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00024_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;name&quot;</span>));
+    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00024_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>, 2);<span class="comment">//modelpoints-&gt;fieldIndex(&quot;categorie_id&quot;)</span>
+    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00024_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;latitude&quot;</span>));
+    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00024_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;longitude&quot;</span>));
+    <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="a00024_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>, <a class="code" href="a00010_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;description&quot;</span>));
     <a class="code" href="a00010_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;toFirst();
 }
 </pre></div>
@@ -172,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00010.html">edit_point_gui</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:26 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:35 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

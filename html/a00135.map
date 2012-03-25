@@ -1,3 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$a00020.html" title="{Ui_Carte\n|+ actionAnglais\l+ actionChoix_BDD\l+ actionExport_BDD\l+ actionFrancais\l+ actionGestion_BDD\l+ actionQuitter\l+ AutoDownLoad\l+ BouttonCentrer\l+ BouttonTelecharger\l+ centralWidget\l+ comboBox\l+ horizontalLayout\l+ horizontalLayout_2\l+ horizontalLayout_3\l+ horizontalLayout_4\l+ label\l+ label_2\l+ label_3\l+ label_4\l+ layoutWidget\l+ lineEdit\l+ listWidget\l+ mainToolBar\l+ MapWidget\l+ menuBar\l+ menuBDD\l+ menuLangue\l+ menuMenu\l+ progressBar\l+ spinBox\l+ statusBar\l+ verticalLayout\l+ verticalLayout_2\l+ verticalSlider\l+ widget\l|+ retranslateUi()\l+ setupUi()\l}" alt="" coords="5,6,155,698"/>
+<area shape="rect" id="node3" href="$a00001.html" title="{application\n|+ _singleton\l|+ appExit()\l+ appInit()\l+ appInit()\l&#45; application()\l&#45; ~application()\l}" alt="" coords="5,139,112,293"/>
 </map>

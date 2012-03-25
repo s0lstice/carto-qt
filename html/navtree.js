@@ -17,79 +17,89 @@ var NAVTREE =
       [ "heure", "a00012.html", null ],
       [ "MontrerPoint", "a00013.html", null ],
       [ "POI", "a00014.html", null ],
-      [ "Ui::AskDataBase", "a00015.html", null ],
-      [ "Ui::Carte", "a00016.html", null ],
-      [ "Ui::edit_point", "a00017.html", null ],
-      [ "Ui::MontrerPoint", "a00018.html", null ],
-      [ "Ui_AskDataBase", "a00019.html", null ],
-      [ "Ui_Carte", "a00020.html", null ],
-      [ "Ui_edit_point", "a00021.html", null ],
-      [ "Ui_MontrerPoint", "a00022.html", null ]
+      [ "QApplication", "a00015.html", null ],
+      [ "QDialog", "a00016.html", null ],
+      [ "QMainWindow", "a00017.html", null ],
+      [ "Ui::AskDataBase", "a00018.html", null ],
+      [ "Ui::Carte", "a00019.html", null ],
+      [ "Ui::edit_point", "a00020.html", null ],
+      [ "Ui::MontrerPoint", "a00021.html", null ],
+      [ "Ui_AskDataBase", "a00022.html", null ],
+      [ "Ui_Carte", "a00023.html", null ],
+      [ "Ui_edit_point", "a00024.html", null ],
+      [ "Ui_MontrerPoint", "a00025.html", null ]
     ] ],
     [ "Index des classes", "classes.html", null ],
     [ "Hiérarchie des classes", "hierarchy.html", [
-      [ "application", "a00001.html", null ],
-      [ "AskDataBase", "a00002.html", null ],
-      [ "Carte", "a00003.html", null ],
       [ "data_categories", "a00004.html", null ],
       [ "data_csv", "a00005.html", null ],
       [ "data_heures", "a00006.html", null ],
       [ "data_jours", "a00007.html", null ],
       [ "data_points", "a00008.html", null ],
       [ "database", "a00009.html", null ],
-      [ "edite_categories", "a00011.html", null ],
       [ "heure", "a00012.html", null ],
-      [ "MontrerPoint", "a00013.html", null ],
       [ "POI", "a00014.html", null ],
-      [ "Ui_AskDataBase", "a00019.html", [
-        [ "Ui::AskDataBase", "a00015.html", null ]
+      [ "QApplication", "a00015.html", [
+        [ "application", "a00001.html", null ]
       ] ],
-      [ "Ui_Carte", "a00020.html", [
-        [ "Ui::Carte", "a00016.html", null ]
+      [ "QDialog", "a00016.html", [
+        [ "edit_point_gui", "a00010.html", null ],
+        [ "edite_categories", "a00011.html", null ],
+        [ "MontrerPoint", "a00013.html", null ]
       ] ],
-      [ "Ui_edit_point", "a00021.html", [
-        [ "Ui::edit_point", "a00017.html", [
+      [ "QMainWindow", "a00017.html", [
+        [ "AskDataBase", "a00002.html", null ],
+        [ "Carte", "a00003.html", null ]
+      ] ],
+      [ "Ui_AskDataBase", "a00022.html", [
+        [ "Ui::AskDataBase", "a00018.html", null ]
+      ] ],
+      [ "Ui_Carte", "a00023.html", [
+        [ "Ui::Carte", "a00019.html", null ]
+      ] ],
+      [ "Ui_edit_point", "a00024.html", [
+        [ "Ui::edit_point", "a00020.html", [
           [ "edit_point_gui", "a00010.html", null ]
         ] ]
       ] ],
-      [ "Ui_MontrerPoint", "a00022.html", [
-        [ "Ui::MontrerPoint", "a00018.html", null ]
+      [ "Ui_MontrerPoint", "a00025.html", [
+        [ "Ui::MontrerPoint", "a00021.html", null ]
       ] ]
     ] ],
     [ "Membres de classe", "functions.html", null ],
     [ "Liste des fichiers", "files.html", [
-      [ "application.cpp", "a00023.html", null ],
-      [ "application.h", "a00024.html", null ],
-      [ "askdatabase.cpp", "a00025.html", null ],
-      [ "askdatabase.h", "a00026.html", null ],
-      [ "carte.cpp", "a00027.html", null ],
-      [ "carte.h", "a00028.html", null ],
-      [ "data_categories.cpp", "a00029.html", null ],
-      [ "data_categories.h", "a00030.html", null ],
-      [ "data_csv.cpp", "a00031.html", null ],
-      [ "data_csv.h", "a00032.html", null ],
-      [ "data_heures.cpp", "a00033.html", null ],
-      [ "data_heures.h", "a00034.html", null ],
-      [ "data_jours.cpp", "a00035.html", null ],
-      [ "data_jours.h", "a00036.html", null ],
-      [ "data_points.cpp", "a00037.html", null ],
-      [ "data_points.h", "a00038.html", null ],
-      [ "database.cpp", "a00039.html", null ],
-      [ "database.h", "a00040.html", null ],
-      [ "edit_point_gui.cpp", "a00041.html", null ],
-      [ "edit_point_gui.h", "a00042.html", null ],
-      [ "edite_categories.cpp", "a00043.html", null ],
-      [ "edite_categories.h", "a00044.html", null ],
-      [ "heure.cpp", "a00045.html", null ],
-      [ "heure.h", "a00046.html", null ],
-      [ "main.cpp", "a00047.html", null ],
-      [ "montrerpoint.cpp", "a00048.html", null ],
-      [ "montrerpoint.h", "a00049.html", null ],
-      [ "POI.h", "a00050.html", null ],
-      [ "ui_askdatabase.h", "a00051.html", null ],
-      [ "ui_carte.h", "a00052.html", null ],
-      [ "ui_edition_point.h", "a00053.html", null ],
-      [ "ui_montrerpoint.h", "a00054.html", null ]
+      [ "application.cpp", "a00026.html", null ],
+      [ "application.h", "a00027.html", null ],
+      [ "askdatabase.cpp", "a00028.html", null ],
+      [ "askdatabase.h", "a00029.html", null ],
+      [ "carte.cpp", "a00030.html", null ],
+      [ "carte.h", "a00031.html", null ],
+      [ "data_categories.cpp", "a00032.html", null ],
+      [ "data_categories.h", "a00033.html", null ],
+      [ "data_csv.cpp", "a00034.html", null ],
+      [ "data_csv.h", "a00035.html", null ],
+      [ "data_heures.cpp", "a00036.html", null ],
+      [ "data_heures.h", "a00037.html", null ],
+      [ "data_jours.cpp", "a00038.html", null ],
+      [ "data_jours.h", "a00039.html", null ],
+      [ "data_points.cpp", "a00040.html", null ],
+      [ "data_points.h", "a00041.html", null ],
+      [ "database.cpp", "a00042.html", null ],
+      [ "database.h", "a00043.html", null ],
+      [ "edit_point_gui.cpp", "a00044.html", null ],
+      [ "edit_point_gui.h", "a00045.html", null ],
+      [ "edite_categories.cpp", "a00046.html", null ],
+      [ "edite_categories.h", "a00047.html", null ],
+      [ "heure.cpp", "a00048.html", null ],
+      [ "heure.h", "a00049.html", null ],
+      [ "main.cpp", "a00050.html", null ],
+      [ "montrerpoint.cpp", "a00051.html", null ],
+      [ "montrerpoint.h", "a00052.html", null ],
+      [ "POI.h", "a00053.html", null ],
+      [ "ui_askdatabase.h", "a00054.html", null ],
+      [ "ui_carte.h", "a00055.html", null ],
+      [ "ui_edition_point.h", "a00056.html", null ],
+      [ "ui_montrerpoint.h", "a00057.html", null ]
     ] ],
     [ "Membres de fichier", "globals.html", null ]
   ] ]

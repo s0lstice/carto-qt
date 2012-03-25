@@ -1,5 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00030.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="12,83,137,112"/>
-<area shape="rect" id="node5" href="$a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="32,160,117,189"/>
-<area shape="rect" id="node9" href="$a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="87,237,143,267"/>
+<area shape="rect" id="node3" href="$a00031.html" title="Fenetre principale de l&#39;application." alt="" coords="584,83,646,112"/>
+<area shape="rect" id="node13" href="$a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="882,160,967,189"/>
+<area shape="rect" id="node30" href="$a00045.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="827,237,939,267"/>
+<area shape="rect" id="node32" href="$a00055.html" title="ui_carte.h" alt="" coords="2151,83,2228,112"/>
+<area shape="rect" id="node83" href="$a00029.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="188,160,295,189"/>
+<area shape="rect" id="node92" href="$a00041.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="1246,83,1344,112"/>
+<area shape="rect" id="node103" href="$a00035.html" title="Fonction d&#39;exportation de la base de donnee au format csv." alt="" coords="22,237,107,267"/>
+<area shape="rect" id="node106" href="$a00027.html" title="classe Application. Initialise l&#39;application" alt="" coords="1368,83,1462,112"/>
+<area shape="rect" id="node111" href="$a00033.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="1096,83,1222,112"/>
+<area shape="rect" id="node114" href="$a00039.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="800,83,894,112"/>
+<area shape="rect" id="node117" href="$a00037.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="918,83,1022,112"/>
+<area shape="rect" id="node23" href="$a00052.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="618,160,722,189"/>
+<area shape="rect" id="node17" href="$a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="963,237,1019,267"/>
 </map>

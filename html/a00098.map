@@ -1,2 +1,11 @@
 <map id="G" name="G">
+<area shape="rect" id="node3" href="$a00052.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="1996,83,2100,112"/>
+<area shape="rect" id="node27" href="$a00045.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="1357,160,1469,189"/>
+<area shape="rect" id="node60" href="$a00057.html" title="ui_montrerpoint.h" alt="" coords="1681,237,1804,267"/>
+<area shape="rect" id="node80" href="$a00049.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="2813,237,2877,267"/>
+<area shape="rect" id="node84" href="$a00037.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="2704,83,2808,112"/>
+<area shape="rect" id="node92" href="$a00039.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="2587,83,2680,112"/>
+<area shape="rect" id="node7" href="$a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="2656,237,2712,267"/>
+<area shape="rect" id="node30" href="$a00056.html" title="ui_edition_point.h" alt="" coords="1099,237,1221,267"/>
+<area shape="rect" id="node86" href="$a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="2660,160,2745,189"/>
 </map>

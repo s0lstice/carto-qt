@@ -91,7 +91,7 @@ Charger et exporter de base de donnee</h3>
 <h3><a class="anchor" id="sub5"></a>
 Traduction dinamique de l'application</h3>
 <h2><a class="anchor" id="ch2"></a>
-Structure de la base de donnee</h2>
+Structure de la base de donnée</h2>
 <p>La base de données est constituée de plusieurs tables permettant d’avoir une structure cohérente est ainsi d’utiliser les modèles proposés par Qt.<br/>
  Notre application se repose sur quatre tables :</p>
 <ul>
@@ -109,11 +109,29 @@ Structure de la base de donnee</h2>
 </div>
 <h2><a class="anchor" id="ch3"></a>
 Structure du programme</h2>
+<p>Cette documentation est complète, diagrammes uml, commentaires des fonctions publiques et privées, notes d'utilisations et incorporation du code source.<br/>
+ Il est cependant intéressant de souligner quelques points : </p>
+<h3><a class="anchor" id="ch31"></a>
+La classe application</h3>
+<p>Cette classe a été écrite en vue d'une traduction dynamique de l'application et pour faciliter l'utilisation des paramètres propre à l'application (QSetings). En effet, la traduction d'un document fait appelle aux méthodes translate et installTranslator de la classe <a class="el" href="a00015.html">QApplication</a>. Cette classe est nécessaire dès l'initialisation du programme. Or, pour une traduction dynamique, il est nécessaire de posséder l'instanciation de cette classe qui est propre au programme. C'est pour quoi nous avons créer une classe singleton nomée application, cette denière hérite de <a class="el" href="a00015.html">QApplication</a> est permet donc de récupèrer la classe principale n'importe où dans le programme.<br/>
+</p>
+<p>En ce qui concerne les QSetings, dans notre cas, ils sont utilisés dès l'ouverture de l'application et ils doivent être enregistrés à la fermeture de celle-ci. Pour ce faire, nous utilisons le constructeur de la classe application et son destructeur. Pour mieux visualiser cet enjeu, rendez vous à l'explication de la classe application : <a class="el" href="a00001.html">application</a> .</p>
+<h3><a class="anchor" id="ch32"></a>
+Gestions de la base de données</h3>
+<p>Au cours de la vie du programme, de nombreuses bases de données sont amenées a créé et utilisé, de nombreuses requêtes seront effectuées. Du point de vue de la conception du logiciel, cela posait des problèmes d'accès et le descripteur de base de données devait être transmis de classe en classe ...<br/>
+ Pour résoudre ces problèmes, nous avons créé une classe database qui est un singleton, ainsi, nous avons accès à notre base à tout moment, et ce en toute sécurité pour elle et les données. Pour plus d'information sur cette classe, regardez l'explication de la classe database : <a class="el" href="a00009.html">database</a> .<br/>
+</p>
+<p>En ce qui concerne l'implémentation des méthodes de gestion des tables, elles ont été dissociées dans plusieurs bibliothèques et non dans des classes, car on ne peut hérité d'un singleton (la seule solution est de "frender" les deux classes, ce qui n'est conceptuellement pas envisageable). De plus l'emploi de méthodes et non de fonctions été plus lord d'utilisation et n'apporter rien. Pour mieux cerner cette explication regardez les bibliothèques :<br/>
+ -<a class="el" href="a00041.html">data_points.h </a> <br/>
+ -<a class="el" href="a00039.html">data_jours.h </a> <br/>
+ -<a class="el" href="a00037.html">data_heures.h </a> <br/>
+ -<a class="el" href="a00033.html">data_categories.h </a> <br/>
+ </p>
 </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

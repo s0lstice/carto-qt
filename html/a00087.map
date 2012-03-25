@@ -1,8 +1,20 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00049.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="83,83,187,112"/>
-<area shape="rect" id="node9" href="$a00027.html" title="Fenetre principale de l&#39;application." alt="" coords="193,237,268,267"/>
-<area shape="rect" id="node11" href="$a00048.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="120,160,237,189"/>
-<area shape="rect" id="node14" href="$a00041.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="312,83,437,112"/>
-<area shape="rect" id="node5" href="$a00028.html" title="Fenetre principale de l&#39;application." alt="" coords="35,160,96,189"/>
-<area shape="rect" id="node7" href="$a00025.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,237,125,267"/>
+<area shape="rect" id="node3" href="$a00033.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="639,83,764,112"/>
+<area shape="rect" id="node7" href="$a00028.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,160,125,189"/>
+<area shape="rect" id="node9" href="$a00030.html" title="Fenetre principale de l&#39;application." alt="" coords="832,160,907,189"/>
+<area shape="rect" id="node17" href="$a00042.html" title="database.cpp" alt="" coords="1053,160,1152,189"/>
+<area shape="rect" id="node19" href="$a00044.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="149,160,275,189"/>
+<area shape="rect" id="node23" href="$a00031.html" title="Fenetre principale de l&#39;application." alt="" coords="503,83,564,112"/>
+<area shape="rect" id="node29" href="$a00041.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="839,83,937,112"/>
+<area shape="rect" id="node35" href="$a00039.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="1140,83,1233,112"/>
+<area shape="rect" id="node41" href="$a00038.html" title="data_jours.cpp" alt="" coords="1459,160,1565,189"/>
+<area shape="rect" id="node46" href="$a00037.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="961,83,1065,112"/>
+<area shape="rect" id="node56" href="$a00046.html" title="Fenetre gerant l&#39;edition des categories." alt="" coords="1308,83,1449,112"/>
+<area shape="rect" id="node5" href="$a00026.html" title="classe Application. Initialise l&#39;application" alt="" coords="299,160,408,189"/>
+<area shape="rect" id="node11" href="$a00032.html" title="data_categories.cpp" alt="" coords="432,160,571,189"/>
+<area shape="rect" id="node13" href="$a00034.html" title="data_csv.cpp" alt="" coords="931,160,1029,189"/>
+<area shape="rect" id="node15" href="$a00040.html" title="data_points.cpp" alt="" coords="693,160,808,189"/>
+<area shape="rect" id="node21" href="$a00050.html" title="debut du programme de catographie" alt="" coords="595,160,669,189"/>
+<area shape="rect" id="node39" href="$a00036.html" title="data_heures.cpp" alt="" coords="1176,160,1293,189"/>
+<area shape="rect" id="node44" href="$a00051.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="1317,160,1435,189"/>
 </map>

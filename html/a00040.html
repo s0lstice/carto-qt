@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Cartographie de lieux: Référence du fichier database.h</title>
+<title>Cartographie de lieux: Référence du fichier data_points.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -77,49 +77,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier database.h</div>  </div>
+<div class="title">Référence du fichier data_points.cpp</div>  </div>
 </div>
 <div class="contents">
-
-<p>Classe singleton, gere l'ouverture et la fermeture de la base de donne, paussaide egalement les methode pour y acceder.  
-<a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &lt;QtSql&gt;</code><br/>
-<code>#include &quot;<a class="el" href="">POI.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="">data_points.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">data_categories.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de database.h:</div>
+Graphe des dépendances par inclusion de data_points.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00083.png" border="0" usemap="#database_8h" alt=""/></div>
-<map name="database_8h" id="database_8h">
-<area shape="rect" id="node5" href="a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,83,139,112"/></map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
-<div class="dyncontent">
-<div class="center"><img src="a00084.png" border="0" usemap="#database_8hdep" alt=""/></div>
-<map name="database_8hdep" id="database_8hdep">
-<area shape="rect" id="node3" href="a00030.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="639,83,764,112"/><area shape="rect" id="node7" href="a00025.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,160,125,189"/><area shape="rect" id="node9" href="a00027.html" title="Fenetre principale de l&#39;application." alt="" coords="832,160,907,189"/><area shape="rect" id="node17" href="a00039.html" title="database.cpp" alt="" coords="1053,160,1152,189"/><area shape="rect" id="node19" href="a00041.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="149,160,275,189"/><area shape="rect" id="node23" href="a00028.html" title="Fenetre principale de l&#39;application." alt="" coords="503,83,564,112"/><area shape="rect" id="node29" href="a00038.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="839,83,937,112"/><area shape="rect" id="node35" href="a00036.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="1140,83,1233,112"/><area shape="rect" id="node41" href="a00035.html" title="data_jours.cpp" alt="" coords="1459,160,1565,189"/><area shape="rect" id="node46" href="a00034.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="961,83,1065,112"/><area shape="rect" id="node56" href="a00043.html" title="Fenetre gerant l&#39;edition des categories." alt="" coords="1308,83,1449,112"/><area shape="rect" id="node5" href="a00023.html" title="classe Application. Initialise l&#39;application" alt="" coords="299,160,408,189"/><area shape="rect" id="node11" href="a00029.html" title="data_categories.cpp" alt="" coords="432,160,571,189"/><area shape="rect" id="node13" href="a00031.html" title="data_csv.cpp" alt="" coords="931,160,1029,189"/><area shape="rect" id="node15" href="a00037.html" title="data_points.cpp" alt="" coords="693,160,808,189"/><area shape="rect" id="node21" href="a00047.html" title="debut du programme de catographie" alt="" coords="595,160,669,189"/><area shape="rect" id="node39" href="a00033.html" title="data_heures.cpp" alt="" coords="1176,160,1293,189"/><area shape="rect" id="node44" href="a00048.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="1317,160,1435,189"/></map>
+<div class="center"><img src="a00082.png" border="0" usemap="#data__points_8cpp" alt=""/></div>
+<map name="data__points_8cpp" id="data__points_8cpp">
+<area shape="rect" id="node3" href="a00041.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="60,83,159,112"/><area shape="rect" id="node19" href="a00033.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="183,83,308,112"/><area shape="rect" id="node7" href="a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="95,237,151,267"/><area shape="rect" id="node13" href="a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="197,160,283,189"/></map>
 </div>
 </div>
 <p><a href="">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00009.html">database</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c">addPoint</a> (QString categorie, QString name, float latitude, float longitude, QString description)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : ajoute un point dans la base de donnée  <a href="#a2d1497f67766953b4eec3bbc8f68604c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_ae96f50adee967a2ea6145f80efb65255.html#ae96f50adee967a2ea6145f80efb65255">addPoint</a> (QString categorie, QString name, float latitude, float longitude)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : ajoute un point dans la base de donnée  <a href="#ae96f50adee967a2ea6145f80efb65255"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="a00014.html">POI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_a6ee4aa0ddb98ec54fe276722715b6ba9.html#a6ee4aa0ddb98ec54fe276722715b6ba9">getPoint</a> (float latitude, float longitude, QString name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : permet d'obtenir les points en fonction de leurs nom et de leurs positions  <a href="#a6ee4aa0ddb98ec54fe276722715b6ba9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="a00014.html">POI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_afa136614be0612ea3df568be3969937e.html#afa136614be0612ea3df568be3969937e">getPointByCategorie</a> (QString categorie)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">]fn QVector&lt;POI&gt; <a class="el" href="a00041_afa136614be0612ea3df568be3969937e.html#afa136614be0612ea3df568be3969937e" title="]fn QVector&lt;POI&gt; getPointByCategorie(QString categorie)">getPointByCategorie(QString categorie)</a>  <a href="#afa136614be0612ea3df568be3969937e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="a00014.html">POI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_a5f55bf21f25d13e1a072e72c83c2ca2c.html#a5f55bf21f25d13e1a072e72c83c2ca2c">getPointByName</a> (QString name, int nbpts)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : permet d'obtenir les points en fonction de leurs nom  <a href="#a5f55bf21f25d13e1a072e72c83c2ca2c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="a00014.html">POI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_abd34ece5e7a12a3ddccef7a4eab5a3de.html#abd34ece5e7a12a3ddccef7a4eab5a3de">getPointImp</a> (float latitude, float longitude, int nbpts, QString Name, QString Cat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : obtenir les points de la base de donnée  <a href="#abd34ece5e7a12a3ddccef7a4eab5a3de"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040_af81c8a88d7865cce9652e08c2c9de6f7.html#af81c8a88d7865cce9652e08c2c9de6f7">initPointsTable</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction creant la table points dans la base de donnée  <a href="#af81c8a88d7865cce9652e08c2c9de6f7"></a><br/></td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Classe singleton, gere l'ouverture et la fermeture de la base de donne, paussaide egalement les methode pour y acceder. </p>
-<dl class="author"><dt><b>Auteur:</b></dt><dd>Guillaume Lastecoueres &amp; Mickael Puret </dd></dl>
-<dl class="version"><dt><b>Version:</b></dt><dd>0.1 </dd></dl>
-
-<p>Définition dans le fichier <a class="el" href="">database.h</a>.</p>
-</div></div>
+</div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00040.html">database.h</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="navelem"><a class="el" href="a00040.html">data_points.cpp</a>      </li>
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -12,7 +12,6 @@
 #include <QtGui>
 #include "data_categories.h"
 #include "edite_categories.h"
-#include "data_gui.h"
 
 /*!
   @fn void edit_point_gui::init_table_point()

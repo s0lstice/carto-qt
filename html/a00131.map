@@ -1,3 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00019.html" title="{Ui::MontrerPoint\n||}" alt="" coords="21,539,139,624"/>
+<area shape="rect" id="node2" href="$a00016.html" title="{QDialog\n||}" alt="" coords="5,979,75,1064"/>
+<area shape="rect" id="node10" href="$a00014.html" title="{POI\n|&#45; categorie\l&#45; description\l&#45; distance\l&#45; id\l&#45; lat\l&#45; lon\l&#45; name\l|+ GetCat()\l+ GetDesc()\l+ GetDist()\l+ GetId()\l+ Getlat()\l+ Getlon()\l+ GetName()\l+ SetCat()\l+ SetDesc()\l+ SetDist()\l+ SetId()\l+ Setlat()\l+ Setlong()\l+ SetName()\l}" alt="" coords="515,814,613,1229"/>
+<area shape="rect" id="node20" href="$a00021.html" title="{Ui::MontrerPoint\n||}" alt="" coords="763,979,880,1064"/>
+<area shape="rect" id="node22" href="$a00025.html" title="{Ui_MontrerPoint\n|+ BouttonFermer\l+ BouttonModification\l+ horizontalLayout\l+ horizontalLayout_2\l+ horizontalLayout_3\l+ horizontalLayout_4\l+ horizontalLayout_5\l+ label\l+ label_2\l+ label_3\l+ label_4\l+ label_5\l+ lineEdit\l+ lineEdit_2\l+ lineEdit_3\l+ lineEdit_4\l+ plainTextEdit\l+ tableWidget\l+ verticalLayout\l+ verticalLayout_2\l+ widget\l+ widget1\l+ widget2\l|+ retranslateUi()\l+ setupUi()\l}" alt="" coords="747,227,896,711"/>
 </map>

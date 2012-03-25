@@ -1,5 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00036.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="5,83,99,112"/>
-<area shape="rect" id="node5" href="$a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="51,160,136,189"/>
-<area shape="rect" id="node9" href="$a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="105,237,161,267"/>
+<area shape="rect" id="node3" href="$a00037.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="143,83,247,112"/>
+<area shape="rect" id="node19" href="$a00039.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="25,83,119,112"/>
+<area shape="rect" id="node5" href="$a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="49,160,135,189"/>
+<area shape="rect" id="node15" href="$a00049.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="163,237,227,267"/>
+<area shape="rect" id="node9" href="$a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="5,237,61,267"/>
 </map>

@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$data__points_8h_afa136614be0612ea3df568be3969937e.html#afa136614be0612ea3df568be3969937e" title="]fn QVector&lt;POI&gt; getPointByCategorie(QString categorie)" alt="" coords="140,19,281,48"/>
+<area shape="rect" id="node17" href="$data__points_8h_ac4b80f02fb4859dfd9a03ef47a2b9f08.html#ac4b80f02fb4859dfd9a03ef47a2b9f08" title="fonction : obtenir les points de la base de donnée" alt="" coords="165,97,256,127"/>
+<area shape="rect" id="node5" href="$data__csv_8h_ac273e7f12452330543253a1d3a5727b2.html#ac273e7f12452330543253a1d3a5727b2" title="fonction : export la base de donnee dans un fichier au format csv" alt="" coords="375,5,460,35"/>
+<area shape="rect" id="node7" href="$classCarte_a917a730085cc0ae242a8b5cc6833895c.html#a917a730085cc0ae242a8b5cc6833895c" title="Carte::exportCSV" alt="" coords="571,5,696,35"/>
+<area shape="rect" id="node9" href="$classCarte_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="764,85,857,115"/>
+<area shape="rect" id="node11" href="$classCarte_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="911,59,1057,88"/>
+<area shape="rect" id="node14" href="$classCarte_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="908,112,1060,141"/>
+<area shape="rect" id="node19" href="$classCarte_ab681a8ee604483662f63665c3b1e50d5.html#ab681a8ee604483662f63665c3b1e50d5" title="Carte::ByCat" alt="" coords="584,59,683,88"/>
+<area shape="rect" id="node22" href="$classCarte_af4df96a9bef8e73e816ab139b8f65db6.html#af4df96a9bef8e73e816ab139b8f65db6" title="Carte::Chercher" alt="" coords="360,109,475,139"/>
+<area shape="rect" id="node25" href="$classCarte_ab0e71abb5334a5426ca6b7b0eb386372.html#ab0e71abb5334a5426ca6b7b0eb386372" title="Carte::LoadingDBBDataA" alt="" coords="332,163,503,192"/>
+<area shape="rect" id="node27" href="$classCarte_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="552,163,715,192"/>
+</map>

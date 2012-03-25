@@ -2,10 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie: Champs de donnée</title>
+<title>Cartographie de lieux: Membres de classe</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body onload='searchBox.OnSelectItem(0);'>
@@ -19,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +35,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -50,10 +57,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
-      <li><a href="classes.html"><span>Index&#160;des&#160;structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
       <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
-      <li class="current"><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
+      <li class="current"><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
   <div id="navrow3" class="tabs2">
@@ -93,96 +100,117 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     </ul>
   </div>
 </div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('functions.html','');
+</script>
+<div id="doc-content">
 <div class="contents">
-<div class="textblock">Liste de tous les champs de structure et d'union avec liens vers les structures/unions auxquelles ils appartiennent :</div>
+<div class="textblock">Liste de tous les membres de classe avec liens vers les classes auxquelles ils appartiennent :</div>
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>select_categorie()
-: <a class="el" href="classedite__categories.html#af52c5acacdaa41559ee0066fb3241632">edite_categories</a>
+: <a class="el" href="a00011_af52c5acacdaa41559ee0066fb3241632.html#af52c5acacdaa41559ee0066fb3241632">edite_categories</a>
 </li>
 <li>select_heure()
-: <a class="el" href="classedit__point__gui.html#aec046351ed1ddd9e1918efbb0d17b017">edit_point_gui</a>
+: <a class="el" href="a00010_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017">edit_point_gui</a>
 </li>
 <li>select_point()
-: <a class="el" href="classedit__point__gui.html#a9be5a5020e85920440c31ab580fe2ce6">edit_point_gui</a>
+: <a class="el" href="a00010_a9be5a5020e85920440c31ab580fe2ce6.html#a9be5a5020e85920440c31ab580fe2ce6">edit_point_gui</a>
 </li>
 <li>SelectFile()
-: <a class="el" href="class_ask_data_base.html#a3b92ce9aff64ee058c19ad08bc1b4d9a">AskDataBase</a>
+: <a class="el" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a">AskDataBase</a>
 </li>
 <li>selectionModel
-: <a class="el" href="classedit__point__gui.html#ab5e452184fbd7d8475f15e874d965295">edit_point_gui</a>
+: <a class="el" href="a00010_ab5e452184fbd7d8475f15e874d965295.html#ab5e452184fbd7d8475f15e874d965295">edit_point_gui</a>
 </li>
 <li>SetCat()
-: <a class="el" href="class_p_o_i.html#af5144a6876a5244ed722fd64772c0c12">POI</a>
+: <a class="el" href="a00014_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12">POI</a>
 </li>
 <li>setDebut()
-: <a class="el" href="classheure.html#ad21f6e085a45e8ed4e0a793f8edfdec7">heure</a>
+: <a class="el" href="a00012_ad21f6e085a45e8ed4e0a793f8edfdec7.html#ad21f6e085a45e8ed4e0a793f8edfdec7">heure</a>
 </li>
 <li>SetDesc()
-: <a class="el" href="class_p_o_i.html#a40b45b8e21bc360ac2ab3a0985a3fe75">POI</a>
+: <a class="el" href="a00014_a40b45b8e21bc360ac2ab3a0985a3fe75.html#a40b45b8e21bc360ac2ab3a0985a3fe75">POI</a>
 </li>
 <li>SetDist()
-: <a class="el" href="class_p_o_i.html#a99ba0b455ddd3e13a7cff836a4ef73f9">POI</a>
+: <a class="el" href="a00014_a99ba0b455ddd3e13a7cff836a4ef73f9.html#a99ba0b455ddd3e13a7cff836a4ef73f9">POI</a>
 </li>
 <li>setFin()
-: <a class="el" href="classheure.html#a8d1d9b98e27ca2519fbdffb990939631">heure</a>
+: <a class="el" href="a00012_a8d1d9b98e27ca2519fbdffb990939631.html#a8d1d9b98e27ca2519fbdffb990939631">heure</a>
 </li>
 <li>SetId()
-: <a class="el" href="class_p_o_i.html#a082781f842b631163def78870698e0e4">POI</a>
+: <a class="el" href="a00014_a082781f842b631163def78870698e0e4.html#a082781f842b631163def78870698e0e4">POI</a>
 </li>
 <li>setJour()
-: <a class="el" href="classheure.html#a25b2852ce32c64a824156852eeea1882">heure</a>
+: <a class="el" href="a00012_a25b2852ce32c64a824156852eeea1882.html#a25b2852ce32c64a824156852eeea1882">heure</a>
 </li>
 <li>Setlat()
-: <a class="el" href="class_p_o_i.html#a24e1f582bd5ee485dc18be686dfee002">POI</a>
+: <a class="el" href="a00014_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002">POI</a>
 </li>
 <li>Setlong()
-: <a class="el" href="class_p_o_i.html#ac6ab205978eb9c5e8febbcdec7f03246">POI</a>
+: <a class="el" href="a00014_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246">POI</a>
 </li>
 <li>SetName()
-: <a class="el" href="class_p_o_i.html#a787ba66b493fe329ce5c610e4cc6711e">POI</a>
+: <a class="el" href="a00014_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e">POI</a>
 </li>
 <li>setupUi()
-: <a class="el" href="class_ui___montrer_point.html#a99ec65592ba5ab0537e7fc18fac53898">Ui_MontrerPoint</a>
-, <a class="el" href="class_ui___ask_data_base.html#a6a0fa94e5d9e02acf1ada45ef77d6110">Ui_AskDataBase</a>
-, <a class="el" href="class_ui___carte.html#a71c9da78123888b7e43332ea6ff8ef31">Ui_Carte</a>
-, <a class="el" href="class_ui__edit__point.html#a48ec337d2706b2922cf8036065770e68">Ui_edit_point</a>
+: <a class="el" href="a00022_a99ec65592ba5ab0537e7fc18fac53898.html#a99ec65592ba5ab0537e7fc18fac53898">Ui_MontrerPoint</a>
+, <a class="el" href="a00019_a6a0fa94e5d9e02acf1ada45ef77d6110.html#a6a0fa94e5d9e02acf1ada45ef77d6110">Ui_AskDataBase</a>
+, <a class="el" href="a00020_a71c9da78123888b7e43332ea6ff8ef31.html#a71c9da78123888b7e43332ea6ff8ef31">Ui_Carte</a>
+, <a class="el" href="a00021_a48ec337d2706b2922cf8036065770e68.html#a48ec337d2706b2922cf8036065770e68">Ui_edit_point</a>
 </li>
 <li>spinBox
-: <a class="el" href="class_ui___carte.html#a439c686ba4e2df156e597249f21aeb53">Ui_Carte</a>
+: <a class="el" href="a00020_a439c686ba4e2df156e597249f21aeb53.html#a439c686ba4e2df156e597249f21aeb53">Ui_Carte</a>
 </li>
 <li>statusBar
-: <a class="el" href="class_ui___carte.html#a68d80c0746d55e062224c8a8b07019e8">Ui_Carte</a>
+: <a class="el" href="a00020_a68d80c0746d55e062224c8a8b07019e8.html#a68d80c0746d55e062224c8a8b07019e8">Ui_Carte</a>
 </li>
 <li>submit_heure
-: <a class="el" href="class_ui__edit__point.html#a229c464b248cd950d5f31b3c8a9276e4">Ui_edit_point</a>
+: <a class="el" href="a00021_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">Ui_edit_point</a>
 </li>
 <li>submit_point
-: <a class="el" href="class_ui__edit__point.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">Ui_edit_point</a>
+: <a class="el" href="a00021_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">Ui_edit_point</a>
 </li>
 <li>submitCategorie()
-: <a class="el" href="classedite__categories.html#a29e088e169311784a5acf101364ff20f">edite_categories</a>
+: <a class="el" href="a00011_a29e088e169311784a5acf101364ff20f.html#a29e088e169311784a5acf101364ff20f">edite_categories</a>
 </li>
 <li>submitHeure()
-: <a class="el" href="classedit__point__gui.html#a95ab985ec988163be3fcd84154190b99">edit_point_gui</a>
+: <a class="el" href="a00010_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99">edit_point_gui</a>
 </li>
 <li>submitPoints()
-: <a class="el" href="classedit__point__gui.html#a0d74ca32a3bef4c7694189542e0125d0">edit_point_gui</a>
+: <a class="el" href="a00010_a0d74ca32a3bef4c7694189542e0125d0.html#a0d74ca32a3bef4c7694189542e0125d0">edit_point_gui</a>
 </li>
 <li>supr_heur
-: <a class="el" href="class_ui__edit__point.html#a0c228edbe8b608bdad63624e0f56e329">Ui_edit_point</a>
+: <a class="el" href="a00021_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">Ui_edit_point</a>
 </li>
 <li>supr_point
-: <a class="el" href="class_ui__edit__point.html#a9246fce7a89db9ff633f1d5492f46e87">Ui_edit_point</a>
+: <a class="el" href="a00021_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">Ui_edit_point</a>
 </li>
 </ul>
 </div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="footer">Généré le Sun Mar 25 2012 17:33:00 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -191,8 +219,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:28 pour cartographie par&#160;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+
 </body>
 </html>

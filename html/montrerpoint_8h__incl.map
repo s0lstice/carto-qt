@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node5" href="$_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="49,83,105,112"/>
+<area shape="rect" id="node5" href="$POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="49,83,105,112"/>
 <area shape="rect" id="node25" href="$edit__point__gui_8h.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="1172,83,1284,112"/>
 <area shape="rect" id="node28" href="$ui__edition__point_8h.html" title="ui_edition_point.h" alt="" coords="1167,160,1289,189"/>
 </map>

@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00033_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnÃ©e" alt="" coords="205,32,277,61"/>
+<area shape="rect" id="node22" href="$a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale." alt="" coords="156,85,327,115"/>
+<area shape="rect" id="node26" href="$a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176" title="Cree ou recupere une BDD puis lance la feetre principale." alt="" coords="152,139,331,168"/>
+<area shape="rect" id="node5" href="$a00004_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c" title="Carte::addPointThread" alt="" coords="399,32,551,61"/>
+<area shape="rect" id="node7" href="$a00004_ae53eeee073f163ef27aaddde5e3383f0.html#ae53eeee073f163ef27aaddde5e3383f0" title="Carte::ParserA" alt="" coords="619,32,728,61"/>
+<area shape="rect" id="node9" href="$a00004_ac25be85b576e7d655754838268055c2e.html#ac25be85b576e7d655754838268055c2e" title="Carte::Telecharger" alt="" coords="776,32,907,61"/>
+<area shape="rect" id="node11" href="$a00004_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="1167,32,1260,61"/>
+<area shape="rect" id="node19" href="$a00004_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="955,57,1117,87"/>
+<area shape="rect" id="node13" href="$a00004_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="1313,5,1460,35"/>
+<area shape="rect" id="node16" href="$a00004_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="1311,59,1463,88"/>
+<area shape="rect" id="node24" href="$a00002_a3ed1c48c258ae7c445b8017007a5abc3.html#a3ed1c48c258ae7c445b8017007a5abc3" title="Construit la fenêtre et initialise les données importantes." alt="" coords="379,112,571,141"/>
+</map>

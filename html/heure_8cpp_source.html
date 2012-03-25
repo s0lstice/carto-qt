@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie:  Fichier source de heure.cpp</title>
+<title>Cartographie de lieux:  Fichier source de heure.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +28,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -51,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -63,30 +63,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="heure_8h.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire.">heure.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &lt;QDebug&gt;</span>
 <a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="classheure.html#a0203535215de0b05adc62e919493a634">00013</a> <a class="code" href="classheure.html#a0203535215de0b05adc62e919493a634">heure::heure</a>(){}
-<a name="l00014"></a><a class="code" href="classheure.html#a25b2852ce32c64a824156852eeea1882">00014</a> <span class="keywordtype">void</span> <a class="code" href="classheure.html#a25b2852ce32c64a824156852eeea1882">heure::setJour</a>(<span class="keywordtype">int</span> jour){
-<a name="l00015"></a>00015     this-&gt;jour = <a class="code" href="classheure.html#acd9a0b2bf31585448751430653a68153">jour</a>;
+<a name="l00013"></a><a class="code" href="classheure_a0203535215de0b05adc62e919493a634.html#a0203535215de0b05adc62e919493a634">00013</a> <a class="code" href="classheure_a0203535215de0b05adc62e919493a634.html#a0203535215de0b05adc62e919493a634">heure::heure</a>(){}
+<a name="l00014"></a><a class="code" href="classheure_a25b2852ce32c64a824156852eeea1882.html#a25b2852ce32c64a824156852eeea1882">00014</a> <span class="keywordtype">void</span> <a class="code" href="classheure_a25b2852ce32c64a824156852eeea1882.html#a25b2852ce32c64a824156852eeea1882">heure::setJour</a>(<span class="keywordtype">int</span> jour){
+<a name="l00015"></a>00015     this-&gt;jour = <a class="code" href="classheure_acd9a0b2bf31585448751430653a68153.html#acd9a0b2bf31585448751430653a68153">jour</a>;
 <a name="l00016"></a>00016 }
 <a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="classheure.html#a37d672d10538f023b756998218a27341">00018</a> <span class="keywordtype">int</span> <a class="code" href="classheure.html#a37d672d10538f023b756998218a27341">heure::getJour</a>(){
-<a name="l00019"></a>00019     <span class="keywordflow">return</span> <a class="code" href="classheure.html#acd9a0b2bf31585448751430653a68153">jour</a>;
+<a name="l00018"></a><a class="code" href="classheure_a37d672d10538f023b756998218a27341.html#a37d672d10538f023b756998218a27341">00018</a> <span class="keywordtype">int</span> <a class="code" href="classheure_a37d672d10538f023b756998218a27341.html#a37d672d10538f023b756998218a27341">heure::getJour</a>(){
+<a name="l00019"></a>00019     <span class="keywordflow">return</span> <a class="code" href="classheure_acd9a0b2bf31585448751430653a68153.html#acd9a0b2bf31585448751430653a68153">jour</a>;
 <a name="l00020"></a>00020 }
 <a name="l00021"></a>00021 
-<a name="l00022"></a><a class="code" href="classheure.html#ad21f6e085a45e8ed4e0a793f8edfdec7">00022</a> <span class="keywordtype">void</span> <a class="code" href="classheure.html#ad21f6e085a45e8ed4e0a793f8edfdec7">heure::setDebut</a>(QString debut){
-<a name="l00023"></a>00023     this-&gt;debut = <a class="code" href="classheure.html#a8000d40286b94208ebf0f0e9dc22d118">debut</a>;
+<a name="l00022"></a><a class="code" href="classheure_ad21f6e085a45e8ed4e0a793f8edfdec7.html#ad21f6e085a45e8ed4e0a793f8edfdec7">00022</a> <span class="keywordtype">void</span> <a class="code" href="classheure_ad21f6e085a45e8ed4e0a793f8edfdec7.html#ad21f6e085a45e8ed4e0a793f8edfdec7">heure::setDebut</a>(QString debut){
+<a name="l00023"></a>00023     this-&gt;debut = <a class="code" href="classheure_a8000d40286b94208ebf0f0e9dc22d118.html#a8000d40286b94208ebf0f0e9dc22d118">debut</a>;
 <a name="l00024"></a>00024 }
 <a name="l00025"></a>00025 
-<a name="l00026"></a><a class="code" href="classheure.html#aa237a49068c5881c57db606d342378b4">00026</a> QString <a class="code" href="classheure.html#aa237a49068c5881c57db606d342378b4">heure::getDebut</a>(){
-<a name="l00027"></a>00027     <span class="keywordflow">return</span> <a class="code" href="classheure.html#a8000d40286b94208ebf0f0e9dc22d118">debut</a>;
+<a name="l00026"></a><a class="code" href="classheure_aa237a49068c5881c57db606d342378b4.html#aa237a49068c5881c57db606d342378b4">00026</a> QString <a class="code" href="classheure_aa237a49068c5881c57db606d342378b4.html#aa237a49068c5881c57db606d342378b4">heure::getDebut</a>(){
+<a name="l00027"></a>00027     <span class="keywordflow">return</span> <a class="code" href="classheure_a8000d40286b94208ebf0f0e9dc22d118.html#a8000d40286b94208ebf0f0e9dc22d118">debut</a>;
 <a name="l00028"></a>00028 }
 <a name="l00029"></a>00029 
-<a name="l00030"></a><a class="code" href="classheure.html#a8d1d9b98e27ca2519fbdffb990939631">00030</a> <span class="keywordtype">void</span> <a class="code" href="classheure.html#a8d1d9b98e27ca2519fbdffb990939631">heure::setFin</a>(QString fin){
-<a name="l00031"></a>00031     this-&gt;fin = <a class="code" href="classheure.html#a61b4e3c6c0002275efc519ded7eccb07">fin</a>;
+<a name="l00030"></a><a class="code" href="classheure_a8d1d9b98e27ca2519fbdffb990939631.html#a8d1d9b98e27ca2519fbdffb990939631">00030</a> <span class="keywordtype">void</span> <a class="code" href="classheure_a8d1d9b98e27ca2519fbdffb990939631.html#a8d1d9b98e27ca2519fbdffb990939631">heure::setFin</a>(QString fin){
+<a name="l00031"></a>00031     this-&gt;fin = <a class="code" href="classheure_a61b4e3c6c0002275efc519ded7eccb07.html#a61b4e3c6c0002275efc519ded7eccb07">fin</a>;
 <a name="l00032"></a>00032 }
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="classheure.html#a55859421cc39c7c2519026eda7e2850e">00035</a> QString <a class="code" href="classheure.html#a55859421cc39c7c2519026eda7e2850e">heure::getFin</a>(){
-<a name="l00036"></a>00036     <span class="keywordflow">return</span> <a class="code" href="classheure.html#a61b4e3c6c0002275efc519ded7eccb07">fin</a>;
+<a name="l00035"></a><a class="code" href="classheure_a55859421cc39c7c2519026eda7e2850e.html#a55859421cc39c7c2519026eda7e2850e">00035</a> QString <a class="code" href="classheure_a55859421cc39c7c2519026eda7e2850e.html#a55859421cc39c7c2519026eda7e2850e">heure::getFin</a>(){
+<a name="l00036"></a>00036     <span class="keywordflow">return</span> <a class="code" href="classheure_a61b4e3c6c0002275efc519ded7eccb07.html#a61b4e3c6c0002275efc519ded7eccb07">fin</a>;
 <a name="l00037"></a>00037 }
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie:  Fichier source de edite_categories.h</title>
+<title>Cartographie de lieux:  Fichier source de edite_categories.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +28,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -51,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -78,23 +78,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00025"></a>00025     Q_OBJECT
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00028"></a>00028     <a class="code" href="classedite__categories.html#abc5e5d3d4c86f2de06b4a408aff85681" title="contructeur de la classe edit_point_gui">edite_categories</a>(QWidget *parent = 0);
+<a name="l00028"></a>00028     <a class="code" href="classedite__categories_abc5e5d3d4c86f2de06b4a408aff85681.html#abc5e5d3d4c86f2de06b4a408aff85681" title="contructeur de la classe edit_point_gui">edite_categories</a>(QWidget *parent = 0);
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="keyword">private</span> slots :
-<a name="l00031"></a>00031     <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#a29e088e169311784a5acf101364ff20f" title="slot met a jour les champ de la table categories qui ont étés modifiés">submitCategorie</a>();
-<a name="l00032"></a>00032     <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#af52c5acacdaa41559ee0066fb3241632" title="slot gerant la categorie selectionné">select_categorie</a>(<span class="keyword">const</span> QModelIndex &amp;index);
-<a name="l00033"></a>00033     <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#a101787e63bf6104ca43e814821bec1ce" title="slot supprimant une categorie selectionné">drup_categorie</a>();
-<a name="l00034"></a>00034     <span class="keywordtype">void</span> <a class="code" href="classedite__categories.html#a068ee52d97e92dd1047617aa99431ae6" title="slot ajoute une categorie">insert_categorie</a>();
+<a name="l00031"></a>00031     <span class="keywordtype">void</span> <a class="code" href="classedite__categories_a29e088e169311784a5acf101364ff20f.html#a29e088e169311784a5acf101364ff20f" title="slot met a jour les champ de la table categories qui ont étés modifiés">submitCategorie</a>();
+<a name="l00032"></a>00032     <span class="keywordtype">void</span> <a class="code" href="classedite__categories_af52c5acacdaa41559ee0066fb3241632.html#af52c5acacdaa41559ee0066fb3241632" title="slot gerant la categorie selectionné">select_categorie</a>(<span class="keyword">const</span> QModelIndex &amp;index);
+<a name="l00033"></a>00033     <span class="keywordtype">void</span> <a class="code" href="classedite__categories_a101787e63bf6104ca43e814821bec1ce.html#a101787e63bf6104ca43e814821bec1ce" title="slot supprimant une categorie selectionné">drup_categorie</a>();
+<a name="l00034"></a>00034     <span class="keywordtype">void</span> <a class="code" href="classedite__categories_a068ee52d97e92dd1047617aa99431ae6.html#a068ee52d97e92dd1047617aa99431ae6" title="slot ajoute une categorie">insert_categorie</a>();
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">private</span> :
-<a name="l00037"></a><a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">00037</a>     QSqlTableModel *<a class="code" href="classedite__categories.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>;
-<a name="l00038"></a><a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">00038</a>     QTableView *<a class="code" href="classedite__categories.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>;
-<a name="l00039"></a><a class="code" href="classedite__categories.html#a0570875ad8f32836717506dd6919f235">00039</a>     QPushButton *<a class="code" href="classedite__categories.html#a0570875ad8f32836717506dd6919f235">editButton</a>;
-<a name="l00040"></a><a class="code" href="classedite__categories.html#a2f140e171420f87c8f7dd03cb2f5bfe0">00040</a>     QPushButton *<a class="code" href="classedite__categories.html#a2f140e171420f87c8f7dd03cb2f5bfe0">addButton</a>;
-<a name="l00041"></a><a class="code" href="classedite__categories.html#aa555c7bd16e71d30a585e433f9cf38fb">00041</a>     QPushButton *<a class="code" href="classedite__categories.html#aa555c7bd16e71d30a585e433f9cf38fb">deletButton</a>;
-<a name="l00042"></a><a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">00042</a>     QDialogButtonBox *<a class="code" href="classedite__categories.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a>;
-<a name="l00043"></a><a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">00043</a>     QVBoxLayout *<a class="code" href="classedite__categories.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a>;
-<a name="l00044"></a><a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">00044</a>     <span class="keywordtype">int</span> <a class="code" href="classedite__categories.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a>;
+<a name="l00037"></a><a class="code" href="classedite__categories_ada799da8bc9b30d502b3601b230cc223.html#ada799da8bc9b30d502b3601b230cc223">00037</a>     QSqlTableModel *<a class="code" href="classedite__categories_ada799da8bc9b30d502b3601b230cc223.html#ada799da8bc9b30d502b3601b230cc223">edite_categorie</a>;
+<a name="l00038"></a><a class="code" href="classedite__categories_abbc748b597a4460b82ce611b7d7709e6.html#abbc748b597a4460b82ce611b7d7709e6">00038</a>     QTableView *<a class="code" href="classedite__categories_abbc748b597a4460b82ce611b7d7709e6.html#abbc748b597a4460b82ce611b7d7709e6">viewCategories</a>;
+<a name="l00039"></a><a class="code" href="classedite__categories_a0570875ad8f32836717506dd6919f235.html#a0570875ad8f32836717506dd6919f235">00039</a>     QPushButton *<a class="code" href="classedite__categories_a0570875ad8f32836717506dd6919f235.html#a0570875ad8f32836717506dd6919f235">editButton</a>;
+<a name="l00040"></a><a class="code" href="classedite__categories_a2f140e171420f87c8f7dd03cb2f5bfe0.html#a2f140e171420f87c8f7dd03cb2f5bfe0">00040</a>     QPushButton *<a class="code" href="classedite__categories_a2f140e171420f87c8f7dd03cb2f5bfe0.html#a2f140e171420f87c8f7dd03cb2f5bfe0">addButton</a>;
+<a name="l00041"></a><a class="code" href="classedite__categories_aa555c7bd16e71d30a585e433f9cf38fb.html#aa555c7bd16e71d30a585e433f9cf38fb">00041</a>     QPushButton *<a class="code" href="classedite__categories_aa555c7bd16e71d30a585e433f9cf38fb.html#aa555c7bd16e71d30a585e433f9cf38fb">deletButton</a>;
+<a name="l00042"></a><a class="code" href="classedite__categories_a13489eba0dbdccf2113fe9743c84a3ce.html#a13489eba0dbdccf2113fe9743c84a3ce">00042</a>     QDialogButtonBox *<a class="code" href="classedite__categories_a13489eba0dbdccf2113fe9743c84a3ce.html#a13489eba0dbdccf2113fe9743c84a3ce">buttonBox</a>;
+<a name="l00043"></a><a class="code" href="classedite__categories_aba21699b4d75aaf896638ef275ea6669.html#aba21699b4d75aaf896638ef275ea6669">00043</a>     QVBoxLayout *<a class="code" href="classedite__categories_aba21699b4d75aaf896638ef275ea6669.html#aba21699b4d75aaf896638ef275ea6669">mainLayout</a>;
+<a name="l00044"></a><a class="code" href="classedite__categories_a31e6934987fdaf39ff6c0ad35e7f210a.html#a31e6934987fdaf39ff6c0ad35e7f210a">00044</a>     <span class="keywordtype">int</span> <a class="code" href="classedite__categories_a31e6934987fdaf39ff6c0ad35e7f210a.html#a31e6934987fdaf39ff6c0ad35e7f210a">courantCategorie</a>;
 <a name="l00045"></a>00045 };
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="preprocessor">#endif // EDITE_CATEGORIES_H</span>
@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

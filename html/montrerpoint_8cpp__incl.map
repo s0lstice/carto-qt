@@ -5,7 +5,7 @@
 <area shape="rect" id="node80" href="$heure_8h.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="2813,237,2877,267"/>
 <area shape="rect" id="node84" href="$data__heures_8h.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="2704,83,2808,112"/>
 <area shape="rect" id="node92" href="$data__jours_8h.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="2587,83,2680,112"/>
-<area shape="rect" id="node7" href="$_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="2656,237,2712,267"/>
+<area shape="rect" id="node7" href="$POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="2656,237,2712,267"/>
 <area shape="rect" id="node30" href="$ui__edition__point_8h.html" title="ui_edition_point.h" alt="" coords="1099,237,1221,267"/>
 <area shape="rect" id="node86" href="$database_8h.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="2660,160,2745,189"/>
 </map>

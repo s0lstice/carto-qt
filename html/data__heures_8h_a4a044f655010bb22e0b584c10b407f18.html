@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux: initHeuresTable</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="data__heures_8h.html">data_heures.h</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="data__heures_8h_ae5d8606c4f6a8266385d7eb9e2728c11.html#ae5d8606c4f6a8266385d7eb9e2728c11">addHeur</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__heures_8h_adda323a88bd569270c76d3eb07ea8c5a.html#adda323a88bd569270c76d3eb07ea8c5a">getHeureByPoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__heures_8h_af40939b9996ee6e1340db201988c0a04.html#af40939b9996ee6e1340db201988c0a04">getHeureByPointRecord</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="data__heures_8h_a4a044f655010bb22e0b584c10b407f18.html#a4a044f655010bb22e0b584c10b407f18">initHeuresTable</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top" class="mempage">
+<a class="anchor" id="a4a044f655010bb22e0b584c10b407f18"></a><!-- doxytag: member="data_heures.h::initHeuresTable" ref="a4a044f655010bb22e0b584c10b407f18" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool initHeuresTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>fonction : creant la table heures dans la base de donnée </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>vrai|fau : bool : indique la reussite ou l'echque de l'initialisation </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>les champs de la table points sont :<br/>
+ -heure_id : INTEGER PRIMARY KEY AUTOINCREMENT : clef primaire de latable<br/>
+ -point_id : INTEGER : clef etrengere sur points.point_id<br/>
+ -debut : HEURE : heur d'ouverture<br/>
+ -fin : HEURE : heur de fermeture </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="data__heures_8cpp_source.html#l00014">14</a> du fichier <a class="el" href="data__heures_8cpp_source.html">data_heures.cpp</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_cgraph.png" border="0" usemap="#data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_cgraph" alt=""/></div>
+<map name="data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_cgraph" id="data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_cgraph">
+<area shape="rect" id="node3" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="168,5,315,35"/><area shape="rect" id="node5" href="classdatabase_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="363,5,499,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_icgraph.png" border="0" usemap="#data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_icgraph" alt=""/></div>
+<map name="data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_icgraph" id="data__heures_8h_a4a044f655010bb22e0b584c10b407f18_a4a044f655010bb22e0b584c10b407f18_icgraph">
+<area shape="rect" id="node3" href="classCarte_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="188,59,281,88"/><area shape="rect" id="node11" href="classdatabase_a1605bbf17785278bfe6f99f7cc066b07.html#a1605bbf17785278bfe6f99f7cc066b07" title="fonction d&#39;initialisation des table de la base de donnée (privé)" alt="" coords="169,112,300,141"/><area shape="rect" id="node5" href="classCarte_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="361,5,508,35"/><area shape="rect" id="node8" href="classCarte_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="359,59,511,88"/><area shape="rect" id="node13" href="classAskDataBase_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale." alt="" coords="349,112,520,141"/><area shape="rect" id="node15" href="classAskDataBase_a3ed1c48c258ae7c445b8017007a5abc3.html#a3ed1c48c258ae7c445b8017007a5abc3" title="Construit la fen�tre et initialise les donn�es importantes." alt="" coords="568,112,760,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:35 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

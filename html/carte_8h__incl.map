@@ -1,7 +1,7 @@
 <map id="G" name="G">
 <area shape="rect" id="node13" href="$database_8h.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="68,83,153,112"/>
 <area shape="rect" id="node25" href="$montrerpoint_8h.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="544,83,648,112"/>
-<area shape="rect" id="node17" href="$_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,160,139,189"/>
+<area shape="rect" id="node17" href="$POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,160,139,189"/>
 <area shape="rect" id="node40" href="$edit__point__gui_8h.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="1112,160,1224,189"/>
 <area shape="rect" id="node43" href="$ui__edition__point_8h.html" title="ui_edition_point.h" alt="" coords="1133,237,1256,267"/>
 </map>

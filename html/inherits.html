@@ -2,10 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie: Hiérarchie des classes</title>
+<title>Cartographie de lieux: Hiérarchie des classes</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body onload='searchBox.OnSelectItem(0);'>
@@ -19,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +35,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -50,13 +57,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
-      <li><a href="classes.html"><span>Index&#160;des&#160;structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
       <li class="current"><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
-      <li><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
 </div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('hierarchy.html','');
+</script>
+<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">Hiérarchie des classes</div>  </div>
@@ -67,60 +87,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><table border="0" cellspacing="10" cellpadding="0">
 <tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#application"/>
 <map name="application" id="application">
-<area shape="rect" id="node1" href="classapplication.html" title="application" alt="" coords="7,5,89,35"/></map>
+<area shape="rect" id="node1" href="a00001.html" title="application" alt="" coords="7,5,89,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#_ask_data_base"/>
-<map name="_ask_data_base" id="_ask_data_base">
-<area shape="rect" id="node1" href="class_ask_data_base.html" title="AskDataBase" alt="" coords="7,5,108,35"/></map>
+<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#AskDataBase"/>
+<map name="AskDataBase" id="AskDataBase">
+<area shape="rect" id="node1" href="a00002.html" title="AskDataBase" alt="" coords="7,5,108,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#_carte"/>
-<map name="_carte" id="_carte">
-<area shape="rect" id="node1" href="class_carte.html" title="Carte" alt="" coords="7,5,60,35"/></map>
+<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#Carte"/>
+<map name="Carte" id="Carte">
+<area shape="rect" id="node1" href="a00003.html" title="Carte" alt="" coords="7,5,60,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#database"/>
+<tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#data__categories"/>
+<map name="data__categories" id="data__categories">
+<area shape="rect" id="node1" href="a00004.html" title="Ceci est une bibilotheque fournissant des fonctions en lecture&#45;ecriture sur la table points..." alt="" coords="5,5,120,35"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#data__csv"/>
+<map name="data__csv" id="data__csv">
+<area shape="rect" id="node1" href="a00005.html" title="Ce si est une bibilotheque qui s&#39;appuis sur la base de donnee et les methode associe, pour plus d&#39;informations, voir la documentation associe." alt="" coords="5,5,80,35"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#data__heures"/>
+<map name="data__heures" id="data__heures">
+<area shape="rect" id="node1" href="a00006.html" title="Ceci est une bibilotheque fournissant des fonctions en lecture&#45;ecriture sur la table points..." alt="" coords="5,5,99,35"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#data__jours"/>
+<map name="data__jours" id="data__jours">
+<area shape="rect" id="node1" href="a00007.html" title="Ceci est une bibilotheque fournissant des fonctions en lecture&#45;ecriture sur la table points..." alt="" coords="5,5,88,35"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#data__points"/>
+<map name="data__points" id="data__points">
+<area shape="rect" id="node1" href="a00008.html" title="Ceci est une bibilotheque fournissant des fonctions en lecture&#45;ecriture sur la table points..." alt="" coords="7,5,95,35"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#database"/>
 <map name="database" id="database">
-<area shape="rect" id="node1" href="classdatabase.html" title="database" alt="" coords="5,5,80,35"/></map>
+<area shape="rect" id="node1" href="a00009.html" title="database" alt="" coords="5,5,80,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#edite__categories"/>
+<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#edite__categories"/>
 <map name="edite__categories" id="edite__categories">
-<area shape="rect" id="node1" href="classedite__categories.html" title="edite_categories" alt="" coords="5,5,123,35"/></map>
+<area shape="rect" id="node1" href="a00011.html" title="edite_categories" alt="" coords="5,5,123,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#heure"/>
+<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#heure"/>
 <map name="heure" id="heure">
-<area shape="rect" id="node1" href="classheure.html" title="heure" alt="" coords="7,5,60,35"/></map>
+<area shape="rect" id="node1" href="a00012.html" title="heure" alt="" coords="7,5,60,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#_montrer_point"/>
-<map name="_montrer_point" id="_montrer_point">
-<area shape="rect" id="node1" href="class_montrer_point.html" title="MontrerPoint" alt="" coords="5,5,101,35"/></map>
+<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#MontrerPoint"/>
+<map name="MontrerPoint" id="MontrerPoint">
+<area shape="rect" id="node1" href="a00013.html" title="MontrerPoint" alt="" coords="5,5,101,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#_p_o_i"/>
-<map name="_p_o_i" id="_p_o_i">
-<area shape="rect" id="node1" href="class_p_o_i.html" title="POI" alt="" coords="5,5,51,35"/></map>
+<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#POI"/>
+<map name="POI" id="POI">
+<area shape="rect" id="node1" href="a00014.html" title="POI" alt="" coords="5,5,51,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#_ui___ask_data_base"/>
-<map name="_ui___ask_data_base" id="_ui___ask_data_base">
-<area shape="rect" id="node1" href="class_ui___ask_data_base.html" title="Ui_AskDataBase" alt="" coords="5,5,128,35"/><area shape="rect" id="node3" href="class_ui_1_1_ask_data_base.html" title="Ui::AskDataBase" alt="" coords="177,5,300,35"/></map>
+<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Ui__AskDataBase"/>
+<map name="Ui__AskDataBase" id="Ui__AskDataBase">
+<area shape="rect" id="node1" href="a00019.html" title="Ui_AskDataBase" alt="" coords="5,5,128,35"/><area shape="rect" id="node3" href="a00015.html" title="Ui::AskDataBase" alt="" coords="177,5,300,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#_ui___carte"/>
-<map name="_ui___carte" id="_ui___carte">
-<area shape="rect" id="node1" href="class_ui___carte.html" title="Ui_Carte" alt="" coords="5,5,80,35"/><area shape="rect" id="node3" href="class_ui_1_1_carte.html" title="Ui::Carte" alt="" coords="128,5,203,35"/></map>
+<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#Ui__Carte"/>
+<map name="Ui__Carte" id="Ui__Carte">
+<area shape="rect" id="node1" href="a00020.html" title="Ui_Carte" alt="" coords="5,5,80,35"/><area shape="rect" id="node3" href="a00016.html" title="Ui::Carte" alt="" coords="128,5,203,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#_ui__edit__point"/>
-<map name="_ui__edit__point" id="_ui__edit__point">
-<area shape="rect" id="node1" href="class_ui__edit__point.html" title="Ui_edit_point" alt="" coords="5,5,104,35"/><area shape="rect" id="node3" href="class_ui_1_1edit__point.html" title="Ui::edit_point" alt="" coords="152,5,251,35"/><area shape="rect" id="node5" href="classedit__point__gui.html" title="edit_point_gui" alt="" coords="300,5,401,35"/></map>
+<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#Ui__edit__point"/>
+<map name="Ui__edit__point" id="Ui__edit__point">
+<area shape="rect" id="node1" href="a00021.html" title="Ui_edit_point" alt="" coords="5,5,104,35"/><area shape="rect" id="node3" href="a00017.html" title="Ui::edit_point" alt="" coords="152,5,251,35"/><area shape="rect" id="node5" href="a00010.html" title="edit_point_gui" alt="" coords="300,5,401,35"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#_ui___montrer_point"/>
-<map name="_ui___montrer_point" id="_ui___montrer_point">
-<area shape="rect" id="node1" href="class_ui___montrer_point.html" title="Ui_MontrerPoint" alt="" coords="7,5,121,35"/><area shape="rect" id="node3" href="class_ui_1_1_montrer_point.html" title="Ui::MontrerPoint" alt="" coords="171,5,288,35"/></map>
+<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#Ui__MontrerPoint"/>
+<map name="Ui__MontrerPoint" id="Ui__MontrerPoint">
+<area shape="rect" id="node1" href="a00022.html" title="Ui_MontrerPoint" alt="" coords="7,5,121,35"/><area shape="rect" id="node3" href="a00018.html" title="Ui::MontrerPoint" alt="" coords="171,5,288,35"/></map>
 </td></tr>
 </table>
 </div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="footer">Généré le Sun Mar 25 2012 17:33:01 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,8 +177,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:29 pour cartographie par&#160;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+
 </body>
 </html>

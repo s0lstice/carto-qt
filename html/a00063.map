@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00028.html" title="Fenetre principale de l&#39;application." alt="" coords="317,83,379,112"/>
+<area shape="rect" id="node15" href="$a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="899,160,984,189"/>
+<area shape="rect" id="node27" href="$a00042.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="443,237,555,267"/>
+<area shape="rect" id="node29" href="$a00052.html" title="ui_carte.h" alt="" coords="2128,83,2205,112"/>
+<area shape="rect" id="node80" href="$a00026.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="627,83,733,112"/>
+<area shape="rect" id="node90" href="$a00038.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="1363,83,1461,112"/>
+<area shape="rect" id="node100" href="$a00032.html" title="Fonction d&#39;exportation de la base de donnee au format csv." alt="" coords="757,83,843,112"/>
+<area shape="rect" id="node103" href="$a00024.html" title="classe Application. Initialise l&#39;application" alt="" coords="1485,83,1579,112"/>
+<area shape="rect" id="node108" href="$a00030.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="1096,83,1221,112"/>
+<area shape="rect" id="node111" href="$a00036.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="1245,83,1339,112"/>
+<area shape="rect" id="node114" href="$a00034.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="917,83,1021,112"/>
+<area shape="rect" id="node21" href="$a00049.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="296,160,400,189"/>
+</map>

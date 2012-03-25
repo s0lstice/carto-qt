@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux:  Fichier source de data_heures.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">data_heures.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00028.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="a00029.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database.">data_heures.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="a00031.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database.">data_jours.h</a>&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00014"></a><a class="code" href="a00029_a4a044f655010bb22e0b584c10b407f18.html#a4a044f655010bb22e0b584c10b407f18">00014</a> <span class="keywordtype">bool</span> <a class="code" href="a00028_a4a044f655010bb22e0b584c10b407f18.html#a4a044f655010bb22e0b584c10b407f18" title="fonction : creant la table heures dans la base de donnée">initHeuresTable</a>(){
+<a name="l00015"></a>00015     QSqlQuery query(<a class="code" href="a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017     query.exec(<span class="stringliteral">&quot;create table heures (heure_id INTEGER PRIMARY KEY AUTOINCREMENT,&quot;</span>
+<a name="l00018"></a>00018                   <span class="stringliteral">&quot;point_id INTEGER,&quot;</span>
+<a name="l00019"></a>00019                   <span class="stringliteral">&quot;jour INTEGER,&quot;</span>
+<a name="l00020"></a>00020                   <span class="stringliteral">&quot;debut HEURE,&quot;</span>
+<a name="l00021"></a>00021                   <span class="stringliteral">&quot;fin HEURE,&quot;</span>
+<a name="l00022"></a>00022                   <span class="stringliteral">&quot;FOREIGN KEY(point_id) REFERENCES points(point_id))&quot;</span>);
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00025"></a>00025 }
+<a name="l00026"></a>00026 
+<a name="l00036"></a><a class="code" href="a00029_ae5d8606c4f6a8266385d7eb9e2728c11.html#ae5d8606c4f6a8266385d7eb9e2728c11">00036</a> <span class="keywordtype">bool</span> <a class="code" href="a00028_ae5d8606c4f6a8266385d7eb9e2728c11.html#ae5d8606c4f6a8266385d7eb9e2728c11" title="fonction : permet d&#39;ajouter une plage horaire">addHeur</a>(<span class="keywordtype">int</span> point_id,<span class="keywordtype">int</span> jour_id, QString debut, QString fin ){
+<a name="l00037"></a>00037     QSqlQuery query(<a class="code" href="a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00038"></a>00038     <span class="keywordflow">if</span>( query.exec(<span class="stringliteral">&quot;insert into heures (point_id, jour, debut, fin) values(&quot;</span>
+<a name="l00039"></a>00039                    + QString::number(point_id)
+<a name="l00040"></a>00040                    + <span class="stringliteral">&quot;,&quot;</span> + QString::number(jour_id)
+<a name="l00041"></a>00041                    + <span class="stringliteral">&quot;,&#39;&quot;</span> + debut
+<a name="l00042"></a>00042                    + <span class="stringliteral">&quot;&#39;,&#39;&quot;</span> + fin
+<a name="l00043"></a>00043                    + <span class="stringliteral">&quot;&#39;)&quot;</span>) == <span class="keyword">false</span>)
+<a name="l00044"></a>00044     {
+<a name="l00045"></a>00045         qDebug()&lt;&lt; <span class="stringliteral">&quot;addHeur&quot;</span> &lt;&lt; query.lastError().text();
+<a name="l00046"></a>00046         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00047"></a>00047     }
+<a name="l00048"></a>00048     <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00049"></a>00049 }
+<a name="l00050"></a>00050 
+<a name="l00057"></a><a class="code" href="a00029_adda323a88bd569270c76d3eb07ea8c5a.html#adda323a88bd569270c76d3eb07ea8c5a">00057</a> QVector&lt;heure&gt; <a class="code" href="a00028_a0619f9b984a4c68485b72e664c18952d.html#a0619f9b984a4c68485b72e664c18952d" title="fonction : permet d&#39;obtenir les plages horaire d&#39;un point">getHeureByPoint</a>(<span class="keywordtype">int</span> point_id){
+<a name="l00058"></a>00058     QSqlQuery query(<a class="code" href="a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00059"></a>00059      <a class="code" href="a00010.html">heure</a> tmpHeure;
+<a name="l00060"></a>00060      QVector&lt;heure&gt; tabHeure;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062      <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;SELECT jour, debut, fin FROM heures WHERE point_id = &#39;&quot;</span>+
+<a name="l00063"></a>00063                    QString::number(point_id) +<span class="stringliteral">&quot;&#39;&quot;</span>) == <span class="keyword">false</span>)
+<a name="l00064"></a>00064      {
+<a name="l00065"></a>00065          qDebug()&lt;&lt; <span class="stringliteral">&quot;getHeureByPoint&quot;</span> &lt;&lt; query.lastError().text();
+<a name="l00066"></a>00066          exit(1);
+<a name="l00067"></a>00067      }
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069      <span class="keywordflow">while</span>(query.next()){
+<a name="l00070"></a>00070          tmpHeure.<a class="code" href="a00010_a25b2852ce32c64a824156852eeea1882.html#a25b2852ce32c64a824156852eeea1882">setJour</a>(query.value(0).toInt());
+<a name="l00071"></a>00071          tmpHeure.<a class="code" href="a00010_ad21f6e085a45e8ed4e0a793f8edfdec7.html#ad21f6e085a45e8ed4e0a793f8edfdec7">setDebut</a>(query.value(1).toString());
+<a name="l00072"></a>00072          tmpHeure.<a class="code" href="a00010_a8d1d9b98e27ca2519fbdffb990939631.html#a8d1d9b98e27ca2519fbdffb990939631">setFin</a>(query.value(2).toString());
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074          tabHeure.append(tmpHeure);
+<a name="l00075"></a>00075      }
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077      <span class="keywordflow">return</span> tabHeure;
+<a name="l00078"></a>00078 }
+<a name="l00079"></a>00079 
+<a name="l00086"></a><a class="code" href="a00029_af40939b9996ee6e1340db201988c0a04.html#af40939b9996ee6e1340db201988c0a04">00086</a> QSqlRecord <a class="code" href="a00028_af40939b9996ee6e1340db201988c0a04.html#af40939b9996ee6e1340db201988c0a04" title="fonction : permet d&#39;obtenir les plages horaire d&#39;un point">getHeureByPointRecord</a>(<span class="keywordtype">int</span> point_id){
+<a name="l00087"></a>00087     QSqlQuery query(<a class="code" href="a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090      <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;SELECT jour, debut, fin FROM heures WHERE point_id = &#39;&quot;</span>+
+<a name="l00091"></a>00091                    QString::number(point_id) +<span class="stringliteral">&quot;&#39;&quot;</span>) == <span class="keyword">false</span>)
+<a name="l00092"></a>00092      {
+<a name="l00093"></a>00093          qDebug()&lt;&lt; <span class="stringliteral">&quot;getHeureByPoint&quot;</span> &lt;&lt; query.lastError().text();
+<a name="l00094"></a>00094          exit(1);
+<a name="l00095"></a>00095      }
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097  <span class="keywordflow">return</span> query.record();
+<a name="l00098"></a>00098 }
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 01:06:23 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$a00014.html" title="{POI\n|&#45; categorie\l&#45; description\l&#45; distance\l&#45; id\l&#45; lat\l&#45; lon\l&#45; name\l|+ GetCat()\l+ GetDesc()\l+ GetDist()\l+ GetId()\l+ Getlat()\l+ Getlon()\l+ GetName()\l+ SetCat()\l+ SetDesc()\l+ SetDist()\l+ SetId()\l+ Setlat()\l+ Setlong()\l+ SetName()\l}" alt="" coords="5,542,104,957"/>
+<area shape="rect" id="node4" href="$a00018.html" title="{Ui::MontrerPoint\n||}" alt="" coords="128,707,245,792"/>
+<area shape="rect" id="node6" href="$a00022.html" title="{Ui_MontrerPoint\n|+ BouttonFermer\l+ BouttonModification\l+ horizontalLayout\l+ horizontalLayout_2\l+ horizontalLayout_3\l+ horizontalLayout_4\l+ horizontalLayout_5\l+ label\l+ label_2\l+ label_3\l+ label_4\l+ label_5\l+ lineEdit\l+ lineEdit_2\l+ lineEdit_3\l+ lineEdit_4\l+ plainTextEdit\l+ tableWidget\l+ verticalLayout\l+ verticalLayout_2\l+ widget\l+ widget1\l+ widget2\l|+ retranslateUi()\l+ setupUi()\l}" alt="" coords="112,6,261,490"/>
+</map>

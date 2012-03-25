@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux:  Fichier source de askdatabase.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">askdatabase.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00021.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef ASKDATABASE_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define ASKDATABASE_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QMainWindow&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;QString&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QtGui&gt;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>Ui {
+<a name="l00019"></a>00019     <span class="keyword">class </span><a class="code" href="a00002.html">AskDataBase</a>;
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="a00002.html">00022</a> <span class="keyword">class </span><a class="code" href="a00002.html">AskDataBase</a> : <span class="keyword">public</span> QMainWindow
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024     Q_OBJECT
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00027"></a>00027     <span class="keyword">explicit</span> <a class="code" href="a00002_a3ed1c48c258ae7c445b8017007a5abc3.html#a3ed1c48c258ae7c445b8017007a5abc3" title="Construit la fen�tre et initialise les donn�es importantes.">AskDataBase</a>(QWidget *parent = 0);
+<a name="l00028"></a>00028     <a class="code" href="a00002_a71f17cc87e6344f812ddee9fb28ba0be.html#a71f17cc87e6344f812ddee9fb28ba0be">~AskDataBase</a>();
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="keyword">private</span>:
+<a name="l00031"></a><a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">00031</a>     <a class="code" href="a00003.html">Ui::AskDataBase</a> *<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>;
+<a name="l00032"></a>00032     <span class="keywordtype">void</span> <a class="code" href="a00002_abd8c2735c93471a439de2a65936bbdef.html#abd8c2735c93471a439de2a65936bbdef">CreationCarte</a>();
+<a name="l00033"></a><a class="code" href="a00002_a81f4d16d946ef1b35b79ca86b671d61e.html#a81f4d16d946ef1b35b79ca86b671d61e">00033</a>     QString <a class="code" href="a00002_a81f4d16d946ef1b35b79ca86b671d61e.html#a81f4d16d946ef1b35b79ca86b671d61e">filename</a>;
+<a name="l00034"></a>00034 <span class="keyword">private</span> slots:
+<a name="l00035"></a>00035     <span class="keywordtype">void</span> <a class="code" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a" title="Creer une fen�tre qui permet la selection d&#39;un fichier .">SelectFile</a>(<span class="keywordtype">void</span>);
+<a name="l00036"></a>00036     <span class="keywordtype">void</span> <a class="code" href="a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale.">CreateFile</a>(<span class="keywordtype">void</span>);
+<a name="l00037"></a>00037     <span class="keywordtype">void</span> <a class="code" href="a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176" title="Cree ou recupere une BDD puis lance la feetre principale.">ValidateFile</a>(<span class="keywordtype">void</span>);
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 };
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="preprocessor">#endif // ASKDATABASE_H</span>
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 01:06:23 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

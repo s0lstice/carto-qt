@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux: getPointImp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="data__points_8cpp.html">data_points.cpp</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="data__points_8cpp_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c">addPoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__points_8cpp_ae96f50adee967a2ea6145f80efb65255.html#ae96f50adee967a2ea6145f80efb65255">addPoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__points_8cpp_a6ee4aa0ddb98ec54fe276722715b6ba9.html#a6ee4aa0ddb98ec54fe276722715b6ba9">getPoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__points_8cpp_afa136614be0612ea3df568be3969937e.html#afa136614be0612ea3df568be3969937e">getPointByCategorie</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__points_8cpp_a5f55bf21f25d13e1a072e72c83c2ca2c.html#a5f55bf21f25d13e1a072e72c83c2ca2c">getPointByName</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de.html#abd34ece5e7a12a3ddccef7a4eab5a3de">getPointImp</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="data__points_8cpp_af81c8a88d7865cce9652e08c2c9de6f7.html#af81c8a88d7865cce9652e08c2c9de6f7">initPointsTable</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top" class="mempage">
+<a class="anchor" id="abd34ece5e7a12a3ddccef7a4eab5a3de"></a><!-- doxytag: member="data_points.cpp::getPointImp" ref="abd34ece5e7a12a3ddccef7a4eab5a3de" args="(float latitude, float longitude, int nbpts, QString Name, QString Cat)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; <a class="el" href="classPOI.html">POI</a> &gt; getPointImp </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>longitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbpts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>Name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>Cat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>fonction : obtenir les points de la base de donnée </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitude</td><td>: float </td></tr>
+    <tr><td class="paramname">longitude</td><td>: flaot </td></tr>
+    <tr><td class="paramname">nbpts</td><td>: int : nombre maximum de points renvoyés </td></tr>
+    <tr><td class="paramname">name</td><td>: QString </td></tr>
+    <tr><td class="paramname">Cat</td><td>: QString : categorie des points recherché </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>QVector&lt;POI&gt; : un vecteur de <a class="el" href="classPOI.html">POI</a> </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>la liste renvoie contien les points les plus proche des coordonnes fournies </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="data__points_8cpp_source.html#l00046">46</a> du fichier <a class="el" href="data__points_8cpp_source.html">data_points.cpp</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_cgraph.png" border="0" usemap="#data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_cgraph" alt=""/></div>
+<map name="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_cgraph" id="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_cgraph">
+<area shape="rect" id="node3" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="355,42,501,72"/><area shape="rect" id="node7" href="data__categories_8cpp_a4489eb5551004a5fd5ef5920b1c10ce0.html#a4489eb5551004a5fd5ef5920b1c10ce0" title="fonction : retourne le nom de la categorie en fonction de l&#39;identifiant" alt="" coords="165,42,288,72"/><area shape="rect" id="node10" href="data__categories_8cpp_a9bf9ac909e82f3606111afd05c6fd0cb.html#a9bf9ac909e82f3606111afd05c6fd0cb" title="fonction : retourne l&#39;identifiant de la categorie en fonction de son nom" alt="" coords="148,96,305,125"/><area shape="rect" id="node13" href="classPOI_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="180,149,273,178"/><area shape="rect" id="node15" href="classPOI_a40b45b8e21bc360ac2ab3a0985a3fe75.html#a40b45b8e21bc360ac2ab3a0985a3fe75" title="POI::SetDesc" alt="" coords="175,202,279,232"/><area shape="rect" id="node17" href="classPOI_a99ba0b455ddd3e13a7cff836a4ef73f9.html#a99ba0b455ddd3e13a7cff836a4ef73f9" title="POI::SetDist" alt="" coords="179,256,275,285"/><area shape="rect" id="node19" href="classPOI_a082781f842b631163def78870698e0e4.html#a082781f842b631163def78870698e0e4" title="POI::SetId" alt="" coords="185,309,268,338"/><area shape="rect" id="node21" href="classPOI_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="184,362,269,392"/><area shape="rect" id="node23" href="classPOI_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="179,416,275,445"/><area shape="rect" id="node25" href="classPOI_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="173,469,280,498"/><area shape="rect" id="node5" href="classdatabase_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="549,42,685,72"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_icgraph.png" border="0" usemap="#data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_icgraph" alt=""/></div>
+<map name="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_icgraph" id="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de_abd34ece5e7a12a3ddccef7a4eab5a3de_icgraph">
+<area shape="rect" id="node3" href="classCarte_ab681a8ee604483662f63665c3b1e50d5.html#ab681a8ee604483662f63665c3b1e50d5" title="Carte::ByCat" alt="" coords="400,5,499,35"/><area shape="rect" id="node13" href="classCarte_af4df96a9bef8e73e816ab139b8f65db6.html#af4df96a9bef8e73e816ab139b8f65db6" title="Carte::Chercher" alt="" coords="176,57,291,87"/><area shape="rect" id="node16" href="classCarte_ab0e71abb5334a5426ca6b7b0eb386372.html#ab0e71abb5334a5426ca6b7b0eb386372" title="Carte::LoadingDBBDataA" alt="" coords="148,111,319,140"/><area shape="rect" id="node5" href="classCarte_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="580,57,673,87"/><area shape="rect" id="node7" href="classCarte_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="727,31,873,60"/><area shape="rect" id="node10" href="classCarte_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="724,84,876,113"/><area shape="rect" id="node18" href="classCarte_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="368,109,531,139"/></map>
+</div>
+</p>
+
+</div>
+</div>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:35 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie:  Fichier source de ui_montrerpoint.h</title>
+<title>Cartographie de lieux:  Fichier source de ui_montrerpoint.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +28,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -51,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -88,179 +88,179 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 QT_BEGIN_NAMESPACE
 <a name="l00029"></a>00029 
-<a name="l00030"></a><a class="code" href="class_ui___montrer_point.html">00030</a> <span class="keyword">class </span><a class="code" href="class_ui___montrer_point.html">Ui_MontrerPoint</a>
+<a name="l00030"></a><a class="code" href="classUi__MontrerPoint.html">00030</a> <span class="keyword">class </span><a class="code" href="classUi__MontrerPoint.html">Ui_MontrerPoint</a>
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a><a class="code" href="class_ui___montrer_point.html#aadc467dc4ce299fe8ae105af991f38b6">00033</a>     QWidget *<a class="code" href="class_ui___montrer_point.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a>;
-<a name="l00034"></a><a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">00034</a>     QWidget *<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>;
-<a name="l00035"></a><a class="code" href="class_ui___montrer_point.html#ac3355e66612d210f2d93c9776c988ebe">00035</a>     QVBoxLayout *<a class="code" href="class_ui___montrer_point.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>;
-<a name="l00036"></a><a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">00036</a>     QVBoxLayout *<a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>;
-<a name="l00037"></a><a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">00037</a>     QHBoxLayout *<a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>;
-<a name="l00038"></a><a class="code" href="class_ui___montrer_point.html#a467e413c1d6eb0de23ca3cf264d8b96c">00038</a>     QLabel *<a class="code" href="class_ui___montrer_point.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>;
-<a name="l00039"></a><a class="code" href="class_ui___montrer_point.html#adfef2884896a0a16615e8d0cc0420b81">00039</a>     QLineEdit *<a class="code" href="class_ui___montrer_point.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>;
-<a name="l00040"></a><a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">00040</a>     QHBoxLayout *<a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>;
-<a name="l00041"></a><a class="code" href="class_ui___montrer_point.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">00041</a>     QLabel *<a class="code" href="class_ui___montrer_point.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>;
-<a name="l00042"></a><a class="code" href="class_ui___montrer_point.html#ab76ac61d3ff80d2af9d6c96151659592">00042</a>     QLineEdit *<a class="code" href="class_ui___montrer_point.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>;
-<a name="l00043"></a><a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">00043</a>     QHBoxLayout *<a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>;
-<a name="l00044"></a><a class="code" href="class_ui___montrer_point.html#a7785132cdad4f0b722ac3be5e9f4c233">00044</a>     QLabel *<a class="code" href="class_ui___montrer_point.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>;
-<a name="l00045"></a><a class="code" href="class_ui___montrer_point.html#a32e1a83b00fb1194e6dff539fb1ef200">00045</a>     QLineEdit *<a class="code" href="class_ui___montrer_point.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>;
-<a name="l00046"></a><a class="code" href="class_ui___montrer_point.html#afd43919138c05b0f865f38e6dcc07adc">00046</a>     QLabel *<a class="code" href="class_ui___montrer_point.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>;
-<a name="l00047"></a><a class="code" href="class_ui___montrer_point.html#a326e59496c21dc65a32b2d9e3a32cd98">00047</a>     QLineEdit *<a class="code" href="class_ui___montrer_point.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>;
-<a name="l00048"></a><a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">00048</a>     QHBoxLayout *<a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>;
-<a name="l00049"></a><a class="code" href="class_ui___montrer_point.html#a673ecf19432262e88024c42d1ab9ad90">00049</a>     QLabel *<a class="code" href="class_ui___montrer_point.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>;
-<a name="l00050"></a><a class="code" href="class_ui___montrer_point.html#aec323a70c8c742c6dc74397a5886de05">00050</a>     QPlainTextEdit *<a class="code" href="class_ui___montrer_point.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>;
-<a name="l00051"></a><a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">00051</a>     QTableWidget *<a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>;
-<a name="l00052"></a><a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">00052</a>     QWidget *<a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>;
-<a name="l00053"></a><a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">00053</a>     QHBoxLayout *<a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>;
-<a name="l00054"></a><a class="code" href="class_ui___montrer_point.html#a25159f8471167dd17cdd2e907b9110b8">00054</a>     QPushButton *<a class="code" href="class_ui___montrer_point.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>;
-<a name="l00055"></a><a class="code" href="class_ui___montrer_point.html#add956379d3ccdc4a470d6fafffed74d1">00055</a>     QPushButton *<a class="code" href="class_ui___montrer_point.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>;
+<a name="l00033"></a><a class="code" href="classUi__MontrerPoint_aadc467dc4ce299fe8ae105af991f38b6.html#aadc467dc4ce299fe8ae105af991f38b6">00033</a>     QWidget *<a class="code" href="classUi__MontrerPoint_aadc467dc4ce299fe8ae105af991f38b6.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a>;
+<a name="l00034"></a><a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">00034</a>     QWidget *<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>;
+<a name="l00035"></a><a class="code" href="classUi__MontrerPoint_ac3355e66612d210f2d93c9776c988ebe.html#ac3355e66612d210f2d93c9776c988ebe">00035</a>     QVBoxLayout *<a class="code" href="classUi__MontrerPoint_ac3355e66612d210f2d93c9776c988ebe.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>;
+<a name="l00036"></a><a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">00036</a>     QVBoxLayout *<a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>;
+<a name="l00037"></a><a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">00037</a>     QHBoxLayout *<a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>;
+<a name="l00038"></a><a class="code" href="classUi__MontrerPoint_a467e413c1d6eb0de23ca3cf264d8b96c.html#a467e413c1d6eb0de23ca3cf264d8b96c">00038</a>     QLabel *<a class="code" href="classUi__MontrerPoint_a467e413c1d6eb0de23ca3cf264d8b96c.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>;
+<a name="l00039"></a><a class="code" href="classUi__MontrerPoint_adfef2884896a0a16615e8d0cc0420b81.html#adfef2884896a0a16615e8d0cc0420b81">00039</a>     QLineEdit *<a class="code" href="classUi__MontrerPoint_adfef2884896a0a16615e8d0cc0420b81.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>;
+<a name="l00040"></a><a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">00040</a>     QHBoxLayout *<a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>;
+<a name="l00041"></a><a class="code" href="classUi__MontrerPoint_a5b3773b2af2cbfa6fc44f0f9d6864fa1.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">00041</a>     QLabel *<a class="code" href="classUi__MontrerPoint_a5b3773b2af2cbfa6fc44f0f9d6864fa1.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>;
+<a name="l00042"></a><a class="code" href="classUi__MontrerPoint_ab76ac61d3ff80d2af9d6c96151659592.html#ab76ac61d3ff80d2af9d6c96151659592">00042</a>     QLineEdit *<a class="code" href="classUi__MontrerPoint_ab76ac61d3ff80d2af9d6c96151659592.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>;
+<a name="l00043"></a><a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">00043</a>     QHBoxLayout *<a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>;
+<a name="l00044"></a><a class="code" href="classUi__MontrerPoint_a7785132cdad4f0b722ac3be5e9f4c233.html#a7785132cdad4f0b722ac3be5e9f4c233">00044</a>     QLabel *<a class="code" href="classUi__MontrerPoint_a7785132cdad4f0b722ac3be5e9f4c233.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>;
+<a name="l00045"></a><a class="code" href="classUi__MontrerPoint_a32e1a83b00fb1194e6dff539fb1ef200.html#a32e1a83b00fb1194e6dff539fb1ef200">00045</a>     QLineEdit *<a class="code" href="classUi__MontrerPoint_a32e1a83b00fb1194e6dff539fb1ef200.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>;
+<a name="l00046"></a><a class="code" href="classUi__MontrerPoint_afd43919138c05b0f865f38e6dcc07adc.html#afd43919138c05b0f865f38e6dcc07adc">00046</a>     QLabel *<a class="code" href="classUi__MontrerPoint_afd43919138c05b0f865f38e6dcc07adc.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>;
+<a name="l00047"></a><a class="code" href="classUi__MontrerPoint_a326e59496c21dc65a32b2d9e3a32cd98.html#a326e59496c21dc65a32b2d9e3a32cd98">00047</a>     QLineEdit *<a class="code" href="classUi__MontrerPoint_a326e59496c21dc65a32b2d9e3a32cd98.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>;
+<a name="l00048"></a><a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">00048</a>     QHBoxLayout *<a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>;
+<a name="l00049"></a><a class="code" href="classUi__MontrerPoint_a673ecf19432262e88024c42d1ab9ad90.html#a673ecf19432262e88024c42d1ab9ad90">00049</a>     QLabel *<a class="code" href="classUi__MontrerPoint_a673ecf19432262e88024c42d1ab9ad90.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>;
+<a name="l00050"></a><a class="code" href="classUi__MontrerPoint_aec323a70c8c742c6dc74397a5886de05.html#aec323a70c8c742c6dc74397a5886de05">00050</a>     QPlainTextEdit *<a class="code" href="classUi__MontrerPoint_aec323a70c8c742c6dc74397a5886de05.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>;
+<a name="l00051"></a><a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">00051</a>     QTableWidget *<a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>;
+<a name="l00052"></a><a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">00052</a>     QWidget *<a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>;
+<a name="l00053"></a><a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">00053</a>     QHBoxLayout *<a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>;
+<a name="l00054"></a><a class="code" href="classUi__MontrerPoint_a25159f8471167dd17cdd2e907b9110b8.html#a25159f8471167dd17cdd2e907b9110b8">00054</a>     QPushButton *<a class="code" href="classUi__MontrerPoint_a25159f8471167dd17cdd2e907b9110b8.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>;
+<a name="l00055"></a><a class="code" href="classUi__MontrerPoint_add956379d3ccdc4a470d6fafffed74d1.html#add956379d3ccdc4a470d6fafffed74d1">00055</a>     QPushButton *<a class="code" href="classUi__MontrerPoint_add956379d3ccdc4a470d6fafffed74d1.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>;
 <a name="l00056"></a>00056 
-<a name="l00057"></a><a class="code" href="class_ui___montrer_point.html#a99ec65592ba5ab0537e7fc18fac53898">00057</a>     <span class="keywordtype">void</span> <a class="code" href="class_ui___montrer_point.html#a99ec65592ba5ab0537e7fc18fac53898">setupUi</a>(QDialog *<a class="code" href="class_montrer_point.html">MontrerPoint</a>)
+<a name="l00057"></a><a class="code" href="classUi__MontrerPoint_a99ec65592ba5ab0537e7fc18fac53898.html#a99ec65592ba5ab0537e7fc18fac53898">00057</a>     <span class="keywordtype">void</span> <a class="code" href="classUi__MontrerPoint_a99ec65592ba5ab0537e7fc18fac53898.html#a99ec65592ba5ab0537e7fc18fac53898">setupUi</a>(QDialog *<a class="code" href="classMontrerPoint.html">MontrerPoint</a>)
 <a name="l00058"></a>00058     {
 <a name="l00059"></a>00059         <span class="keywordflow">if</span> (MontrerPoint-&gt;objectName().isEmpty())
 <a name="l00060"></a>00060             MontrerPoint-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;MontrerPoint&quot;</span>));
 <a name="l00061"></a>00061         MontrerPoint-&gt;resize(670, 404);
-<a name="l00062"></a>00062         <a class="code" href="class_ui___montrer_point.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a> = <span class="keyword">new</span> QWidget(MontrerPoint);
-<a name="l00063"></a>00063         <a class="code" href="class_ui___montrer_point.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;widget&quot;</span>));
-<a name="l00064"></a>00064         <a class="code" href="class_ui___montrer_point.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a>-&gt;setGeometry(QRect(9, 9, 231, 351));
-<a name="l00065"></a>00065         <a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a> = <span class="keyword">new</span> QWidget(MontrerPoint);
-<a name="l00066"></a>00066         <a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;widget1&quot;</span>));
-<a name="l00067"></a>00067         <a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>-&gt;setGeometry(QRect(250, 10, 411, 351));
-<a name="l00068"></a>00068         <a class="code" href="class_ui___montrer_point.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a> = <span class="keyword">new</span> QVBoxLayout(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00069"></a>00069         <a class="code" href="class_ui___montrer_point.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;verticalLayout_2&quot;</span>));
-<a name="l00070"></a>00070         <a class="code" href="class_ui___montrer_point.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>-&gt;setContentsMargins(0, 0, 0, 0);
-<a name="l00071"></a>00071         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a> = <span class="keyword">new</span> QVBoxLayout();
-<a name="l00072"></a>00072         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;verticalLayout&quot;</span>));
-<a name="l00073"></a>00073         <a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a> = <span class="keyword">new</span> QHBoxLayout();
-<a name="l00074"></a>00074         <a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout&quot;</span>));
-<a name="l00075"></a>00075         <a class="code" href="class_ui___montrer_point.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a> = <span class="keyword">new</span> QLabel(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00076"></a>00076         <a class="code" href="class_ui___montrer_point.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label&quot;</span>));
+<a name="l00062"></a>00062         <a class="code" href="classUi__MontrerPoint_aadc467dc4ce299fe8ae105af991f38b6.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a> = <span class="keyword">new</span> QWidget(MontrerPoint);
+<a name="l00063"></a>00063         <a class="code" href="classUi__MontrerPoint_aadc467dc4ce299fe8ae105af991f38b6.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;widget&quot;</span>));
+<a name="l00064"></a>00064         <a class="code" href="classUi__MontrerPoint_aadc467dc4ce299fe8ae105af991f38b6.html#aadc467dc4ce299fe8ae105af991f38b6">widget</a>-&gt;setGeometry(QRect(9, 9, 231, 351));
+<a name="l00065"></a>00065         <a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a> = <span class="keyword">new</span> QWidget(MontrerPoint);
+<a name="l00066"></a>00066         <a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;widget1&quot;</span>));
+<a name="l00067"></a>00067         <a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>-&gt;setGeometry(QRect(250, 10, 411, 351));
+<a name="l00068"></a>00068         <a class="code" href="classUi__MontrerPoint_ac3355e66612d210f2d93c9776c988ebe.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a> = <span class="keyword">new</span> QVBoxLayout(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00069"></a>00069         <a class="code" href="classUi__MontrerPoint_ac3355e66612d210f2d93c9776c988ebe.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;verticalLayout_2&quot;</span>));
+<a name="l00070"></a>00070         <a class="code" href="classUi__MontrerPoint_ac3355e66612d210f2d93c9776c988ebe.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>-&gt;setContentsMargins(0, 0, 0, 0);
+<a name="l00071"></a>00071         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a> = <span class="keyword">new</span> QVBoxLayout();
+<a name="l00072"></a>00072         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;verticalLayout&quot;</span>));
+<a name="l00073"></a>00073         <a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a> = <span class="keyword">new</span> QHBoxLayout();
+<a name="l00074"></a>00074         <a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout&quot;</span>));
+<a name="l00075"></a>00075         <a class="code" href="classUi__MontrerPoint_a467e413c1d6eb0de23ca3cf264d8b96c.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a> = <span class="keyword">new</span> QLabel(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00076"></a>00076         <a class="code" href="classUi__MontrerPoint_a467e413c1d6eb0de23ca3cf264d8b96c.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label&quot;</span>));
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078         <a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>);
+<a name="l00078"></a>00078         <a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a467e413c1d6eb0de23ca3cf264d8b96c.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>);
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080         <a class="code" href="class_ui___montrer_point.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00081"></a>00081         <a class="code" href="class_ui___montrer_point.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit_2&quot;</span>));
-<a name="l00082"></a>00082         <a class="code" href="class_ui___montrer_point.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>-&gt;setReadOnly(<span class="keyword">true</span>);
+<a name="l00080"></a>00080         <a class="code" href="classUi__MontrerPoint_adfef2884896a0a16615e8d0cc0420b81.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00081"></a>00081         <a class="code" href="classUi__MontrerPoint_adfef2884896a0a16615e8d0cc0420b81.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit_2&quot;</span>));
+<a name="l00082"></a>00082         <a class="code" href="classUi__MontrerPoint_adfef2884896a0a16615e8d0cc0420b81.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>-&gt;setReadOnly(<span class="keyword">true</span>);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084         <a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>);
+<a name="l00084"></a>00084         <a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_adfef2884896a0a16615e8d0cc0420b81.html#adfef2884896a0a16615e8d0cc0420b81">lineEdit_2</a>);
 <a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="class_ui___montrer_point.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>);
+<a name="l00087"></a>00087         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="classUi__MontrerPoint_ad29dd8175744d2064fc58ac683b05587.html#ad29dd8175744d2064fc58ac683b05587">horizontalLayout</a>);
 <a name="l00088"></a>00088 
-<a name="l00089"></a>00089         <a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a> = <span class="keyword">new</span> QHBoxLayout();
-<a name="l00090"></a>00090         <a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_2&quot;</span>));
-<a name="l00091"></a>00091         <a class="code" href="class_ui___montrer_point.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a> = <span class="keyword">new</span> QLabel(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00092"></a>00092         <a class="code" href="class_ui___montrer_point.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_2&quot;</span>));
+<a name="l00089"></a>00089         <a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a> = <span class="keyword">new</span> QHBoxLayout();
+<a name="l00090"></a>00090         <a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_2&quot;</span>));
+<a name="l00091"></a>00091         <a class="code" href="classUi__MontrerPoint_a5b3773b2af2cbfa6fc44f0f9d6864fa1.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a> = <span class="keyword">new</span> QLabel(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00092"></a>00092         <a class="code" href="classUi__MontrerPoint_a5b3773b2af2cbfa6fc44f0f9d6864fa1.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_2&quot;</span>));
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094         <a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>);
+<a name="l00094"></a>00094         <a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a5b3773b2af2cbfa6fc44f0f9d6864fa1.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>);
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096         <a class="code" href="class_ui___montrer_point.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00097"></a>00097         <a class="code" href="class_ui___montrer_point.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit&quot;</span>));
-<a name="l00098"></a>00098         <a class="code" href="class_ui___montrer_point.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>-&gt;setReadOnly(<span class="keyword">true</span>);
+<a name="l00096"></a>00096         <a class="code" href="classUi__MontrerPoint_ab76ac61d3ff80d2af9d6c96151659592.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00097"></a>00097         <a class="code" href="classUi__MontrerPoint_ab76ac61d3ff80d2af9d6c96151659592.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit&quot;</span>));
+<a name="l00098"></a>00098         <a class="code" href="classUi__MontrerPoint_ab76ac61d3ff80d2af9d6c96151659592.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>-&gt;setReadOnly(<span class="keyword">true</span>);
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100         <a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>);
+<a name="l00100"></a>00100         <a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_ab76ac61d3ff80d2af9d6c96151659592.html#ab76ac61d3ff80d2af9d6c96151659592">lineEdit</a>);
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="class_ui___montrer_point.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>);
+<a name="l00103"></a>00103         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="classUi__MontrerPoint_a94036b623c7a54e2048f067b4ab04b75.html#a94036b623c7a54e2048f067b4ab04b75">horizontalLayout_2</a>);
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105         <a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a> = <span class="keyword">new</span> QHBoxLayout();
-<a name="l00106"></a>00106         <a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_3&quot;</span>));
-<a name="l00107"></a>00107         <a class="code" href="class_ui___montrer_point.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a> = <span class="keyword">new</span> QLabel(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00108"></a>00108         <a class="code" href="class_ui___montrer_point.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_3&quot;</span>));
+<a name="l00105"></a>00105         <a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a> = <span class="keyword">new</span> QHBoxLayout();
+<a name="l00106"></a>00106         <a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_3&quot;</span>));
+<a name="l00107"></a>00107         <a class="code" href="classUi__MontrerPoint_a7785132cdad4f0b722ac3be5e9f4c233.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a> = <span class="keyword">new</span> QLabel(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00108"></a>00108         <a class="code" href="classUi__MontrerPoint_a7785132cdad4f0b722ac3be5e9f4c233.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_3&quot;</span>));
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110         <a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>);
+<a name="l00110"></a>00110         <a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a7785132cdad4f0b722ac3be5e9f4c233.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>);
 <a name="l00111"></a>00111 
-<a name="l00112"></a>00112         <a class="code" href="class_ui___montrer_point.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00113"></a>00113         <a class="code" href="class_ui___montrer_point.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit_3&quot;</span>));
-<a name="l00114"></a>00114         <a class="code" href="class_ui___montrer_point.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>-&gt;setReadOnly(<span class="keyword">true</span>);
+<a name="l00112"></a>00112         <a class="code" href="classUi__MontrerPoint_a32e1a83b00fb1194e6dff539fb1ef200.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00113"></a>00113         <a class="code" href="classUi__MontrerPoint_a32e1a83b00fb1194e6dff539fb1ef200.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit_3&quot;</span>));
+<a name="l00114"></a>00114         <a class="code" href="classUi__MontrerPoint_a32e1a83b00fb1194e6dff539fb1ef200.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>-&gt;setReadOnly(<span class="keyword">true</span>);
 <a name="l00115"></a>00115 
-<a name="l00116"></a>00116         <a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>);
+<a name="l00116"></a>00116         <a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a32e1a83b00fb1194e6dff539fb1ef200.html#a32e1a83b00fb1194e6dff539fb1ef200">lineEdit_3</a>);
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118         <a class="code" href="class_ui___montrer_point.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a> = <span class="keyword">new</span> QLabel(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00119"></a>00119         <a class="code" href="class_ui___montrer_point.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_4&quot;</span>));
+<a name="l00118"></a>00118         <a class="code" href="classUi__MontrerPoint_afd43919138c05b0f865f38e6dcc07adc.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a> = <span class="keyword">new</span> QLabel(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00119"></a>00119         <a class="code" href="classUi__MontrerPoint_afd43919138c05b0f865f38e6dcc07adc.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_4&quot;</span>));
 <a name="l00120"></a>00120 
-<a name="l00121"></a>00121         <a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>);
+<a name="l00121"></a>00121         <a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_afd43919138c05b0f865f38e6dcc07adc.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>);
 <a name="l00122"></a>00122 
-<a name="l00123"></a>00123         <a class="code" href="class_ui___montrer_point.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00124"></a>00124         <a class="code" href="class_ui___montrer_point.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit_4&quot;</span>));
-<a name="l00125"></a>00125         <a class="code" href="class_ui___montrer_point.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>-&gt;setReadOnly(<span class="keyword">true</span>);
+<a name="l00123"></a>00123         <a class="code" href="classUi__MontrerPoint_a326e59496c21dc65a32b2d9e3a32cd98.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00124"></a>00124         <a class="code" href="classUi__MontrerPoint_a326e59496c21dc65a32b2d9e3a32cd98.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit_4&quot;</span>));
+<a name="l00125"></a>00125         <a class="code" href="classUi__MontrerPoint_a326e59496c21dc65a32b2d9e3a32cd98.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>-&gt;setReadOnly(<span class="keyword">true</span>);
 <a name="l00126"></a>00126 
-<a name="l00127"></a>00127         <a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>);
+<a name="l00127"></a>00127         <a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a326e59496c21dc65a32b2d9e3a32cd98.html#a326e59496c21dc65a32b2d9e3a32cd98">lineEdit_4</a>);
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="class_ui___montrer_point.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>);
+<a name="l00130"></a>00130         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="classUi__MontrerPoint_a3d0aabbd3cafa88ffa04bd9b49864f4f.html#a3d0aabbd3cafa88ffa04bd9b49864f4f">horizontalLayout_3</a>);
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132         <a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a> = <span class="keyword">new</span> QHBoxLayout();
-<a name="l00133"></a>00133         <a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_4&quot;</span>));
-<a name="l00134"></a>00134         <a class="code" href="class_ui___montrer_point.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a> = <span class="keyword">new</span> QLabel(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00135"></a>00135         <a class="code" href="class_ui___montrer_point.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_5&quot;</span>));
+<a name="l00132"></a>00132         <a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a> = <span class="keyword">new</span> QHBoxLayout();
+<a name="l00133"></a>00133         <a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_4&quot;</span>));
+<a name="l00134"></a>00134         <a class="code" href="classUi__MontrerPoint_a673ecf19432262e88024c42d1ab9ad90.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a> = <span class="keyword">new</span> QLabel(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00135"></a>00135         <a class="code" href="classUi__MontrerPoint_a673ecf19432262e88024c42d1ab9ad90.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label_5&quot;</span>));
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137         <a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>);
+<a name="l00137"></a>00137         <a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a673ecf19432262e88024c42d1ab9ad90.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>);
 <a name="l00138"></a>00138 
-<a name="l00139"></a>00139         <a class="code" href="class_ui___montrer_point.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a> = <span class="keyword">new</span> QPlainTextEdit(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00140"></a>00140         <a class="code" href="class_ui___montrer_point.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;plainTextEdit&quot;</span>));
-<a name="l00141"></a>00141         <a class="code" href="class_ui___montrer_point.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>-&gt;setReadOnly(<span class="keyword">true</span>);
+<a name="l00139"></a>00139         <a class="code" href="classUi__MontrerPoint_aec323a70c8c742c6dc74397a5886de05.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a> = <span class="keyword">new</span> QPlainTextEdit(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00140"></a>00140         <a class="code" href="classUi__MontrerPoint_aec323a70c8c742c6dc74397a5886de05.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;plainTextEdit&quot;</span>));
+<a name="l00141"></a>00141         <a class="code" href="classUi__MontrerPoint_aec323a70c8c742c6dc74397a5886de05.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>-&gt;setReadOnly(<span class="keyword">true</span>);
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143         <a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>);
+<a name="l00143"></a>00143         <a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_aec323a70c8c742c6dc74397a5886de05.html#aec323a70c8c742c6dc74397a5886de05">plainTextEdit</a>);
 <a name="l00144"></a>00144 
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="class_ui___montrer_point.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>);
+<a name="l00146"></a>00146         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addLayout(<a class="code" href="classUi__MontrerPoint_aba33612662d6195aeff16f6f9c50567d.html#aba33612662d6195aeff16f6f9c50567d">horizontalLayout_4</a>);
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a> = <span class="keyword">new</span> QTableWidget(<a class="code" href="class_ui___montrer_point.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
-<a name="l00149"></a>00149         <span class="keywordflow">if</span> (<a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;columnCount() &lt; 3)
-<a name="l00150"></a>00150             <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setColumnCount(3);
-<a name="l00151"></a>00151         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;tableWidget&quot;</span>));
-<a name="l00152"></a>00152         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);
-<a name="l00153"></a>00153         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setSortingEnabled(<span class="keyword">true</span>);
-<a name="l00154"></a>00154         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setRowCount(0);
-<a name="l00155"></a>00155         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setColumnCount(3);
-<a name="l00156"></a>00156         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;horizontalHeader()-&gt;setVisible(<span class="keyword">true</span>);
-<a name="l00157"></a>00157         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;horizontalHeader()-&gt;setCascadingSectionResizes(<span class="keyword">true</span>);
-<a name="l00158"></a>00158         <a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;horizontalHeader()-&gt;setProperty(<span class="stringliteral">&quot;showSortIndicator&quot;</span>, QVariant(<span class="keyword">true</span>));
+<a name="l00148"></a>00148         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a> = <span class="keyword">new</span> QTableWidget(<a class="code" href="classUi__MontrerPoint_a8ea56e9de414a8ba7843aedd1d389de0.html#a8ea56e9de414a8ba7843aedd1d389de0">widget1</a>);
+<a name="l00149"></a>00149         <span class="keywordflow">if</span> (<a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;columnCount() &lt; 3)
+<a name="l00150"></a>00150             <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setColumnCount(3);
+<a name="l00151"></a>00151         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;tableWidget&quot;</span>));
+<a name="l00152"></a>00152         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);
+<a name="l00153"></a>00153         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setSortingEnabled(<span class="keyword">true</span>);
+<a name="l00154"></a>00154         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setRowCount(0);
+<a name="l00155"></a>00155         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;setColumnCount(3);
+<a name="l00156"></a>00156         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;horizontalHeader()-&gt;setVisible(<span class="keyword">true</span>);
+<a name="l00157"></a>00157         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;horizontalHeader()-&gt;setCascadingSectionResizes(<span class="keyword">true</span>);
+<a name="l00158"></a>00158         <a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>-&gt;horizontalHeader()-&gt;setProperty(<span class="stringliteral">&quot;showSortIndicator&quot;</span>, QVariant(<span class="keyword">true</span>));
 <a name="l00159"></a>00159 
-<a name="l00160"></a>00160         <a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>);
+<a name="l00160"></a>00160         <a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a5d20589310a72b22af4a53956b2294a9.html#a5d20589310a72b22af4a53956b2294a9">tableWidget</a>);
 <a name="l00161"></a>00161 
 <a name="l00162"></a>00162 
-<a name="l00163"></a>00163         <a class="code" href="class_ui___montrer_point.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>-&gt;addLayout(<a class="code" href="class_ui___montrer_point.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>);
+<a name="l00163"></a>00163         <a class="code" href="classUi__MontrerPoint_ac3355e66612d210f2d93c9776c988ebe.html#ac3355e66612d210f2d93c9776c988ebe">verticalLayout_2</a>-&gt;addLayout(<a class="code" href="classUi__MontrerPoint_a25d53cab29fef0d15bd611b32bed836f.html#a25d53cab29fef0d15bd611b32bed836f">verticalLayout</a>);
 <a name="l00164"></a>00164 
-<a name="l00165"></a>00165         <a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a> = <span class="keyword">new</span> QWidget(MontrerPoint);
-<a name="l00166"></a>00166         <a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;widget2&quot;</span>));
-<a name="l00167"></a>00167         <a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>-&gt;setGeometry(QRect(490, 370, 158, 25));
-<a name="l00168"></a>00168         <a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a> = <span class="keyword">new</span> QHBoxLayout(<a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>);
-<a name="l00169"></a>00169         <a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_5&quot;</span>));
-<a name="l00170"></a>00170         <a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;setContentsMargins(0, 0, 0, 0);
-<a name="l00171"></a>00171         <a class="code" href="class_ui___montrer_point.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>);
-<a name="l00172"></a>00172         <a class="code" href="class_ui___montrer_point.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;BouttonModification&quot;</span>));
+<a name="l00165"></a>00165         <a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a> = <span class="keyword">new</span> QWidget(MontrerPoint);
+<a name="l00166"></a>00166         <a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;widget2&quot;</span>));
+<a name="l00167"></a>00167         <a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>-&gt;setGeometry(QRect(490, 370, 158, 25));
+<a name="l00168"></a>00168         <a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a> = <span class="keyword">new</span> QHBoxLayout(<a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>);
+<a name="l00169"></a>00169         <a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout_5&quot;</span>));
+<a name="l00170"></a>00170         <a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;setContentsMargins(0, 0, 0, 0);
+<a name="l00171"></a>00171         <a class="code" href="classUi__MontrerPoint_a25159f8471167dd17cdd2e907b9110b8.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>);
+<a name="l00172"></a>00172         <a class="code" href="classUi__MontrerPoint_a25159f8471167dd17cdd2e907b9110b8.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;BouttonModification&quot;</span>));
 <a name="l00173"></a>00173 
-<a name="l00174"></a>00174         <a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>);
+<a name="l00174"></a>00174         <a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_a25159f8471167dd17cdd2e907b9110b8.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>);
 <a name="l00175"></a>00175 
-<a name="l00176"></a>00176         <a class="code" href="class_ui___montrer_point.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="class_ui___montrer_point.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>);
-<a name="l00177"></a>00177         <a class="code" href="class_ui___montrer_point.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;BouttonFermer&quot;</span>));
+<a name="l00176"></a>00176         <a class="code" href="classUi__MontrerPoint_add956379d3ccdc4a470d6fafffed74d1.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="classUi__MontrerPoint_a65b7002ad8700077dee4ea4098fe53a3.html#a65b7002ad8700077dee4ea4098fe53a3">widget2</a>);
+<a name="l00177"></a>00177         <a class="code" href="classUi__MontrerPoint_add956379d3ccdc4a470d6fafffed74d1.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;BouttonFermer&quot;</span>));
 <a name="l00178"></a>00178 
-<a name="l00179"></a>00179         <a class="code" href="class_ui___montrer_point.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;addWidget(<a class="code" href="class_ui___montrer_point.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>);
+<a name="l00179"></a>00179         <a class="code" href="classUi__MontrerPoint_a043549b641b282770245b384d93d7a1b.html#a043549b641b282770245b384d93d7a1b">horizontalLayout_5</a>-&gt;addWidget(<a class="code" href="classUi__MontrerPoint_add956379d3ccdc4a470d6fafffed74d1.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>);
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182         <a class="code" href="class_ui___montrer_point.html#aa95a48fa9fb5df41bc7c3011b26d62ae">retranslateUi</a>(MontrerPoint);
+<a name="l00182"></a>00182         <a class="code" href="classUi__MontrerPoint_aa95a48fa9fb5df41bc7c3011b26d62ae.html#aa95a48fa9fb5df41bc7c3011b26d62ae">retranslateUi</a>(MontrerPoint);
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184         QMetaObject::connectSlotsByName(MontrerPoint);
 <a name="l00185"></a>00185     } <span class="comment">// setupUi</span>
 <a name="l00186"></a>00186 
-<a name="l00187"></a><a class="code" href="class_ui___montrer_point.html#aa95a48fa9fb5df41bc7c3011b26d62ae">00187</a>     <span class="keywordtype">void</span> <a class="code" href="class_ui___montrer_point.html#aa95a48fa9fb5df41bc7c3011b26d62ae">retranslateUi</a>(QDialog *<a class="code" href="class_montrer_point.html">MontrerPoint</a>)
+<a name="l00187"></a><a class="code" href="classUi__MontrerPoint_aa95a48fa9fb5df41bc7c3011b26d62ae.html#aa95a48fa9fb5df41bc7c3011b26d62ae">00187</a>     <span class="keywordtype">void</span> <a class="code" href="classUi__MontrerPoint_aa95a48fa9fb5df41bc7c3011b26d62ae.html#aa95a48fa9fb5df41bc7c3011b26d62ae">retranslateUi</a>(QDialog *<a class="code" href="classMontrerPoint.html">MontrerPoint</a>)
 <a name="l00188"></a>00188     {
 <a name="l00189"></a>00189         MontrerPoint-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Dialog&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00190"></a>00190         <a class="code" href="class_ui___montrer_point.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Nom :&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00191"></a>00191         <a class="code" href="class_ui___montrer_point.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Categorie :&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00192"></a>00192         <a class="code" href="class_ui___montrer_point.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Latitude :&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00193"></a>00193         <a class="code" href="class_ui___montrer_point.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Longitude :&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00194"></a>00194         <a class="code" href="class_ui___montrer_point.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Description :&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00195"></a>00195         <a class="code" href="class_ui___montrer_point.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Modification&quot;</span>, 0, QApplication::UnicodeUTF8));
-<a name="l00196"></a>00196         <a class="code" href="class_ui___montrer_point.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Fermer&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00190"></a>00190         <a class="code" href="classUi__MontrerPoint_a467e413c1d6eb0de23ca3cf264d8b96c.html#a467e413c1d6eb0de23ca3cf264d8b96c">label</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Nom :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00191"></a>00191         <a class="code" href="classUi__MontrerPoint_a5b3773b2af2cbfa6fc44f0f9d6864fa1.html#a5b3773b2af2cbfa6fc44f0f9d6864fa1">label_2</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Categorie :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00192"></a>00192         <a class="code" href="classUi__MontrerPoint_a7785132cdad4f0b722ac3be5e9f4c233.html#a7785132cdad4f0b722ac3be5e9f4c233">label_3</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Latitude :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00193"></a>00193         <a class="code" href="classUi__MontrerPoint_afd43919138c05b0f865f38e6dcc07adc.html#afd43919138c05b0f865f38e6dcc07adc">label_4</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Longitude :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00194"></a>00194         <a class="code" href="classUi__MontrerPoint_a673ecf19432262e88024c42d1ab9ad90.html#a673ecf19432262e88024c42d1ab9ad90">label_5</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Description :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00195"></a>00195         <a class="code" href="classUi__MontrerPoint_a25159f8471167dd17cdd2e907b9110b8.html#a25159f8471167dd17cdd2e907b9110b8">BouttonModification</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Modification&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00196"></a>00196         <a class="code" href="classUi__MontrerPoint_add956379d3ccdc4a470d6fafffed74d1.html#add956379d3ccdc4a470d6fafffed74d1">BouttonFermer</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MontrerPoint&quot;</span>, <span class="stringliteral">&quot;Fermer&quot;</span>, 0, QApplication::UnicodeUTF8));
 <a name="l00197"></a>00197     } <span class="comment">// retranslateUi</span>
 <a name="l00198"></a>00198 
 <a name="l00199"></a>00199 };
 <a name="l00200"></a>00200 
 <a name="l00201"></a>00201 <span class="keyword">namespace </span>Ui {
-<a name="l00202"></a><a class="code" href="class_ui_1_1_montrer_point.html">00202</a>     <span class="keyword">class </span><a class="code" href="class_ui_1_1_montrer_point.html">MontrerPoint</a>: <span class="keyword">public</span> <a class="code" href="class_ui___montrer_point.html">Ui_MontrerPoint</a> {};
+<a name="l00202"></a><a class="code" href="classUi_1_1MontrerPoint.html">00202</a>     <span class="keyword">class </span><a class="code" href="classUi_1_1MontrerPoint.html">MontrerPoint</a>: <span class="keyword">public</span> <a class="code" href="classUi__MontrerPoint.html">Ui_MontrerPoint</a> {};
 <a name="l00203"></a>00203 } <span class="comment">// namespace Ui</span>
 <a name="l00204"></a>00204 
 <a name="l00205"></a>00205 QT_END_NAMESPACE
@@ -273,7 +273,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -282,7 +282,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

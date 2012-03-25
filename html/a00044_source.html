@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux:  Fichier source de montrerpoint.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">montrerpoint.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00044.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef MONTRERPOINT_H</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define MONTRERPOINT_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QDialog&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="a00045.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QtGui&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QMapControl/qmapcontrol.h&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;QSlider&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;QNetworkReply&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;QPointF&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;QSqlRelationalTableModel&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;QSqlRelationalDelegate&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="a00045.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="a00037.html" title="Fenetre gerant l&#39;edition de la base de donnee.">edit_point_gui.h</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keyword">using namespace </span>qmapcontrol;
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Ui {
+<a name="l00030"></a>00030 <span class="keyword">class </span><a class="code" href="a00011.html">MontrerPoint</a>;
+<a name="l00031"></a>00031 }
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="a00011.html">00033</a> <span class="keyword">class </span><a class="code" href="a00011.html">MontrerPoint</a> : <span class="keyword">public</span> QDialog
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035     Q_OBJECT
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">public</span>:
+<a name="l00038"></a>00038     <span class="keyword">explicit</span> <a class="code" href="a00011.html">MontrerPoint</a>(<a class="code" href="a00013.html">POI</a> PointDInteret,QWidget *parent = 0);
+<a name="l00039"></a>00039     ~<a class="code" href="a00011.html">MontrerPoint</a>();
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="keyword">private</span>:
+<a name="l00042"></a><a class="code" href="a00011_a9123a5a1b243b317c7fc304d3369c627.html#a9123a5a1b243b317c7fc304d3369c627">00042</a>     <a class="code" href="a00012.html">Ui::MontrerPoint</a> *<a class="code" href="a00011_a9123a5a1b243b317c7fc304d3369c627.html#a9123a5a1b243b317c7fc304d3369c627">ui</a>;
+<a name="l00043"></a><a class="code" href="a00011_affc6380442814816351fcf5292d38b09.html#affc6380442814816351fcf5292d38b09">00043</a>     MapControl* <a class="code" href="a00011_affc6380442814816351fcf5292d38b09.html#affc6380442814816351fcf5292d38b09">mc</a>;
+<a name="l00044"></a><a class="code" href="a00011_a208344dba9b0c26e6386c3895eb74699.html#a208344dba9b0c26e6386c3895eb74699">00044</a>     MapAdapter* <a class="code" href="a00011_a208344dba9b0c26e6386c3895eb74699.html#a208344dba9b0c26e6386c3895eb74699">mapadapter</a>;
+<a name="l00045"></a><a class="code" href="a00011_a2394f46f1f84a48590fe9609094da1b8.html#a2394f46f1f84a48590fe9609094da1b8">00045</a>     Layer* <a class="code" href="a00011_a2394f46f1f84a48590fe9609094da1b8.html#a2394f46f1f84a48590fe9609094da1b8">mainlayer</a>;
+<a name="l00046"></a><a class="code" href="a00011_a8bd850181237ef293f31694834573fb1.html#a8bd850181237ef293f31694834573fb1">00046</a>     QSqlRelationalTableModel *<a class="code" href="a00011_a8bd850181237ef293f31694834573fb1.html#a8bd850181237ef293f31694834573fb1">modelheures</a>;
+<a name="l00047"></a><a class="code" href="a00011_a1659c8efc2e4dbb7e136410375abb077.html#a1659c8efc2e4dbb7e136410375abb077">00047</a>     <a class="code" href="a00013.html">POI</a> <a class="code" href="a00011_a1659c8efc2e4dbb7e136410375abb077.html#a1659c8efc2e4dbb7e136410375abb077">PointDInteretA</a>;
+<a name="l00048"></a>00048 <span class="keyword">private</span> slots:
+<a name="l00049"></a>00049     <span class="keywordtype">void</span> modification();
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // MONTRERPOINT_H</span>
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 01:06:23 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux: application::application</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="classapplication.html">application</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="classapplication_a77216e63f30177676add8a9974085f25.html#a77216e63f30177676add8a9974085f25">_singleton</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="classapplication_ace25ec04cdd8a3aa9046ae8d38b7e1fc.html#ace25ec04cdd8a3aa9046ae8d38b7e1fc">appExit</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="classapplication_a5f1fdbb3d05895efb4e62e74cfc0b815.html#a5f1fdbb3d05895efb4e62e74cfc0b815">appInit</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="classapplication_a9115346cb4be2645bf9682326dba535a.html#a9115346cb4be2645bf9682326dba535a">appInit</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="classapplication_aa2b264ebd9bcf72f0ba3631c7a73825d.html#aa2b264ebd9bcf72f0ba3631c7a73825d">application</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="classapplication_a545079c32aa55c781531c23380f05d47.html#a545079c32aa55c781531c23380f05d47">~application</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top" class="mempage">
+<a class="anchor" id="aa2b264ebd9bcf72f0ba3631c7a73825d"></a><!-- doxytag: member="application::application" ref="aa2b264ebd9bcf72f0ba3631c7a73825d" args="(int &amp;argc, char **argv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">application::application </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>constructeur de l'application, herite de QApplication </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>et argv: parametres d'appelle de l'application </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>info : ce constructeur est privé, la casse application est un singleton qui herite de QApplication. role : initialise une application qt, met en place le QSettings qui gere les categories de base.<br/>
+ permet egalement de recupere le descripteur de l'application au cours de la vie du programme ; dans le but, par exemple, de changer la langue de maniere dynamique. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="application_8cpp_source.html#l00026">26</a> du fichier <a class="el" href="application_8cpp_source.html">application.cpp</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classapplication_aa2b264ebd9bcf72f0ba3631c7a73825d_aa2b264ebd9bcf72f0ba3631c7a73825d_icgraph.png" border="0" usemap="#classapplication_aa2b264ebd9bcf72f0ba3631c7a73825d_aa2b264ebd9bcf72f0ba3631c7a73825d_icgraph" alt=""/></div>
+<map name="classapplication_aa2b264ebd9bcf72f0ba3631c7a73825d_aa2b264ebd9bcf72f0ba3631c7a73825d_icgraph" id="classapplication_aa2b264ebd9bcf72f0ba3631c7a73825d_aa2b264ebd9bcf72f0ba3631c7a73825d_icgraph">
+<area shape="rect" id="node3" href="classapplication_a5f1fdbb3d05895efb4e62e74cfc0b815.html#a5f1fdbb3d05895efb4e62e74cfc0b815" title="application::appInit" alt="" coords="208,5,339,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:36 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

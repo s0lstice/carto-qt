@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classedit__point__gui_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure" alt="" coords="263,5,428,35"/>
+<area shape="rect" id="node9" href="$classedit__point__gui_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure" alt="" coords="259,59,432,88"/>
+<area shape="rect" id="node12" href="$classedit__point__gui_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure" alt="" coords="253,112,437,141"/>
+<area shape="rect" id="node14" href="$classedit__point__gui_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies" alt="" coords="253,165,437,195"/>
+<area shape="rect" id="node5" href="$classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="485,32,632,61"/>
+<area shape="rect" id="node7" href="$classdatabase_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="680,32,816,61"/>
+</map>

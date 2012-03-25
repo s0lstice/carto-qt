@@ -1,15 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_p_o_i.html#a21c3cf3a3e3a220a9a926b1b108626fb" title="POI::GetCat" alt="" coords="167,5,260,35"/>
+<area shape="rect" id="node3" href="$classPOI.html#a21c3cf3a3e3a220a9a926b1b108626fb" title="POI::GetCat" alt="" coords="167,5,260,35"/>
 <area shape="rect" id="node5" href="$data__categories_8cpp.html#aae0ee7b6ed88b7f4a80f4852c51fb729" title="fonction : retourne un vecteur avec toutes les categories de la base de donnee" alt="" coords="363,85,464,115"/>
 <area shape="rect" id="node11" href="$classheure.html#aa237a49068c5881c57db606d342378b4" title="heure::getDebut" alt="" coords="156,109,271,139"/>
-<area shape="rect" id="node13" href="$class_p_o_i.html#ad3e54d9834f4700f4540bde6ab306039" title="POI::GetDesc" alt="" coords="161,163,265,192"/>
+<area shape="rect" id="node13" href="$classPOI.html#ad3e54d9834f4700f4540bde6ab306039" title="POI::GetDesc" alt="" coords="161,163,265,192"/>
 <area shape="rect" id="node15" href="$classheure.html#a55859421cc39c7c2519026eda7e2850e" title="heure::getFin" alt="" coords="164,216,263,245"/>
 <area shape="rect" id="node17" href="$data__heures_8cpp.html#a0619f9b984a4c68485b72e664c18952d" title="fonction : permet d&#39;obtenir les plages horaire d&#39;un point" alt="" coords="153,269,273,299"/>
-<area shape="rect" id="node26" href="$class_p_o_i.html#a3b511b8714fdadf765e24adf37e51124" title="POI::GetId" alt="" coords="171,323,256,352"/>
+<area shape="rect" id="node26" href="$classPOI.html#a3b511b8714fdadf765e24adf37e51124" title="POI::GetId" alt="" coords="171,323,256,352"/>
 <area shape="rect" id="node28" href="$classheure.html#a37d672d10538f023b756998218a27341" title="heure::getJour" alt="" coords="161,376,265,405"/>
-<area shape="rect" id="node30" href="$class_p_o_i.html#aa5b4a4a635f1cf7b096d0610a683cf29" title="POI::Getlat" alt="" coords="169,429,257,459"/>
-<area shape="rect" id="node32" href="$class_p_o_i.html#a991a068f59ee5df1a8695d982f79863f" title="POI::Getlon" alt="" coords="168,483,259,512"/>
-<area shape="rect" id="node34" href="$class_p_o_i.html#a1c2e342a9f0d189ec2a7f376d3cd6b03" title="POI::GetName" alt="" coords="159,536,268,565"/>
+<area shape="rect" id="node30" href="$classPOI.html#aa5b4a4a635f1cf7b096d0610a683cf29" title="POI::Getlat" alt="" coords="169,429,257,459"/>
+<area shape="rect" id="node32" href="$classPOI.html#a991a068f59ee5df1a8695d982f79863f" title="POI::Getlon" alt="" coords="168,483,259,512"/>
+<area shape="rect" id="node34" href="$classPOI.html#a1c2e342a9f0d189ec2a7f376d3cd6b03" title="POI::GetName" alt="" coords="159,536,268,565"/>
 <area shape="rect" id="node36" href="$data__points_8cpp.html#afa136614be0612ea3df568be3969937e" title="fonction : permet d&#39;obtenir les points en fonction de la categorie" alt="" coords="143,589,284,619"/>
 <area shape="rect" id="node55" href="$data__jours_8cpp.html#a152678b2a8d06834e4b6f7d994814542" title="fonction : permet de connaitre le jour en fonction de l&#39;identifiant" alt="" coords="379,801,448,831"/>
 <area shape="rect" id="node7" href="$classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="541,403,688,432"/>
@@ -19,9 +19,9 @@
 <area shape="rect" id="node24" href="$classheure.html#a25b2852ce32c64a824156852eeea1882" title="heure::setJour" alt="" coords="361,324,465,353"/>
 <area shape="rect" id="node39" href="$data__categories_8cpp.html#a4489eb5551004a5fd5ef5920b1c10ce0" title="fonction : retourne le nom de la categorie en fonction de l&#39;identifiant" alt="" coords="352,428,475,457"/>
 <area shape="rect" id="node42" href="$data__categories_8cpp.html#a9bf9ac909e82f3606111afd05c6fd0cb" title="fonction : retourne l&#39;identifiant de la categorie en fonction de son nom" alt="" coords="335,481,492,511"/>
-<area shape="rect" id="node45" href="$class_p_o_i.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="367,535,460,564"/>
-<area shape="rect" id="node47" href="$class_p_o_i.html#a082781f842b631163def78870698e0e4" title="POI::SetId" alt="" coords="372,588,455,617"/>
-<area shape="rect" id="node49" href="$class_p_o_i.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="371,641,456,671"/>
-<area shape="rect" id="node51" href="$class_p_o_i.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="365,695,461,724"/>
-<area shape="rect" id="node53" href="$class_p_o_i.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="360,748,467,777"/>
+<area shape="rect" id="node45" href="$classPOI.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="367,535,460,564"/>
+<area shape="rect" id="node47" href="$classPOI.html#a082781f842b631163def78870698e0e4" title="POI::SetId" alt="" coords="372,588,455,617"/>
+<area shape="rect" id="node49" href="$classPOI.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="371,641,456,671"/>
+<area shape="rect" id="node51" href="$classPOI.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="365,695,461,724"/>
+<area shape="rect" id="node53" href="$classPOI.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="360,748,467,777"/>
 </map>

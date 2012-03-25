@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="544,29,691,58"/>
+<area shape="rect" id="node7" href="$classedite__categories_a101787e63bf6104ca43e814821bec1ce.html#a101787e63bf6104ca43e814821bec1ce" title="slot supprimant une categorie selectionné" alt="" coords="280,29,491,58"/>
+<area shape="rect" id="node10" href="$classedite__categories_a068ee52d97e92dd1047617aa99431ae6.html#a068ee52d97e92dd1047617aa99431ae6" title="slot ajoute une categorie" alt="" coords="277,82,493,111"/>
+<area shape="rect" id="node13" href="$classedite__categories_af52c5acacdaa41559ee0066fb3241632.html#af52c5acacdaa41559ee0066fb3241632" title="slot gerant la categorie selectionné" alt="" coords="276,135,495,165"/>
+<area shape="rect" id="node15" href="$classedite__categories_a29e088e169311784a5acf101364ff20f.html#a29e088e169311784a5acf101364ff20f" title="slot met a jour les champ de la table categories qui ont étés modifiés" alt="" coords="276,189,495,218"/>
+<area shape="rect" id="node5" href="$classdatabase_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="739,29,875,58"/>
+</map>

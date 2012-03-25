@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux:  Fichier source de askdatabase.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- G√©n√©r√© par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">askdatabase.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00020.html">Aller √† la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base.">askdatabase.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="a00046.html">ui_askdatabase.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="a00023.html" title="Fenetre principale de l&#39;application.">carte.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;QDebug&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="a00035.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho...">database.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="a00025.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database.">data_categories.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QSettings&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 
+<a name="l00034"></a><a class="code" href="a00002_a3ed1c48c258ae7c445b8017007a5abc3.html#a3ed1c48c258ae7c445b8017007a5abc3">00034</a> <a class="code" href="a00002_a3ed1c48c258ae7c445b8017007a5abc3.html#a3ed1c48c258ae7c445b8017007a5abc3" title="Construit la fenÍtre et initialise les donnÈes importantes.">AskDataBase::AskDataBase</a>(QWidget *parent) :
+<a name="l00035"></a>00035     QMainWindow(parent),
+<a name="l00036"></a>00036     ui(new Ui::<a class="code" href="a00002.html">AskDataBase</a>)
+<a name="l00037"></a>00037 {
+<a name="l00038"></a>00038     <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a6a0fa94e5d9e02acf1ada45ef77d6110.html#a6a0fa94e5d9e02acf1ada45ef77d6110">setupUi</a>(<span class="keyword">this</span>);
+<a name="l00039"></a>00039     connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a06e3c5e0cc829d6d7a766f4ea2b8965e.html#a06e3c5e0cc829d6d7a766f4ea2b8965e">pushButton_3</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(close()));
+<a name="l00040"></a>00040     connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_ab65c3a128db8e2c530b11ade6fe374d1.html#ab65c3a128db8e2c530b11ade6fe374d1">pushButton_2</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176" title="Cree ou recupere une BDD puis lance la feetre principale.">ValidateFile</a>()));
+<a name="l00041"></a>00041     connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_ae62d1ddb6fe62b2a9fefdebd0777db1b.html#ae62d1ddb6fe62b2a9fefdebd0777db1b">pushButton</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale.">CreateFile</a>()));
+<a name="l00042"></a>00042     connect(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a5e35fc71f60e60c08d90d3664c54a512.html#a5e35fc71f60e60c08d90d3664c54a512">pushButton_4</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a" title="Creer une fenÍtre qui permet la selection d&#39;un fichier .">SelectFile</a>()));
+<a name="l00043"></a>00043     QString MyAppDirPath =  QCoreApplication::applicationDirPath();
+<a name="l00044"></a>00044     QStringList listFilter;
+<a name="l00045"></a>00045     listFilter &lt;&lt; <span class="stringliteral">&quot;*.db&quot;</span>;
+<a name="l00046"></a>00046     QDir *DirA = <span class="keyword">new</span> QDir(MyAppDirPath);
+<a name="l00047"></a>00047     QStringList FIL = DirA-&gt;entryList(listFilter);
+<a name="l00048"></a>00048     <span class="keywordtype">int</span> i = 0;
+<a name="l00049"></a>00049     <span class="keywordflow">for</span>(i=0;i&lt;FIL.count();i++)
+<a name="l00050"></a>00050     {
+<a name="l00051"></a>00051         <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;addItem(FIL[i]);
+<a name="l00052"></a>00052     }
+<a name="l00053"></a>00053     free(DirA);
+<a name="l00054"></a>00054 }
+<a name="l00055"></a>00055 
+<a name="l00056"></a><a class="code" href="a00002_a71f17cc87e6344f812ddee9fb28ba0be.html#a71f17cc87e6344f812ddee9fb28ba0be">00056</a> <a class="code" href="a00002_a71f17cc87e6344f812ddee9fb28ba0be.html#a71f17cc87e6344f812ddee9fb28ba0be">AskDataBase::~AskDataBase</a>()
+<a name="l00057"></a>00057 {
+<a name="l00058"></a>00058     <span class="keyword">delete</span> <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>;
+<a name="l00059"></a>00059 }
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 
+<a name="l00069"></a><a class="code" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a">00069</a> <span class="keywordtype">void</span> <a class="code" href="a00002_a3b92ce9aff64ee058c19ad08bc1b4d9a.html#a3b92ce9aff64ee058c19ad08bc1b4d9a" title="Creer une fenÍtre qui permet la selection d&#39;un fichier .">AskDataBase::SelectFile</a>(<span class="keywordtype">void</span>)
+<a name="l00070"></a>00070 {
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072     QString File = QFileDialog::getOpenFileName(<span class="keyword">this</span>,tr(<span class="stringliteral">&quot;Choisir base de donnÈe&quot;</span>), QDir::currentPath(), tr(<span class="stringliteral">&quot;Database files (*.db)&quot;</span>));
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074     <span class="keywordflow">if</span> (!File.isEmpty())
+<a name="l00075"></a>00075          {
+<a name="l00076"></a>00076              <span class="keywordflow">if</span> (<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;findText(File) == -1)
+<a name="l00077"></a>00077                  <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;addItem(File);
+<a name="l00078"></a>00078                  <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;setCurrentIndex(<a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;findText(File));
+<a name="l00079"></a>00079          }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00090"></a><a class="code" href="a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847">00090</a> <span class="keywordtype">void</span> <a class="code" href="a00002_a79829977773511b957993f8bee463847.html#a79829977773511b957993f8bee463847" title="Cree ou recupere une BDD puis lance la feetre principale.">AskDataBase::CreateFile</a>(<span class="keywordtype">void</span>)
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092     <a class="code" href="a00002_a81f4d16d946ef1b35b79ca86b671d61e.html#a81f4d16d946ef1b35b79ca86b671d61e">filename</a>= <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;currentText().remove(<span class="stringliteral">&quot;.db&quot;</span>);
+<a name="l00093"></a>00093     <a class="code" href="a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>(<a class="code" href="a00002_a81f4d16d946ef1b35b79ca86b671d61e.html#a81f4d16d946ef1b35b79ca86b671d61e">filename</a>)-&gt;<a class="code" href="a00006_a1605bbf17785278bfe6f99f7cc066b07.html#a1605bbf17785278bfe6f99f7cc066b07" title="fonction d&#39;initialisation des table de la base de donn√©e (priv√©)">initTable</a>();
+<a name="l00094"></a>00094     <span class="keywordtype">int</span> i = 0 ;
+<a name="l00095"></a>00095     QStringList Categories;
+<a name="l00096"></a>00096     QSettings settings(<span class="stringliteral">&quot;CartoTeam&quot;</span>, <span class="stringliteral">&quot;Cartographe&quot;</span>);
+<a name="l00097"></a>00097     Categories.append(settings.value(<span class="stringliteral">&quot;Categories&quot;</span>).toStringList());
+<a name="l00098"></a>00098     <span class="keywordflow">for</span>(i=0;i&lt;Categories.count();i++)
+<a name="l00099"></a>00099     {
+<a name="l00100"></a>00100         <a class="code" href="a00024_a5470005e0fdf270b455aec1bce4d7a11.html#a5470005e0fdf270b455aec1bce4d7a11" title="fonction : ajoute la categorie passe en parametre">addCategorie</a>(Categories.value(i));
+<a name="l00101"></a>00101     }
+<a name="l00102"></a>00102     <a class="code" href="a00004.html">Carte</a> * WCarte = <span class="keyword">new</span> <a class="code" href="a00004.html">Carte</a>();
+<a name="l00103"></a>00103     WCarte-&gt;show();
+<a name="l00104"></a>00104     this-&gt;close();
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00113"></a><a class="code" href="a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176">00113</a> <span class="keywordtype">void</span> <a class="code" href="a00002_a1b52225dd6ab24af45e9f884baf5e176.html#a1b52225dd6ab24af45e9f884baf5e176" title="Cree ou recupere une BDD puis lance la feetre principale.">AskDataBase::ValidateFile</a>(<span class="keywordtype">void</span>)
+<a name="l00114"></a>00114 {
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118         <a class="code" href="a00002_a81f4d16d946ef1b35b79ca86b671d61e.html#a81f4d16d946ef1b35b79ca86b671d61e">filename</a>= <a class="code" href="a00002_a4fb50b5eadcbe9170dc1d12e656d0f86.html#a4fb50b5eadcbe9170dc1d12e656d0f86">ui</a>-&gt;<a class="code" href="a00014_a229ca49b582bd4e0e3bddd170b81dcb4.html#a229ca49b582bd4e0e3bddd170b81dcb4">comboBox</a>-&gt;currentText().remove(<span class="stringliteral">&quot;.db&quot;</span>);
+<a name="l00119"></a>00119         <a class="code" href="a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>(<a class="code" href="a00002_a81f4d16d946ef1b35b79ca86b671d61e.html#a81f4d16d946ef1b35b79ca86b671d61e">filename</a>);
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121         <span class="keywordtype">int</span> i = 0 ;
+<a name="l00122"></a>00122         QStringList Categories;
+<a name="l00123"></a>00123         QSettings settings(<span class="stringliteral">&quot;CartoTeam&quot;</span>, <span class="stringliteral">&quot;Cartographe&quot;</span>);
+<a name="l00124"></a>00124         Categories.append(settings.value(<span class="stringliteral">&quot;Categories&quot;</span>).toStringList());
+<a name="l00125"></a>00125         <span class="keywordflow">for</span>(i=0;i&lt;Categories.count();i++)
+<a name="l00126"></a>00126         {
+<a name="l00127"></a>00127             <a class="code" href="a00024_a5470005e0fdf270b455aec1bce4d7a11.html#a5470005e0fdf270b455aec1bce4d7a11" title="fonction : ajoute la categorie passe en parametre">addCategorie</a>(Categories.value(i));
+<a name="l00128"></a>00128         }
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130         <a class="code" href="a00004.html">Carte</a> * WCarte = <span class="keyword">new</span> <a class="code" href="a00004.html">Carte</a>();
+<a name="l00131"></a>00131         WCarte-&gt;show();
+<a name="l00132"></a>00132         this-&gt;close();
+<a name="l00133"></a>00133 }
+<a name="l00134"></a>00134 
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>G√©n√©r√© le Sun Mar 25 2012 01:06:23 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

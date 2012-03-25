@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie:  Fichier source de edit_point_gui.cpp</title>
+<title>Cartographie de lieux:  Fichier source de edit_point_gui.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +28,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -51,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -67,307 +67,307 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="edite__categories_8h.html" title="Fenetre gerant l&#39;edition des categories.">edite_categories.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;data_gui.h&quot;</span>
 <a name="l00016"></a>00016 
-<a name="l00025"></a><a class="code" href="classedit__point__gui.html#ad28ebca32fc75a357bd93f08fda1fb5f">00025</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point">edit_point_gui::init_table_point</a>(){
+<a name="l00025"></a><a class="code" href="classedit__point__gui_ad28ebca32fc75a357bd93f08fda1fb5f.html#ad28ebca32fc75a357bd93f08fda1fb5f">00025</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_ad28ebca32fc75a357bd93f08fda1fb5f.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point">edit_point_gui::init_table_point</a>(){
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027     <span class="comment">/*** table points ***/</span>
-<a name="l00028"></a>00028     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a> = <span class="keyword">new</span> QSqlRelationalTableModel();
-<a name="l00029"></a>00029     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setTable(<span class="stringliteral">&quot;points&quot;</span>);
-<a name="l00030"></a>00030     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setEditStrategy(QSqlTableModel::OnManualSubmit);
-<a name="l00031"></a>00031     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setRelation(2, QSqlRelation(<span class="stringliteral">&quot;categories&quot;</span>, <span class="stringliteral">&quot;categorie_id&quot;</span>, <span class="stringliteral">&quot;categorie&quot;</span>));
-<a name="l00032"></a>00032     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(1, Qt::Horizontal, tr(<span class="stringliteral">&quot;name&quot;</span>));
-<a name="l00033"></a>00033     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(2, Qt::Horizontal, tr(<span class="stringliteral">&quot;categorie&quot;</span>));
-<a name="l00034"></a>00034     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(3, Qt::Horizontal, tr(<span class="stringliteral">&quot;latitude&quot;</span>));
-<a name="l00035"></a>00035     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(4, Qt::Horizontal, tr(<span class="stringliteral">&quot;longitude&quot;</span>));
-<a name="l00036"></a>00036     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;select();
+<a name="l00028"></a>00028     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a> = <span class="keyword">new</span> QSqlRelationalTableModel();
+<a name="l00029"></a>00029     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setTable(<span class="stringliteral">&quot;points&quot;</span>);
+<a name="l00030"></a>00030     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setEditStrategy(QSqlTableModel::OnManualSubmit);
+<a name="l00031"></a>00031     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setRelation(2, QSqlRelation(<span class="stringliteral">&quot;categories&quot;</span>, <span class="stringliteral">&quot;categorie_id&quot;</span>, <span class="stringliteral">&quot;categorie&quot;</span>));
+<a name="l00032"></a>00032     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(1, Qt::Horizontal, tr(<span class="stringliteral">&quot;name&quot;</span>));
+<a name="l00033"></a>00033     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(2, Qt::Horizontal, tr(<span class="stringliteral">&quot;categorie&quot;</span>));
+<a name="l00034"></a>00034     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(3, Qt::Horizontal, tr(<span class="stringliteral">&quot;latitude&quot;</span>));
+<a name="l00035"></a>00035     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;setHeaderData(4, Qt::Horizontal, tr(<span class="stringliteral">&quot;longitude&quot;</span>));
+<a name="l00036"></a>00036     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;select();
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 }
 <a name="l00039"></a>00039 
-<a name="l00045"></a><a class="code" href="classedit__point__gui.html#abe9b534e166a941f9981452f04d749f9">00045</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point">edit_point_gui::delete_table_point</a>(){
-<a name="l00046"></a>00046     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>;
+<a name="l00045"></a><a class="code" href="classedit__point__gui_abe9b534e166a941f9981452f04d749f9.html#abe9b534e166a941f9981452f04d749f9">00045</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_abe9b534e166a941f9981452f04d749f9.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point">edit_point_gui::delete_table_point</a>(){
+<a name="l00046"></a>00046     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>;
 <a name="l00047"></a>00047 }
 <a name="l00048"></a>00048 
-<a name="l00063"></a><a class="code" href="classedit__point__gui.html#a6f2742e46e7d1e67ddba17d40833cb67">00063</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table">edit_point_gui::init_view_point</a>(){
+<a name="l00063"></a><a class="code" href="classedit__point__gui_a6f2742e46e7d1e67ddba17d40833cb67.html#a6f2742e46e7d1e67ddba17d40833cb67">00063</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a6f2742e46e7d1e67ddba17d40833cb67.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table">edit_point_gui::init_view_point</a>(){
 <a name="l00064"></a>00064     <span class="comment">//viewpoints = new QTableView;</span>
-<a name="l00065"></a>00065     <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setModel(<a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>);
-<a name="l00066"></a>00066     <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-<a name="l00067"></a>00067     <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
-<a name="l00068"></a>00068     <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+<a name="l00065"></a>00065     <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setModel(<a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>);
+<a name="l00066"></a>00066     <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
+<a name="l00067"></a>00067     <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
+<a name="l00068"></a>00068     <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070     <span class="comment">/*calcule de la largeur de chaque collone plus de la barre d&#39;entete avec + 2 pour les marges*/</span>
 <a name="l00071"></a>00071     <span class="comment">/*car adjustesize ne marche pas sur les QTableView*/</span>
-<a name="l00072"></a>00072     <span class="keywordtype">int</span> width =  <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;width() - (<a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;verticalHeader()-&gt;width() +
-<a name="l00073"></a>00073             <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(1) +
-<a name="l00074"></a>00074             <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(2) +
-<a name="l00075"></a>00075             <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(3) +
-<a name="l00076"></a>00076             <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(4) +
-<a name="l00077"></a>00077             <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(5)); <span class="comment">//&lt;- largeur a rajouter</span>
-<a name="l00078"></a>00078     <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setColumnWidth(5, <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(5) + width -2);
+<a name="l00072"></a>00072     <span class="keywordtype">int</span> width =  <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;width() - (<a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;verticalHeader()-&gt;width() +
+<a name="l00073"></a>00073             <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(1) +
+<a name="l00074"></a>00074             <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(2) +
+<a name="l00075"></a>00075             <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(3) +
+<a name="l00076"></a>00076             <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(4) +
+<a name="l00077"></a>00077             <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(5)); <span class="comment">//&lt;- largeur a rajouter</span>
+<a name="l00078"></a>00078     <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setColumnWidth(5, <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;columnWidth(5) + width -2);
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080     connect(<a class="code" href="class_ui__edit__point.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui.html#a0d74ca32a3bef4c7694189542e0125d0" title="met a jour la table points en fonction des champs modifies">submitPoints</a>()));
-<a name="l00081"></a>00081     connect(<a class="code" href="class_ui__edit__point.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="classedit__point__gui.html#a47d7e4b965940d01158a8ae9df712ec2">position</a>()));
-<a name="l00082"></a>00082     connect(<a class="code" href="class_ui__edit__point.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui.html#a7ff071eaadca06239c9e7b1fd753b710" title="action lors de l&#39;ajout d&#39;un point">insert_point</a>()));
-<a name="l00083"></a>00083     connect(<a class="code" href="class_ui__edit__point.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui.html#a64d46f9525b022fc61466f9a9ebc8e33" title="action lors de la suppression d&#39;un point">drup_point</a>()));
-<a name="l00084"></a>00084     connect(<a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;selectionModel(),SIGNAL(
+<a name="l00080"></a>00080     connect(<a class="code" href="classUi__edit__point_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui_a0d74ca32a3bef4c7694189542e0125d0.html#a0d74ca32a3bef4c7694189542e0125d0" title="met a jour la table points en fonction des champs modifies">submitPoints</a>()));
+<a name="l00081"></a>00081     connect(<a class="code" href="classUi__edit__point_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="classedit__point__gui_a47d7e4b965940d01158a8ae9df712ec2.html#a47d7e4b965940d01158a8ae9df712ec2">position</a>()));
+<a name="l00082"></a>00082     connect(<a class="code" href="classUi__edit__point_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui_a7ff071eaadca06239c9e7b1fd753b710.html#a7ff071eaadca06239c9e7b1fd753b710" title="action lors de l&#39;ajout d&#39;un point">insert_point</a>()));
+<a name="l00083"></a>00083     connect(<a class="code" href="classUi__edit__point_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui_a64d46f9525b022fc61466f9a9ebc8e33.html#a64d46f9525b022fc61466f9a9ebc8e33" title="action lors de la suppression d&#39;un point">drup_point</a>()));
+<a name="l00084"></a>00084     connect(<a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;selectionModel(),SIGNAL(
 <a name="l00085"></a>00085                 currentRowChanged(<span class="keyword">const</span> QModelIndex &amp;,
-<a name="l00086"></a>00086                 <span class="keyword">const</span> QModelIndex &amp;)),<span class="keyword">this</span>,SLOT(<a class="code" href="classedit__point__gui.html#a9be5a5020e85920440c31ab580fe2ce6" title="action lors de la selection d&#39;un point">select_point</a>(<span class="keyword">const</span> QModelIndex &amp;)));
+<a name="l00086"></a>00086                 <span class="keyword">const</span> QModelIndex &amp;)),<span class="keyword">this</span>,SLOT(<a class="code" href="classedit__point__gui_a9be5a5020e85920440c31ab580fe2ce6.html#a9be5a5020e85920440c31ab580fe2ce6" title="action lors de la selection d&#39;un point">select_point</a>(<span class="keyword">const</span> QModelIndex &amp;)));
 <a name="l00087"></a>00087 }
 <a name="l00088"></a>00088 
-<a name="l00102"></a><a class="code" href="classedit__point__gui.html#acdab29646352e372be5d21747d4a9e5f">00102</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point">edit_point_gui::init_mapper_point</a>(){
+<a name="l00102"></a><a class="code" href="classedit__point__gui_acdab29646352e372be5d21747d4a9e5f.html#acdab29646352e372be5d21747d4a9e5f">00102</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_acdab29646352e372be5d21747d4a9e5f.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point">edit_point_gui::init_mapper_point</a>(){
 <a name="l00103"></a>00103     <span class="comment">/*** affichage de la partie point ***/</span>
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105     QSqlTableModel *relModelCategorie = <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;relationModel(2);
-<a name="l00106"></a>00106     <a class="code" href="class_ui__edit__point.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModel(relModelCategorie);
-<a name="l00107"></a>00107     <a class="code" href="class_ui__edit__point.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModelColumn(relModelCategorie-&gt;fieldIndex(<span class="stringliteral">&quot;categorie&quot;</span>));
+<a name="l00105"></a>00105     QSqlTableModel *relModelCategorie = <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;relationModel(2);
+<a name="l00106"></a>00106     <a class="code" href="classUi__edit__point_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModel(relModelCategorie);
+<a name="l00107"></a>00107     <a class="code" href="classUi__edit__point_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setModelColumn(relModelCategorie-&gt;fieldIndex(<span class="stringliteral">&quot;categorie&quot;</span>));
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a> = <span class="keyword">new</span> QDataWidgetMapper(<span class="keyword">this</span>);
-<a name="l00110"></a>00110     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setModel(<a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>);
-<a name="l00111"></a>00111     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-<a name="l00112"></a>00112     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>, <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;name&quot;</span>));
-<a name="l00113"></a>00113     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>, 2);<span class="comment">//modelpoints-&gt;fieldIndex(&quot;categorie_id&quot;)</span>
-<a name="l00114"></a>00114     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>, <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;latitude&quot;</span>));
-<a name="l00115"></a>00115     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>, <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;longitude&quot;</span>));
-<a name="l00116"></a>00116     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>, <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;description&quot;</span>));
-<a name="l00117"></a>00117     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;toFirst();
+<a name="l00109"></a>00109     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a> = <span class="keyword">new</span> QDataWidgetMapper(<span class="keyword">this</span>);
+<a name="l00110"></a>00110     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setModel(<a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>);
+<a name="l00111"></a>00111     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
+<a name="l00112"></a>00112     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>, <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;name&quot;</span>));
+<a name="l00113"></a>00113     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>, 2);<span class="comment">//modelpoints-&gt;fieldIndex(&quot;categorie_id&quot;)</span>
+<a name="l00114"></a>00114     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>, <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;latitude&quot;</span>));
+<a name="l00115"></a>00115     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>, <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;longitude&quot;</span>));
+<a name="l00116"></a>00116     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>, <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;fieldIndex(<span class="stringliteral">&quot;description&quot;</span>));
+<a name="l00117"></a>00117     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;toFirst();
 <a name="l00118"></a>00118 }
 <a name="l00119"></a>00119 
-<a name="l00125"></a><a class="code" href="classedit__point__gui.html#a7ea17ed341dc6492ec99d9ec0fac284c">00125</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point">edit_point_gui::delete_mapper_point</a>(){
-<a name="l00126"></a>00126     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>;
+<a name="l00125"></a><a class="code" href="classedit__point__gui_a7ea17ed341dc6492ec99d9ec0fac284c.html#a7ea17ed341dc6492ec99d9ec0fac284c">00125</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a7ea17ed341dc6492ec99d9ec0fac284c.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point">edit_point_gui::delete_mapper_point</a>(){
+<a name="l00126"></a>00126     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>;
 <a name="l00127"></a>00127 }
 <a name="l00128"></a>00128 
-<a name="l00138"></a><a class="code" href="classedit__point__gui.html#a1ddaf28d63a1ff56d6f495a408c19e19">00138</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a1ddaf28d63a1ff56d6f495a408c19e19" title="met en place le model heure  edit_point_gui::init_table_heure()">edit_point_gui::init_table_heure</a>(){
+<a name="l00138"></a><a class="code" href="classedit__point__gui_a1ddaf28d63a1ff56d6f495a408c19e19.html#a1ddaf28d63a1ff56d6f495a408c19e19">00138</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a1ddaf28d63a1ff56d6f495a408c19e19.html#a1ddaf28d63a1ff56d6f495a408c19e19" title="met en place le model heure  edit_point_gui::init_table_heure()">edit_point_gui::init_table_heure</a>(){
 <a name="l00139"></a>00139     <span class="comment">/*** affichage des heures ***/</span>
-<a name="l00140"></a>00140     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a> = <span class="keyword">new</span> QSqlRelationalTableModel(<span class="keyword">this</span>);
-<a name="l00141"></a>00141     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setTable(<span class="stringliteral">&quot;heures&quot;</span>);
-<a name="l00142"></a>00142     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setEditStrategy(QSqlTableModel::OnManualSubmit);
-<a name="l00143"></a>00143     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setRelation(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>), QSqlRelation(<span class="stringliteral">&quot;jours&quot;</span>, <span class="stringliteral">&quot;jour_id&quot;</span>, <span class="stringliteral">&quot;jour&quot;</span>));
-<a name="l00144"></a>00144     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
+<a name="l00140"></a>00140     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a> = <span class="keyword">new</span> QSqlRelationalTableModel(<span class="keyword">this</span>);
+<a name="l00141"></a>00141     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setTable(<span class="stringliteral">&quot;heures&quot;</span>);
+<a name="l00142"></a>00142     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setEditStrategy(QSqlTableModel::OnManualSubmit);
+<a name="l00143"></a>00143     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setRelation(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>), QSqlRelation(<span class="stringliteral">&quot;jours&quot;</span>, <span class="stringliteral">&quot;jour_id&quot;</span>, <span class="stringliteral">&quot;jour&quot;</span>));
+<a name="l00144"></a>00144     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setHeaderData(2, Qt::Horizontal, tr(<span class="stringliteral">&quot;Jour&quot;</span>));
-<a name="l00147"></a>00147     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setHeaderData(3, Qt::Horizontal, tr(<span class="stringliteral">&quot;Ouverture&quot;</span>));
-<a name="l00148"></a>00148     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setHeaderData(4, Qt::Horizontal, tr(<span class="stringliteral">&quot;Fermeture&quot;</span>));
-<a name="l00149"></a>00149     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setSort(2,Qt::AscendingOrder);
+<a name="l00146"></a>00146     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setHeaderData(2, Qt::Horizontal, tr(<span class="stringliteral">&quot;Jour&quot;</span>));
+<a name="l00147"></a>00147     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setHeaderData(3, Qt::Horizontal, tr(<span class="stringliteral">&quot;Ouverture&quot;</span>));
+<a name="l00148"></a>00148     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setHeaderData(4, Qt::Horizontal, tr(<span class="stringliteral">&quot;Fermeture&quot;</span>));
+<a name="l00149"></a>00149     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setSort(2,Qt::AscendingOrder);
 <a name="l00150"></a>00150 
 <a name="l00151"></a>00151 }
 <a name="l00152"></a>00152 
-<a name="l00158"></a><a class="code" href="classedit__point__gui.html#a711f7dcddfbaa69ab34d0ed90e5f1f3e">00158</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a711f7dcddfbaa69ab34d0ed90e5f1f3e" title="desalocation du model heure">edit_point_gui::delete_table_heure</a>(){
-<a name="l00159"></a>00159     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>;
+<a name="l00158"></a><a class="code" href="classedit__point__gui_a711f7dcddfbaa69ab34d0ed90e5f1f3e.html#a711f7dcddfbaa69ab34d0ed90e5f1f3e">00158</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a711f7dcddfbaa69ab34d0ed90e5f1f3e.html#a711f7dcddfbaa69ab34d0ed90e5f1f3e" title="desalocation du model heure">edit_point_gui::delete_table_heure</a>(){
+<a name="l00159"></a>00159     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>;
 <a name="l00160"></a>00160 }
 <a name="l00161"></a>00161 
-<a name="l00176"></a><a class="code" href="classedit__point__gui.html#a109d164e4c4ed5531e85245db047a2d0">00176</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table">edit_point_gui::init_view_heure</a>(){
+<a name="l00176"></a><a class="code" href="classedit__point__gui_a109d164e4c4ed5531e85245db047a2d0.html#a109d164e4c4ed5531e85245db047a2d0">00176</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a109d164e4c4ed5531e85245db047a2d0.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table">edit_point_gui::init_view_heure</a>(){
 <a name="l00177"></a>00177     <span class="comment">/*** affichage du tableau ***/</span>
-<a name="l00178"></a>00178     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setModel(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
-<a name="l00179"></a>00179     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-<a name="l00180"></a>00180     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
-<a name="l00181"></a>00181     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(1, <span class="keyword">true</span>);
-<a name="l00182"></a>00182     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+<a name="l00178"></a>00178     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setModel(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
+<a name="l00179"></a>00179     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
+<a name="l00180"></a>00180     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(0, <span class="keyword">true</span>);
+<a name="l00181"></a>00181     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnHidden(1, <span class="keyword">true</span>);
+<a name="l00182"></a>00182     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184     <span class="comment">/*calcule de la largeur de chaque collone plus de la barre d&#39;entete avec + 2 pour les marges*/</span>
 <a name="l00185"></a>00185     <span class="comment">/*car adjustesize ne marche pas sur les QTableView*/</span>
-<a name="l00186"></a>00186     <span class="keywordtype">int</span> width =  <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;width() - (<a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;verticalHeader()-&gt;width() +
-<a name="l00187"></a>00187             <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) +
-<a name="l00188"></a>00188             <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) +
-<a name="l00189"></a>00189             <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4));
+<a name="l00186"></a>00186     <span class="keywordtype">int</span> width =  <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;width() - (<a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;verticalHeader()-&gt;width() +
+<a name="l00187"></a>00187             <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) +
+<a name="l00188"></a>00188             <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) +
+<a name="l00189"></a>00189             <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4));
 <a name="l00190"></a>00190     width/=3; <span class="comment">//&lt;- largeur a rajouter</span>
-<a name="l00191"></a>00191     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(2, <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) + width);
-<a name="l00192"></a>00192     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(3, <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) + width);
-<a name="l00193"></a>00193     <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(4, <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4) + width -1);
+<a name="l00191"></a>00191     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(2, <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(2) + width);
+<a name="l00192"></a>00192     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(3, <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(3) + width);
+<a name="l00193"></a>00193     <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setColumnWidth(4, <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;columnWidth(4) + width -1);
 <a name="l00194"></a>00194 
-<a name="l00195"></a>00195     connect(<a class="code" href="class_ui__edit__point.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure">insert_heur</a>()));
-<a name="l00196"></a>00196     connect(<a class="code" href="class_ui__edit__point.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies">submitHeure</a>()));
-<a name="l00197"></a>00197     connect(<a class="code" href="class_ui__edit__point.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure">drup_heur</a>()));
-<a name="l00198"></a>00198     connect(<a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;selectionModel(),SIGNAL(
+<a name="l00195"></a>00195     connect(<a class="code" href="classUi__edit__point_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure">insert_heur</a>()));
+<a name="l00196"></a>00196     connect(<a class="code" href="classUi__edit__point_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies">submitHeure</a>()));
+<a name="l00197"></a>00197     connect(<a class="code" href="classUi__edit__point_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>,  SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="classedit__point__gui_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure">drup_heur</a>()));
+<a name="l00198"></a>00198     connect(<a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;selectionModel(),SIGNAL(
 <a name="l00199"></a>00199                 currentRowChanged(<span class="keyword">const</span> QModelIndex &amp;,
-<a name="l00200"></a>00200                 <span class="keyword">const</span> QModelIndex &amp;)),<span class="keyword">this</span>,SLOT(<a class="code" href="classedit__point__gui.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure">select_heure</a>(<span class="keyword">const</span> QModelIndex &amp;)));
+<a name="l00200"></a>00200                 <span class="keyword">const</span> QModelIndex &amp;)),<span class="keyword">this</span>,SLOT(<a class="code" href="classedit__point__gui_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure">select_heure</a>(<span class="keyword">const</span> QModelIndex &amp;)));
 <a name="l00201"></a>00201 }
 <a name="l00202"></a>00202 
-<a name="l00214"></a><a class="code" href="classedit__point__gui.html#a2942df5953fa13d4db13d5079a8f3704">00214</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a2942df5953fa13d4db13d5079a8f3704" title="met en place le mapper d&#39;heures">edit_point_gui::init_mapper_heure</a>(){
+<a name="l00214"></a><a class="code" href="classedit__point__gui_a2942df5953fa13d4db13d5079a8f3704.html#a2942df5953fa13d4db13d5079a8f3704">00214</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a2942df5953fa13d4db13d5079a8f3704.html#a2942df5953fa13d4db13d5079a8f3704" title="met en place le mapper d&#39;heures">edit_point_gui::init_mapper_heure</a>(){
 <a name="l00215"></a>00215     <span class="comment">/*** gestion des heures (ajout : suppression) ***/</span>
 <a name="l00216"></a>00216 
-<a name="l00217"></a>00217     QSqlTableModel *relModelJour = <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;relationModel(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
-<a name="l00218"></a>00218     <a class="code" href="class_ui__edit__point.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModel(relModelJour);
-<a name="l00219"></a>00219     <a class="code" href="class_ui__edit__point.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModelColumn(relModelJour-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
+<a name="l00217"></a>00217     QSqlTableModel *relModelJour = <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;relationModel(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
+<a name="l00218"></a>00218     <a class="code" href="classUi__edit__point_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModel(relModelJour);
+<a name="l00219"></a>00219     <a class="code" href="classUi__edit__point_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setModelColumn(relModelJour-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
 <a name="l00220"></a>00220 
-<a name="l00221"></a>00221     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a> = <span class="keyword">new</span> QDataWidgetMapper(<span class="keyword">this</span>);
-<a name="l00222"></a>00222     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setModel(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
-<a name="l00223"></a>00223     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
-<a name="l00224"></a>00224     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>, <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
-<a name="l00225"></a>00225     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#a1411288cced40433d2ed958da096639a">debut_heur</a>, <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;debut&quot;</span>));
-<a name="l00226"></a>00226     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="class_ui__edit__point.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>, <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;fin&quot;</span>));
-<a name="l00227"></a>00227     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;toFirst();
+<a name="l00221"></a>00221     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a> = <span class="keyword">new</span> QDataWidgetMapper(<span class="keyword">this</span>);
+<a name="l00222"></a>00222     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setModel(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>);
+<a name="l00223"></a>00223     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setItemDelegate(<span class="keyword">new</span> QSqlRelationalDelegate(<span class="keyword">this</span>));
+<a name="l00224"></a>00224     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>, <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;jour&quot;</span>));
+<a name="l00225"></a>00225     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>, <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;debut&quot;</span>));
+<a name="l00226"></a>00226     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;addMapping(<a class="code" href="classUi__edit__point_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>, <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;fieldIndex(<span class="stringliteral">&quot;fin&quot;</span>));
+<a name="l00227"></a>00227     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;toFirst();
 <a name="l00228"></a>00228 }
 <a name="l00229"></a>00229 
-<a name="l00235"></a><a class="code" href="classedit__point__gui.html#a0e5c67d07e197411333c797559a27a92">00235</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a0e5c67d07e197411333c797559a27a92" title="desalocation du mapper d&#39;heure">edit_point_gui::delete_mapper_heure</a>(){
-<a name="l00236"></a>00236     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>;
+<a name="l00235"></a><a class="code" href="classedit__point__gui_a0e5c67d07e197411333c797559a27a92.html#a0e5c67d07e197411333c797559a27a92">00235</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a0e5c67d07e197411333c797559a27a92.html#a0e5c67d07e197411333c797559a27a92" title="desalocation du mapper d&#39;heure">edit_point_gui::delete_mapper_heure</a>(){
+<a name="l00236"></a>00236     <span class="keyword">delete</span> <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>;
 <a name="l00237"></a>00237 }
 <a name="l00238"></a>00238 
-<a name="l00245"></a><a class="code" href="classedit__point__gui.html#a2676bbeb0fc10004110959f4fb199c7e">00245</a> <a class="code" href="classedit__point__gui.html#a2676bbeb0fc10004110959f4fb199c7e" title="contructeur de la classe edit_point_gui">edit_point_gui::edit_point_gui</a>(<span class="keywordtype">float</span> PosxA  ,<span class="keywordtype">float</span> PosyA ,<span class="keywordtype">int</span> point_id , QWidget *parent ) : QDialog(parent)
+<a name="l00245"></a><a class="code" href="classedit__point__gui_a2676bbeb0fc10004110959f4fb199c7e.html#a2676bbeb0fc10004110959f4fb199c7e">00245</a> <a class="code" href="classedit__point__gui_a2676bbeb0fc10004110959f4fb199c7e.html#a2676bbeb0fc10004110959f4fb199c7e" title="contructeur de la classe edit_point_gui">edit_point_gui::edit_point_gui</a>(<span class="keywordtype">float</span> PosxA  ,<span class="keywordtype">float</span> PosyA ,<span class="keywordtype">int</span> point_id , QWidget *parent ) : QDialog(parent)
 <a name="l00246"></a>00246 {
-<a name="l00247"></a>00247     <a class="code" href="class_ui__edit__point.html#a48ec337d2706b2922cf8036065770e68">setupUi</a>(<span class="keyword">this</span>);
-<a name="l00248"></a>00248     <a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>();
-<a name="l00249"></a>00249     <a class="code" href="classedit__point__gui.html#a7a08702484e8e69603eae108eaed4079">Posx</a> = PosxA;
-<a name="l00250"></a>00250     <a class="code" href="classedit__point__gui.html#a209dc84ce4f059f79c60affa30138904">Posy</a> = PosyA;
+<a name="l00247"></a>00247     <a class="code" href="classUi__edit__point_a48ec337d2706b2922cf8036065770e68.html#a48ec337d2706b2922cf8036065770e68">setupUi</a>(<span class="keyword">this</span>);
+<a name="l00248"></a>00248     <a class="code" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>();
+<a name="l00249"></a>00249     <a class="code" href="classedit__point__gui_a7a08702484e8e69603eae108eaed4079.html#a7a08702484e8e69603eae108eaed4079">Posx</a> = PosxA;
+<a name="l00250"></a>00250     <a class="code" href="classedit__point__gui_a209dc84ce4f059f79c60affa30138904.html#a209dc84ce4f059f79c60affa30138904">Posy</a> = PosyA;
 <a name="l00251"></a>00251     <span class="comment">/*** initialisation ***/</span>
-<a name="l00252"></a>00252     <a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = 1;
+<a name="l00252"></a>00252     <a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = 1;
 <a name="l00253"></a>00253     <span class="keywordflow">if</span>(point_id != 0)
-<a name="l00254"></a>00254         <a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = point_id;
+<a name="l00254"></a>00254         <a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = point_id;
 <a name="l00255"></a>00255 
 <a name="l00256"></a>00256 
 <a name="l00257"></a>00257 
-<a name="l00258"></a>00258     <a class="code" href="classedit__point__gui.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point">init_table_point</a>();
-<a name="l00259"></a>00259     <a class="code" href="classedit__point__gui.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table">init_view_point</a>();
-<a name="l00260"></a>00260     <a class="code" href="classedit__point__gui.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point">init_mapper_point</a>();
-<a name="l00261"></a>00261     <a class="code" href="classedit__point__gui.html#a1ddaf28d63a1ff56d6f495a408c19e19" title="met en place le model heure  edit_point_gui::init_table_heure()">init_table_heure</a>();
-<a name="l00262"></a>00262     <a class="code" href="classedit__point__gui.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table">init_view_heure</a>();
-<a name="l00263"></a>00263     <a class="code" href="classedit__point__gui.html#a2942df5953fa13d4db13d5079a8f3704" title="met en place le mapper d&#39;heures">init_mapper_heure</a>();
+<a name="l00258"></a>00258     <a class="code" href="classedit__point__gui_ad28ebca32fc75a357bd93f08fda1fb5f.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point">init_table_point</a>();
+<a name="l00259"></a>00259     <a class="code" href="classedit__point__gui_a6f2742e46e7d1e67ddba17d40833cb67.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table">init_view_point</a>();
+<a name="l00260"></a>00260     <a class="code" href="classedit__point__gui_acdab29646352e372be5d21747d4a9e5f.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point">init_mapper_point</a>();
+<a name="l00261"></a>00261     <a class="code" href="classedit__point__gui_a1ddaf28d63a1ff56d6f495a408c19e19.html#a1ddaf28d63a1ff56d6f495a408c19e19" title="met en place le model heure  edit_point_gui::init_table_heure()">init_table_heure</a>();
+<a name="l00262"></a>00262     <a class="code" href="classedit__point__gui_a109d164e4c4ed5531e85245db047a2d0.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table">init_view_heure</a>();
+<a name="l00263"></a>00263     <a class="code" href="classedit__point__gui_a2942df5953fa13d4db13d5079a8f3704.html#a2942df5953fa13d4db13d5079a8f3704" title="met en place le mapper d&#39;heures">init_mapper_heure</a>();
 <a name="l00264"></a>00264     setWindowTitle(tr(<span class="stringliteral">&quot;Edition des points&quot;</span>));
 <a name="l00265"></a>00265 
 <a name="l00266"></a>00266 }
 <a name="l00267"></a>00267 
-<a name="l00272"></a><a class="code" href="classedit__point__gui.html#a0a787117af61fe59b23699e9a6624a24">00272</a> <a class="code" href="classedit__point__gui.html#a0a787117af61fe59b23699e9a6624a24" title="destucteur de la classe edit_point_gui">edit_point_gui::~edit_point_gui</a>(){
-<a name="l00273"></a>00273     <a class="code" href="classedit__point__gui.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point">delete_table_point</a>();
-<a name="l00274"></a>00274     <a class="code" href="classedit__point__gui.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point">delete_mapper_point</a>();
-<a name="l00275"></a>00275     <a class="code" href="classedit__point__gui.html#a711f7dcddfbaa69ab34d0ed90e5f1f3e" title="desalocation du model heure">delete_table_heure</a>();
-<a name="l00276"></a>00276     <a class="code" href="classedit__point__gui.html#a0e5c67d07e197411333c797559a27a92" title="desalocation du mapper d&#39;heure">delete_mapper_heure</a>();
+<a name="l00272"></a><a class="code" href="classedit__point__gui_a0a787117af61fe59b23699e9a6624a24.html#a0a787117af61fe59b23699e9a6624a24">00272</a> <a class="code" href="classedit__point__gui_a0a787117af61fe59b23699e9a6624a24.html#a0a787117af61fe59b23699e9a6624a24" title="destucteur de la classe edit_point_gui">edit_point_gui::~edit_point_gui</a>(){
+<a name="l00273"></a>00273     <a class="code" href="classedit__point__gui_abe9b534e166a941f9981452f04d749f9.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point">delete_table_point</a>();
+<a name="l00274"></a>00274     <a class="code" href="classedit__point__gui_a7ea17ed341dc6492ec99d9ec0fac284c.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point">delete_mapper_point</a>();
+<a name="l00275"></a>00275     <a class="code" href="classedit__point__gui_a711f7dcddfbaa69ab34d0ed90e5f1f3e.html#a711f7dcddfbaa69ab34d0ed90e5f1f3e" title="desalocation du model heure">delete_table_heure</a>();
+<a name="l00276"></a>00276     <a class="code" href="classedit__point__gui_a0e5c67d07e197411333c797559a27a92.html#a0e5c67d07e197411333c797559a27a92" title="desalocation du mapper d&#39;heure">delete_mapper_heure</a>();
 <a name="l00277"></a>00277 }
 <a name="l00278"></a>00278 
-<a name="l00284"></a><a class="code" href="classedit__point__gui.html#a0d74ca32a3bef4c7694189542e0125d0">00284</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a0d74ca32a3bef4c7694189542e0125d0" title="met a jour la table points en fonction des champs modifies">edit_point_gui::submitPoints</a>()
+<a name="l00284"></a><a class="code" href="classedit__point__gui_a0d74ca32a3bef4c7694189542e0125d0.html#a0d74ca32a3bef4c7694189542e0125d0">00284</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a0d74ca32a3bef4c7694189542e0125d0.html#a0d74ca32a3bef4c7694189542e0125d0" title="met a jour la table points en fonction des champs modifies">edit_point_gui::submitPoints</a>()
 <a name="l00285"></a>00285 {
-<a name="l00286"></a>00286     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;database().transaction();
-<a name="l00287"></a>00287     <span class="keywordflow">if</span> (<a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;submitAll()) {
-<a name="l00288"></a>00288         <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;database().commit();
+<a name="l00286"></a>00286     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;database().transaction();
+<a name="l00287"></a>00287     <span class="keywordflow">if</span> (<a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;submitAll()) {
+<a name="l00288"></a>00288         <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;database().commit();
 <a name="l00289"></a>00289     } <span class="keywordflow">else</span> {
-<a name="l00290"></a>00290         <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;database().rollback();
+<a name="l00290"></a>00290         <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;database().rollback();
 <a name="l00291"></a>00291         QMessageBox::warning(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Erreur&quot;</span>),
 <a name="l00292"></a>00292                              tr(<span class="stringliteral">&quot;L&#39;opperation de mise a jour de la table des heures a rencontre une erreur : %1&quot;</span>)
-<a name="l00293"></a>00293                              .arg(<a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;lastError().text()));
+<a name="l00293"></a>00293                              .arg(<a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;lastError().text()));
 <a name="l00294"></a>00294     }
 <a name="l00295"></a>00295 }
 <a name="l00296"></a>00296 
-<a name="l00303"></a><a class="code" href="classedit__point__gui.html#a95ab985ec988163be3fcd84154190b99">00303</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies">edit_point_gui::submitHeure</a>(){
+<a name="l00303"></a><a class="code" href="classedit__point__gui_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99">00303</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies">edit_point_gui::submitHeure</a>(){
 <a name="l00304"></a>00304 
-<a name="l00305"></a>00305     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;database().transaction();
-<a name="l00306"></a>00306     <span class="keywordflow">if</span> (<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;submitAll()) {
-<a name="l00307"></a>00307         <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;database().commit();
+<a name="l00305"></a>00305     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;database().transaction();
+<a name="l00306"></a>00306     <span class="keywordflow">if</span> (<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;submitAll()) {
+<a name="l00307"></a>00307         <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;database().commit();
 <a name="l00308"></a>00308     } <span class="keywordflow">else</span> {
-<a name="l00309"></a>00309         <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;database().rollback();
+<a name="l00309"></a>00309         <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;database().rollback();
 <a name="l00310"></a>00310         QMessageBox::warning(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Erreur&quot;</span>),
 <a name="l00311"></a>00311                              tr(<span class="stringliteral">&quot;L&#39;opperation de mise a jour de la table des heures a rencontre une erreur : %1&quot;</span>)
-<a name="l00312"></a>00312                              .arg(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;lastError().text()));
+<a name="l00312"></a>00312                              .arg(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;lastError().text()));
 <a name="l00313"></a>00313     }
 <a name="l00314"></a>00314 }
 <a name="l00315"></a>00315 
-<a name="l00326"></a><a class="code" href="classedit__point__gui.html#aec046351ed1ddd9e1918efbb0d17b017">00326</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure">edit_point_gui::select_heure</a>(<span class="keyword">const</span> QModelIndex &amp;index){
-<a name="l00327"></a>00327     QModelIndex indexp = <a class="code" href="class_ui__edit__point.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;currentIndex();
+<a name="l00326"></a><a class="code" href="classedit__point__gui_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017">00326</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure">edit_point_gui::select_heure</a>(<span class="keyword">const</span> QModelIndex &amp;index){
+<a name="l00327"></a>00327     QModelIndex indexp = <a class="code" href="classUi__edit__point_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;currentIndex();
 <a name="l00328"></a>00328     indexp.row();
-<a name="l00329"></a>00329     <a class="code" href="classedit__point__gui.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setCurrentIndex(indexp.row());
+<a name="l00329"></a>00329     <a class="code" href="classedit__point__gui_a7f2de817aa2ee0d6e9e7cd1081bf9e0c.html#a7f2de817aa2ee0d6e9e7cd1081bf9e0c">mapperheures</a>-&gt;setCurrentIndex(indexp.row());
 <a name="l00330"></a>00330 
-<a name="l00331"></a>00331     QSqlRecord record = <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;record(index.row());
-<a name="l00332"></a>00332     <a class="code" href="classedit__point__gui.html#a1467da4e155b4d2b82a403318ceac33b">courantheur</a> = record.value(<span class="stringliteral">&quot;heure_id&quot;</span>).toInt();
+<a name="l00331"></a>00331     QSqlRecord record = <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;record(index.row());
+<a name="l00332"></a>00332     <a class="code" href="classedit__point__gui_a1467da4e155b4d2b82a403318ceac33b.html#a1467da4e155b4d2b82a403318ceac33b">courantheur</a> = record.value(<span class="stringliteral">&quot;heure_id&quot;</span>).toInt();
 <a name="l00333"></a>00333 }
 <a name="l00334"></a>00334 
-<a name="l00347"></a><a class="code" href="classedit__point__gui.html#a9be5a5020e85920440c31ab580fe2ce6">00347</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a9be5a5020e85920440c31ab580fe2ce6" title="action lors de la selection d&#39;un point">edit_point_gui::select_point</a>(<span class="keyword">const</span> QModelIndex &amp;index){
-<a name="l00348"></a>00348     QModelIndex indexp = <a class="code" href="class_ui__edit__point.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;currentIndex();
-<a name="l00349"></a>00349     <a class="code" href="classedit__point__gui.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setCurrentIndex(indexp.row());
+<a name="l00347"></a><a class="code" href="classedit__point__gui_a9be5a5020e85920440c31ab580fe2ce6.html#a9be5a5020e85920440c31ab580fe2ce6">00347</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a9be5a5020e85920440c31ab580fe2ce6.html#a9be5a5020e85920440c31ab580fe2ce6" title="action lors de la selection d&#39;un point">edit_point_gui::select_point</a>(<span class="keyword">const</span> QModelIndex &amp;index){
+<a name="l00348"></a>00348     QModelIndex indexp = <a class="code" href="classUi__edit__point_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;currentIndex();
+<a name="l00349"></a>00349     <a class="code" href="classedit__point__gui_ad251c19e82645e708abec937434e836c.html#ad251c19e82645e708abec937434e836c">mapperpoints</a>-&gt;setCurrentIndex(indexp.row());
 <a name="l00350"></a>00350 
-<a name="l00351"></a>00351     QSqlRecord record = <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;record(index.row());
-<a name="l00352"></a>00352     <a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = record.value(<span class="stringliteral">&quot;point_id&quot;</span>).toInt();
-<a name="l00353"></a>00353     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setFilter(QString(<span class="stringliteral">&quot;point_id = %1&quot;</span>).arg(<a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>));
+<a name="l00351"></a>00351     QSqlRecord record = <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;record(index.row());
+<a name="l00352"></a>00352     <a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = record.value(<span class="stringliteral">&quot;point_id&quot;</span>).toInt();
+<a name="l00353"></a>00353     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;setFilter(QString(<span class="stringliteral">&quot;point_id = %1&quot;</span>).arg(<a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>));
 <a name="l00354"></a>00354 
 <a name="l00355"></a>00355 }
 <a name="l00356"></a>00356 
-<a name="l00369"></a><a class="code" href="classedit__point__gui.html#a64d46f9525b022fc61466f9a9ebc8e33">00369</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a64d46f9525b022fc61466f9a9ebc8e33" title="action lors de la suppression d&#39;un point">edit_point_gui::drup_point</a>(){
-<a name="l00370"></a>00370     QSqlQuery query(<a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00369"></a><a class="code" href="classedit__point__gui_a64d46f9525b022fc61466f9a9ebc8e33.html#a64d46f9525b022fc61466f9a9ebc8e33">00369</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a64d46f9525b022fc61466f9a9ebc8e33.html#a64d46f9525b022fc61466f9a9ebc8e33" title="action lors de la suppression d&#39;un point">edit_point_gui::drup_point</a>(){
+<a name="l00370"></a>00370     QSqlQuery query(<a class="code" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
 <a name="l00371"></a>00371 
-<a name="l00372"></a>00372     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM heures WHERE point_id = &quot;</span> + QString::number(<a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>)) == <span class="keyword">false</span>)
+<a name="l00372"></a>00372     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM heures WHERE point_id = &quot;</span> + QString::number(<a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>)) == <span class="keyword">false</span>)
 <a name="l00373"></a>00373     {
 <a name="l00374"></a>00374         qDebug()&lt;&lt; <span class="stringliteral">&quot;drup_point&quot;</span> &lt;&lt; query.lastError().text();
 <a name="l00375"></a>00375     }
 <a name="l00376"></a>00376 
-<a name="l00377"></a>00377     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM points WHERE point_id = &quot;</span> + QString::number(<a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>)) == <span class="keyword">false</span>)
+<a name="l00377"></a>00377     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM points WHERE point_id = &quot;</span> + QString::number(<a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>)) == <span class="keyword">false</span>)
 <a name="l00378"></a>00378     {
 <a name="l00379"></a>00379         qDebug()&lt;&lt; <span class="stringliteral">&quot;drup_point&quot;</span> &lt;&lt; query.lastError().text();
 <a name="l00380"></a>00380     }
-<a name="l00381"></a>00381     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;select();
-<a name="l00382"></a>00382     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
+<a name="l00381"></a>00381     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;select();
+<a name="l00382"></a>00382     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
 <a name="l00383"></a>00383 }
 <a name="l00384"></a>00384 
-<a name="l00394"></a><a class="code" href="classedit__point__gui.html#a59524a811b2a9a9bbc6c725e8c95e65a">00394</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure">edit_point_gui::drup_heur</a>(){
-<a name="l00395"></a>00395     QSqlQuery query(<a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00394"></a><a class="code" href="classedit__point__gui_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a">00394</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure">edit_point_gui::drup_heur</a>(){
+<a name="l00395"></a>00395     QSqlQuery query(<a class="code" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
 <a name="l00396"></a>00396 
-<a name="l00397"></a>00397     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM heures WHERE heure_id = &quot;</span> + QString::number(<a class="code" href="classedit__point__gui.html#a1467da4e155b4d2b82a403318ceac33b">courantheur</a>)) == <span class="keyword">false</span>)
+<a name="l00397"></a>00397     <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;DELETE FROM heures WHERE heure_id = &quot;</span> + QString::number(<a class="code" href="classedit__point__gui_a1467da4e155b4d2b82a403318ceac33b.html#a1467da4e155b4d2b82a403318ceac33b">courantheur</a>)) == <span class="keyword">false</span>)
 <a name="l00398"></a>00398     {
 <a name="l00399"></a>00399         qDebug()&lt;&lt; <span class="stringliteral">&quot;drup_point&quot;</span> &lt;&lt; query.lastError().text();
 <a name="l00400"></a>00400     }
-<a name="l00401"></a>00401     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
+<a name="l00401"></a>00401     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
 <a name="l00402"></a>00402 }
 <a name="l00403"></a>00403 
-<a name="l00415"></a><a class="code" href="classedit__point__gui.html#a8411f9248d1f8a7c4be9a246b63c49b7">00415</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure">edit_point_gui::insert_heur</a>(){
-<a name="l00416"></a>00416     QSqlQuery query(<a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00415"></a><a class="code" href="classedit__point__gui_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7">00415</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure">edit_point_gui::insert_heur</a>(){
+<a name="l00416"></a>00416     QSqlQuery query(<a class="code" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
 <a name="l00417"></a>00417 
-<a name="l00418"></a>00418     <span class="keywordflow">if</span>(<a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> != 0)
-<a name="l00419"></a>00419         <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;insert into heures(point_id, jour, debut, fin) values(&quot;</span> + QString::number(<a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>) + <span class="stringliteral">&quot;, 1, &#39;00:00&#39;, &#39;00:00&#39;)&quot;</span>) == <span class="keyword">false</span>)
+<a name="l00418"></a>00418     <span class="keywordflow">if</span>(<a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> != 0)
+<a name="l00419"></a>00419         <span class="keywordflow">if</span>(query.exec(<span class="stringliteral">&quot;insert into heures(point_id, jour, debut, fin) values(&quot;</span> + QString::number(<a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a>) + <span class="stringliteral">&quot;, 1, &#39;00:00&#39;, &#39;00:00&#39;)&quot;</span>) == <span class="keyword">false</span>)
 <a name="l00420"></a>00420         {
 <a name="l00421"></a>00421             qDebug()&lt;&lt; <span class="stringliteral">&quot;insert_heur&quot;</span> &lt;&lt; query.lastError().text();
 <a name="l00422"></a>00422         }
-<a name="l00423"></a>00423     <a class="code" href="classedit__point__gui.html#a1467da4e155b4d2b82a403318ceac33b">courantheur</a> = <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;data(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;index(<a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;rowCount() -1, 0)).toInt();
-<a name="l00424"></a>00424     <a class="code" href="classedit__point__gui.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
+<a name="l00423"></a>00423     <a class="code" href="classedit__point__gui_a1467da4e155b4d2b82a403318ceac33b.html#a1467da4e155b4d2b82a403318ceac33b">courantheur</a> = <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;data(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;index(<a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;rowCount() -1, 0)).toInt();
+<a name="l00424"></a>00424     <a class="code" href="classedit__point__gui_aec8aba98d3dab3135c9d5d790e2da172.html#aec8aba98d3dab3135c9d5d790e2da172">modelheures</a>-&gt;select();
 <a name="l00425"></a>00425 
 <a name="l00426"></a>00426 }
 <a name="l00427"></a>00427 
-<a name="l00438"></a><a class="code" href="classedit__point__gui.html#a7ff071eaadca06239c9e7b1fd753b710">00438</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a7ff071eaadca06239c9e7b1fd753b710" title="action lors de l&#39;ajout d&#39;un point">edit_point_gui::insert_point</a>(){
-<a name="l00439"></a>00439     QSqlQuery query(<a class="code" href="classdatabase.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+<a name="l00438"></a><a class="code" href="classedit__point__gui_a7ff071eaadca06239c9e7b1fd753b710.html#a7ff071eaadca06239c9e7b1fd753b710">00438</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a7ff071eaadca06239c9e7b1fd753b710.html#a7ff071eaadca06239c9e7b1fd753b710" title="action lors de l&#39;ajout d&#39;un point">edit_point_gui::insert_point</a>(){
+<a name="l00439"></a>00439     QSqlQuery query(<a class="code" href="classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
 <a name="l00440"></a>00440 
-<a name="l00441"></a>00441     <span class="keywordflow">if</span>(<a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> != 0)
+<a name="l00441"></a>00441     <span class="keywordflow">if</span>(<a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> != 0)
 <a name="l00442"></a>00442         <span class="keywordflow">if</span>( query.exec(<span class="stringliteral">&quot;insert into points(latitude, longitude, categorie_id ) values(0, 0, 1)&quot;</span>) == <span class="keyword">false</span>)
 <a name="l00443"></a>00443         {
 <a name="l00444"></a>00444             qDebug()&lt;&lt; <span class="stringliteral">&quot;insert_point&quot;</span> &lt;&lt; query.lastError().text();
 <a name="l00445"></a>00445         }
-<a name="l00446"></a>00446     <a class="code" href="classedit__point__gui.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;data(<a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;index(<a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;rowCount() -1, 0)).toInt();
-<a name="l00447"></a>00447     <a class="code" href="classedit__point__gui.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;select();
+<a name="l00446"></a>00446     <a class="code" href="classedit__point__gui_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> = <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;data(<a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;index(<a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;rowCount() -1, 0)).toInt();
+<a name="l00447"></a>00447     <a class="code" href="classedit__point__gui_aed3762a542cd96c2d6ec785c0a2644e7.html#aed3762a542cd96c2d6ec785c0a2644e7">modelpoints</a>-&gt;select();
 <a name="l00448"></a>00448 }
 <a name="l00449"></a>00449 
-<a name="l00456"></a><a class="code" href="classedit__point__gui.html#ab22fda8732f20a5d712be28e1132ed12">00456</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#ab22fda8732f20a5d712be28e1132ed12" title="action lors de la modification d&#39;une heure">edit_point_gui::on_debut_heur_editingFinished</a>()
+<a name="l00456"></a><a class="code" href="classedit__point__gui_ab22fda8732f20a5d712be28e1132ed12.html#ab22fda8732f20a5d712be28e1132ed12">00456</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_ab22fda8732f20a5d712be28e1132ed12.html#ab22fda8732f20a5d712be28e1132ed12" title="action lors de la modification d&#39;une heure">edit_point_gui::on_debut_heur_editingFinished</a>()
 <a name="l00457"></a>00457 {
 <a name="l00458"></a>00458     QRegExp exp (<span class="stringliteral">&quot;^[0-9][0-9]:[0-9][0-9]$&quot;</span>);
-<a name="l00459"></a>00459     <span class="keywordflow">if</span>(exp.exactMatch(<a class="code" href="class_ui__edit__point.html#a1411288cced40433d2ed958da096639a">debut_heur</a>-&gt;text()) == <span class="keyword">false</span>){
+<a name="l00459"></a>00459     <span class="keywordflow">if</span>(exp.exactMatch(<a class="code" href="classUi__edit__point_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>-&gt;text()) == <span class="keyword">false</span>){
 <a name="l00460"></a>00460         QMessageBox::warning(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Erreur&quot;</span>),
 <a name="l00461"></a>00461                              tr(<span class="stringliteral">&quot;l&#39;heure doit etre sous la forme suivante HH:mm&quot;</span>));
-<a name="l00462"></a>00462         <a class="code" href="class_ui__edit__point.html#a1411288cced40433d2ed958da096639a">debut_heur</a>-&gt;setText(<span class="stringliteral">&quot;00:00&quot;</span>);
+<a name="l00462"></a>00462         <a class="code" href="classUi__edit__point_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>-&gt;setText(<span class="stringliteral">&quot;00:00&quot;</span>);
 <a name="l00463"></a>00463     }
 <a name="l00464"></a>00464 }
 <a name="l00465"></a>00465 
-<a name="l00472"></a><a class="code" href="classedit__point__gui.html#a330b5baa65111136b931bc971a27cfcf">00472</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a330b5baa65111136b931bc971a27cfcf" title="action lors de la modification d&#39;une heure">edit_point_gui::on_fin_heur_editingFinished</a>()
+<a name="l00472"></a><a class="code" href="classedit__point__gui_a330b5baa65111136b931bc971a27cfcf.html#a330b5baa65111136b931bc971a27cfcf">00472</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a330b5baa65111136b931bc971a27cfcf.html#a330b5baa65111136b931bc971a27cfcf" title="action lors de la modification d&#39;une heure">edit_point_gui::on_fin_heur_editingFinished</a>()
 <a name="l00473"></a>00473 {
 <a name="l00474"></a>00474     QRegExp exp (<span class="stringliteral">&quot;^[0-9][0-9]:[0-9][0-9]$&quot;</span>);
-<a name="l00475"></a>00475     <span class="keywordflow">if</span>(exp.exactMatch(<a class="code" href="class_ui__edit__point.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>-&gt;text()) == <span class="keyword">false</span>){
+<a name="l00475"></a>00475     <span class="keywordflow">if</span>(exp.exactMatch(<a class="code" href="classUi__edit__point_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>-&gt;text()) == <span class="keyword">false</span>){
 <a name="l00476"></a>00476         QMessageBox::warning(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Erreur&quot;</span>),
 <a name="l00477"></a>00477                              tr(<span class="stringliteral">&quot;l&#39;heur doit etre sous la forme suivante HH:mm&quot;</span>));
-<a name="l00478"></a>00478         <a class="code" href="class_ui__edit__point.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>-&gt;setText(<span class="stringliteral">&quot;00:00&quot;</span>);
+<a name="l00478"></a>00478         <a class="code" href="classUi__edit__point_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>-&gt;setText(<span class="stringliteral">&quot;00:00&quot;</span>);
 <a name="l00479"></a>00479     }
 <a name="l00480"></a>00480 }
 <a name="l00481"></a>00481 
 <a name="l00482"></a>00482 
-<a name="l00489"></a><a class="code" href="classedit__point__gui.html#ae47c16fb798841e1dda233d1ed3efbb1">00489</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#ae47c16fb798841e1dda233d1ed3efbb1" title="ajout/modification de categorie(s)">edit_point_gui::on_categorie_point_but_clicked</a>()
+<a name="l00489"></a><a class="code" href="classedit__point__gui_ae47c16fb798841e1dda233d1ed3efbb1.html#ae47c16fb798841e1dda233d1ed3efbb1">00489</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_ae47c16fb798841e1dda233d1ed3efbb1.html#ae47c16fb798841e1dda233d1ed3efbb1" title="ajout/modification de categorie(s)">edit_point_gui::on_categorie_point_but_clicked</a>()
 <a name="l00490"></a>00490 {
 <a name="l00491"></a>00491     <a class="code" href="classedite__categories.html">edite_categories</a> window;
 <a name="l00492"></a>00492     window.exec();
 <a name="l00493"></a>00493 
 <a name="l00494"></a>00494     <span class="comment">//reactualisation de la base de donne</span>
-<a name="l00495"></a>00495     <a class="code" href="classedit__point__gui.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point">delete_table_point</a>();
-<a name="l00496"></a>00496     <a class="code" href="classedit__point__gui.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point">delete_mapper_point</a>();
+<a name="l00495"></a>00495     <a class="code" href="classedit__point__gui_abe9b534e166a941f9981452f04d749f9.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point">delete_table_point</a>();
+<a name="l00496"></a>00496     <a class="code" href="classedit__point__gui_a7ea17ed341dc6492ec99d9ec0fac284c.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point">delete_mapper_point</a>();
 <a name="l00497"></a>00497 
-<a name="l00498"></a>00498     <a class="code" href="classedit__point__gui.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point">init_table_point</a>();
-<a name="l00499"></a>00499     <a class="code" href="classedit__point__gui.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table">init_view_point</a>();
-<a name="l00500"></a>00500     <a class="code" href="classedit__point__gui.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point">init_mapper_point</a>();
-<a name="l00501"></a>00501     <a class="code" href="classedit__point__gui.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table">init_view_heure</a>();
+<a name="l00498"></a>00498     <a class="code" href="classedit__point__gui_ad28ebca32fc75a357bd93f08fda1fb5f.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point">init_table_point</a>();
+<a name="l00499"></a>00499     <a class="code" href="classedit__point__gui_a6f2742e46e7d1e67ddba17d40833cb67.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table">init_view_point</a>();
+<a name="l00500"></a>00500     <a class="code" href="classedit__point__gui_acdab29646352e372be5d21747d4a9e5f.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point">init_mapper_point</a>();
+<a name="l00501"></a>00501     <a class="code" href="classedit__point__gui_a109d164e4c4ed5531e85245db047a2d0.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table">init_view_heure</a>();
 <a name="l00502"></a>00502 }
 <a name="l00503"></a>00503 
 <a name="l00504"></a>00504 
-<a name="l00505"></a><a class="code" href="classedit__point__gui.html#a47d7e4b965940d01158a8ae9df712ec2">00505</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui.html#a47d7e4b965940d01158a8ae9df712ec2">edit_point_gui::position</a>()
+<a name="l00505"></a><a class="code" href="classedit__point__gui_a47d7e4b965940d01158a8ae9df712ec2.html#a47d7e4b965940d01158a8ae9df712ec2">00505</a> <span class="keywordtype">void</span> <a class="code" href="classedit__point__gui_a47d7e4b965940d01158a8ae9df712ec2.html#a47d7e4b965940d01158a8ae9df712ec2">edit_point_gui::position</a>()
 <a name="l00506"></a>00506 {
 <a name="l00507"></a>00507 
-<a name="l00508"></a>00508     <a class="code" href="class_ui__edit__point.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setValue(<a class="code" href="classedit__point__gui.html#a7a08702484e8e69603eae108eaed4079">Posx</a>);
-<a name="l00509"></a>00509     <a class="code" href="class_ui__edit__point.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setValue(<a class="code" href="classedit__point__gui.html#a209dc84ce4f059f79c60affa30138904">Posy</a>);
+<a name="l00508"></a>00508     <a class="code" href="classUi__edit__point_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setValue(<a class="code" href="classedit__point__gui_a7a08702484e8e69603eae108eaed4079.html#a7a08702484e8e69603eae108eaed4079">Posx</a>);
+<a name="l00509"></a>00509     <a class="code" href="classUi__edit__point_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setValue(<a class="code" href="classedit__point__gui_a209dc84ce4f059f79c60affa30138904.html#a209dc84ce4f059f79c60affa30138904">Posy</a>);
 <a name="l00510"></a>00510 
 <a name="l00511"></a>00511 }
 </pre></div></div>
@@ -377,7 +377,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -386,7 +386,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

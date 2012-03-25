@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie:  Fichier source de data_points.h</title>
+<title>Cartographie de lieux:  Fichier source de data_points.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +28,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -51,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -64,19 +64,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define DATA_POINTS_H</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QtSql&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="database_8h.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho...">database.h</a>&quot;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QMutex&gt;</span>
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="keywordtype">bool</span> <a class="code" href="data__points_8cpp.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée">addPoint</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude);
-<a name="l00020"></a>00020 <span class="keywordtype">bool</span> <a class="code" href="data__points_8cpp.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée">addPoint</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude, QString description);
-<a name="l00021"></a>00021 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp.html#a5f55bf21f25d13e1a072e72c83c2ca2c" title="fonction : permet d&#39;obtenir les points en fonction de leurs nom">getPointByName</a>(QString name,<span class="keywordtype">int</span> nbpts);
-<a name="l00022"></a>00022 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp.html#afa136614be0612ea3df568be3969937e" title="fonction : permet d&#39;obtenir les points en fonction de la categorie">getPointByCategorie</a>(QString categorie);
-<a name="l00023"></a>00023 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp.html#a6ee4aa0ddb98ec54fe276722715b6ba9" title="fonction : permet d&#39;obtenir les points en fonction de leurs nom et de leurs positions">getPoint</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude);
-<a name="l00024"></a>00024 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée">getPointImp</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude,<span class="keywordtype">int</span> nbpts,QString name,QString cat);
-<a name="l00025"></a>00025 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp.html#a6ee4aa0ddb98ec54fe276722715b6ba9" title="fonction : permet d&#39;obtenir les points en fonction de leurs nom et de leurs positions">getPoint</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude, QString name);
-<a name="l00026"></a>00026 <span class="keywordtype">int</span> <a class="code" href="data__points_8h.html#aaf72332dd797516296bada7395a5a6ee">getIdPoint</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude);
-<a name="l00027"></a>00027 <span class="keywordtype">bool</span> <a class="code" href="data__points_8cpp.html#af81c8a88d7865cce9652e08c2c9de6f7" title="fonction creant la table points dans la base de donnée">initPointsTable</a>();
+<a name="l00019"></a>00019 <span class="keywordtype">bool</span> <a class="code" href="data__points_8cpp_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée">addPoint</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude);
+<a name="l00020"></a>00020 <span class="keywordtype">bool</span> <a class="code" href="data__points_8cpp_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée">addPoint</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude, QString description);
+<a name="l00021"></a>00021 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp_a5f55bf21f25d13e1a072e72c83c2ca2c.html#a5f55bf21f25d13e1a072e72c83c2ca2c" title="fonction : permet d&#39;obtenir les points en fonction de leurs nom">getPointByName</a>(QString name,<span class="keywordtype">int</span> nbpts);
+<a name="l00022"></a>00022 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp_afa136614be0612ea3df568be3969937e.html#afa136614be0612ea3df568be3969937e" title="]fn QVector&lt;POI&gt; getPointByCategorie(QString categorie)">getPointByCategorie</a>(QString categorie);
+<a name="l00023"></a>00023 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp_a6ee4aa0ddb98ec54fe276722715b6ba9.html#a6ee4aa0ddb98ec54fe276722715b6ba9" title="fonction : permet d&#39;obtenir les points en fonction de leurs nom et de leurs positions">getPoint</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude);
+<a name="l00024"></a>00024 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp_abd34ece5e7a12a3ddccef7a4eab5a3de.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée">getPointImp</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude,<span class="keywordtype">int</span> nbpts,QString name,QString cat);
+<a name="l00025"></a>00025 QVector&lt;POI&gt; <a class="code" href="data__points_8cpp_a6ee4aa0ddb98ec54fe276722715b6ba9.html#a6ee4aa0ddb98ec54fe276722715b6ba9" title="fonction : permet d&#39;obtenir les points en fonction de leurs nom et de leurs positions">getPoint</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude, QString name);
+<a name="l00026"></a>00026 <span class="keywordtype">int</span> <a class="code" href="data__points_8h_aaf72332dd797516296bada7395a5a6ee.html#aaf72332dd797516296bada7395a5a6ee">getIdPoint</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude);
+<a name="l00027"></a>00027 <span class="keywordtype">bool</span> <a class="code" href="data__points_8cpp_af81c8a88d7865cce9652e08c2c9de6f7.html#af81c8a88d7865cce9652e08c2c9de6f7" title="fonction creant la table points dans la base de donnée">initPointsTable</a>();
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="preprocessor">#endif // DATA_POINTS_H</span>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

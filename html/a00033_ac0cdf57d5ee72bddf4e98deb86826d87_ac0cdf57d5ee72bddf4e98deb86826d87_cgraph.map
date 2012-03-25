@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="347,11,493,40"/>
+<area shape="rect" id="node7" href="$a00024_a4489eb5551004a5fd5ef5920b1c10ce0.html#a4489eb5551004a5fd5ef5920b1c10ce0" title="fonction : retourne le nom de la categorie en fonction de l&#39;identifiant" alt="" coords="176,36,299,66"/>
+<area shape="rect" id="node10" href="$a00013_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="191,90,284,119"/>
+<area shape="rect" id="node12" href="$a00013_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="195,143,280,172"/>
+<area shape="rect" id="node14" href="$a00013_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="189,196,285,226"/>
+<area shape="rect" id="node16" href="$a00013_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="184,250,291,279"/>
+<area shape="rect" id="node5" href="$a00006_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="541,11,677,40"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00004_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="580,42,673,71"/>
+<area shape="rect" id="node11" href="$a00027_ac273e7f12452330543253a1d3a5727b2.html#ac273e7f12452330543253a1d3a5727b2" title="fonction : export la base de donnee dans un fichier au format csv" alt="" coords="196,42,281,71"/>
+<area shape="rect" id="node16" href="$a00004_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="368,95,531,125"/>
+<area shape="rect" id="node19" href="$a00001_a545079c32aa55c781531c23380f05d47.html#a545079c32aa55c781531c23380f05d47" title="::~application()" alt="" coords="157,146,320,175"/>
+<area shape="rect" id="node5" href="$a00004_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="727,15,873,45"/>
+<area shape="rect" id="node8" href="$a00004_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="724,69,876,98"/>
+<area shape="rect" id="node13" href="$a00004_a917a730085cc0ae242a8b5cc6833895c.html#a917a730085cc0ae242a8b5cc6833895c" title="Carte::exportCSV" alt="" coords="387,42,512,71"/>
+</map>

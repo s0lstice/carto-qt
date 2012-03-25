@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>cartographie:  Fichier source de montrerpoint.h</title>
+<title>Cartographie de lieux:  Fichier source de montrerpoint.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">cartographie</div>
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
   </td>
  </tr>
  </tbody>
@@ -28,7 +28,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -51,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Portée&#160;globale</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -64,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define MONTRERPOINT_H</span>
 <a name="l00012"></a>00012 <span class="preprocessor"></span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QDialog&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QtGui&gt;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QMapControl/qmapcontrol.h&gt;</span>
@@ -73,31 +73,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00020"></a>00020 <span class="preprocessor">#include &lt;QPointF&gt;</span>
 <a name="l00021"></a>00021 <span class="preprocessor">#include &lt;QSqlRelationalTableModel&gt;</span>
 <a name="l00022"></a>00022 <span class="preprocessor">#include &lt;QSqlRelationalDelegate&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point.">POI.h</a>&quot;</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="edit__point__gui_8h.html" title="Fenetre gerant l&#39;edition de la base de donnee.">edit_point_gui.h</a>&quot;</span>
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="keyword">using namespace </span>qmapcontrol;
 <a name="l00029"></a>00029 <span class="keyword">namespace </span>Ui {
-<a name="l00030"></a>00030 <span class="keyword">class </span><a class="code" href="class_montrer_point.html">MontrerPoint</a>;
+<a name="l00030"></a>00030 <span class="keyword">class </span><a class="code" href="classMontrerPoint.html">MontrerPoint</a>;
 <a name="l00031"></a>00031 }
 <a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="class_montrer_point.html">00033</a> <span class="keyword">class </span><a class="code" href="class_montrer_point.html">MontrerPoint</a> : <span class="keyword">public</span> QDialog
+<a name="l00033"></a><a class="code" href="classMontrerPoint.html">00033</a> <span class="keyword">class </span><a class="code" href="classMontrerPoint.html">MontrerPoint</a> : <span class="keyword">public</span> QDialog
 <a name="l00034"></a>00034 {
 <a name="l00035"></a>00035     Q_OBJECT
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">public</span>:
-<a name="l00038"></a>00038     <span class="keyword">explicit</span> <a class="code" href="class_montrer_point.html">MontrerPoint</a>(<a class="code" href="class_p_o_i.html">POI</a> PointDInteret,QWidget *parent = 0);
-<a name="l00039"></a>00039     ~<a class="code" href="class_montrer_point.html">MontrerPoint</a>();
+<a name="l00038"></a>00038     <span class="keyword">explicit</span> <a class="code" href="classMontrerPoint.html">MontrerPoint</a>(<a class="code" href="classPOI.html">POI</a> PointDInteret,QWidget *parent = 0);
+<a name="l00039"></a>00039     ~<a class="code" href="classMontrerPoint.html">MontrerPoint</a>();
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">private</span>:
-<a name="l00042"></a><a class="code" href="class_montrer_point.html#a9123a5a1b243b317c7fc304d3369c627">00042</a>     <a class="code" href="class_ui_1_1_montrer_point.html">Ui::MontrerPoint</a> *<a class="code" href="class_montrer_point.html#a9123a5a1b243b317c7fc304d3369c627">ui</a>;
-<a name="l00043"></a><a class="code" href="class_montrer_point.html#affc6380442814816351fcf5292d38b09">00043</a>     MapControl* <a class="code" href="class_montrer_point.html#affc6380442814816351fcf5292d38b09">mc</a>;
-<a name="l00044"></a><a class="code" href="class_montrer_point.html#a208344dba9b0c26e6386c3895eb74699">00044</a>     MapAdapter* <a class="code" href="class_montrer_point.html#a208344dba9b0c26e6386c3895eb74699">mapadapter</a>;
-<a name="l00045"></a><a class="code" href="class_montrer_point.html#a2394f46f1f84a48590fe9609094da1b8">00045</a>     Layer* <a class="code" href="class_montrer_point.html#a2394f46f1f84a48590fe9609094da1b8">mainlayer</a>;
-<a name="l00046"></a><a class="code" href="class_montrer_point.html#a8bd850181237ef293f31694834573fb1">00046</a>     QSqlRelationalTableModel *<a class="code" href="class_montrer_point.html#a8bd850181237ef293f31694834573fb1">modelheures</a>;
-<a name="l00047"></a><a class="code" href="class_montrer_point.html#a1659c8efc2e4dbb7e136410375abb077">00047</a>     <a class="code" href="class_p_o_i.html">POI</a> <a class="code" href="class_montrer_point.html#a1659c8efc2e4dbb7e136410375abb077">PointDInteretA</a>;
+<a name="l00042"></a><a class="code" href="classMontrerPoint_a9123a5a1b243b317c7fc304d3369c627.html#a9123a5a1b243b317c7fc304d3369c627">00042</a>     <a class="code" href="classUi_1_1MontrerPoint.html">Ui::MontrerPoint</a> *<a class="code" href="classMontrerPoint_a9123a5a1b243b317c7fc304d3369c627.html#a9123a5a1b243b317c7fc304d3369c627">ui</a>;
+<a name="l00043"></a><a class="code" href="classMontrerPoint_affc6380442814816351fcf5292d38b09.html#affc6380442814816351fcf5292d38b09">00043</a>     MapControl* <a class="code" href="classMontrerPoint_affc6380442814816351fcf5292d38b09.html#affc6380442814816351fcf5292d38b09">mc</a>;
+<a name="l00044"></a><a class="code" href="classMontrerPoint_a208344dba9b0c26e6386c3895eb74699.html#a208344dba9b0c26e6386c3895eb74699">00044</a>     MapAdapter* <a class="code" href="classMontrerPoint_a208344dba9b0c26e6386c3895eb74699.html#a208344dba9b0c26e6386c3895eb74699">mapadapter</a>;
+<a name="l00045"></a><a class="code" href="classMontrerPoint_a2394f46f1f84a48590fe9609094da1b8.html#a2394f46f1f84a48590fe9609094da1b8">00045</a>     Layer* <a class="code" href="classMontrerPoint_a2394f46f1f84a48590fe9609094da1b8.html#a2394f46f1f84a48590fe9609094da1b8">mainlayer</a>;
+<a name="l00046"></a><a class="code" href="classMontrerPoint_a8bd850181237ef293f31694834573fb1.html#a8bd850181237ef293f31694834573fb1">00046</a>     QSqlRelationalTableModel *<a class="code" href="classMontrerPoint_a8bd850181237ef293f31694834573fb1.html#a8bd850181237ef293f31694834573fb1">modelheures</a>;
+<a name="l00047"></a><a class="code" href="classMontrerPoint_a1659c8efc2e4dbb7e136410375abb077.html#a1659c8efc2e4dbb7e136410375abb077">00047</a>     <a class="code" href="classPOI.html">POI</a> <a class="code" href="classMontrerPoint_a1659c8efc2e4dbb7e136410375abb077.html#a1659c8efc2e4dbb7e136410375abb077">PointDInteretA</a>;
 <a name="l00048"></a>00048 <span class="keyword">private</span> slots:
 <a name="l00049"></a>00049     <span class="keywordtype">void</span> modification();
 <a name="l00050"></a>00050 };
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Fri Mar 23 2012 01:25:27 pour cartographie par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 00:40:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

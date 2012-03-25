@@ -1,5 +1,5 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$data__categories_8h.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="12,83,137,112"/>
 <area shape="rect" id="node5" href="$database_8h.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="32,160,117,189"/>
-<area shape="rect" id="node9" href="$_p_o_i_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="87,237,143,267"/>
+<area shape="rect" id="node9" href="$POI_8h.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="87,237,143,267"/>
 </map>

@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classCarte_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c" title="Carte::addPointThread" alt="" coords="164,57,316,87"/>
+<area shape="rect" id="node17" href="$classPOI_a21c3cf3a3e3a220a9a926b1b108626fb.html#a21c3cf3a3e3a220a9a926b1b108626fb" title="POI::GetCat" alt="" coords="193,111,287,140"/>
+<area shape="rect" id="node19" href="$classPOI_aa5b4a4a635f1cf7b096d0610a683cf29.html#aa5b4a4a635f1cf7b096d0610a683cf29" title="POI::Getlat" alt="" coords="196,164,284,193"/>
+<area shape="rect" id="node21" href="$classPOI_a991a068f59ee5df1a8695d982f79863f.html#a991a068f59ee5df1a8695d982f79863f" title="POI::Getlon" alt="" coords="195,217,285,247"/>
+<area shape="rect" id="node23" href="$classPOI_a1c2e342a9f0d189ec2a7f376d3cd6b03.html#a1c2e342a9f0d189ec2a7f376d3cd6b03" title="POI::GetName" alt="" coords="185,271,295,300"/>
+<area shape="rect" id="node25" href="$classPOI_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12" title="POI::SetCat" alt="" coords="193,324,287,353"/>
+<area shape="rect" id="node27" href="$classPOI_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002" title="POI::Setlat" alt="" coords="197,377,283,407"/>
+<area shape="rect" id="node29" href="$classPOI_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246" title="POI::Setlong" alt="" coords="192,431,288,460"/>
+<area shape="rect" id="node31" href="$classPOI_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e" title="POI::SetName" alt="" coords="187,484,293,513"/>
+<area shape="rect" id="node5" href="$data__points_8cpp_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée" alt="" coords="367,57,439,87"/>
+<area shape="rect" id="node7" href="$data__categories_8cpp_a5470005e0fdf270b455aec1bce4d7a11.html#a5470005e0fdf270b455aec1bce4d7a11" title="fonction : ajoute la categorie passe en parametre" alt="" coords="519,5,617,35"/>
+<area shape="rect" id="node9" href="$classdatabase_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="696,57,843,87"/>
+<area shape="rect" id="node14" href="$data__categories_8cpp_a9bf9ac909e82f3606111afd05c6fd0cb.html#a9bf9ac909e82f3606111afd05c6fd0cb" title="fonction : retourne l&#39;identifiant de la categorie en fonction de son nom" alt="" coords="489,109,647,139"/>
+<area shape="rect" id="node11" href="$classdatabase_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="891,57,1027,87"/>
+</map>

@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux:  Fichier source de ui_edition_point.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">ui_edition_point.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00048.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/********************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment">** Form generated from reading UI file &#39;edition_point.ui&#39;</span>
+<a name="l00003"></a>00003 <span class="comment">**</span>
+<a name="l00004"></a>00004 <span class="comment">** Created: Thu 22. Mar 06:45:07 2012</span>
+<a name="l00005"></a>00005 <span class="comment">**      by: Qt User Interface Compiler version 4.8.0</span>
+<a name="l00006"></a>00006 <span class="comment">**</span>
+<a name="l00007"></a>00007 <span class="comment">** WARNING! All changes made in this file will be lost when recompiling UI file!</span>
+<a name="l00008"></a>00008 <span class="comment">********************************************************************************/</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef UI_EDITION_POINT_H</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define UI_EDITION_POINT_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QtGui/QAction&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;QtGui/QApplication&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QtGui/QButtonGroup&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QtGui/QComboBox&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;QtGui/QDialog&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;QtGui/QDoubleSpinBox&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;QtGui/QGroupBox&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;QtGui/QHeaderView&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;QtGui/QLabel&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;QtGui/QLineEdit&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;QtGui/QPlainTextEdit&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;QtGui/QPushButton&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;QtGui/QTableView&gt;</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 QT_BEGIN_NAMESPACE
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="a00016.html">00030</a> <span class="keyword">class </span><a class="code" href="a00016.html">Ui_edit_point</a>
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032 <span class="keyword">public</span>:
+<a name="l00033"></a><a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">00033</a>     QGroupBox *<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>;
+<a name="l00034"></a><a class="code" href="a00016_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">00034</a>     QLineEdit *<a class="code" href="a00016_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>;
+<a name="l00035"></a><a class="code" href="a00016_a15a76084f630538c16b195d3b583ce33.html#a15a76084f630538c16b195d3b583ce33">00035</a>     QLabel *<a class="code" href="a00016_a15a76084f630538c16b195d3b583ce33.html#a15a76084f630538c16b195d3b583ce33">point_name_lab</a>;
+<a name="l00036"></a><a class="code" href="a00016_a6e54c58ac7b32fe713d6965e5829f17e.html#a6e54c58ac7b32fe713d6965e5829f17e">00036</a>     QLabel *<a class="code" href="a00016_a6e54c58ac7b32fe713d6965e5829f17e.html#a6e54c58ac7b32fe713d6965e5829f17e">categorie_point_lab</a>;
+<a name="l00037"></a><a class="code" href="a00016_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">00037</a>     QComboBox *<a class="code" href="a00016_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>;
+<a name="l00038"></a><a class="code" href="a00016_ae75bca78821b607d14b6b236fa0b2eef.html#ae75bca78821b607d14b6b236fa0b2eef">00038</a>     QLabel *<a class="code" href="a00016_ae75bca78821b607d14b6b236fa0b2eef.html#ae75bca78821b607d14b6b236fa0b2eef">lat_point_lab</a>;
+<a name="l00039"></a><a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">00039</a>     QDoubleSpinBox *<a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>;
+<a name="l00040"></a><a class="code" href="a00016_a200c11b56fffc2f962a54bbc01d3a1c0.html#a200c11b56fffc2f962a54bbc01d3a1c0">00040</a>     QLabel *<a class="code" href="a00016_a200c11b56fffc2f962a54bbc01d3a1c0.html#a200c11b56fffc2f962a54bbc01d3a1c0">Lon_point_lab</a>;
+<a name="l00041"></a><a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">00041</a>     QDoubleSpinBox *<a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>;
+<a name="l00042"></a><a class="code" href="a00016_aaa7283b8b84dafe09f013b5839273e0e.html#aaa7283b8b84dafe09f013b5839273e0e">00042</a>     QLabel *<a class="code" href="a00016_aaa7283b8b84dafe09f013b5839273e0e.html#aaa7283b8b84dafe09f013b5839273e0e">decription_point_lab</a>;
+<a name="l00043"></a><a class="code" href="a00016_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">00043</a>     QPlainTextEdit *<a class="code" href="a00016_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>;
+<a name="l00044"></a><a class="code" href="a00016_acdf8c9accc0c25f873f84ddfdcbfb631.html#acdf8c9accc0c25f873f84ddfdcbfb631">00044</a>     QPushButton *<a class="code" href="a00016_acdf8c9accc0c25f873f84ddfdcbfb631.html#acdf8c9accc0c25f873f84ddfdcbfb631">categorie_point_but</a>;
+<a name="l00045"></a><a class="code" href="a00016_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">00045</a>     QPushButton *<a class="code" href="a00016_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a>;
+<a name="l00046"></a><a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">00046</a>     QGroupBox *<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>;
+<a name="l00047"></a><a class="code" href="a00016_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">00047</a>     QTableView *<a class="code" href="a00016_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>;
+<a name="l00048"></a><a class="code" href="a00016_a90d60ca1dbf173c1b5559e1e00b2d327.html#a90d60ca1dbf173c1b5559e1e00b2d327">00048</a>     QLabel *<a class="code" href="a00016_a90d60ca1dbf173c1b5559e1e00b2d327.html#a90d60ca1dbf173c1b5559e1e00b2d327">jour_heur_lab</a>;
+<a name="l00049"></a><a class="code" href="a00016_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">00049</a>     QComboBox *<a class="code" href="a00016_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>;
+<a name="l00050"></a><a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">00050</a>     QLabel *<a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">plage_heur</a>;
+<a name="l00051"></a><a class="code" href="a00016_a86b1210a5276097a91e02be93af71952.html#a86b1210a5276097a91e02be93af71952">00051</a>     QLabel *<a class="code" href="a00016_a86b1210a5276097a91e02be93af71952.html#a86b1210a5276097a91e02be93af71952">label</a>;
+<a name="l00052"></a><a class="code" href="a00016_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">00052</a>     QPushButton *<a class="code" href="a00016_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>;
+<a name="l00053"></a><a class="code" href="a00016_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">00053</a>     QPushButton *<a class="code" href="a00016_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>;
+<a name="l00054"></a><a class="code" href="a00016_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">00054</a>     QPushButton *<a class="code" href="a00016_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>;
+<a name="l00055"></a><a class="code" href="a00016_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">00055</a>     QLineEdit *<a class="code" href="a00016_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>;
+<a name="l00056"></a><a class="code" href="a00016_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">00056</a>     QLineEdit *<a class="code" href="a00016_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>;
+<a name="l00057"></a><a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">00057</a>     QGroupBox *<a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>;
+<a name="l00058"></a><a class="code" href="a00016_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">00058</a>     QPushButton *<a class="code" href="a00016_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a>;
+<a name="l00059"></a><a class="code" href="a00016_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">00059</a>     QPushButton *<a class="code" href="a00016_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a>;
+<a name="l00060"></a><a class="code" href="a00016_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">00060</a>     QTableView *<a class="code" href="a00016_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>;
+<a name="l00061"></a><a class="code" href="a00016_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">00061</a>     QPushButton *<a class="code" href="a00016_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="a00016_a48ec337d2706b2922cf8036065770e68.html#a48ec337d2706b2922cf8036065770e68">00063</a>     <span class="keywordtype">void</span> <a class="code" href="a00016_a48ec337d2706b2922cf8036065770e68.html#a48ec337d2706b2922cf8036065770e68">setupUi</a>(QDialog *edit_point)
+<a name="l00064"></a>00064     {
+<a name="l00065"></a>00065         <span class="keywordflow">if</span> (edit_point-&gt;objectName().isEmpty())
+<a name="l00066"></a>00066             edit_point-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;edit_point&quot;</span>));
+<a name="l00067"></a>00067         edit_point-&gt;resize(831, 519);
+<a name="l00068"></a>00068         <a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a> = <span class="keyword">new</span> QGroupBox(edit_point);
+<a name="l00069"></a>00069         <a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;Point&quot;</span>));
+<a name="l00070"></a>00070         <a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>-&gt;setGeometry(QRect(10, 190, 411, 321));
+<a name="l00071"></a>00071         <a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>-&gt;setFlat(<span class="keyword">false</span>);
+<a name="l00072"></a>00072         <a class="code" href="a00016_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00073"></a>00073         <a class="code" href="a00016_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;nom_point&quot;</span>));
+<a name="l00074"></a>00074         <a class="code" href="a00016_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>-&gt;setGeometry(QRect(92, 30, 311, 27));
+<a name="l00075"></a>00075         <a class="code" href="a00016_a15a76084f630538c16b195d3b583ce33.html#a15a76084f630538c16b195d3b583ce33">point_name_lab</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00076"></a>00076         <a class="code" href="a00016_a15a76084f630538c16b195d3b583ce33.html#a15a76084f630538c16b195d3b583ce33">point_name_lab</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;point_name_lab&quot;</span>));
+<a name="l00077"></a>00077         <a class="code" href="a00016_a15a76084f630538c16b195d3b583ce33.html#a15a76084f630538c16b195d3b583ce33">point_name_lab</a>-&gt;setGeometry(QRect(10, 36, 91, 16));
+<a name="l00078"></a>00078         <a class="code" href="a00016_a6e54c58ac7b32fe713d6965e5829f17e.html#a6e54c58ac7b32fe713d6965e5829f17e">categorie_point_lab</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00079"></a>00079         <a class="code" href="a00016_a6e54c58ac7b32fe713d6965e5829f17e.html#a6e54c58ac7b32fe713d6965e5829f17e">categorie_point_lab</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;categorie_point_lab&quot;</span>));
+<a name="l00080"></a>00080         <a class="code" href="a00016_a6e54c58ac7b32fe713d6965e5829f17e.html#a6e54c58ac7b32fe713d6965e5829f17e">categorie_point_lab</a>-&gt;setGeometry(QRect(10, 66, 81, 17));
+<a name="l00081"></a>00081         <a class="code" href="a00016_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a> = <span class="keyword">new</span> QComboBox(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00082"></a>00082         <a class="code" href="a00016_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;categorie_point&quot;</span>));
+<a name="l00083"></a>00083         <a class="code" href="a00016_aee5b61224908df8e24331510c8334f0e.html#aee5b61224908df8e24331510c8334f0e">categorie_point</a>-&gt;setGeometry(QRect(92, 60, 141, 27));
+<a name="l00084"></a>00084         <a class="code" href="a00016_ae75bca78821b607d14b6b236fa0b2eef.html#ae75bca78821b607d14b6b236fa0b2eef">lat_point_lab</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00085"></a>00085         <a class="code" href="a00016_ae75bca78821b607d14b6b236fa0b2eef.html#ae75bca78821b607d14b6b236fa0b2eef">lat_point_lab</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lat_point_lab&quot;</span>));
+<a name="l00086"></a>00086         <a class="code" href="a00016_ae75bca78821b607d14b6b236fa0b2eef.html#ae75bca78821b607d14b6b236fa0b2eef">lat_point_lab</a>-&gt;setGeometry(QRect(10, 97, 91, 17));
+<a name="l00087"></a>00087         <a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a> = <span class="keyword">new</span> QDoubleSpinBox(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00088"></a>00088         <a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lat_point&quot;</span>));
+<a name="l00089"></a>00089         <a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setGeometry(QRect(92, 91, 141, 27));
+<a name="l00090"></a>00090         <a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setDecimals(5);
+<a name="l00091"></a>00091         <a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setMinimum(-100);
+<a name="l00092"></a>00092         <a class="code" href="a00016_adc6f43c003bf8bf9a0a8d9e38ff9a434.html#adc6f43c003bf8bf9a0a8d9e38ff9a434">lat_point</a>-&gt;setMaximum(100);
+<a name="l00093"></a>00093         <a class="code" href="a00016_a200c11b56fffc2f962a54bbc01d3a1c0.html#a200c11b56fffc2f962a54bbc01d3a1c0">Lon_point_lab</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00094"></a>00094         <a class="code" href="a00016_a200c11b56fffc2f962a54bbc01d3a1c0.html#a200c11b56fffc2f962a54bbc01d3a1c0">Lon_point_lab</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;Lon_point_lab&quot;</span>));
+<a name="l00095"></a>00095         <a class="code" href="a00016_a200c11b56fffc2f962a54bbc01d3a1c0.html#a200c11b56fffc2f962a54bbc01d3a1c0">Lon_point_lab</a>-&gt;setGeometry(QRect(10, 127, 91, 17));
+<a name="l00096"></a>00096         <a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a> = <span class="keyword">new</span> QDoubleSpinBox(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00097"></a>00097         <a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lon_point&quot;</span>));
+<a name="l00098"></a>00098         <a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setGeometry(QRect(92, 122, 141, 27));
+<a name="l00099"></a>00099         <a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setDecimals(5);
+<a name="l00100"></a>00100         <a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setMinimum(-100);
+<a name="l00101"></a>00101         <a class="code" href="a00016_acb880df8b1bb2a6b60213e3f742f07cd.html#acb880df8b1bb2a6b60213e3f742f07cd">lon_point</a>-&gt;setMaximum(100);
+<a name="l00102"></a>00102         <a class="code" href="a00016_aaa7283b8b84dafe09f013b5839273e0e.html#aaa7283b8b84dafe09f013b5839273e0e">decription_point_lab</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00103"></a>00103         <a class="code" href="a00016_aaa7283b8b84dafe09f013b5839273e0e.html#aaa7283b8b84dafe09f013b5839273e0e">decription_point_lab</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;decription_point_lab&quot;</span>));
+<a name="l00104"></a>00104         <a class="code" href="a00016_aaa7283b8b84dafe09f013b5839273e0e.html#aaa7283b8b84dafe09f013b5839273e0e">decription_point_lab</a>-&gt;setGeometry(QRect(10, 160, 81, 17));
+<a name="l00105"></a>00105         <a class="code" href="a00016_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a> = <span class="keyword">new</span> QPlainTextEdit(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00106"></a>00106         <a class="code" href="a00016_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;description_point&quot;</span>));
+<a name="l00107"></a>00107         <a class="code" href="a00016_a7f4ac27a312be53c3e1f65c34d9d00d0.html#a7f4ac27a312be53c3e1f65c34d9d00d0">description_point</a>-&gt;setGeometry(QRect(93, 154, 311, 161));
+<a name="l00108"></a>00108         <a class="code" href="a00016_acdf8c9accc0c25f873f84ddfdcbfb631.html#acdf8c9accc0c25f873f84ddfdcbfb631">categorie_point_but</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00109"></a>00109         <a class="code" href="a00016_acdf8c9accc0c25f873f84ddfdcbfb631.html#acdf8c9accc0c25f873f84ddfdcbfb631">categorie_point_but</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;categorie_point_but&quot;</span>));
+<a name="l00110"></a>00110         <a class="code" href="a00016_acdf8c9accc0c25f873f84ddfdcbfb631.html#acdf8c9accc0c25f873f84ddfdcbfb631">categorie_point_but</a>-&gt;setGeometry(QRect(240, 60, 161, 30));
+<a name="l00111"></a>00111         <a class="code" href="a00016_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>);
+<a name="l00112"></a>00112         <a class="code" href="a00016_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;BouttonPosition&quot;</span>));
+<a name="l00113"></a>00113         <a class="code" href="a00016_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a>-&gt;setGeometry(QRect(240, 106, 161, 30));
+<a name="l00114"></a>00114         <a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a> = <span class="keyword">new</span> QGroupBox(edit_point);
+<a name="l00115"></a>00115         <a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;heures_point_box&quot;</span>));
+<a name="l00116"></a>00116         <a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>-&gt;setGeometry(QRect(420, 190, 401, 331));
+<a name="l00117"></a>00117         <a class="code" href="a00016_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a> = <span class="keyword">new</span> QTableView(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00118"></a>00118         <a class="code" href="a00016_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;viewheures&quot;</span>));
+<a name="l00119"></a>00119         <a class="code" href="a00016_abe6c90d63139ea355d85c5df02227c52.html#abe6c90d63139ea355d85c5df02227c52">viewheures</a>-&gt;setGeometry(QRect(10, 30, 381, 191));
+<a name="l00120"></a>00120         <a class="code" href="a00016_a90d60ca1dbf173c1b5559e1e00b2d327.html#a90d60ca1dbf173c1b5559e1e00b2d327">jour_heur_lab</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00121"></a>00121         <a class="code" href="a00016_a90d60ca1dbf173c1b5559e1e00b2d327.html#a90d60ca1dbf173c1b5559e1e00b2d327">jour_heur_lab</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;jour_heur_lab&quot;</span>));
+<a name="l00122"></a>00122         <a class="code" href="a00016_a90d60ca1dbf173c1b5559e1e00b2d327.html#a90d60ca1dbf173c1b5559e1e00b2d327">jour_heur_lab</a>-&gt;setGeometry(QRect(10, 230, 131, 17));
+<a name="l00123"></a>00123         <a class="code" href="a00016_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a> = <span class="keyword">new</span> QComboBox(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00124"></a>00124         <a class="code" href="a00016_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;jour_heur&quot;</span>));
+<a name="l00125"></a>00125         <a class="code" href="a00016_a449b0a9eb193f684f5c71338cdc67e85.html#a449b0a9eb193f684f5c71338cdc67e85">jour_heur</a>-&gt;setGeometry(QRect(120, 225, 261, 27));
+<a name="l00126"></a>00126         <a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">plage_heur</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00127"></a>00127         <a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">plage_heur</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;plage_heur&quot;</span>));
+<a name="l00128"></a>00128         <a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">plage_heur</a>-&gt;setGeometry(QRect(10, 260, 101, 17));
+<a name="l00129"></a>00129         <a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">plage_heur</a>-&gt;setFrameShape(QFrame::NoFrame);
+<a name="l00130"></a>00130         <a class="code" href="a00016_a86b1210a5276097a91e02be93af71952.html#a86b1210a5276097a91e02be93af71952">label</a> = <span class="keyword">new</span> QLabel(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00131"></a>00131         <a class="code" href="a00016_a86b1210a5276097a91e02be93af71952.html#a86b1210a5276097a91e02be93af71952">label</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label&quot;</span>));
+<a name="l00132"></a>00132         <a class="code" href="a00016_a86b1210a5276097a91e02be93af71952.html#a86b1210a5276097a91e02be93af71952">label</a>-&gt;setGeometry(QRect(250, 260, 16, 17));
+<a name="l00133"></a>00133         <a class="code" href="a00016_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00134"></a>00134         <a class="code" href="a00016_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;jout_heur&quot;</span>));
+<a name="l00135"></a>00135         <a class="code" href="a00016_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>-&gt;setGeometry(QRect(10, 290, 121, 27));
+<a name="l00136"></a>00136         <a class="code" href="a00016_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00137"></a>00137         <a class="code" href="a00016_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;supr_heur&quot;</span>));
+<a name="l00138"></a>00138         <a class="code" href="a00016_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>-&gt;setGeometry(QRect(150, 290, 121, 27));
+<a name="l00139"></a>00139         <a class="code" href="a00016_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00140"></a>00140         <a class="code" href="a00016_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;submit_heure&quot;</span>));
+<a name="l00141"></a>00141         <a class="code" href="a00016_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>-&gt;setGeometry(QRect(290, 290, 111, 27));
+<a name="l00142"></a>00142         <a class="code" href="a00016_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00143"></a>00143         <a class="code" href="a00016_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;debut_heur&quot;</span>));
+<a name="l00144"></a>00144         <a class="code" href="a00016_a1411288cced40433d2ed958da096639a.html#a1411288cced40433d2ed958da096639a">debut_heur</a>-&gt;setGeometry(QRect(120, 257, 113, 27));
+<a name="l00145"></a>00145         <a class="code" href="a00016_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a> = <span class="keyword">new</span> QLineEdit(<a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>);
+<a name="l00146"></a>00146         <a class="code" href="a00016_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;fin_heur&quot;</span>));
+<a name="l00147"></a>00147         <a class="code" href="a00016_ab452a72630766328b1ea3e29c4afa1df.html#ab452a72630766328b1ea3e29c4afa1df">fin_heur</a>-&gt;setGeometry(QRect(269, 257, 113, 27));
+<a name="l00148"></a>00148         <a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a> = <span class="keyword">new</span> QGroupBox(edit_point);
+<a name="l00149"></a>00149         <a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;groupBox&quot;</span>));
+<a name="l00150"></a>00150         <a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>-&gt;setGeometry(QRect(10, 10, 811, 181));
+<a name="l00151"></a>00151         <a class="code" href="a00016_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>);
+<a name="l00152"></a>00152         <a class="code" href="a00016_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;supr_point&quot;</span>));
+<a name="l00153"></a>00153         <a class="code" href="a00016_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a>-&gt;setGeometry(QRect(670, 80, 121, 27));
+<a name="l00154"></a>00154         <a class="code" href="a00016_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>);
+<a name="l00155"></a>00155         <a class="code" href="a00016_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;jout_point&quot;</span>));
+<a name="l00156"></a>00156         <a class="code" href="a00016_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a>-&gt;setGeometry(QRect(670, 40, 121, 27));
+<a name="l00157"></a>00157         <a class="code" href="a00016_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a> = <span class="keyword">new</span> QTableView(<a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>);
+<a name="l00158"></a>00158         <a class="code" href="a00016_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;table_point&quot;</span>));
+<a name="l00159"></a>00159         <a class="code" href="a00016_ab9e60dc37d41e61669923f34cd438ea4.html#ab9e60dc37d41e61669923f34cd438ea4">table_point</a>-&gt;setGeometry(QRect(10, 20, 641, 151));
+<a name="l00160"></a>00160         <a class="code" href="a00016_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a> = <span class="keyword">new</span> QPushButton(<a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>);
+<a name="l00161"></a>00161         <a class="code" href="a00016_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a>-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;submit_point&quot;</span>));
+<a name="l00162"></a>00162         <a class="code" href="a00016_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a>-&gt;setGeometry(QRect(670, 120, 121, 27));
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164         <a class="code" href="a00016_ab3b3a1c61ac1be4e51c6b6e1138d6b47.html#ab3b3a1c61ac1be4e51c6b6e1138d6b47">retranslateUi</a>(edit_point);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         QMetaObject::connectSlotsByName(edit_point);
+<a name="l00167"></a>00167     } <span class="comment">// setupUi</span>
+<a name="l00168"></a>00168 
+<a name="l00169"></a><a class="code" href="a00016_ab3b3a1c61ac1be4e51c6b6e1138d6b47.html#ab3b3a1c61ac1be4e51c6b6e1138d6b47">00169</a>     <span class="keywordtype">void</span> <a class="code" href="a00016_ab3b3a1c61ac1be4e51c6b6e1138d6b47.html#ab3b3a1c61ac1be4e51c6b6e1138d6b47">retranslateUi</a>(QDialog *edit_point)
+<a name="l00170"></a>00170     {
+<a name="l00171"></a>00171         edit_point-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Dialog&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00172"></a>00172         <a class="code" href="a00016_aaec98917ff5f91db1d9d38655795db3c.html#aaec98917ff5f91db1d9d38655795db3c">Point</a>-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Donn\303\251es du point :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00173"></a>00173         <a class="code" href="a00016_a82d9b50598ae297fdb7b0206c45df753.html#a82d9b50598ae297fdb7b0206c45df753">nom_point</a>-&gt;setText(QString());
+<a name="l00174"></a>00174         <a class="code" href="a00016_a15a76084f630538c16b195d3b583ce33.html#a15a76084f630538c16b195d3b583ce33">point_name_lab</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Nom :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00175"></a>00175         <a class="code" href="a00016_a6e54c58ac7b32fe713d6965e5829f17e.html#a6e54c58ac7b32fe713d6965e5829f17e">categorie_point_lab</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Categorie :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00176"></a>00176         <a class="code" href="a00016_ae75bca78821b607d14b6b236fa0b2eef.html#ae75bca78821b607d14b6b236fa0b2eef">lat_point_lab</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Latitude :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00177"></a>00177         <a class="code" href="a00016_a200c11b56fffc2f962a54bbc01d3a1c0.html#a200c11b56fffc2f962a54bbc01d3a1c0">Lon_point_lab</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Longitude : &quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00178"></a>00178         <a class="code" href="a00016_aaa7283b8b84dafe09f013b5839273e0e.html#aaa7283b8b84dafe09f013b5839273e0e">decription_point_lab</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;desciption :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00179"></a>00179         <a class="code" href="a00016_acdf8c9accc0c25f873f84ddfdcbfb631.html#acdf8c9accc0c25f873f84ddfdcbfb631">categorie_point_but</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Ajouter une categorie&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00180"></a>00180         <a class="code" href="a00016_a437b434d5b73b87cf188657f472d490d.html#a437b434d5b73b87cf188657f472d490d">BouttonPosition</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Position actuel&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00181"></a>00181         <a class="code" href="a00016_a314b2c7d68fc186d5bee9dec85ca8e4c.html#a314b2c7d68fc186d5bee9dec85ca8e4c">heures_point_box</a>-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Horaires du point :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00182"></a>00182         <a class="code" href="a00016_a90d60ca1dbf173c1b5559e1e00b2d327.html#a90d60ca1dbf173c1b5559e1e00b2d327">jour_heur_lab</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Jour :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00183"></a>00183         <a class="code" href="a00016_af2eae38736e746cb64ec989ab07680af.html#af2eae38736e746cb64ec989ab07680af">plage_heur</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Plage horaire  :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00184"></a>00184         <a class="code" href="a00016_a86b1210a5276097a91e02be93af71952.html#a86b1210a5276097a91e02be93af71952">label</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;-&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00185"></a>00185         <a class="code" href="a00016_a1c63ae7f18a0421a2d730f59d8828e3a.html#a1c63ae7f18a0421a2d730f59d8828e3a">jout_heur</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Ajouter &quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00186"></a>00186         <a class="code" href="a00016_a0c228edbe8b608bdad63624e0f56e329.html#a0c228edbe8b608bdad63624e0f56e329">supr_heur</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Supprimer&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00187"></a>00187         <a class="code" href="a00016_a229c464b248cd950d5f31b3c8a9276e4.html#a229c464b248cd950d5f31b3c8a9276e4">submit_heure</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;mettre \303\240 jour&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00188"></a>00188         <a class="code" href="a00016_abfaeb9bfeac9749a0dc90a35172dd115.html#abfaeb9bfeac9749a0dc90a35172dd115">groupBox</a>-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Points existant :&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00189"></a>00189         <a class="code" href="a00016_a9246fce7a89db9ff633f1d5492f46e87.html#a9246fce7a89db9ff633f1d5492f46e87">supr_point</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Supprimer&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00190"></a>00190         <a class="code" href="a00016_ad757be3f2a2fd02cb20dfe2d311da9cd.html#ad757be3f2a2fd02cb20dfe2d311da9cd">jout_point</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;Ajouter &quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00191"></a>00191         <a class="code" href="a00016_aecfc4820e5d7fbaa8f5b1eb744ca6dca.html#aecfc4820e5d7fbaa8f5b1eb744ca6dca">submit_point</a>-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;edit_point&quot;</span>, <span class="stringliteral">&quot;metre \303\240 jour&quot;</span>, 0, QApplication::UnicodeUTF8));
+<a name="l00192"></a>00192     } <span class="comment">// retranslateUi</span>
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194 };
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196 <span class="keyword">namespace </span>Ui {
+<a name="l00197"></a><a class="code" href="a00007.html">00197</a>     <span class="keyword">class </span><a class="code" href="a00007.html">edit_point</a>: <span class="keyword">public</span> <a class="code" href="a00016.html">Ui_edit_point</a> {};
+<a name="l00198"></a>00198 } <span class="comment">// namespace Ui</span>
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200 QT_END_NAMESPACE
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202 <span class="preprocessor">#endif // UI_EDITION_POINT_H</span>
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 01:06:24 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

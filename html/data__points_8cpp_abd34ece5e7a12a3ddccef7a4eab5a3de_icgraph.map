@@ -1,9 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_carte.html#ab681a8ee604483662f63665c3b1e50d5" title="Carte::ByCat" alt="" coords="400,5,499,35"/>
-<area shape="rect" id="node13" href="$class_carte.html#af4df96a9bef8e73e816ab139b8f65db6" title="Carte::Chercher" alt="" coords="176,57,291,87"/>
-<area shape="rect" id="node16" href="$class_carte.html#ab0e71abb5334a5426ca6b7b0eb386372" title="Carte::LoadingDBBDataA" alt="" coords="148,111,319,140"/>
-<area shape="rect" id="node5" href="$class_carte.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="580,57,673,87"/>
-<area shape="rect" id="node7" href="$class_carte.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="727,31,873,60"/>
-<area shape="rect" id="node10" href="$class_carte.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="724,84,876,113"/>
-<area shape="rect" id="node18" href="$class_carte.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="368,109,531,139"/>
+<area shape="rect" id="node3" href="$classCarte.html#ab681a8ee604483662f63665c3b1e50d5" title="Carte::ByCat" alt="" coords="400,5,499,35"/>
+<area shape="rect" id="node13" href="$classCarte.html#af4df96a9bef8e73e816ab139b8f65db6" title="Carte::Chercher" alt="" coords="176,57,291,87"/>
+<area shape="rect" id="node16" href="$classCarte.html#ab0e71abb5334a5426ca6b7b0eb386372" title="Carte::LoadingDBBDataA" alt="" coords="148,111,319,140"/>
+<area shape="rect" id="node5" href="$classCarte.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte." alt="" coords="580,57,673,87"/>
+<area shape="rect" id="node7" href="$classCarte.html#aa2e71ad13a26276509ed93dc4b68358b" title="Carte::langue_englais" alt="" coords="727,31,873,60"/>
+<area shape="rect" id="node10" href="$classCarte.html#a77b38f8463ffd5f2704ab1bb422540aa" title="Carte::langue_francais" alt="" coords="724,84,876,113"/>
+<area shape="rect" id="node18" href="$classCarte.html#ab7007bf53697bae886c686b90a84db80" title="Carte::LoadingDBBData" alt="" coords="368,109,531,139"/>
 </map>

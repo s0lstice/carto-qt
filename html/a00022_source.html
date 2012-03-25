@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Cartographie de lieux:  Fichier source de carte.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Cartographie de lieux&#160;<span id="projectnumber">0.1</span></div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">carte.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00022.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="a00023.html" title="Fenetre principale de l&#39;application.">carte.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="a00047.html">ui_carte.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QtGui&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QFormLayout&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;QNetworkRequest&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base.">askdatabase.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;QtConcurrentRun&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="a00035.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho...">database.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="a00033.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database.">data_points.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;QtXml&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;QFile&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;QString&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="a00037.html" title="Fenetre gerant l&#39;edition de la base de donnee.">edit_point_gui.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="a00027.html" title="Fonction d&#39;exportation de la base de donnee au format csv.">data_csv.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="a00019.html" title="classe Application. Initialise l&#39;application">application.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;QSettings&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="a00025.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database.">data_categories.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="a00031.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database.">data_jours.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="a00029.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database.">data_heures.h</a>&quot;</span>
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 
+<a name="l00038"></a><a class="code" href="a00004_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61">00038</a> <a class="code" href="a00004_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte.">Carte::Carte</a>(QWidget *parent) :QMainWindow(parent), ui(new Ui::<a class="code" href="a00004.html">Carte</a>)
+<a name="l00039"></a>00039 {
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041     <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=1;
+<a name="l00042"></a>00042     <a class="code" href="a00004_adbe9c9f0b59d64b225a366eab0826d67.html#adbe9c9f0b59d64b225a366eab0826d67">GestionnaireDeRequete</a> = <span class="keyword">new</span> QNetworkAccessManager();
+<a name="l00043"></a>00043     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a71c9da78123888b7e43332ea6ff8ef31.html#a71c9da78123888b7e43332ea6ff8ef31">setupUi</a>(<span class="keyword">this</span>);
+<a name="l00044"></a>00044     QVBoxLayout Temp;
+<a name="l00045"></a>00045     <a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a> = <span class="keyword">new</span> MapControl(QSize(480, 480));
+<a name="l00046"></a>00046     <a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>-&gt;showScale(<span class="keyword">true</span>);
+<a name="l00047"></a>00047     <a class="code" href="a00004_a6b6dd3dbcec762075c9e889af8380f8d.html#a6b6dd3dbcec762075c9e889af8380f8d">mapadapter</a> = <span class="keyword">new</span> OSMMapAdapter();
+<a name="l00048"></a>00048     <a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a> = <span class="keyword">new</span> MapLayer(<span class="stringliteral">&quot;OpenStreetMap-Layer&quot;</span>, <a class="code" href="a00004_a6b6dd3dbcec762075c9e889af8380f8d.html#a6b6dd3dbcec762075c9e889af8380f8d">mapadapter</a>);
+<a name="l00049"></a>00049     <a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>-&gt;addLayer(<a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a>);
+<a name="l00050"></a>00050     <a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>-&gt;setView(QPointF(2.33,48.86));
+<a name="l00051"></a>00051     <a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>-&gt;setZoom(13);
+<a name="l00052"></a>00052     Temp.addWidget(<a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>);
+<a name="l00053"></a>00053     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_ad323f9c45e698775cc8631f08ce328c8.html#ad323f9c45e698775cc8631f08ce328c8">MapWidget</a>-&gt;setLayout(&amp;Temp);
+<a name="l00054"></a>00054     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a439c686ba4e2df156e597249f21aeb53.html#a439c686ba4e2df156e597249f21aeb53">spinBox</a>,SIGNAL(valueChanged(<span class="keywordtype">int</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a94df4902e76bdb3576b2e27d5b9b3d57.html#a94df4902e76bdb3576b2e27d5b9b3d57">ModifNbPoint</a>(<span class="keywordtype">int</span>)));
+<a name="l00055"></a>00055     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aea73ad09f2aec4f89f8e7c51086f3464.html#aea73ad09f2aec4f89f8e7c51086f3464">verticalSlider</a>,SIGNAL(valueChanged(<span class="keywordtype">int</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a1a9520bb412647b8845abe985f51798e.html#a1a9520bb412647b8845abe985f51798e">PosLabel</a>(<span class="keywordtype">int</span>)));
+<a name="l00056"></a>00056     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aea73ad09f2aec4f89f8e7c51086f3464.html#aea73ad09f2aec4f89f8e7c51086f3464">verticalSlider</a>,SIGNAL(valueChanged(<span class="keywordtype">int</span>)),<a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>,SLOT(setZoom(<span class="keywordtype">int</span>)));
+<a name="l00057"></a>00057     connect(<a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>,SIGNAL(viewChanged(QPointF,<span class="keywordtype">int</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_adc796443eae536cbe05fbb18fbfa54bf.html#adc796443eae536cbe05fbb18fbfa54bf">ZoomInv</a>(QPointF,<span class="keywordtype">int</span>)));
+<a name="l00058"></a>00058     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a396fb8a21fa4cefe2c87075372a2ee17.html#a396fb8a21fa4cefe2c87075372a2ee17">actionQuitter</a>,SIGNAL(triggered()),<span class="keyword">this</span>,SLOT(close()));
+<a name="l00059"></a>00059     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aeec7d7ec68d1eb7502d8a8aa9f5d7181.html#aeec7d7ec68d1eb7502d8a8aa9f5d7181">actionChoix_BDD</a>,SIGNAL(triggered()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_afc9f6dae9773fce89d8b4a894d8bcc6c.html#afc9f6dae9773fce89d8b4a894d8bcc6c">choixBDD</a>()));
+<a name="l00060"></a>00060     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a25ff3e16935dab2ad04d4b88b3eadad6.html#a25ff3e16935dab2ad04d4b88b3eadad6">actionGestion_BDD</a>,SIGNAL(triggered()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a079dbf7d072f670b0a41fd11529fd115.html#a079dbf7d072f670b0a41fd11529fd115">gestionBDD</a>()));
+<a name="l00061"></a>00061     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>,SIGNAL(itemDoubleClicked(QListWidgetItem*)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a4676e76ceba5f4b897f7a7a0cbcc3c19.html#a4676e76ceba5f4b897f7a7a0cbcc3c19">ReponseQListClick</a>(QListWidgetItem*)));
+<a name="l00062"></a>00062     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a1df7bd3f0d2ac8ef01b43b088ae83b39.html#a1df7bd3f0d2ac8ef01b43b088ae83b39">actionExport_BDD</a>,SIGNAL(triggered()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a917a730085cc0ae242a8b5cc6833895c.html#a917a730085cc0ae242a8b5cc6833895c">exportCSV</a>()));
+<a name="l00063"></a>00063     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a6603565b140182119f0865d7f0b29f04.html#a6603565b140182119f0865d7f0b29f04">actionAnglais</a>,SIGNAL(triggered()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b">langue_englais</a>()));
+<a name="l00064"></a>00064     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a5c9e81db947f99ea83ef958043a39a3f.html#a5c9e81db947f99ea83ef958043a39a3f">actionFrancais</a>,SIGNAL(triggered()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa">langue_francais</a>()));
+<a name="l00065"></a>00065     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>,SIGNAL(currentIndexChanged(<span class="keywordtype">int</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_ab681a8ee604483662f63665c3b1e50d5.html#ab681a8ee604483662f63665c3b1e50d5">ByCat</a>(<span class="keywordtype">int</span>)));
+<a name="l00066"></a>00066     <span class="comment">//connect(ui-&gt;actionExport_BDD,SIGNAL(triggered()),this,SLOT(exportCSV()));</span>
+<a name="l00067"></a>00067     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a29828701f4775a7ee00d2d71ec72dace.html#a29828701f4775a7ee00d2d71ec72dace">lineEdit</a>,SIGNAL(textChanged(QString)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_af4df96a9bef8e73e816ab139b8f65db6.html#af4df96a9bef8e73e816ab139b8f65db6">Chercher</a>(QString)));
+<a name="l00068"></a>00068     connect(<a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a>,SIGNAL(geometryClicked(Geometry*,QPoint)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_abf355f4d7ce3cc7792d778e57f1a2c46.html#abf355f4d7ce3cc7792d778e57f1a2c46">ReponseGeometryClick</a>(Geometry*,QPoint)));
+<a name="l00069"></a>00069     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aebcee8ccb73255288e3621bf5a4bba8f.html#aebcee8ccb73255288e3621bf5a4bba8f">BouttonCentrer</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a23f49c62048a8d7b32d91375d128f625.html#a23f49c62048a8d7b32d91375d128f625">Centrer</a>()));
+<a name="l00070"></a>00070     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a72f7b5dd9cdc70f7a6fd1a1546174bef.html#a72f7b5dd9cdc70f7a6fd1a1546174bef">AutoDownLoad</a>,SIGNAL(stateChanged(<span class="keywordtype">int</span>)),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_a6dfd8ad4dff7484f5ae5fe782ed982aa.html#a6dfd8ad4dff7484f5ae5fe782ed982aa">AutoTelcharger</a>(<span class="keywordtype">int</span>)));
+<a name="l00071"></a>00071     connect(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a4159f33ac32d31e889d1efc4b96911da.html#a4159f33ac32d31e889d1efc4b96911da">BouttonTelecharger</a>,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_ac25be85b576e7d655754838268055c2e.html#ac25be85b576e7d655754838268055c2e">Telecharger</a>()));
+<a name="l00072"></a>00072     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;addItem(<span class="stringliteral">&quot;&quot;</span>);
+<a name="l00073"></a>00073     <a class="code" href="a00004_a4a4093db5371b906d3affe6d2deb6d69.html#a4a4093db5371b906d3affe6d2deb6d69">LectureBaseDDTimer</a> = <span class="keyword">new</span> QTimer();
+<a name="l00074"></a>00074     <a class="code" href="a00004_a4a4093db5371b906d3affe6d2deb6d69.html#a4a4093db5371b906d3affe6d2deb6d69">LectureBaseDDTimer</a>-&gt;setInterval(50);
+<a name="l00075"></a>00075     <a class="code" href="a00004_a4a4093db5371b906d3affe6d2deb6d69.html#a4a4093db5371b906d3affe6d2deb6d69">LectureBaseDDTimer</a>-&gt;start();
+<a name="l00076"></a>00076     connect(<a class="code" href="a00004_a4a4093db5371b906d3affe6d2deb6d69.html#a4a4093db5371b906d3affe6d2deb6d69">LectureBaseDDTimer</a>,SIGNAL(timeout()),<span class="keyword">this</span>,SLOT(<a class="code" href="a00004_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80">LoadingDBBData</a>()));
+<a name="l00077"></a>00077     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a439c686ba4e2df156e597249f21aeb53.html#a439c686ba4e2df156e597249f21aeb53">spinBox</a>-&gt;setValue(10);
+<a name="l00078"></a>00078     <a class="code" href="a00004_ada2f2b3376d02236c706b6760c0b5242.html#ada2f2b3376d02236c706b6760c0b5242">nbpstoshow</a> = 10 ;
+<a name="l00079"></a>00079     <span class="keywordtype">int</span> i ;
+<a name="l00080"></a>00080     <a class="code" href="a00032_af81c8a88d7865cce9652e08c2c9de6f7.html#af81c8a88d7865cce9652e08c2c9de6f7" title="fonction creant la table points dans la base de donnée">initPointsTable</a>();
+<a name="l00081"></a>00081     <a class="code" href="a00024_ac88bc1f40ebd488cb44ab192b365b6ca.html#ac88bc1f40ebd488cb44ab192b365b6ca" title="fonction : creant la table categories dans la base de donnée">initCategoriesTable</a>();
+<a name="l00082"></a>00082     <a class="code" href="a00030_a0e22631de0be04e1bd4c212e533e6091.html#a0e22631de0be04e1bd4c212e533e6091" title="fonction : creant la table heures dans la base de donnée">initJoursTable</a>();
+<a name="l00083"></a>00083     <a class="code" href="a00028_a4a044f655010bb22e0b584c10b407f18.html#a4a044f655010bb22e0b584c10b407f18" title="fonction : creant la table heures dans la base de donnée">initHeuresTable</a>();
+<a name="l00084"></a>00084     <a class="code" href="a00004_a4edb3d0cbcd43c28c72011fc21b0d4bc.html#a4edb3d0cbcd43c28c72011fc21b0d4bc">DLenable</a>=<span class="keyword">false</span>;
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086     QVector&lt;QString&gt; Categories = <a class="code" href="a00024_aae0ee7b6ed88b7f4a80f4852c51fb729.html#aae0ee7b6ed88b7f4a80f4852c51fb729" title="fonction : retourne un vecteur avec toutes les categories de la base de donnee">getCategories</a>();
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088     <span class="keywordflow">for</span>(i=0;i&lt;Categories.count();i++)
+<a name="l00089"></a>00089     {
+<a name="l00090"></a>00090         <span class="keywordflow">if</span>(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;findText(Categories.value(i))==-1)
+<a name="l00091"></a>00091         {
+<a name="l00092"></a>00092             <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;addItem(Categories.value(i));
+<a name="l00093"></a>00093         }
+<a name="l00094"></a>00094     }
+<a name="l00095"></a>00095 }
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="a00004_ac25be85b576e7d655754838268055c2e.html#ac25be85b576e7d655754838268055c2e">00097</a> <span class="keywordtype">void</span> <a class="code" href="a00004_ac25be85b576e7d655754838268055c2e.html#ac25be85b576e7d655754838268055c2e">Carte::Telecharger</a>()
+<a name="l00098"></a>00098 {
+<a name="l00099"></a>00099     <a class="code" href="a00004_abf3145a0481b4d5a6646b4b49928ec72.html#abf3145a0481b4d5a6646b4b49928ec72">downloading</a> = <span class="keyword">true</span>;
+<a name="l00100"></a>00100     QString Urlp = QString(<span class="stringliteral">&quot;http://www.geovelo.fr/api_test.php?lon=&quot;</span> + QString::number(<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>) + <span class="stringliteral">&quot;&amp;lat=&quot;</span> + QString::number(<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>));
+<a name="l00101"></a>00101     QUrl url = QUrl(Urlp);
+<a name="l00102"></a>00102     QNetworkRequest requete(url);
+<a name="l00103"></a>00103     <a class="code" href="a00004_adbe9c9f0b59d64b225a366eab0826d67.html#adbe9c9f0b59d64b225a366eab0826d67">GestionnaireDeRequete</a>-&gt;get(requete);
+<a name="l00104"></a>00104     connect( <a class="code" href="a00004_adbe9c9f0b59d64b225a366eab0826d67.html#adbe9c9f0b59d64b225a366eab0826d67">GestionnaireDeRequete</a>, SIGNAL(finished(QNetworkReply*)), <span class="keyword">this</span>, SLOT(<a class="code" href="a00004_ae53eeee073f163ef27aaddde5e3383f0.html#ae53eeee073f163ef27aaddde5e3383f0">ParserA</a>(QNetworkReply*)));
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a><a class="code" href="a00004_a6dfd8ad4dff7484f5ae5fe782ed982aa.html#a6dfd8ad4dff7484f5ae5fe782ed982aa">00108</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a6dfd8ad4dff7484f5ae5fe782ed982aa.html#a6dfd8ad4dff7484f5ae5fe782ed982aa">Carte::AutoTelcharger</a>(<span class="keywordtype">int</span> LvL)
+<a name="l00109"></a>00109 {
+<a name="l00110"></a>00110     <span class="keywordflow">if</span>(LvL!=2)
+<a name="l00111"></a>00111     {
+<a name="l00112"></a>00112         <a class="code" href="a00004_a4edb3d0cbcd43c28c72011fc21b0d4bc.html#a4edb3d0cbcd43c28c72011fc21b0d4bc">DLenable</a>=<span class="keyword">false</span>;
+<a name="l00113"></a>00113     }
+<a name="l00114"></a>00114     <span class="keywordflow">else</span>
+<a name="l00115"></a>00115     {
+<a name="l00116"></a>00116         <a class="code" href="a00004_a4edb3d0cbcd43c28c72011fc21b0d4bc.html#a4edb3d0cbcd43c28c72011fc21b0d4bc">DLenable</a>=<span class="keyword">true</span>;
+<a name="l00117"></a>00117     }
+<a name="l00118"></a>00118 }
+<a name="l00119"></a>00119 
+<a name="l00120"></a><a class="code" href="a00004_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b">00120</a> <span class="keywordtype">void</span> <a class="code" href="a00004_aa2e71ad13a26276509ed93dc4b68358b.html#aa2e71ad13a26276509ed93dc4b68358b">Carte::langue_englais</a>(){
+<a name="l00121"></a>00121     <a class="code" href="a00004.html">Carte</a> * WCarte = <span class="keyword">new</span> <a class="code" href="a00004_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte.">Carte</a>();
+<a name="l00122"></a>00122     QTranslator translator;
+<a name="l00123"></a>00123     translator.load(<span class="stringliteral">&quot;langue_en&quot;</span>);
+<a name="l00124"></a>00124     <a class="code" href="a00001.html">application</a> *app = <a class="code" href="a00001_a9115346cb4be2645bf9682326dba535a.html#a9115346cb4be2645bf9682326dba535a">application::appInit</a>();
+<a name="l00125"></a>00125     app-&gt;installTranslator(&amp;translator);
+<a name="l00126"></a>00126     WCarte-&gt;show();
+<a name="l00127"></a>00127     this-&gt;close();
+<a name="l00128"></a>00128 }
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 
+<a name="l00131"></a><a class="code" href="a00004_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa">00131</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a77b38f8463ffd5f2704ab1bb422540aa.html#a77b38f8463ffd5f2704ab1bb422540aa">Carte::langue_francais</a>(){
+<a name="l00132"></a>00132     <a class="code" href="a00004.html">Carte</a> * WCarte = <span class="keyword">new</span> <a class="code" href="a00004_a906b30821c3cd257d778e78f50751e61.html#a906b30821c3cd257d778e78f50751e61" title="Createur de la fentre Carte.">Carte</a>();
+<a name="l00133"></a>00133     QTranslator translator;
+<a name="l00134"></a>00134     translator.load(<span class="stringliteral">&quot;langue_fr&quot;</span>);
+<a name="l00135"></a>00135     <a class="code" href="a00001.html">application</a> *app = <a class="code" href="a00001_a9115346cb4be2645bf9682326dba535a.html#a9115346cb4be2645bf9682326dba535a">application::appInit</a>();
+<a name="l00136"></a>00136     app-&gt;installTranslator(&amp;translator);
+<a name="l00137"></a>00137      WCarte-&gt;show();
+<a name="l00138"></a>00138     this-&gt;close();
+<a name="l00139"></a>00139 }
+<a name="l00140"></a>00140 
+<a name="l00141"></a><a class="code" href="a00004_a917a730085cc0ae242a8b5cc6833895c.html#a917a730085cc0ae242a8b5cc6833895c">00141</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a917a730085cc0ae242a8b5cc6833895c.html#a917a730085cc0ae242a8b5cc6833895c">Carte::exportCSV</a>(){
+<a name="l00142"></a>00142     QString File = QFileDialog::getSaveFileName(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;export&quot;</span>), <span class="stringliteral">&quot;.&quot;</span>, tr(<span class="stringliteral">&quot;csv (*.csv&quot;</span>));
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144     <span class="keywordflow">if</span> (!File.isEmpty())
+<a name="l00145"></a>00145          {
+<a name="l00146"></a>00146                  <a class="code" href="a00026_ac273e7f12452330543253a1d3a5727b2.html#ac273e7f12452330543253a1d3a5727b2" title="fonction : export la base de donnee dans un fichier au format csv">export_csv</a>(File);
+<a name="l00147"></a>00147          }
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149 }
+<a name="l00150"></a>00150 
+<a name="l00151"></a><a class="code" href="a00004_afc9f6dae9773fce89d8b4a894d8bcc6c.html#afc9f6dae9773fce89d8b4a894d8bcc6c">00151</a> <span class="keywordtype">void</span> <a class="code" href="a00004_afc9f6dae9773fce89d8b4a894d8bcc6c.html#afc9f6dae9773fce89d8b4a894d8bcc6c">Carte::choixBDD</a>()
+<a name="l00152"></a>00152 {
+<a name="l00153"></a>00153     <a class="code" href="a00002.html">AskDataBase</a> *choixFenetre = <span class="keyword">new</span> <a class="code" href="a00002.html">AskDataBase</a>();
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155     <a class="code" href="a00006_a4cc091f2b67ceb0504d87de92e0111bd.html#a4cc091f2b67ceb0504d87de92e0111bd">database::dataDisconnect</a>();
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157     choixFenetre-&gt;show();
+<a name="l00158"></a>00158     this-&gt;close();
+<a name="l00159"></a>00159 }
+<a name="l00160"></a>00160 
+<a name="l00161"></a><a class="code" href="a00004_a23f49c62048a8d7b32d91375d128f625.html#a23f49c62048a8d7b32d91375d128f625">00161</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a23f49c62048a8d7b32d91375d128f625.html#a23f49c62048a8d7b32d91375d128f625">Carte::Centrer</a>()
+<a name="l00162"></a>00162 {
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164     <span class="keywordtype">int</span> i = 0 ;
+<a name="l00165"></a>00165     <span class="keywordflow">if</span>(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;selectedItems().count()==1)
+<a name="l00166"></a>00166     {
+<a name="l00167"></a>00167         <span class="keywordflow">if</span>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count()&gt;0)
+<a name="l00168"></a>00168         {
+<a name="l00169"></a>00169             <span class="keywordflow">for</span>(i=0;i&lt;<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count();i++)
+<a name="l00170"></a>00170             {
+<a name="l00171"></a>00171                  <span class="keywordflow">if</span>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).GetName()==<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;selectedItems().value(0)-&gt;text())
+<a name="l00172"></a>00172                  {
+<a name="l00173"></a>00173                       <a class="code" href="a00004_af04a34a98c026084eb831ea328fbedba.html#af04a34a98c026084eb831ea328fbedba">mc</a>-&gt;setView(QPointF(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).Getlat(),<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).Getlon()));
+<a name="l00174"></a>00174                  }
+<a name="l00175"></a>00175             }
+<a name="l00176"></a>00176         }
+<a name="l00177"></a>00177     }
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179 }
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 
+<a name="l00182"></a><a class="code" href="a00004_a079dbf7d072f670b0a41fd11529fd115.html#a079dbf7d072f670b0a41fd11529fd115">00182</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a079dbf7d072f670b0a41fd11529fd115.html#a079dbf7d072f670b0a41fd11529fd115">Carte::gestionBDD</a>(){
+<a name="l00183"></a>00183     <a class="code" href="a00008.html">edit_point_gui</a> art(0,<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>,<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>,0);
+<a name="l00184"></a>00184     art.exec();
+<a name="l00185"></a>00185     <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=9;
+<a name="l00186"></a>00186 }
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188 
+<a name="l00189"></a><a class="code" href="a00004_aaddfb22fcb7baced92648cc0d6a823a0.html#aaddfb22fcb7baced92648cc0d6a823a0">00189</a> <span class="keywordtype">void</span> <a class="code" href="a00004_aaddfb22fcb7baced92648cc0d6a823a0.html#aaddfb22fcb7baced92648cc0d6a823a0">Carte::AjouterPoints</a>()
+<a name="l00190"></a>00190 {
+<a name="l00191"></a>00191     <span class="keywordtype">int</span> i;
+<a name="l00192"></a>00192     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;clear();
+<a name="l00193"></a>00193     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;setUpdatesEnabled(<span class="keyword">false</span>);
+<a name="l00194"></a>00194     <span class="keywordflow">for</span>(i=0;i&lt;<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count();i++)
+<a name="l00195"></a>00195     {
+<a name="l00196"></a>00196         <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;addItem(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).GetName());
+<a name="l00197"></a>00197     }
+<a name="l00198"></a>00198     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;setUpdatesEnabled(<span class="keyword">true</span>);
+<a name="l00199"></a>00199     QPen* pointpen = <span class="keyword">new</span> QPen(QColor(0,127,255));
+<a name="l00200"></a>00200     <a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a>-&gt;clearGeometries();
+<a name="l00201"></a>00201     pointpen-&gt;setWidth(3);
+<a name="l00202"></a>00202     <span class="keywordflow">for</span>(i=0;i&lt;<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count();i++)
+<a name="l00203"></a>00203     {
+<a name="l00204"></a>00204         CirclePoint* <a class="code" href="a00004_a3d380ee41b693ee417117061c525d39e.html#a3d380ee41b693ee417117061c525d39e">PointA</a> = <span class="keyword">new</span>   CirclePoint(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).Getlat(),<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).Getlon(),<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(i).GetName(),Point::Middle,pointpen);
+<a name="l00205"></a>00205         <a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a>-&gt;addGeometry(PointA);
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207     }
+<a name="l00208"></a>00208     free(pointpen);
+<a name="l00209"></a>00209     <a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a>-&gt;setVisible(<span class="keyword">false</span>);
+<a name="l00210"></a>00210     <a class="code" href="a00004_a95f83857a97b1e5157f38f5c5e8623b6.html#a95f83857a97b1e5157f38f5c5e8623b6">mainlayer</a>-&gt;setVisible(<span class="keyword">true</span>);
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212 }
+<a name="l00213"></a>00213 
+<a name="l00214"></a><a class="code" href="a00004_adc796443eae536cbe05fbb18fbfa54bf.html#adc796443eae536cbe05fbb18fbfa54bf">00214</a> <span class="keywordtype">void</span> <a class="code" href="a00004_adc796443eae536cbe05fbb18fbfa54bf.html#adc796443eae536cbe05fbb18fbfa54bf">Carte::ZoomInv</a>(QPointF Point,<span class="keywordtype">int</span> Entier)
+<a name="l00215"></a>00215 {
+<a name="l00216"></a>00216     <span class="keywordflow">if</span>(<a class="code" href="a00004_a4700f68b28df0519ce4f24954a966462.html#a4700f68b28df0519ce4f24954a966462">zoomlevel</a>!=Entier)
+<a name="l00217"></a>00217     {
+<a name="l00218"></a>00218     <a class="code" href="a00004_a4700f68b28df0519ce4f24954a966462.html#a4700f68b28df0519ce4f24954a966462">zoomlevel</a> = Entier;
+<a name="l00219"></a>00219     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aea73ad09f2aec4f89f8e7c51086f3464.html#aea73ad09f2aec4f89f8e7c51086f3464">verticalSlider</a>-&gt;setValue(Entier);
+<a name="l00220"></a>00220     }
+<a name="l00221"></a>00221     <span class="keywordflow">if</span>((<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>!=Point.x())||(<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>!=Point.y()))
+<a name="l00222"></a>00222     {
+<a name="l00223"></a>00223         <a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>= Point.x();
+<a name="l00224"></a>00224         <a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>= Point.y();
+<a name="l00225"></a>00225     }
+<a name="l00226"></a>00226 }
+<a name="l00227"></a>00227 
+<a name="l00228"></a><a class="code" href="a00004_a1a9520bb412647b8845abe985f51798e.html#a1a9520bb412647b8845abe985f51798e">00228</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a1a9520bb412647b8845abe985f51798e.html#a1a9520bb412647b8845abe985f51798e">Carte::PosLabel</a>(<span class="keywordtype">int</span> Py)
+<a name="l00229"></a>00229 {
+<a name="l00230"></a>00230     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_abd303a2193f9b403aa07bf72625db635.html#abd303a2193f9b403aa07bf72625db635">label</a>-&gt;setGeometry(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_abd303a2193f9b403aa07bf72625db635.html#abd303a2193f9b403aa07bf72625db635">label</a>-&gt;x(),(((<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aea73ad09f2aec4f89f8e7c51086f3464.html#aea73ad09f2aec4f89f8e7c51086f3464">verticalSlider</a>-&gt;height()+<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aea73ad09f2aec4f89f8e7c51086f3464.html#aea73ad09f2aec4f89f8e7c51086f3464">verticalSlider</a>-&gt;y())/18)*(18-Py)),<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_abd303a2193f9b403aa07bf72625db635.html#abd303a2193f9b403aa07bf72625db635">label</a>-&gt;width(),<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_abd303a2193f9b403aa07bf72625db635.html#abd303a2193f9b403aa07bf72625db635">label</a>-&gt;height());
+<a name="l00231"></a>00231     <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_abd303a2193f9b403aa07bf72625db635.html#abd303a2193f9b403aa07bf72625db635">label</a>-&gt;setText(QString::number(Py));
+<a name="l00232"></a>00232 }
+<a name="l00233"></a>00233 
+<a name="l00234"></a><a class="code" href="a00004_a63300ff55c58b5d5b1674a3fc8f25910.html#a63300ff55c58b5d5b1674a3fc8f25910">00234</a> <a class="code" href="a00004_a63300ff55c58b5d5b1674a3fc8f25910.html#a63300ff55c58b5d5b1674a3fc8f25910">Carte::~Carte</a>()
+<a name="l00235"></a>00235 {
+<a name="l00236"></a>00236     <span class="keyword">delete</span> <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>;
+<a name="l00237"></a>00237 }
+<a name="l00238"></a>00238 
+<a name="l00239"></a><a class="code" href="a00004_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80">00239</a> <span class="keywordtype">void</span> <a class="code" href="a00004_ab7007bf53697bae886c686b90a84db80.html#ab7007bf53697bae886c686b90a84db80">Carte::LoadingDBBData</a>()
+<a name="l00240"></a>00240 {
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242     <span class="keywordtype">int</span> i;
+<a name="l00243"></a>00243     <span class="keywordflow">if</span>(<a class="code" href="a00004_a7390ad99c1574f0dde7e83c377a9b660.html#a7390ad99c1574f0dde7e83c377a9b660">y</a>&lt;101)
+<a name="l00244"></a>00244     {
+<a name="l00245"></a>00245         <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_aa659ed4ec76a0a97a99ff6a613858292.html#aa659ed4ec76a0a97a99ff6a613858292">progressBar</a>-&gt;setValue(<a class="code" href="a00004_a7390ad99c1574f0dde7e83c377a9b660.html#a7390ad99c1574f0dde7e83c377a9b660">y</a>);
+<a name="l00246"></a>00246     }
+<a name="l00247"></a>00247     <span class="keywordflow">else</span>
+<a name="l00248"></a>00248     {
+<a name="l00249"></a>00249         <a class="code" href="a00004_a7390ad99c1574f0dde7e83c377a9b660.html#a7390ad99c1574f0dde7e83c377a9b660">y</a>=<a class="code" href="a00004_a7390ad99c1574f0dde7e83c377a9b660.html#a7390ad99c1574f0dde7e83c377a9b660">y</a>-100;
+<a name="l00250"></a>00250     }
+<a name="l00251"></a>00251     <span class="keywordflow">if</span>(((<a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>==1)&amp;&amp;(<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>!=<a class="code" href="a00004_a042a2e335e281229d471f825fbe71ccf.html#a042a2e335e281229d471f825fbe71ccf">PosxBak</a>)&amp;&amp;(<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>!=<a class="code" href="a00004_af9d751d6d5101f18950f5bf4490e433d.html#af9d751d6d5101f18950f5bf4490e433d">PosyBak</a>))||(<a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>&gt;=5))
+<a name="l00252"></a>00252     {
+<a name="l00253"></a>00253         <span class="keywordflow">if</span>(<a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>==10)
+<a name="l00254"></a>00254         {
+<a name="l00255"></a>00255                 <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=1;
+<a name="l00256"></a>00256                 <a class="code" href="a00004_aaddfb22fcb7baced92648cc0d6a823a0.html#aaddfb22fcb7baced92648cc0d6a823a0">AjouterPoints</a>();
+<a name="l00257"></a>00257                 <span class="keywordflow">return</span>;
+<a name="l00258"></a>00258         }
+<a name="l00259"></a>00259         <span class="keywordflow">if</span>(<a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>==9)
+<a name="l00260"></a>00260         {
+<a name="l00261"></a>00261             qDebug(<span class="stringliteral">&quot;9&quot;</span>);
+<a name="l00262"></a>00262             QVector&lt;QString&gt; Categories = <a class="code" href="a00024_aae0ee7b6ed88b7f4a80f4852c51fb729.html#aae0ee7b6ed88b7f4a80f4852c51fb729" title="fonction : retourne un vecteur avec toutes les categories de la base de donnee">getCategories</a>();
+<a name="l00263"></a>00263                 <span class="keywordflow">for</span>(i=0;i&lt;Categories.count();i++)
+<a name="l00264"></a>00264                 {
+<a name="l00265"></a>00265                     <span class="keywordflow">if</span>(<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;findText(Categories.value(i))==-1)
+<a name="l00266"></a>00266                     {
+<a name="l00267"></a>00267                         <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;addItem(Categories.value(i));
+<a name="l00268"></a>00268                     }
+<a name="l00269"></a>00269                 }
+<a name="l00270"></a>00270                 <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a> =1;
+<a name="l00271"></a>00271         }
+<a name="l00272"></a>00272         <span class="keywordflow">if</span>((<a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>==5)&amp;&amp;(<a class="code" href="a00004_abf3145a0481b4d5a6646b4b49928ec72.html#abf3145a0481b4d5a6646b4b49928ec72">downloading</a>==<span class="keyword">false</span>)&amp;&amp;(<a class="code" href="a00004_a4edb3d0cbcd43c28c72011fc21b0d4bc.html#a4edb3d0cbcd43c28c72011fc21b0d4bc">DLenable</a>==<span class="keyword">true</span>))
+<a name="l00273"></a>00273         {
+<a name="l00274"></a>00274             <a class="code" href="a00004_ac25be85b576e7d655754838268055c2e.html#ac25be85b576e7d655754838268055c2e">Telecharger</a>();
+<a name="l00275"></a>00275         }
+<a name="l00276"></a>00276          <a class="code" href="a00004_a042a2e335e281229d471f825fbe71ccf.html#a042a2e335e281229d471f825fbe71ccf">PosxBak</a> = <a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>;
+<a name="l00277"></a>00277          <a class="code" href="a00004_af9d751d6d5101f18950f5bf4490e433d.html#af9d751d6d5101f18950f5bf4490e433d">PosyBak</a> = <a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>;
+<a name="l00278"></a>00278          <a class="code" href="a00004_aaddfb22fcb7baced92648cc0d6a823a0.html#aaddfb22fcb7baced92648cc0d6a823a0">AjouterPoints</a>();
+<a name="l00279"></a>00279          QtConcurrent::run(<span class="keyword">this</span>,&amp;<a class="code" href="a00004_ab0e71abb5334a5426ca6b7b0eb386372.html#ab0e71abb5334a5426ca6b7b0eb386372">Carte::LoadingDBBDataA</a>);
+<a name="l00280"></a>00280     }
+<a name="l00281"></a>00281 }
+<a name="l00282"></a>00282 
+<a name="l00283"></a><a class="code" href="a00004_ab0e71abb5334a5426ca6b7b0eb386372.html#ab0e71abb5334a5426ca6b7b0eb386372">00283</a> <span class="keywordtype">void</span> <a class="code" href="a00004_ab0e71abb5334a5426ca6b7b0eb386372.html#ab0e71abb5334a5426ca6b7b0eb386372">Carte::LoadingDBBDataA</a>()
+<a name="l00284"></a>00284 {
+<a name="l00285"></a>00285    <a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.clear();
+<a name="l00286"></a>00286    <a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a> = <a class="code" href="a00032_abd34ece5e7a12a3ddccef7a4eab5a3de.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée">getPointImp</a>(<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>,<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>,<a class="code" href="a00004_ada2f2b3376d02236c706b6760c0b5242.html#ada2f2b3376d02236c706b6760c0b5242">nbpstoshow</a>,<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a29828701f4775a7ee00d2d71ec72dace.html#a29828701f4775a7ee00d2d71ec72dace">lineEdit</a>-&gt;text(),<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;currentText());
+<a name="l00287"></a>00287    <span class="keywordflow">if</span>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count()!=0)
+<a name="l00288"></a>00288    {
+<a name="l00289"></a>00289        <span class="keywordflow">if</span>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(1).GetDist()&gt;0.00005)
+<a name="l00290"></a>00290        {
+<a name="l00291"></a>00291             <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a> = 5 ;
+<a name="l00292"></a>00292            <span class="keywordflow">return</span>;
+<a name="l00293"></a>00293        }
+<a name="l00294"></a>00294        <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=10;
+<a name="l00295"></a>00295       <span class="keywordflow">return</span>;
+<a name="l00296"></a>00296    }
+<a name="l00297"></a>00297    <span class="keywordflow">else</span>
+<a name="l00298"></a>00298    {
+<a name="l00299"></a>00299        <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=5;
+<a name="l00300"></a>00300        <span class="keywordflow">return</span>;
+<a name="l00301"></a>00301    }
+<a name="l00302"></a>00302 }
+<a name="l00303"></a>00303 
+<a name="l00304"></a>00304 
+<a name="l00305"></a><a class="code" href="a00004_ae53eeee073f163ef27aaddde5e3383f0.html#ae53eeee073f163ef27aaddde5e3383f0">00305</a> <span class="keywordtype">void</span> <a class="code" href="a00004_ae53eeee073f163ef27aaddde5e3383f0.html#ae53eeee073f163ef27aaddde5e3383f0">Carte::ParserA</a>(QNetworkReply* reponse)
+<a name="l00306"></a>00306 {
+<a name="l00307"></a>00307     QDomDocument doc;
+<a name="l00308"></a>00308 
+<a name="l00309"></a>00309   <span class="comment">//********************************</span>
+<a name="l00310"></a>00310   <span class="comment">// Read the DOM tree form file</span>
+<a name="l00311"></a>00311   <span class="comment">//********************************</span>
+<a name="l00312"></a>00312     doc.setContent(reponse-&gt;readAll());
+<a name="l00313"></a>00313   <span class="comment">//********************************</span>
+<a name="l00314"></a>00314   <span class="comment">// Parse the DOM tree</span>
+<a name="l00315"></a>00315   <span class="comment">//********************************</span>
+<a name="l00316"></a>00316   QDomElement kml=doc.documentElement();
+<a name="l00317"></a>00317   QDomElement document = kml.firstChild().toElement();
+<a name="l00318"></a>00318   QDomElement Placemark = document.firstChild().toElement();
+<a name="l00319"></a>00319   QDomElement node;
+<a name="l00320"></a>00320   QDomElement childnode;
+<a name="l00321"></a>00321   <span class="comment">//parcourt des lieux</span>
+<a name="l00322"></a>00322 
+<a name="l00323"></a>00323   <span class="keywordflow">while</span>(!Placemark.isNull())
+<a name="l00324"></a>00324   {
+<a name="l00325"></a>00325       <a class="code" href="a00013.html">POI</a>* PointOfInterest = <span class="keyword">new</span> <a class="code" href="a00013.html">POI</a>();
+<a name="l00326"></a>00326       node = Placemark.firstChild().toElement();
+<a name="l00327"></a>00327       <span class="keywordflow">while</span>(!node.isNull()){
+<a name="l00328"></a>00328           <span class="keywordflow">if</span>(node.tagName() == <span class="stringliteral">&quot;categorie&quot;</span>){
+<a name="l00329"></a>00329             PointOfInterest-&gt;<a class="code" href="a00013_af5144a6876a5244ed722fd64772c0c12.html#af5144a6876a5244ed722fd64772c0c12">SetCat</a>(node.text());
+<a name="l00330"></a>00330           }
+<a name="l00331"></a>00331           <span class="keywordflow">else</span> <span class="keywordflow">if</span>(node.tagName() == <span class="stringliteral">&quot;nom&quot;</span>){
+<a name="l00332"></a>00332               PointOfInterest-&gt;<a class="code" href="a00013_a787ba66b493fe329ce5c610e4cc6711e.html#a787ba66b493fe329ce5c610e4cc6711e">SetName</a>(node.text().replace(QString(<span class="stringliteral">&quot;&#39;&quot;</span>),QString(<span class="stringliteral">&quot; &quot;</span>),Qt::CaseSensitive));
+<a name="l00333"></a>00333           }
+<a name="l00334"></a>00334           <span class="keywordflow">else</span> <span class="keywordflow">if</span>(node.tagName() == <span class="stringliteral">&quot;Point&quot;</span>){
+<a name="l00335"></a>00335               childnode = node.firstChild().toElement();
+<a name="l00336"></a>00336               <span class="keywordflow">if</span>(childnode.tagName() == <span class="stringliteral">&quot;coordinates&quot;</span>){
+<a name="l00337"></a>00337                   PointOfInterest-&gt;<a class="code" href="a00013_a24e1f582bd5ee485dc18be686dfee002.html#a24e1f582bd5ee485dc18be686dfee002">Setlat</a>(QString(childnode.text().split(<span class="stringliteral">&quot;,&quot;</span>)[0]).toFloat());
+<a name="l00338"></a>00338                   PointOfInterest-&gt;<a class="code" href="a00013_ac6ab205978eb9c5e8febbcdec7f03246.html#ac6ab205978eb9c5e8febbcdec7f03246">Setlong</a>(QString(childnode.text().split(<span class="stringliteral">&quot;,&quot;</span>)[1]).toFloat());
+<a name="l00339"></a>00339                   }
+<a name="l00340"></a>00340           }
+<a name="l00341"></a>00341           node = node.nextSibling().toElement();
+<a name="l00342"></a>00342       }
+<a name="l00343"></a>00343       Placemark = Placemark.nextSibling().toElement();
+<a name="l00344"></a>00344       QtConcurrent::run(<span class="keyword">this</span>,&amp;<a class="code" href="a00004_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c">Carte::addPointThread</a>,PointOfInterest-&gt;<a class="code" href="a00013_a21c3cf3a3e3a220a9a926b1b108626fb.html#a21c3cf3a3e3a220a9a926b1b108626fb">GetCat</a>(),PointOfInterest-&gt;<a class="code" href="a00013_a1c2e342a9f0d189ec2a7f376d3cd6b03.html#a1c2e342a9f0d189ec2a7f376d3cd6b03">GetName</a>(),PointOfInterest-&gt;<a class="code" href="a00013_aa5b4a4a635f1cf7b096d0610a683cf29.html#aa5b4a4a635f1cf7b096d0610a683cf29">Getlat</a>(),PointOfInterest-&gt;<a class="code" href="a00013_a991a068f59ee5df1a8695d982f79863f.html#a991a068f59ee5df1a8695d982f79863f">Getlon</a>());
+<a name="l00345"></a>00345         free(PointOfInterest);
+<a name="l00346"></a>00346   }
+<a name="l00347"></a>00347     doc.clear();
+<a name="l00348"></a>00348     reponse-&gt;close();
+<a name="l00349"></a>00349     <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=10;
+<a name="l00350"></a>00350     <a class="code" href="a00004_abf3145a0481b4d5a6646b4b49928ec72.html#abf3145a0481b4d5a6646b4b49928ec72">downloading</a>=<span class="keyword">false</span>;
+<a name="l00351"></a>00351 }
+<a name="l00352"></a>00352 
+<a name="l00353"></a><a class="code" href="a00004_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c">00353</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a1303ca6492f40ce92957f63c3acc5e1c.html#a1303ca6492f40ce92957f63c3acc5e1c">Carte::addPointThread</a>(QString categorie, QString name, <span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> longitude)
+<a name="l00354"></a>00354 {
+<a name="l00355"></a>00355        <a class="code" href="a00032_a2d1497f67766953b4eec3bbc8f68604c.html#a2d1497f67766953b4eec3bbc8f68604c" title="fonction : ajoute un point dans la base de donnée">addPoint</a>(categorie, name,latitude,longitude);
+<a name="l00356"></a>00356        <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a> = 10;
+<a name="l00357"></a>00357        <a class="code" href="a00004_a7390ad99c1574f0dde7e83c377a9b660.html#a7390ad99c1574f0dde7e83c377a9b660">y</a>++;
+<a name="l00358"></a>00358 }
+<a name="l00359"></a>00359 
+<a name="l00360"></a><a class="code" href="a00004_a4676e76ceba5f4b897f7a7a0cbcc3c19.html#a4676e76ceba5f4b897f7a7a0cbcc3c19">00360</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a4676e76ceba5f4b897f7a7a0cbcc3c19.html#a4676e76ceba5f4b897f7a7a0cbcc3c19">Carte::ReponseQListClick</a>(QListWidgetItem* Item)
+<a name="l00361"></a>00361 {
+<a name="l00362"></a>00362     <span class="keywordtype">int</span> iterateur=0;
+<a name="l00363"></a>00363     <a class="code" href="a00011.html">MontrerPoint</a> *MontrePointWindow;
+<a name="l00364"></a>00364     <span class="keywordflow">for</span>(iterateur=0;iterateur&lt;<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count();iterateur++)
+<a name="l00365"></a>00365     {
+<a name="l00366"></a>00366         <span class="keywordflow">if</span>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(iterateur).GetName()==Item-&gt;text())
+<a name="l00367"></a>00367         {
+<a name="l00368"></a>00368           MontrePointWindow = <span class="keyword">new</span> <a class="code" href="a00011.html">MontrerPoint</a>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(iterateur));
+<a name="l00369"></a>00369           MontrePointWindow-&gt;exec();
+<a name="l00370"></a>00370           <span class="keywordflow">return</span>;
+<a name="l00371"></a>00371         }
+<a name="l00372"></a>00372     }
+<a name="l00373"></a>00373 }
+<a name="l00374"></a>00374 
+<a name="l00375"></a><a class="code" href="a00004_a94df4902e76bdb3576b2e27d5b9b3d57.html#a94df4902e76bdb3576b2e27d5b9b3d57">00375</a> <span class="keywordtype">void</span> <a class="code" href="a00004_a94df4902e76bdb3576b2e27d5b9b3d57.html#a94df4902e76bdb3576b2e27d5b9b3d57">Carte::ModifNbPoint</a>(<span class="keywordtype">int</span> nbpoints)
+<a name="l00376"></a>00376 {
+<a name="l00377"></a>00377      <a class="code" href="a00004_ada2f2b3376d02236c706b6760c0b5242.html#ada2f2b3376d02236c706b6760c0b5242">nbpstoshow</a> = nbpoints;
+<a name="l00378"></a>00378      <a class="code" href="a00004_aaddfb22fcb7baced92648cc0d6a823a0.html#aaddfb22fcb7baced92648cc0d6a823a0">AjouterPoints</a>();
+<a name="l00379"></a>00379 }
+<a name="l00380"></a>00380 
+<a name="l00381"></a><a class="code" href="a00004_abf355f4d7ce3cc7792d778e57f1a2c46.html#abf355f4d7ce3cc7792d778e57f1a2c46">00381</a> <span class="keywordtype">void</span> <a class="code" href="a00004_abf355f4d7ce3cc7792d778e57f1a2c46.html#abf355f4d7ce3cc7792d778e57f1a2c46">Carte::ReponseGeometryClick</a>(Geometry* geo,QPoint pt)
+<a name="l00382"></a>00382 {
+<a name="l00383"></a>00383     <span class="keywordtype">int</span> iterateur=0;
+<a name="l00384"></a>00384     <a class="code" href="a00011.html">MontrerPoint</a> *MontrePointWindow;
+<a name="l00385"></a>00385     <span class="keywordflow">for</span>(iterateur=0;iterateur&lt;<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.count();iterateur++)
+<a name="l00386"></a>00386     {
+<a name="l00387"></a>00387         <span class="keywordflow">if</span>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(iterateur).GetName()==geo-&gt;name())
+<a name="l00388"></a>00388         {
+<a name="l00389"></a>00389           MontrePointWindow = <span class="keyword">new</span> <a class="code" href="a00011.html">MontrerPoint</a>(<a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.value(iterateur));
+<a name="l00390"></a>00390          <a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;setCurrentItem( (<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a11c1cd5dbedfd4e982d990a196002067.html#a11c1cd5dbedfd4e982d990a196002067">listWidget</a>-&gt;findItems(geo-&gt;name(),Qt::MatchFlags())).value(1));
+<a name="l00391"></a>00391            MontrePointWindow-&gt;show();
+<a name="l00392"></a>00392             <span class="keywordflow">break</span>;
+<a name="l00393"></a>00393         }
+<a name="l00394"></a>00394     }
+<a name="l00395"></a>00395 }
+<a name="l00396"></a>00396 
+<a name="l00397"></a><a class="code" href="a00004_af4df96a9bef8e73e816ab139b8f65db6.html#af4df96a9bef8e73e816ab139b8f65db6">00397</a> <span class="keywordtype">void</span> <a class="code" href="a00004_af4df96a9bef8e73e816ab139b8f65db6.html#af4df96a9bef8e73e816ab139b8f65db6">Carte::Chercher</a>(QString Chaine)
+<a name="l00398"></a>00398 {
+<a name="l00399"></a>00399     <a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.clear();
+<a name="l00400"></a>00400     <a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>=<a class="code" href="a00032_abd34ece5e7a12a3ddccef7a4eab5a3de.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée">getPointImp</a>(<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>,<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>,<a class="code" href="a00004_ada2f2b3376d02236c706b6760c0b5242.html#ada2f2b3376d02236c706b6760c0b5242">nbpstoshow</a>,Chaine,<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;currentText());
+<a name="l00401"></a>00401     <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=10;
+<a name="l00402"></a>00402 }
+<a name="l00403"></a>00403 
+<a name="l00404"></a><a class="code" href="a00004_ab681a8ee604483662f63665c3b1e50d5.html#ab681a8ee604483662f63665c3b1e50d5">00404</a> <span class="keywordtype">void</span> <a class="code" href="a00004_ab681a8ee604483662f63665c3b1e50d5.html#ab681a8ee604483662f63665c3b1e50d5">Carte::ByCat</a>(<span class="keywordtype">int</span> i)
+<a name="l00405"></a>00405 {
+<a name="l00406"></a>00406     <a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>.clear();
+<a name="l00407"></a>00407     <a class="code" href="a00004_a5107bd0c7da8025dc0a6dd417b588a53.html#a5107bd0c7da8025dc0a6dd417b588a53">VPOI</a>=<a class="code" href="a00032_abd34ece5e7a12a3ddccef7a4eab5a3de.html#abd34ece5e7a12a3ddccef7a4eab5a3de" title="fonction : obtenir les points de la base de donnée">getPointImp</a>(<a class="code" href="a00004_aa3e1ce78559476e74f3a1e9aa928528c.html#aa3e1ce78559476e74f3a1e9aa928528c">Posx</a>,<a class="code" href="a00004_abd3dfc3cc4c8b0b4d6a4e5c69cd9062e.html#abd3dfc3cc4c8b0b4d6a4e5c69cd9062e">Posy</a>,<a class="code" href="a00004_ada2f2b3376d02236c706b6760c0b5242.html#ada2f2b3376d02236c706b6760c0b5242">nbpstoshow</a>,<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a29828701f4775a7ee00d2d71ec72dace.html#a29828701f4775a7ee00d2d71ec72dace">lineEdit</a>-&gt;text(),<a class="code" href="a00004_ace09a2a6c3535177e8b362433f027c5e.html#ace09a2a6c3535177e8b362433f027c5e">ui</a>-&gt;<a class="code" href="a00015_a19efbf4c794c2db2513fb6b3e681bf81.html#a19efbf4c794c2db2513fb6b3e681bf81">comboBox</a>-&gt;currentText());
+<a name="l00408"></a>00408     <a class="code" href="a00004_a59314a2ba3fc821a7455b2d59806b62e.html#a59314a2ba3fc821a7455b2d59806b62e">cmpt</a>=10;
+<a name="l00409"></a>00409 }
+</pre></div></div>
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Sun Mar 25 2012 01:06:23 pour Cartographie de lieux par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

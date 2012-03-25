@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00008_a7ea17ed341dc6492ec99d9ec0fac284c.html#a7ea17ed341dc6492ec99d9ec0fac284c" title="desalocation du mapper de point" alt="" coords="348,5,577,35"/>
+<area shape="rect" id="node5" href="$a00008_abe9b534e166a941f9981452f04d749f9.html#abe9b534e166a941f9981452f04d749f9" title="desalocation du model de point" alt="" coords="356,59,569,88"/>
+<area shape="rect" id="node7" href="$a00008_acdab29646352e372be5d21747d4a9e5f.html#acdab29646352e372be5d21747d4a9e5f" title="met en place le mapper de point" alt="" coords="357,112,568,141"/>
+<area shape="rect" id="node9" href="$a00008_ad28ebca32fc75a357bd93f08fda1fb5f.html#ad28ebca32fc75a357bd93f08fda1fb5f" title="met en place le model de point" alt="" coords="364,165,561,195"/>
+<area shape="rect" id="node11" href="$a00008_a109d164e4c4ed5531e85245db047a2d0.html#a109d164e4c4ed5531e85245db047a2d0" title="met en place l&#39;affichage des heures sous forme de table" alt="" coords="363,219,563,248"/>
+<area shape="rect" id="node26" href="$a00008_a6f2742e46e7d1e67ddba17d40833cb67.html#a6f2742e46e7d1e67ddba17d40833cb67" title="met en place l&#39;affichage des points sous forme de table" alt="" coords="365,405,560,435"/>
+<area shape="rect" id="node13" href="$a00008_a59524a811b2a9a9bbc6c725e8c95e65a.html#a59524a811b2a9a9bbc6c725e8c95e65a" title="action lors de la suppression d&#39;une heure" alt="" coords="637,112,803,141"/>
+<area shape="rect" id="node19" href="$a00008_a8411f9248d1f8a7c4be9a246b63c49b7.html#a8411f9248d1f8a7c4be9a246b63c49b7" title="action lors de l&#39;ajout d&#39;une heure" alt="" coords="633,165,807,195"/>
+<area shape="rect" id="node22" href="$a00008_aec046351ed1ddd9e1918efbb0d17b017.html#aec046351ed1ddd9e1918efbb0d17b017" title="action lors de la selection d&#39;une heure" alt="" coords="628,219,812,248"/>
+<area shape="rect" id="node24" href="$a00008_a95ab985ec988163be3fcd84154190b99.html#a95ab985ec988163be3fcd84154190b99" title="met a jour la table heures en fonction des champs modifies" alt="" coords="628,272,812,301"/>
+<area shape="rect" id="node15" href="$a00006_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9" title="database::dataCreate" alt="" coords="861,245,1008,275"/>
+<area shape="rect" id="node17" href="$a00006_a682571191e5bb9be17a42e833664232b.html#a682571191e5bb9be17a42e833664232b" title="constructeur du gestionnaire de base de donnée" alt="" coords="1056,245,1192,275"/>
+<area shape="rect" id="node28" href="$a00008_a64d46f9525b022fc61466f9a9ebc8e33.html#a64d46f9525b022fc61466f9a9ebc8e33" title="action lors de la suppression d&#39;un point" alt="" coords="635,325,805,355"/>
+<area shape="rect" id="node31" href="$a00008_a7ff071eaadca06239c9e7b1fd753b710.html#a7ff071eaadca06239c9e7b1fd753b710" title="action lors de l&#39;ajout d&#39;un point" alt="" coords="632,379,808,408"/>
+<area shape="rect" id="node34" href="$a00008_a47d7e4b965940d01158a8ae9df712ec2.html#a47d7e4b965940d01158a8ae9df712ec2" title="edit_point_gui::position" alt="" coords="643,432,797,461"/>
+<area shape="rect" id="node36" href="$a00008_a9be5a5020e85920440c31ab580fe2ce6.html#a9be5a5020e85920440c31ab580fe2ce6" title="action lors de la selection d&#39;un point" alt="" coords="631,485,809,515"/>
+<area shape="rect" id="node38" href="$a00008_a0d74ca32a3bef4c7694189542e0125d0.html#a0d74ca32a3bef4c7694189542e0125d0" title="met a jour la table points en fonction des champs modifies" alt="" coords="627,539,813,568"/>
+</map>

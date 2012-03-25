@@ -180,7 +180,7 @@ void Carte::Centrer()
 
 
 void Carte::gestionBDD(){
-    edit_point_gui art(0,Posx,Posy,0);
+    edit_point_gui art(Posx,Posy,0,0);
     art.exec();
     cmpt=9;
 }

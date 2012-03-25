@@ -15,7 +15,7 @@
 #include <QMapControl/qmapcontrol.h>
 #include <QSlider>
 #include <QNetworkReply>
-#include "Parseur.h"
+
 #include "database.h"
 #include <QTimer>
 #include "montrerpoint.h"

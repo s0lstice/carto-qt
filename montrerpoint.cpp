@@ -19,8 +19,8 @@
 /*!
   @fn MontrerPoint::MontrerPoint(POI PointDInteret,QWidget *parent) : QDialog(parent), ui(new Ui::MontrerPoint)
   @brief Construit la fenêtre et initialise les données importantes
-    \param POI PointDInteret. La fenêtre va se construire en utilisant ses attributs
-    \note Nous creeons un fenetre qui va afficher les attributs du point et sa position geographique, pour se faire on initialise les champs de la fenêtre avec chaque attributs
+  @param POI PointDInteret. La fenêtre va se construire en utilisant ses attributs
+  @note Nous creeons un fenetre qui va afficher les attributs du point et sa position geographique, pour se faire on initialise les champs de la fenêtre avec chaque attributs
     Pour l'affichage de l'heure nous créeons une table et nous récuperons les heures du points à l'aide d'une requete sur la base de donnée.
 */
 
@@ -85,6 +85,13 @@ MontrerPoint::MontrerPoint(POI PointDInteret,QWidget *parent) :
 }
 
 
+/*!
+  @fn void MontrerPoint::modification()
+  @brief Construit la fenêtre et initialise les données importantes
+  @param POI PointDInteret. La fenêtre va se construire en utilisant ses attributs
+  @note Nous creeons un fenetre qui va afficher les attributs du point et sa position geographique, pour se faire on initialise les champs de la fenêtre avec chaque attributs
+    Pour l'affichage de l'heure nous créeons une table et nous récuperons les heures du points à l'aide d'une requete sur la base de donnée.
+*/
 void MontrerPoint::modification()
 {
     edit_point_gui art(PointDInteretA.Getlat(),PointDInteretA.Getlon(),PointDInteretA.GetId());

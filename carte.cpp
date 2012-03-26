@@ -281,9 +281,8 @@ void Carte::ZoomInv(QPointF Point,int Entier)
 }
 /*!
   @fn void Carte::PosLabel(int Py)
-  @brief Cette fonction permet d'acualiser le slider vertical lorsqu'on zoom sur la carte
-   @param QPointF Point , int Entier. Entier represente le niveau de zoom Point represente les coordonnées
-  @note info : Nous verifions que le niveau de zoom est différents de la valeur du slider vertical cela evite une boucle infinie
+  @brief Cette fonction permet de deplacer le chiffre indiquant le niveau de zoom au niveau du curseur du slider
+   @param int Py permet le calcul de la position du label
 */
 void Carte::PosLabel(int Py)
 {
@@ -291,11 +290,29 @@ void Carte::PosLabel(int Py)
     ui->label->setText(QString::number(Py));
 }
 
+
+/*!
+  @fn Carte::~Carte()
+  @brief libere les ressources de la fenetre contenant la carte
+*/
 Carte::~Carte()
 {
     delete ui;
 }
 
+
+
+/*!
+  @fn void Carte::LoadingDBBData()
+  @brief Cette fonction est appelé lorsque le timer atteint son temps
+  @note info: Cette fonction qui est appelé tout les ticks du timer permet de faire tourner le programme
+  Premierement il met à jour la barre de chargement avec la variable y.
+  Deuxiémement il regarde la valeur de cmpt et determine ce qu'il doit faire.
+  Si cmpt = 1 alors il regarde si les coordonnées ont changé. Si oui il va simplement mettre à jour les coordonnées et afficher les points.
+  Si cmpt = 10 cela signifie que même si la vue n'a pas changé il doit mettre à jour les points c'est ce qu'il fait
+  si cmpt = 9 alors il y a potentiellement eu des changements dans les categories il faut donc mettre à jour les categories
+  si cmpt = 5 alors cela signifie qu'il n'y a pas de points suffisament proche. Si il y a le telechargement auto alors il va telecharger de nouveaux points.
+*/
 void Carte::LoadingDBBData()
 {
 
@@ -335,11 +352,22 @@ void Carte::LoadingDBBData()
         }
          PosxBak = Posx;
          PosyBak = Posy;
+
          AjouterPoints();
-         QtConcurrent::run(this,&Carte::LoadingDBBDataA);
+          QtConcurrent::run(this,&Carte::LoadingDBBDataA);
     }
 }
 
+
+
+/*!
+  @fn void Carte::LoadingDBBDataA()
+  @brief Cette fonction est lancé dans un thread à partir de LoadingDBBData
+  @note info: Cette fonction récupére des points dans la base de données à partir des coordonnées de la croix sur la carte puis il regarde.
+  Si il n'y a pas de point il met cmpt = 5 pour le telechargement de nouveaux points
+  Si la distance est trop elevé par rapport à la position de la croix sur la carte alors il met aussi cmpt = 5 pour amorcer un telechargement
+  Sinon il demande l'actualisation des points.
+*/
 void Carte::LoadingDBBDataA()
 {
    VPOI.clear();
@@ -362,9 +390,16 @@ void Carte::LoadingDBBDataA()
 }
 
 
+/*!
+  @fn void Carte::ParserA(QNetworkReply* reponse)
+  @brief Cette fonction est lancé lorsque l'on a récuperé le fichier kml. Il le parse puis ajoute les points dans la BDD.
+  @note info: Ce fonction parse donc le fichier kml puis lorsqu'il a recupere les informations d'un point il lance un thread qui a pour but de l'ajouter dans la base de donnees.
+  A la fin de l'ajout il met cmpt=10 pour pouvoir actualiser la liste des points.
+*/
 void Carte::ParserA(QNetworkReply* reponse)
 {
     QDomDocument doc;
+    y=0;
 
   //********************************
   // Read the DOM tree form file
@@ -410,6 +445,13 @@ void Carte::ParserA(QNetworkReply* reponse)
     downloading=false;
 }
 
+
+/*!
+  @fn void Carte::addPointThread(QString categorie, QString name, float latitude, float longitude)
+  @brief Cette fonction permet tout simplement d'ajouter un point dans la base de données.
+  @param QString categorie, QString name, float latitude, float longitude representent les données du point que l'on veut ajouter.
+  @note note : On ajoute dans la base de données à l'aide d'un thread car c'est l'operation qui prend le plus de temps et qui peut donc empecher l'utilisateur de se deplacer. On met cmpt = 10 pour informer que l'on souhaite mettre à jour les points et y++ pour incrémenter la barre de progrés.
+*/
 void Carte::addPointThread(QString categorie, QString name, float latitude, float longitude)
 {
        addPoint(categorie, name,latitude,longitude);
@@ -417,6 +459,13 @@ void Carte::addPointThread(QString categorie, QString name, float latitude, floa
        y++;
 }
 
+
+/*!
+  @fn void Carte::ReponseQListClick(QListWidgetItem* Item)
+  @brief Cette fonction permet d'afficher une fenêtre lorsqu'on double cliquesur un element dans la liste des points.
+  @param QListWidgetItem* Item represente l'item sur lequel on à cliqué.
+  @note note : on recherche le point avec le même nom que l'objet sur lequel on a clique cela permet d'afficher une fenetre qui donne les informations sur le point
+*/
 void Carte::ReponseQListClick(QListWidgetItem* Item)
 {
     int iterateur=0;
@@ -432,12 +481,27 @@ void Carte::ReponseQListClick(QListWidgetItem* Item)
     }
 }
 
+/*!
+  @fn void Carte::ModifNbPoint(int nbpoints)
+  @brief Cette fonction change la variable qui indique le nombre de points à afficher.
+  @param int nbpoints indique la valeur du nombre de points à afficher
+
+*/
 void Carte::ModifNbPoint(int nbpoints)
 {
      nbpstoshow = nbpoints;
-     AjouterPoints();
+     VPOI.clear();
+     VPOI=getPointImp(Posx,Posy,nbpstoshow,ui->lineEdit->text(),ui->comboBox->currentText());
+     cmpt=10;
 }
 
+
+/*!
+  @fn void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
+  @brief Cette fonction permet d'afficher une fenêtre lorsqu'on clique sur un element de la carte.
+  @param Geometry* geo,QPoint pt representent l'objet ainsi que ses coordonnées
+  @note note : on recherche le point avec le même nom que l'objet sur lequel on a clique cela permet d'afficher une fenetre qui donne les informations sur le point
+*/
 void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
 {
     int iterateur=0;
@@ -454,6 +518,13 @@ void Carte::ReponseGeometryClick(Geometry* geo,QPoint pt)
     }
 }
 
+
+/*!
+  @fn void Carte::Chercher(QString Chaine)
+  @brief Cette fonction permet de filtrer les points par la chaine de recherche
+  @param QString Chaine est la chaine tapé par l'utilisateur
+
+*/
 void Carte::Chercher(QString Chaine)
 {
     VPOI.clear();
@@ -461,6 +532,12 @@ void Carte::Chercher(QString Chaine)
     cmpt=10;
 }
 
+/*!
+  @fn void Carte::Chercher(int i)
+  @brief Cette fonction permet de filtrer les points par categorie
+  @param int i est la categorie choisie
+
+*/
 void Carte::ByCat(int i)
 {
     VPOI.clear();

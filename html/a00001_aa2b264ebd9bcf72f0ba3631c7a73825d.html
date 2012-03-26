@@ -110,18 +110,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div>
 <div class="memdoc">
 
-<p>constructeur de l'application, herite de QApplication </p>
+<p>constructeur de l'application, herite de <a class="el" href="a00015.html">QApplication</a> </p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">argc</td><td>et argv: parametres d'appelle de l'application </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>info : ce constructeur est privé, la casse application est un singleton qui herite de QApplication. role : initialise une application qt, met en place le QSettings qui gere les categories de base.<br/>
+<dl class="note"><dt><b>Note:</b></dt><dd>info : ce constructeur est privé, la casse application est un singleton qui herite de <a class="el" href="a00015.html">QApplication</a>. role : initialise une application qt, met en place le QSettings qui gere les categories de base.<br/>
  permet egalement de recupere le descripteur de l'application au cours de la vie du programme ; dans le but, par exemple, de changer la langue de maniere dynamique. </dd></dl>
 
 <p>Définition à la ligne <a class="el" href="#L26">26</a> du fichier <a class="el" href="">application.cpp</a>.</p>
-<div class="fragment"><pre class="fragment">                                                 : QApplication(argc, argv)
+<div class="fragment"><pre class="fragment">                                                 : <a class="code" href="a00015.html">QApplication</a>(argc, argv)
 {
 
     QSettings settings(<span class="stringliteral">&quot;CartoTeam&quot;</span>, <span class="stringliteral">&quot;Cartographe&quot;</span>);
@@ -147,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00001.html">application</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:26 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:35 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

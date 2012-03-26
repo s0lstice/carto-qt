@@ -13,7 +13,6 @@
 #include "data_categories.h"
 #include "edite_categories.h"
 
-
 /*!
   @fn void edit_point_gui::init_table_point()
   @brief met en place le model de point

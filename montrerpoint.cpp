@@ -83,6 +83,8 @@ MontrerPoint::MontrerPoint(POI PointDInteret,QWidget *parent) :
 
 
 }
+
+
 void MontrerPoint::modification()
 {
     edit_point_gui art(PointDInteretA.Getlat(),PointDInteretA.Getlon(),PointDInteretA.GetId());

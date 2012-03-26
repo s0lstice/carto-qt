@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Cartographie de lieux: Référence du fichier data_categories.cpp</title>
+<title>Cartographie de lieux: Référence du fichier askdatabase.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -77,41 +77,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#func-members">Fonctions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier data_categories.cpp</div>  </div>
+<div class="title">Référence du fichier askdatabase.h</div>  </div>
 </div>
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">data_categories.h</a>&quot;</code><br/>
+
+<p>Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;QMainWindow&gt;</code><br/>
+<code>#include &lt;QString&gt;</code><br/>
+<code>#include &lt;QtGui&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de data_categories.cpp:</div>
+Graphe des dépendances par inclusion de askdatabase.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00066.png" border="0" usemap="#data__categories_8cpp" alt=""/></div>
-<map name="data__categories_8cpp" id="data__categories_8cpp">
-<area shape="rect" id="node3" href="a00030.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="12,83,137,112"/><area shape="rect" id="node5" href="a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="32,160,117,189"/><area shape="rect" id="node9" href="a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="87,237,143,267"/></map>
+<div class="center"><img src="a00064.png" border="0" usemap="#askdatabase_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00065.png" border="0" usemap="#askdatabase_8hdep" alt=""/></div>
+<map name="askdatabase_8hdep" id="askdatabase_8hdep">
+<area shape="rect" id="node3" href="a00028.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,83,125,112"/><area shape="rect" id="node5" href="a00030.html" title="Fenetre principale de l&#39;application." alt="" coords="149,83,224,112"/><area shape="rect" id="node7" href="a00050.html" title="debut du programme de catographie" alt="" coords="248,83,323,112"/></map>
 </div>
 </div>
 <p><a href="">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Fonctions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029_a5470005e0fdf270b455aec1bce4d7a11.html#a5470005e0fdf270b455aec1bce4d7a11">addCategorie</a> (QString categorie)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : ajoute la categorie passe en parametre  <a href="#a5470005e0fdf270b455aec1bce4d7a11"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029_a4489eb5551004a5fd5ef5920b1c10ce0.html#a4489eb5551004a5fd5ef5920b1c10ce0">getCategorieById</a> (int id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : retourne le nom de la categorie en fonction de l'identifiant  <a href="#a4489eb5551004a5fd5ef5920b1c10ce0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029_a9bf9ac909e82f3606111afd05c6fd0cb.html#a9bf9ac909e82f3606111afd05c6fd0cb">getCategorieIdByName</a> (QString name)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : retourne l'identifiant de la categorie en fonction de son nom  <a href="#a9bf9ac909e82f3606111afd05c6fd0cb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029_aae0ee7b6ed88b7f4a80f4852c51fb729.html#aae0ee7b6ed88b7f4a80f4852c51fb729">getCategories</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : retourne un vecteur avec toutes les categories de la base de donnee  <a href="#aae0ee7b6ed88b7f4a80f4852c51fb729"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029_ac88bc1f40ebd488cb44ab192b365b6ca.html#ac88bc1f40ebd488cb44ab192b365b6ca">initCategoriesTable</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : creant la table categories dans la base de donnée  <a href="#ac88bc1f40ebd488cb44ab192b365b6ca"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00002.html">AskDataBase</a></td></tr>
 </table>
-</div>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base. </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Guillaume Lastecoueres &amp; Mickael Puret </dd></dl>
+<dl class="version"><dt><b>Version:</b></dt><dd>0.1</dd></dl>
+<p>La creation ou la selection d'une base de donné necessite la selection de son emplacement. La creation necessite de creer toutes les table de la base. </p>
+
+<p>Définition dans le fichier <a class="el" href="">askdatabase.h</a>.</p>
+</div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00029.html">data_categories.cpp</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="navelem"><a class="el" href="a00029.html">askdatabase.h</a>      </li>
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

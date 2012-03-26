@@ -1,4 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="28,83,113,112"/>
-<area shape="rect" id="node7" href="$a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,160,139,189"/>
+<area shape="rect" id="node3" href="$a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="69,83,155,112"/>
+<area shape="rect" id="node13" href="$a00049.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="163,160,227,189"/>
+<area shape="rect" id="node7" href="$a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="5,160,61,189"/>
 </map>

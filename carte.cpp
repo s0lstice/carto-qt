@@ -31,9 +31,15 @@
 
 
 /*!
-    @fn Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
-    @brief Createur de la fentre Carte
-    \note Dans les faits la recuperation ou la creation de la base de donne se fait  l'appel de datacreate on rcupre aussi les catagories qui ont t sauvergard dans les QSettings.
+  @fn Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
+  @brief constructeur de la fenêtre principale
+  @note info : Dans ce constructeur de nombreuses choses se passe.
+  Premierement il y a initialisation d'un gestionnaire d'acces reseau qui servira plus tard au telechargement du fichier kml chez geovelo.
+  On met dans le widget de l'interface de la carte le QMapControl.
+  On centre la carte sur paris en zoomant dessus
+  Nous connectons tous les élements de l'interface aux fonctions correpondantes.
+  Nous démarrons le timer qui sert à l'actualisation de la carte.
+  Nous initialisons les différentes tables de la base de données.
 */
 Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
 {
@@ -94,6 +100,13 @@ Carte::Carte(QWidget *parent) :QMainWindow(parent), ui(new Ui::Carte)
     }
 }
 
+/*!
+  @fn void Carte::Telecharger()
+  @brief Fonction permettant le telechargement du fichier KML
+  @note info :Dans cette fonction nous créons une url à partir des coordonnées de la carte.
+  Puis nous executons une requête get pour rappatrier le fichier.
+  Une fois fais nous appelons la fonction ParserA
+*/
 void Carte::Telecharger()
 {
     downloading = true;
@@ -105,6 +118,13 @@ void Carte::Telecharger()
 
 }
 
+/*!
+  @fn void Carte::AutoTelcharger(int LvL)
+  @brief Fonction qui permet d'activer ou non l'autotelechargement
+  @param int LvL valeur prise par la checkBox
+  @note info : En fonction de la valeur renvoyé lors du clic sur la checkbox
+  nous activons la variable DLenable ou non. Cette variable permet d'autotelecharger des points
+*/
 void Carte::AutoTelcharger(int LvL)
 {
     if(LvL!=2)
@@ -138,6 +158,13 @@ void Carte::langue_francais(){
     this->close();
 }
 
+
+
+/*!
+  @fn void Carte::exportCSV()
+  @brief Fonction qui permet l'export de la BDD sous la forme d'un fichier .csv
+  @note info : Ouverture d'un explorateur de fichier. Suivit par l'appel de la fonction d'export au format csv
+*/
 void Carte::exportCSV(){
     QString File = QFileDialog::getSaveFileName(this, tr("export"), ".", tr("csv (*.csv"));
 
@@ -148,6 +175,11 @@ void Carte::exportCSV(){
 
 }
 
+/*!
+  @fn void Carte::choixBDD()
+  @brief Fonction qui permet d'appeler la fenêtre de selection de BDD
+  @note info : Nous deconnectons la BDD actuellement utilisé puis nous ouvrons la fenêtre de selection de BDD
+*/
 void Carte::choixBDD()
 {
     AskDataBase *choixFenetre = new AskDataBase();
@@ -158,6 +190,11 @@ void Carte::choixBDD()
     this->close();
 }
 
+/*!
+  @fn void Carte::Centrer()
+  @brief Fonction qui centre la vue de la carte sur le point selectionné dans la liste des points
+  @note info : Nous parcourons les points dans le Vecteur de point de façon à recuperer les coordonnées du point séléctionné puis nous appliquons ses coordonnées à la carte
+*/
 void Carte::Centrer()
 {
 
@@ -179,13 +216,25 @@ void Carte::Centrer()
 }
 
 
+/*!
+  @fn void Carte::gestionBDD()
+  @brief Fonction qui ouvre la fenêtre de gestion de la BDD
+  @note info : Nous fournissons les coordonnées actuelles à la fenêtre de façon  à permettre de créer un point avec les coordonnées de la carte.
+  Cmpt = 9 signifie que lors du prochain appel au compteur il faudra actualiser la liste des catégories.
+*/
 void Carte::gestionBDD(){
     edit_point_gui art(Posx,Posy,0,0);
     art.exec();
     cmpt=9;
 }
 
-
+/*!
+  @fn void Carte::AjouterPoints()
+  @brief Fonction qui dessine les points sur la carte et ajoute le nom des points dans la listes des points.
+  @note info : Pour pouvoir économiser la ressource processeur. Nous desactivons l'actualisation de la liste lorsqu'on la peuple de cette façon elle n'essaye pas de s'actualiser à chaque fois que nous ajoutons un point.
+  Nous supprimons ensuite les points de la carte pour déssiner les nouveaux.
+  Pour finir nous desactivons activons la visibilité de la carte pour actualisé le layer Mainlayer.
+*/
 void Carte::AjouterPoints()
 {
     int i;
@@ -211,6 +260,12 @@ void Carte::AjouterPoints()
 
 }
 
+/*!
+  @fn void Carte::ZoomInv(QPointF Point,int Entier)
+  @brief Cette fonction permet d'acualiser le slider vertical lorsqu'on zoom sur la carte
+   @param QPointF Point , int Entier. Entier represente le niveau de zoom Point represente les coordonnées
+  @note info : Nous verifions que le niveau de zoom est différents de la valeur du slider vertical cela evite une boucle infinie
+*/
 void Carte::ZoomInv(QPointF Point,int Entier)
 {
     if(zoomlevel!=Entier)
@@ -224,7 +279,12 @@ void Carte::ZoomInv(QPointF Point,int Entier)
         Posy= Point.y();
     }
 }
-
+/*!
+  @fn void Carte::PosLabel(int Py)
+  @brief Cette fonction permet d'acualiser le slider vertical lorsqu'on zoom sur la carte
+   @param QPointF Point , int Entier. Entier represente le niveau de zoom Point represente les coordonnées
+  @note info : Nous verifions que le niveau de zoom est différents de la valeur du slider vertical cela evite une boucle infinie
+*/
 void Carte::PosLabel(int Py)
 {
     ui->label->setGeometry(ui->label->x(),(((ui->verticalSlider->height()+ui->verticalSlider->y())/18)*(18-Py)),ui->label->width(),ui->label->height());

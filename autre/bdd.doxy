@@ -9,3 +9,31 @@ Cette structure permet donc de gère un nombre infini de points définis par :
 Le diagramme suivant montre la structure de la base de données :\n
 
 \image html bdd.jpeg
+
++++
+
+Cette documentation est complète, diagrammes uml, commentaires des fonctions publiques et privées, notes d'utilisations et incorporation du code source.\n
+Il est cependant intéressant de souligner quelques points :
+\subsection ch31 La classe application
+Cette classe a été écrite en vue d'une traduction dynamique de l'application et pour faciliter l'utilisation des paramètres propre à l'application (QSetings).
+En effet, la traduction d'un document fait appelle aux méthodes translate et installTranslator de la classe QApplication. Cette classe est nécessaire dès l'initialisation du programme.
+Or, pour une traduction dynamique, il est nécessaire de posséder l'instanciation de cette classe qui est propre au programme.
+C'est pour quoi nous avons créer une classe singleton nomée application, cette denière hérite de QApplication est permet donc de récupèrer la classe principale n'importe où dans le programme.\n
+
+En ce qui concerne les QSetings, dans notre cas, ils sont utilisés dès l'ouverture de l'application et ils doivent être enregistrés à la fermeture de celle-ci.
+Pour ce faire, nous utilisons le constructeur de la classe application et son destructeur. Pour mieux visualiser cet enjeu, rendez vous à l'explication de la classe application : \ref application .
+
+\subsection ch32 Gestions de la base de données
+Au cours de la vie du programme, de nombreuses bases de données sont amenées a créé et utilisé, de nombreuses requêtes seront effectuées.
+Du point de vue de la conception du logiciel, cela posait des problèmes d'accès et le descripteur de base de données devait être transmis de classe en classe ...\n
+Pour résoudre ces problèmes, nous avons créé une classe database qui est un singleton, ainsi, nous avons accès à notre base à tout moment, et ce en toute sécurité pour elle et les données.
+Pour plus d'information sur cette classe, regardez l'explication de la classe database : \ref database .\n
+
+En ce qui concerne l'implémentation des méthodes de gestion des tables, elles ont été dissociées dans plusieurs bibliothèques et non dans des classes, car on ne peut hérité d'un singleton
+(la seule solution est de "frender" les deux classes, ce qui n'est conceptuellement pas envisageable). De plus l'emploi de méthodes et non de fonctions été plus lord d'utilisation et n'apporter rien.
+Pour mieux cerner cette explication regardez les bibliothèques :\n
+-\link data_points.h data_points.h \endlink \n
+-\link data_jours.h data_jours.h \endlink \n
+-\link data_heures.h data_heures.h \endlink \n
+-\link data_categories.h data_categories.h \endlink \n
+ 

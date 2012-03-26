@@ -1,2 +1,5 @@
 <map id="G" name="G">
+<area shape="rect" id="node2" href="$a00017.html" title="{QMainWindow\n||}" alt="" coords="29,501,136,587"/>
+<area shape="rect" id="node6" href="$a00018.html" title="{Ui::AskDataBase\n||}" alt="" coords="251,501,373,587"/>
+<area shape="rect" id="node8" href="$a00022.html" title="{Ui_AskDataBase\n|+ centralwidget\l+ comboBox\l+ gridLayout\l+ gridLayoutWidget\l+ menubar\l+ pushButton\l+ pushButton_2\l+ pushButton_3\l+ pushButton_4\l|+ retranslateUi()\l+ setupUi()\l}" alt="" coords="245,209,379,450"/>
 </map>

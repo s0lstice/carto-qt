@@ -138,9 +138,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  role : -ajout un champ vide a la table points<br/>
  -met a jour l'affichage des points. -selectionne le points cree. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="#L438">438</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="#L437">437</a> du fichier <a class="el" href="">edit_point_gui.cpp</a>.</p>
 <div class="fragment"><pre class="fragment">                                 {
-    QSqlQuery query(<a class="code" href="a00009_a33a863c856f5cd5068aca7a6bab50ac9.html#a33a863c856f5cd5068aca7a6bab50ac9">database::dataCreate</a>()-&gt;dataConnect());
+    QSqlQuery query(<a class="code" href="a00009_ae4f384ebda9ba6a0f530d4eb192af317.html#ae4f384ebda9ba6a0f530d4eb192af317" title="gestionnaire de singleton, permet de recuperer la classe">database::dataCreate</a>()-&gt;dataConnect());
 
     <span class="keywordflow">if</span>(<a class="code" href="a00010_aca561e6f065db4f0c306b0f5dfd1b1eb.html#aca561e6f065db4f0c306b0f5dfd1b1eb">courantpoint</a> != 0)
         <span class="keywordflow">if</span>( query.exec(<span class="stringliteral">&quot;insert into points(latitude, longitude, categorie_id ) values(0, 0, 1)&quot;</span>) == <span class="keyword">false</span>)
@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="a00010.html">edit_point_gui</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:26 pour Cartographie de lieux par&#160;
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:35 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

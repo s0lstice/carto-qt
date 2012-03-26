@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Cartographie de lieux: Référence du fichier carte.h</title>
+<title>Cartographie de lieux: Référence du fichier askdatabase.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -76,57 +76,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier carte.h</div>  </div>
+<div class="title">Référence du fichier askdatabase.cpp</div>  </div>
 </div>
 <div class="contents">
 
-<p>Fenetre principale de l'application.  
+<p>Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base.  
 <a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &lt;QtGui&gt;</code><br/>
-<code>#include &lt;QMapControl/qmapcontrol.h&gt;</code><br/>
-<code>#include &lt;QSlider&gt;</code><br/>
-<code>#include &lt;QNetworkReply&gt;</code><br/>
-<code>#include &quot;Parseur.h&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="">askdatabase.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">ui_askdatabase.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">carte.h</a>&quot;</code><br/>
+<code>#include &quot;QDebug&quot;</code><br/>
 <code>#include &quot;<a class="el" href="">database.h</a>&quot;</code><br/>
-<code>#include &lt;QTimer&gt;</code><br/>
-<code>#include &quot;<a class="el" href="">montrerpoint.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">data_categories.h</a>&quot;</code><br/>
+<code>#include &lt;QSettings&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de carte.h:</div>
+Graphe des dépendances par inclusion de askdatabase.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00064.png" border="0" usemap="#carte_8h" alt=""/></div>
-<map name="carte_8h" id="carte_8h">
-<area shape="rect" id="node13" href="a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="68,83,153,112"/><area shape="rect" id="node25" href="a00049.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="544,83,648,112"/><area shape="rect" id="node17" href="a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,160,139,189"/><area shape="rect" id="node40" href="a00042.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="1112,160,1224,189"/><area shape="rect" id="node43" href="a00053.html" title="ui_edition_point.h" alt="" coords="1133,237,1256,267"/></map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
-<div class="dyncontent">
-<div class="center"><img src="a00065.png" border="0" usemap="#carte_8hdep" alt=""/></div>
-<map name="carte_8hdep" id="carte_8hdep">
-<area shape="rect" id="node3" href="a00025.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,83,125,112"/><area shape="rect" id="node5" href="a00027.html" title="Fenetre principale de l&#39;application." alt="" coords="149,83,224,112"/></map>
+<div class="center"><img src="a00063.png" border="0" usemap="#askdatabase_8cpp" alt=""/></div>
+<map name="askdatabase_8cpp" id="askdatabase_8cpp">
+<area shape="rect" id="node3" href="a00029.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="563,160,669,189"/><area shape="rect" id="node11" href="a00054.html" title="ui_askdatabase.h" alt="" coords="1869,315,1992,344"/><area shape="rect" id="node35" href="a00031.html" title="Fenetre principale de l&#39;application." alt="" coords="1136,83,1197,112"/><area shape="rect" id="node44" href="a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="828,160,913,189"/><area shape="rect" id="node99" href="a00033.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="964,83,1089,112"/><area shape="rect" id="node55" href="a00052.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="1127,160,1231,189"/><area shape="rect" id="node48" href="a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="739,237,795,267"/><area shape="rect" id="node70" href="a00045.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="1008,237,1120,267"/><area shape="rect" id="node73" href="a00056.html" title="ui_edition_point.h" alt="" coords="1029,315,1152,344"/></map>
 </div>
 </div>
 <p><a href="">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html">Carte</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Fenetre principale de l'application. </p>
+<div class="textblock"><p>Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base. </p>
 <dl class="author"><dt><b>Auteur:</b></dt><dd>Guillaume Lastecoueres &amp; Mickael Puret </dd></dl>
 <dl class="version"><dt><b>Version:</b></dt><dd>0.1</dd></dl>
-<p>permet la visualisation de la carte, la selection et le filtrage de points. Son menu permet le parametrage de la base de donnee et le changement de langue </p>
+<p>La creation ou la selection d'une base de donn� necessite la selection de son emplacement. La creation necessite de creer toutes les table de la base. </p>
 
-<p>Définition dans le fichier <a class="el" href="">carte.h</a>.</p>
+<p>Définition dans le fichier <a class="el" href="">askdatabase.cpp</a>.</p>
 </div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00028.html">carte.h</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="navelem"><a class="el" href="a00028.html">askdatabase.cpp</a>      </li>
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

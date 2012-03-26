@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Cartographie de lieux: Référence du fichier data_csv.cpp</title>
+<title>Cartographie de lieux: Référence du fichier carte.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -77,39 +77,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#func-members">Fonctions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier data_csv.cpp</div>  </div>
+<div class="title">Référence du fichier carte.h</div>  </div>
 </div>
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">data_csv.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">data_categories.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">POI.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">data_points.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">heure.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">data_heures.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="">data_jours.h</a>&quot;</code><br/>
+
+<p>Fenetre principale de l'application.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;QtGui&gt;</code><br/>
+<code>#include &lt;QMapControl/qmapcontrol.h&gt;</code><br/>
+<code>#include &lt;QSlider&gt;</code><br/>
+<code>#include &lt;QNetworkReply&gt;</code><br/>
+<code>#include &quot;<a class="el" href="">database.h</a>&quot;</code><br/>
+<code>#include &lt;QTimer&gt;</code><br/>
+<code>#include &quot;<a class="el" href="">montrerpoint.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de data_csv.cpp:</div>
+Graphe des dépendances par inclusion de carte.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00070.png" border="0" usemap="#data__csv_8cpp" alt=""/></div>
-<map name="data__csv_8cpp" id="data__csv_8cpp">
-<area shape="rect" id="node3" href="a00032.html" title="Fonction d&#39;exportation de la base de donnee au format csv." alt="" coords="5,237,91,267"/><area shape="rect" id="node7" href="a00030.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="233,83,359,112"/><area shape="rect" id="node13" href="a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="396,237,452,267"/><area shape="rect" id="node19" href="a00038.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="500,83,599,112"/><area shape="rect" id="node26" href="a00046.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="125,160,189,189"/><area shape="rect" id="node30" href="a00034.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="105,83,209,112"/><area shape="rect" id="node34" href="a00036.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="383,83,476,112"/><area shape="rect" id="node9" href="a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="303,160,388,189"/></map>
+<div class="center"><img src="a00067.png" border="0" usemap="#carte_8h" alt=""/></div>
+<map name="carte_8h" id="carte_8h">
+<area shape="rect" id="node11" href="a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="68,83,153,112"/><area shape="rect" id="node23" href="a00052.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="544,83,648,112"/><area shape="rect" id="node15" href="a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="83,160,139,189"/><area shape="rect" id="node38" href="a00045.html" title="Fenetre gerant l&#39;edition de la base de donnee." alt="" coords="1112,160,1224,189"/><area shape="rect" id="node41" href="a00056.html" title="ui_edition_point.h" alt="" coords="1133,237,1256,267"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00068.png" border="0" usemap="#carte_8hdep" alt=""/></div>
+<map name="carte_8hdep" id="carte_8hdep">
+<area shape="rect" id="node3" href="a00028.html" title="Fenetre de gestion des bases de donnees, permet de choisir ou creer une nouvelle base." alt="" coords="5,83,125,112"/><area shape="rect" id="node5" href="a00030.html" title="Fenetre principale de l&#39;application." alt="" coords="149,83,224,112"/></map>
 </div>
 </div>
 <p><a href="">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Fonctions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031_ac273e7f12452330543253a1d3a5727b2.html#ac273e7f12452330543253a1d3a5727b2">export_csv</a> (QString filecsv)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : export la base de donnee dans un fichier au format csv  <a href="#ac273e7f12452330543253a1d3a5727b2"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html">Carte</a></td></tr>
 </table>
-</div>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Fenetre principale de l'application. </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Guillaume Lastecoueres &amp; Mickael Puret </dd></dl>
+<dl class="version"><dt><b>Version:</b></dt><dd>0.1</dd></dl>
+<p>permet la visualisation de la carte, la selection et le filtrage de points. Son menu permet le parametrage de la base de donnee et le changement de langue </p>
+
+<p>Définition dans le fichier <a class="el" href="">carte.h</a>.</p>
+</div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00031.html">data_csv.cpp</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="navelem"><a class="el" href="a00031.html">carte.h</a>      </li>
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

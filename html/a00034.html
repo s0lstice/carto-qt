@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Cartographie de lieux: Référence du fichier data_heures.h</title>
+<title>Cartographie de lieux: Référence du fichier data_csv.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -79,55 +79,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div class="summary">
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier data_heures.h</div>  </div>
+<div class="title">Référence du fichier data_csv.cpp</div>  </div>
 </div>
 <div class="contents">
-
-<p>Bibliotheque de fonctions gerant la table heures. utilise formement la classe database.  
-<a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="">database.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="">data_csv.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">data_categories.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">POI.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">data_points.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="">heure.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">data_heures.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="">data_jours.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de data_heures.h:</div>
+Graphe des dépendances par inclusion de data_csv.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00074.png" border="0" usemap="#data__heures_8h" alt=""/></div>
-<map name="data__heures_8h" id="data__heures_8h">
-<area shape="rect" id="node3" href="a00040.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="69,83,155,112"/><area shape="rect" id="node13" href="a00046.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="163,160,227,189"/><area shape="rect" id="node7" href="a00050.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="5,160,61,189"/></map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
-<div class="dyncontent">
-<div class="center"><img src="a00075.png" border="0" usemap="#data__heures_8hdep" alt=""/></div>
-<map name="data__heures_8hdep" id="data__heures_8hdep">
-<area shape="rect" id="node3" href="a00027.html" title="Fenetre principale de l&#39;application." alt="" coords="5,83,80,112"/><area shape="rect" id="node5" href="a00031.html" title="data_csv.cpp" alt="" coords="104,83,203,112"/><area shape="rect" id="node7" href="a00033.html" title="data_heures.cpp" alt="" coords="227,83,344,112"/><area shape="rect" id="node9" href="a00039.html" title="database.cpp" alt="" coords="368,83,467,112"/><area shape="rect" id="node11" href="a00048.html" title="Fenetre permetant la visualisation complette d&#39;un point, position sur catre, donnees dans la base..." alt="" coords="491,83,608,112"/></map>
+<div class="center"><img src="a00073.png" border="0" usemap="#data__csv_8cpp" alt=""/></div>
+<map name="data__csv_8cpp" id="data__csv_8cpp">
+<area shape="rect" id="node3" href="a00035.html" title="Fonction d&#39;exportation de la base de donnee au format csv." alt="" coords="5,237,91,267"/><area shape="rect" id="node7" href="a00033.html" title="Bibliotheque de fonctions gerant la table categorie. utilise formement la classe database." alt="" coords="233,83,359,112"/><area shape="rect" id="node13" href="a00053.html" title="Classe permetant de contenir toutes les informations d&#39;un point." alt="" coords="396,237,452,267"/><area shape="rect" id="node19" href="a00041.html" title="Bibliotheque de fonctions gerant la table points. utilise formement la classe database." alt="" coords="500,83,599,112"/><area shape="rect" id="node26" href="a00049.html" title="Classe permetant de contenir toutes les informations d&#39;une plage horaire." alt="" coords="125,160,189,189"/><area shape="rect" id="node30" href="a00037.html" title="Bibliotheque de fonctions gerant la table heures. utilise formement la classe database." alt="" coords="105,83,209,112"/><area shape="rect" id="node34" href="a00039.html" title="Bibliotheque de fonctions gerant la table jours. utilise formement la classe database." alt="" coords="383,83,476,112"/><area shape="rect" id="node9" href="a00043.html" title="Classe singleton, gere l&#39;ouverture et la fermeture de la base de donne, paussaide egalement les metho..." alt="" coords="303,160,388,189"/></map>
 </div>
 </div>
 <p><a href="">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00034_ae5d8606c4f6a8266385d7eb9e2728c11.html#ae5d8606c4f6a8266385d7eb9e2728c11">addHeur</a> (int point_id, int jour_id, QString debut, QString fin)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : permet d'ajouter une plage horaire  <a href="#ae5d8606c4f6a8266385d7eb9e2728c11"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="a00012.html">heure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00034_adda323a88bd569270c76d3eb07ea8c5a.html#adda323a88bd569270c76d3eb07ea8c5a">getHeureByPoint</a> (int point_id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : permet d'obtenir les plages horaire d'un point  <a href="#adda323a88bd569270c76d3eb07ea8c5a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QSqlRecord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00034_af40939b9996ee6e1340db201988c0a04.html#af40939b9996ee6e1340db201988c0a04">getHeureByPointRecord</a> (int point_id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : permet d'obtenir les plages horaire d'un point  <a href="#af40939b9996ee6e1340db201988c0a04"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00034_a4a044f655010bb22e0b584c10b407f18.html#a4a044f655010bb22e0b584c10b407f18">initHeuresTable</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : creant la table heures dans la base de donnée  <a href="#a4a044f655010bb22e0b584c10b407f18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00034_ac273e7f12452330543253a1d3a5727b2.html#ac273e7f12452330543253a1d3a5727b2">export_csv</a> (QString filecsv)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction : export la base de donnee dans un fichier au format csv  <a href="#ac273e7f12452330543253a1d3a5727b2"></a><br/></td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Bibliotheque de fonctions gerant la table heures. utilise formement la classe database. </p>
-<dl class="author"><dt><b>Auteur:</b></dt><dd>Guillaume Lastecoueres &amp; Mickael Puret </dd></dl>
-<dl class="version"><dt><b>Version:</b></dt><dd>0.1</dd></dl>
-<p>Ensemble de fonctions de gestion de la table heures </p>
-
-<p>Définition dans le fichier <a class="el" href="">data_heures.h</a>.</p>
-</div></div>
+</div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00034.html">data_heures.h</a>      </li>
-      <li class="footer">Généré le Sun Mar 25 2012 20:04:25 pour Cartographie de lieux par&#160;
+      <li class="navelem"><a class="el" href="a00034.html">data_csv.cpp</a>      </li>
+      <li class="footer">Généré le Sun Mar 25 2012 22:50:34 pour Cartographie de lieux par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

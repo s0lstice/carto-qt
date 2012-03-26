@@ -22,6 +22,7 @@
  * \subsection sub2 Navigation et gestion des points
 
  * \subsection sub3 Ajout et edition des points
+ \image html edit_bdd.jpeg
 
  * \subsection sub4 Charger et exporter de base de donnee
 

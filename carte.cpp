@@ -7,6 +7,9 @@
  * permet la visualisation de la carte, la selection et le filtrage de points. Son menu permet le parametrage de la base de donnee et le changement de langue
  *
  */
+/*! \class Carte carte.cpp
+  \brief fentere principale de l'application
+*/
 
 #include "carte.h"
 #include "ui_carte.h"

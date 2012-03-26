@@ -6,7 +6,9 @@
  *
  *
  */
-
+/*! \class edit_point_gui edit_point_gui.cpp
+  \brief Fenetre gerant l'edition de la base de donnee.
+*/
 #include "edit_point_gui.h"
 #include "database.h"
 #include <QtGui>

@@ -7,7 +7,9 @@
  * La creation ou la selection d'une base de donné necessite la selection de son emplacement. La creation necessite de creer toutes les table de la base.
  *
  */
-
+/*! \class AskDataBase askdatabase.cpp
+  \brief fenetre de selection de la base de donnee
+*/
 #include "askdatabase.h"
 #include "ui_askdatabase.h"
 #include "carte.h"
@@ -15,7 +17,7 @@
 #include "database.h"
 #include "data_categories.h"
 #include <QSettings>
-#include <string>
+//#include <string>
 
 
 /*!

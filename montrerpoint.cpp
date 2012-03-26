@@ -6,7 +6,9 @@
  *
  *
  */
-
+/*! \class MontrerPoint montrerpoint.cpp
+  \brief Fernetre montrant la position et les informations des points
+*/
 
 #include "montrerpoint.h"
 #include "ui_montrerpoint.h"

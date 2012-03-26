@@ -81,8 +81,7 @@ Pour mieux cerner cette explication regardez les bibliothèques :\n
 
 /*!
   @brief Initialise le programme
-
-    \note Nous appellons un objet de la classe application qui herite de la classe Qapplication. Cela est fait pour permettre les traductions ainsi que mettre aux propres les QSettings.
+  \note Nous appellons un objet de la classe application qui herite de la classe Qapplication. Cela est fait pour permettre les traductions ainsi que mettre aux propres les QSettings.
 */
 int main(int argc, char *argv[])
 {

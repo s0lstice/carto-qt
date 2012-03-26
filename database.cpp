@@ -1,3 +1,8 @@
+
+/*! \class database database.cpp
+  \brief classe principale de la base de donnee, instancie, initialise, et fournit l'acces aux differantes fonctions.
+*/
+
 #include "database.h"
 #include "POI.h"
 #include "heure.h"

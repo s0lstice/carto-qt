@@ -6,7 +6,9 @@
  *
  *
  */
-
+/*! \class edite_categories edite_categories.cpp
+  \brief fenetre de gestion de la base de donnee (ajout-suppretion-edition).
+*/
 #include "edite_categories.h"
 #include "database.h"
 

@@ -6,6 +6,9 @@
  *
  *
  */
+/*! \class heure heure.cpp
+  \brief contient toutes les informations sur une plage horaire
+*/
 
 #include "heure.h"
 #include <QDebug>

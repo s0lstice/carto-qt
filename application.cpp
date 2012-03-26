@@ -7,7 +7,9 @@
  * Initialisation et destruction du programme, gere les parametres de l'application.
  *
  */
-
+/*! \class application application.cpp
+  \brief classe principale de l'application Qt
+*/
 
 #include "application.h"
 #include <QSettings>
